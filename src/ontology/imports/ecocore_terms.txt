@@ -3,3 +3,4 @@ ECOCORE:00000010 # Heterotroph
 ECOCORE:00000023 # Autotroph
 ECOCORE:00000008 # Trophic interaction
 ECOCORE:00000001 # Food web
+RO:0002470

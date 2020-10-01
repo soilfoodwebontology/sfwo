@@ -1,0 +1,614 @@
+format-version: 1.2
+data-version: stwo/releases/2020-10-01/stwo-base.owl
+ontology: stwo/stwo-base
+property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Soil Trophic Web Ontology" xsd:string
+property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
+property_value: owl:versionInfo "2020-10-01" xsd:string
+
+[Term]
+id: BFO:0000003
+is_a: BFO:0000001
+
+[Term]
+id: ECOCORE:00000010
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000011
+
+[Term]
+id: ECOCORE:00000012
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000009
+intersection_of: RO:0002215 ECOCORE:00000011
+
+[Term]
+id: ECOCORE:00000015
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000016
+
+[Term]
+id: ECOCORE:00000019
+synonym: "plant feeder" NARROW []
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000020
+equivalent_to: STWO:0000023 ! phytophage
+
+[Term]
+id: ECOCORE:00000023
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000009
+
+[Term]
+id: ECOCORE:00000045
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000060
+
+[Term]
+id: ECOCORE:00000050
+equivalent_to: STWO:0000040 ! collector gatherer
+
+[Term]
+id: ECOCORE:00000054
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000058
+
+[Term]
+id: ECOCORE:00000055
+intersection_of: ECOCORE:00000054
+intersection_of: RO:0002215 ECOCORE:00000057
+equivalent_to: STWO:0000011 ! saprophage
+
+[Term]
+id: ECOCORE:00000056
+intersection_of: ECOCORE:00000054
+intersection_of: RO:0002215 ECOCORE:00000059
+
+[Term]
+id: ECOCORE:00000084
+equivalent_to: STWO:0000026 ! phyllophage
+
+[Term]
+id: ECOCORE:00000085
+equivalent_to: STWO:0000022 ! rhizophage
+
+[Term]
+id: ECOCORE:00000086
+equivalent_to: STWO:0000028 ! algophage
+
+[Term]
+id: ECOCORE:00000088
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000021
+equivalent_to: STWO:0000013 ! zoophage
+
+[Term]
+id: ECOCORE:00000089
+intersection_of: ECOCORE:00000088
+intersection_of: RO:0002215 ECOCORE:00000102
+
+[Term]
+id: ECOCORE:00000090
+intersection_of: ECOCORE:00000088
+intersection_of: RO:0002215 ECOCORE:00000103
+equivalent_to: STWO:0000010 ! necrophage
+
+[Term]
+id: ECOCORE:00000091
+intersection_of: ECOCORE:00000089
+intersection_of: RO:0002215 ECOCORE:00000108
+equivalent_to: STWO:0000014 ! entomophage
+
+[Term]
+id: ECOCORE:00000098
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000114
+
+[Term]
+id: ECOCORE:00000121
+intersection_of: ECOCORE:00000130
+intersection_of: RO:0002215 ECOCORE:00000162
+
+[Term]
+id: ECOCORE:00000123
+intersection_of: ECOCORE:00000129
+intersection_of: RO:0002215 ECOCORE:00000162
+
+[Term]
+id: ECOCORE:00000124
+intersection_of: ECOCORE:00000129
+intersection_of: RO:0002215 ECOCORE:00000014
+
+[Term]
+id: ECOCORE:00000125
+intersection_of: ECOCORE:00000131
+intersection_of: RO:0002215 ECOCORE:00000162
+
+[Term]
+id: ECOCORE:00000126
+intersection_of: ECOCORE:00000131
+intersection_of: RO:0002215 ECOCORE:00000014
+
+[Term]
+id: ECOCORE:00000127
+intersection_of: ECOCORE:00000132
+intersection_of: RO:0002215 ECOCORE:00000162
+
+[Term]
+id: ECOCORE:00000128
+intersection_of: ECOCORE:00000132
+intersection_of: RO:0002215 ECOCORE:00000014
+
+[Term]
+id: ECOCORE:00000129
+intersection_of: ECOCORE:00000023
+intersection_of: RO:0002215 ECOCORE:00000163
+
+[Term]
+id: ECOCORE:00000130
+intersection_of: ECOCORE:00000023
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000013
+intersection_of: RO:0002215 ECOCORE:00000017
+
+[Term]
+id: ECOCORE:00000131
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000017
+
+[Term]
+id: ECOCORE:00000132
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000163
+
+[Term]
+id: ECOCORE:00000143
+intersection_of: ECOCORE:00000019
+intersection_of: RO:0002215 ECOCORE:00000100
+
+[Term]
+id: ECOCORE:00000146
+intersection_of: ECOCORE:00000045
+intersection_of: RO:0002215 ECOCORE:00000147
+
+[Term]
+id: ECOCORE:00000157
+equivalent_to: STWO:0000041 ! collector filterer
+
+[Term]
+id: ECOCORE:00000164
+intersection_of: ECOCORE:00000088
+intersection_of: RO:0002215 ECOCORE:00000165
+equivalent_to: STWO:0000016 ! hematophage
+
+[Term]
+id: ECOCORE:00000168
+intersection_of: ECOCORE:00000019
+intersection_of: RO:0002215 ECOCORE:00000099
+
+[Term]
+id: ECOCORE:00000169
+intersection_of: ECOCORE:00000019
+intersection_of: RO:0002215 ECOCORE:00000101
+
+[Term]
+id: ECOCORE:00000176
+intersection_of: ECOCORE:00000054
+intersection_of: RO:0002215 STWO:0000043 ! coprophagy
+
+[Term]
+id: ENVO:01000155
+synonym: "organic matter" EXACT []
+
+[Term]
+id: ENVO:01000628
+relationship: BFO:0000051 PO:0025034
+relationship: RO:0000086 PATO:0001422
+
+[Term]
+id: FAO:0000001
+is_a: STWO:4000011 ! fungal anatomical entity
+
+[Term]
+id: NCBITaxon:131567
+is_a: OBI:0100026
+
+[Term]
+id: PO:0025131
+is_a: UBERON:0001062
+relationship: RO:0002160 NCBITaxon:33090
+
+[Term]
+id: STWO:0000000
+name: chemotroph
+def: "An organism which is capable of obtaining energy from the bonds in a chemical compound" []
+is_a: OBI:0100026
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000163
+
+[Term]
+id: STWO:0000001
+name: organotroph
+def: "An organism which is capable of using a biogenic organic compound as an electron donor." []
+is_a: OBI:0100026
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000162
+
+[Term]
+id: STWO:0000002
+name: lithotroph
+def: "An organism which is capable of using an inorganic compound as an electron donor." []
+is_a: OBI:0100026
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000014
+
+[Term]
+id: STWO:0000003
+name: phagotroph
+def: "A chemoorganoheterotroph which obtains nutrition by engulfment of food particles, by phagocytose or ingestion." []
+is_a: ECOCORE:00000127
+
+[Term]
+id: STWO:0000004
+name: microphage
+def: "A phagotroph feeding on very small organic particles or organisms." []
+is_a: STWO:0000003 ! phagotroph
+
+[Term]
+id: STWO:0000005
+name: macrophage
+def: "A phagotroph feeding on large organic particles or organisms." []
+is_a: STWO:0000003 ! phagotroph
+
+[Term]
+id: STWO:0000006
+name: pathotroph
+def: "A chemoorganoheterotroph which obtains nutrition through a parasitic relationship with another organism." []
+is_a: ECOCORE:00000127
+
+[Term]
+id: STWO:0000007
+name: phototroph
+def: "An organism which is capable of transforming light into chemical energy." []
+is_a: OBI:0100026
+intersection_of: OBI:0100026
+intersection_of: RO:0002215 ECOCORE:00000017
+
+[Term]
+id: STWO:0000008
+name: geophage
+def: "A decomposer which obtains nutrition by consuming earth or soil-like substrates such as clay or chalk." []
+is_a: ECOCORE:00000054
+intersection_of: ECOCORE:00000054
+intersection_of: RO:0002215 STWO:0000044 ! geophagy
+
+[Term]
+id: STWO:0000009
+name: exudativore
+def: "A heterotroph that consumes plan or animal exudates." []
+is_a: ECOCORE:00000010
+
+[Term]
+id: STWO:0000010
+name: necrophage
+def: "A saprophage which obtains nutrition by consuming corpses or carrion." []
+is_a: STWO:0000011 ! saprophage
+
+[Term]
+id: STWO:0000011
+name: saprophage
+is_a: ECOCORE:00000054
+
+[Term]
+id: STWO:0000012
+name: saproxylophage
+def: "A saprophage which obtains nutrition by consuming decaying wood." []
+is_a: STWO:0000011 ! saprophage
+
+[Term]
+id: STWO:0000013
+name: zoophage
+is_a: ECOCORE:00000010
+
+[Term]
+id: STWO:0000014
+name: entomophage
+is_a: ECOCORE:00000089
+
+[Term]
+id: STWO:0000015
+name: malacophage
+def: "A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods." []
+is_a: STWO:0000013 ! zoophage
+
+[Term]
+id: STWO:0000016
+name: hematophage
+def: "A zoophage that feeds on blood." []
+is_a: STWO:0000013 ! zoophage
+
+[Term]
+id: STWO:0000017
+name: oophage
+def: "A zoophage that feeds on eggs." []
+is_a: STWO:0000013 ! zoophage
+intersection_of: STWO:0000013 ! zoophage
+intersection_of: RO:0002215 ECOCORE:00000109
+
+[Term]
+id: STWO:0000018
+name: myrmecophage
+def: "An entomophage that feeds on ants." []
+is_a: STWO:0000014 ! entomophage
+
+[Term]
+id: STWO:0000019
+name: nematophage
+def: "A zoophage that primarily eats nematodes." []
+is_a: STWO:0000013 ! zoophage
+
+[Term]
+id: STWO:0000020
+name: honeydew feeder
+def: "An exudativore that consumes honeydew produced by phloem sap-feeding insects." []
+is_a: STWO:0000009 ! exudativore
+
+[Term]
+id: STWO:0000021
+name: phloem sap feeder
+def: "An gumnivore that primarily consumes phloem sap." []
+synonym: "phloem feeder" EXACT []
+is_a: ECOCORE:00000145
+
+[Term]
+id: STWO:0000022
+name: rhizophage
+synonym: "racidivore" EXACT []
+is_a: ECOCORE:00000019
+
+[Term]
+id: STWO:0000023
+name: phytophage
+is_a: ECOCORE:00000010
+
+[Term]
+id: STWO:0000024
+name: plant parasite
+def: "A parasite whose host is a plant." []
+synonym: "phytoparasite" EXACT []
+is_a: ECOCORE:00000146
+
+[Term]
+id: STWO:0000025
+name: phytosaprophage
+is_a: STWO:0000011 ! saprophage
+
+[Term]
+id: STWO:0000026
+name: phyllophage
+is_a: ECOCORE:00000019
+
+[Term]
+id: STWO:0000027
+name: bryophage
+def: "An herbivore that primarily consumes bryophytes (mosses, liverworts, and hornworts)." []
+is_a: ECOCORE:00000019
+
+[Term]
+id: STWO:0000028
+name: algophage
+is_a: ECOCORE:00000019
+
+[Term]
+id: STWO:0000029
+name: lepidophage
+def: "A piscivore that primarily eats fish scales." []
+is_a: ECOCORE:00000156
+
+[Term]
+id: STWO:0000030
+name: ophiophage
+def: "A zoophage that primarily eats snakes." []
+synonym: "serpentivore" EXACT []
+is_a: STWO:0000013 ! zoophage
+intersection_of: STWO:0000013 ! zoophage
+intersection_of: RO:0002215 ECOCORE:00000154
+
+[Term]
+id: STWO:0000031
+name: aphidophage
+def: "An entomophage that feeds on aphids." []
+synonym: "aphidiphage" EXACT []
+is_a: STWO:0000014 ! entomophage
+
+[Term]
+id: STWO:0000032
+name: scraper
+def: "An herbivore that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates." []
+is_a: ECOCORE:00000019
+
+[Term]
+id: STWO:0000033
+name: engulfer
+def: "A predator that feeds on its prey by engulfing and swallowing the prey whole." []
+is_a: ECOCORE:00000089
+
+[Term]
+id: STWO:0000034
+name: fluid feeder
+def: "A heterotroph that obtains nutrition by consuming other organisms' fluids." []
+is_a: ECOCORE:00000010
+
+[Term]
+id: STWO:0000035
+name: piercer and sucker
+def: "A sucker with sharp or chewing mouthparts that pierce food items to allow internal fluids to be sucked out." []
+is_a: STWO:0000036 ! sucker
+
+[Term]
+id: STWO:0000036
+name: sucker
+def: "A fluid feeder that feeds by sucking fluids into its mouth." []
+is_a: STWO:0000034 ! fluid feeder
+
+[Term]
+id: STWO:0000037
+name: shredder
+def: "A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves." []
+is_a: ECOCORE:00000010
+
+[Term]
+id: STWO:0000038
+name: active suspension feeder
+def: "A suspension feeder that uses ciliary or muscular activity to create feeding currents." []
+is_a: ECOCORE:00000051
+
+[Term]
+id: STWO:0000039
+name: passive suspension feeder
+def: "A suspension feeder that utilises the natural flow to bring particles in contact with feeding structures." []
+is_a: ECOCORE:00000051
+
+[Term]
+id: STWO:0000040
+name: collector gatherer
+is_a: ECOCORE:00000010
+
+[Term]
+id: STWO:0000041
+name: collector filterer
+is_a: ECOCORE:00000051
+
+[Term]
+id: STWO:0000042
+name: piscivory
+def: "A predation process during which a living entity acquires food and energy by consuming fishes." []
+is_a: ECOCORE:00000102
+
+[Term]
+id: STWO:0000043
+name: coprophagy
+def: "A decomposition process during which a living entity acquires food and energy by consuming feces." []
+synonym: "coprophagia" EXACT []
+is_a: ECOCORE:00000058
+
+[Term]
+id: STWO:0000044
+name: geophagy
+def: "A decomposition process during which a living entity acquires food and energy by consuming earth or soil-like substrates such as clay or chalk." []
+synonym: "geophagia" EXACT []
+is_a: ECOCORE:00000058
+
+[Term]
+id: STWO:4000000
+name: dissolved organic matter
+is_a: ENVO:01000155
+
+[Term]
+id: STWO:4000001
+name: particulate organic matter
+is_a: ENVO:01000155
+
+[Term]
+id: STWO:4000002
+name: undecomposed organic matter
+is_a: ENVO:01000155
+
+[Term]
+id: STWO:4000003
+name: light
+is_a: PATO:0001021
+
+[Term]
+id: STWO:4000004
+name: sunlight
+synonym: "solar energy" EXACT []
+is_a: STWO:4000003 ! light
+
+[Term]
+id: STWO:4000005
+name: soil organic matter
+is_a: ENVO:01000155
+
+[Term]
+id: STWO:4000006
+name: fresh organic matter
+is_a: STWO:4000002 ! undecomposed organic matter
+
+[Term]
+id: STWO:4000007
+name: root litter
+is_a: ENVO:01000155
+relationship: RO:0000086 PATO:0001422
+relationship: RO:0002473 NCBITaxon:1
+
+[Term]
+id: STWO:4000008
+name: dead organic matter
+is_a: ENVO:01000155
+
+[Term]
+id: STWO:4000009
+name: living organic matter
+is_a: ENVO:01000155
+
+[Term]
+id: STWO:4000010
+name: deadwood
+is_a: STWO:4000008 ! dead organic matter
+intersection_of: PO:0005848
+intersection_of: RO:0000086 PATO:0001422
+
+[Term]
+id: STWO:4000011
+name: fungal anatomical entity
+is_a: UBERON:0001062
+
+[Term]
+id: STWO:4000012
+name: honeydew
+is_a: UBERON:0000174
+
+[Term]
+id: STWO:4000013
+name: living wood
+is_a: STWO:4000009 ! living organic matter
+intersection_of: PO:0005848
+intersection_of: RO:0000086 PATO:0001421
+
+[Term]
+id: STWO:4000014
+name: mold
+def: "A non-taxonomic grouping of fungi that grow in the form of mycelium of hyphae (vegetative filaments)." []
+is_a: NCBITaxon:4751
+
+[Term]
+id: STWO:4000015
+name: yeast
+def: "A non-taxonomic grouping of fungi with little or no mycelium development that asexually reproduce by budding." []
+is_a: NCBITaxon:4751
+
+[Term]
+id: UBERON:0000463
+relationship: BFO:0000050 UBERON:0000468
+
+[Term]
+id: UBERON:0000465
+is_a: BFO:0000040
+
+[Term]
+id: UBERON:0001062
+is_a: BFO:0000004
+
+[Term]
+id: UBERON:0008979
+synonym: "carrion" RELATED []
+intersection_of: UBERON:0000468
+intersection_of: RO:0000086 PATO:0001422
+
+[Term]
+id: ecocore:00000082
+intersection_of: ECOCORE:00000010
+intersection_of: RO:0002215 ECOCORE:00000020
+intersection_of: RO:0002215 ECOCORE:00000021
+

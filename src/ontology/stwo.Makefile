@@ -17,18 +17,24 @@
 # 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # .PRECIOUS: imports/ecocore_import.owl
 
-imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.txt imports/ecocore_remove_terms.txt
+imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ecocore_terms_combined.txt --force true --method MIREOT \
-		remove -T imports/ecocore_remove_terms.txt --preserve-structure false --trim true \
 		remove --term RO:0002410 --term RO:0002328 --axioms "subproperty" --preserve-structure false --trim true \
 		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/ecocore_import.owl
 
+	# imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.txt imports/ecocore_remove_terms.txt
+	# 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ecocore_terms_combined.txt --force true --method MIREOT \
+	# 		remove -T imports/ecocore_remove_terms.txt --preserve-structure false --trim true \
+	# 		remove --term RO:0002410 --term RO:0002328 --axioms "subproperty" --preserve-structure false --trim true \
+	# 		query --update ../sparql/inject-subset-declaration.ru \
+	# 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+	# .PRECIOUS: imports/ecocore_import.owl
+
 imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
-	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ro_terms_combined.txt --force true --method MIREOT \
-		remove --term GO:0016301 --term GO:0016772 --term GO:0016740 --term GO:0003824 --term GO:0003674 --term GO:0008150 --trim true \
-		remove --term RO:0002018 --select "self descendants" --preserve-structure false --trim true \
+	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< --term-file imports/ro_terms_combined.txt --force true --method TOP \
+		filter --term "RO:0002321" --select "annotations self descendants" --axioms all --preserve-structure true --signature true \
 		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/ro_import.owl
