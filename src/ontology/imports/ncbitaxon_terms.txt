@@ -1,0 +1,11 @@
+NCBITaxon:4751 # Fungi
+NCBITaxon:2 # Bacteria
+NCBITaxon:33090 # Viridiplantae
+NCBITaxon:2157 # Archaea
+NCBITaxon:33208 # Metazoa
+NCBITaxon:50557 # Insecta
+NCBITaxon:36668 # Formicidae
+NCBITaxon:27482 # Aphididae
+NCBITaxon:8570 # Serpentes
+NCBITaxon:6231 # Nematoda
+NCBITaxon:6447 # Mollusca

@@ -1,0 +1,3 @@
+ENVO:01000628 # Leaf litter
+ENVO:01000155 # Organic material
+CARO:0001010 # Organism or virus or viroid

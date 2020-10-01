@@ -1,0 +1,4 @@
+RO:0002321 # Ecologically related to
+RO:0002160 # only in taxon
+RO:0000086 # has quality
+RO:0002473 # composed primarily of

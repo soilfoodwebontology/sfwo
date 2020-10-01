@@ -1,0 +1,10 @@
+PO:0009010 # Seed
+PO:0009001 # Fruit
+PO:0009005 # Root
+PO:0025164 # Root epidermal cell
+PO:0025281 # Pollen
+PO:0025540 # Phloem sap
+PO:0025034 # Leaf
+PO:0000256 # Root hair cell
+PO:0005848 # Secondary xylem (wood)
+PO:0005417 # Phloem

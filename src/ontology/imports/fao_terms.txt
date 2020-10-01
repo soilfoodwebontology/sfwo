@@ -1,0 +1,3 @@
+FAO:0000012 # Basidiocarp
+FAO:0001001 # Hypha
+FAO:0000011 # Mycelium
