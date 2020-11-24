@@ -9,3 +9,14 @@ NCBITaxon:27482 # Aphididae
 NCBITaxon:8570 # Serpentes
 NCBITaxon:6231 # Nematoda
 NCBITaxon:6447 # Mollusca
+NCBITaxon:7088 # Lepidoptera
+NCBITaxon:13809 # Anthocerotophyta
+NCBITaxon:3208 # Bryophyta
+NCBITaxon:3195 # Marchantiophyta
+NCBITaxon:7898 # Actinopterygii
+NCBITaxon:8287 # Sarcopterygii
+NCBITaxon:117565 # Myxini
+NCBITaxon:117569 # Hyperoartia
+NCBITaxon:118072 # Coelacanthimorpha
+NCBITaxon:7777 # Chondrichthyes
+NCBITaxon:7878 # Dipnoi

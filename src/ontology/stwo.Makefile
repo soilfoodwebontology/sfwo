@@ -3,34 +3,13 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-# imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.txt imports/ecocore_remove_terms.txt
-# 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -B imports/ecocore_terms_combined.txt -L imports/ecocore_terms_combined.txt --force true --method MIREOT \
-# 		remove --term PCO:0000031 --preserve-structure false --trim true \
-# 		remove --term RO:0002410 --term RO:0002328 --axioms "subproperty" --preserve-structure false --trim true \
-# 		remove --term PATO:0001237 --term PATO:0000001 --trim true \
-# 		remove --term CARO:0000000 --term CARO:0030000 --term CARO:0001010 --trim true \
-# 		remove --term NCBITaxon:33213 --select "self descendants" --preserve-structure false --trim true \
-# 		remove --select "parents" --select "FOODON:*" --trim true \
-# 		remove -T imports/ecocore_remove_terms.txt --preserve-structure false --trim true \
-# 		reduce -r ELK \
-# 		query --update ../sparql/inject-subset-declaration.ru \
-# 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-# .PRECIOUS: imports/ecocore_import.owl
-
 imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ecocore_terms_combined.txt --force true --method MIREOT \
+	  remove --select "parents" --select "FOODON:*" --trim true \
 		remove --term RO:0002410 --term RO:0002328 --axioms "subproperty" --preserve-structure false --trim true \
 		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/ecocore_import.owl
-
-	# imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.txt imports/ecocore_remove_terms.txt
-	# 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ecocore_terms_combined.txt --force true --method MIREOT \
-	# 		remove -T imports/ecocore_remove_terms.txt --preserve-structure false --trim true \
-	# 		remove --term RO:0002410 --term RO:0002328 --axioms "subproperty" --preserve-structure false --trim true \
-	# 		query --update ../sparql/inject-subset-declaration.ru \
-	# 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-	# .PRECIOUS: imports/ecocore_import.owl
 
 imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< --term-file imports/ro_terms_combined.txt --force true --method TOP \
@@ -83,6 +62,6 @@ imports/ncbitaxon_import.owl: mirror/ncbitaxon.owl imports/ncbitaxon_terms_combi
 
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed asserted-only \
+		reason --reasoner ELK --equivalent-classes-allowed all \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@

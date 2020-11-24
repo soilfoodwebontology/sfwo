@@ -4,3 +4,9 @@ ECOCORE:00000023 # Autotroph
 ECOCORE:00000008 # Trophic interaction
 ECOCORE:00000001 # Food web
 RO:0002470
+ECOCORE:00000076 # algae
+CHEBI:16526 # Carbon dioxide
+CHEBI:72695 # Organic molecule/compound
+CHEBI:24835 # Inorganic molecular entity/compound
+ECOCORE:00000144 # Xylophage
+ECOCORE:00000122 # photolithoautotroph
