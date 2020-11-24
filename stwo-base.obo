@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: stwo/releases/2020-10-01/stwo-base.owl
+data-version: stwo/releases/2020-11-24/stwo-base.owl
 ontology: stwo/stwo-base
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Soil Trophic Web Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2020-10-01" xsd:string
+property_value: owl:versionInfo "2020-11-24" xsd:string
 
 [Term]
 id: BFO:0000003
@@ -14,10 +14,14 @@ is_a: BFO:0000001
 [Term]
 id: ECOCORE:00000010
 intersection_of: OBI:0100026
+intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000011
+intersection_of: STWO:0000047 CHEBI:72695 ! acquires carbon from
 
 [Term]
 id: ECOCORE:00000012
+intersection_of: ECOCORE:00000010
+intersection_of: ECOCORE:00000023
 intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000009
 intersection_of: RO:0002215 ECOCORE:00000011
@@ -32,12 +36,13 @@ id: ECOCORE:00000019
 synonym: "plant feeder" NARROW []
 intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000020
-equivalent_to: STWO:0000023 ! phytophage
 
 [Term]
 id: ECOCORE:00000023
 intersection_of: OBI:0100026
+intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000009
+intersection_of: STWO:0000047 CHEBI:16526 ! acquires carbon from
 
 [Term]
 id: ECOCORE:00000045
@@ -57,7 +62,6 @@ intersection_of: RO:0002215 ECOCORE:00000058
 id: ECOCORE:00000055
 intersection_of: ECOCORE:00000054
 intersection_of: RO:0002215 ECOCORE:00000057
-equivalent_to: STWO:0000011 ! saprophage
 
 [Term]
 id: ECOCORE:00000056
@@ -80,7 +84,6 @@ equivalent_to: STWO:0000028 ! algophage
 id: ECOCORE:00000088
 intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000021
-equivalent_to: STWO:0000013 ! zoophage
 
 [Term]
 id: ECOCORE:00000089
@@ -101,70 +104,114 @@ equivalent_to: STWO:0000014 ! entomophage
 
 [Term]
 id: ECOCORE:00000098
-intersection_of: ECOCORE:00000010
+intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000114
 
 [Term]
 id: ECOCORE:00000121
 intersection_of: ECOCORE:00000130
+intersection_of: ECOCORE:00000130
 intersection_of: RO:0002215 ECOCORE:00000162
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from
+
+[Term]
+id: ECOCORE:00000122
+intersection_of: ECOCORE:00000130
+intersection_of: ECOCORE:00000130
+intersection_of: RO:0002215 ECOCORE:00000014
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000123
 intersection_of: ECOCORE:00000129
+intersection_of: ECOCORE:00000129
 intersection_of: RO:0002215 ECOCORE:00000162
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000124
 intersection_of: ECOCORE:00000129
+intersection_of: ECOCORE:00000129
 intersection_of: RO:0002215 ECOCORE:00000014
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000125
 intersection_of: ECOCORE:00000131
+intersection_of: ECOCORE:00000131
 intersection_of: RO:0002215 ECOCORE:00000162
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000126
 intersection_of: ECOCORE:00000131
+intersection_of: ECOCORE:00000131
 intersection_of: RO:0002215 ECOCORE:00000014
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000127
 intersection_of: ECOCORE:00000132
+intersection_of: ECOCORE:00000132
 intersection_of: RO:0002215 ECOCORE:00000162
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000128
 intersection_of: ECOCORE:00000132
+intersection_of: ECOCORE:00000132
 intersection_of: RO:0002215 ECOCORE:00000014
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000129
 intersection_of: ECOCORE:00000023
+intersection_of: ECOCORE:00000023
 intersection_of: RO:0002215 ECOCORE:00000163
+intersection_of: STWO:0000048 CHEBI:25367 ! uses as energy source
 
 [Term]
 id: ECOCORE:00000130
 intersection_of: ECOCORE:00000023
+intersection_of: ECOCORE:00000023
 intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000013
 intersection_of: RO:0002215 ECOCORE:00000017
+intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 
 [Term]
 id: ECOCORE:00000131
 intersection_of: ECOCORE:00000010
+intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000017
+intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 
 [Term]
 id: ECOCORE:00000132
 intersection_of: ECOCORE:00000010
+intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000163
+intersection_of: STWO:0000048 CHEBI:25367 ! uses as energy source
+
+[Term]
+id: ECOCORE:00000136
+synonym: "carpophage" EXACT []
+synonym: "fructivore" EXACT []
+
+[Term]
+id: ECOCORE:00000137
+synonym: "pollen feeder" EXACT []
 
 [Term]
 id: ECOCORE:00000143
 intersection_of: ECOCORE:00000019
 intersection_of: RO:0002215 ECOCORE:00000100
+
+[Term]
+id: ECOCORE:00000144
+
+[Term]
+id: ECOCORE:00000145
 
 [Term]
 id: ECOCORE:00000146
@@ -179,7 +226,6 @@ equivalent_to: STWO:0000041 ! collector filterer
 id: ECOCORE:00000164
 intersection_of: ECOCORE:00000088
 intersection_of: RO:0002215 ECOCORE:00000165
-equivalent_to: STWO:0000016 ! hematophage
 
 [Term]
 id: ECOCORE:00000168
@@ -193,6 +239,7 @@ intersection_of: RO:0002215 ECOCORE:00000101
 
 [Term]
 id: ECOCORE:00000176
+is_a: ECOCORE:00000054
 intersection_of: ECOCORE:00000054
 intersection_of: RO:0002215 STWO:0000043 ! coprophagy
 
@@ -202,8 +249,19 @@ synonym: "organic matter" EXACT []
 
 [Term]
 id: ENVO:01000628
+is_a: ENVO:01001103
 relationship: BFO:0000051 PO:0025034
 relationship: RO:0000086 PATO:0001422
+
+[Term]
+id: ENVO:01001103
+is_a: STWO:4000001 ! particulate organic matter
+is_a: STWO:4000008 ! dead organic matter
+
+[Term]
+id: ENVO:04000008
+relationship: BFO:0000050 ENVO:00001998
+relationship: BFO:0000051 STWO:4000008 ! dead organic matter
 
 [Term]
 id: FAO:0000001
@@ -224,7 +282,9 @@ name: chemotroph
 def: "An organism which is capable of obtaining energy from the bonds in a chemical compound" []
 is_a: OBI:0100026
 intersection_of: OBI:0100026
+intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000163
+intersection_of: STWO:0000048 CHEBI:25367 ! uses as energy source
 
 [Term]
 id: STWO:0000001
@@ -232,7 +292,9 @@ name: organotroph
 def: "An organism which is capable of using a biogenic organic compound as an electron donor." []
 is_a: OBI:0100026
 intersection_of: OBI:0100026
+intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000162
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from
 
 [Term]
 id: STWO:0000002
@@ -240,7 +302,9 @@ name: lithotroph
 def: "An organism which is capable of using an inorganic compound as an electron donor." []
 is_a: OBI:0100026
 intersection_of: OBI:0100026
+intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000014
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from
 
 [Term]
 id: STWO:0000003
@@ -358,7 +422,7 @@ id: STWO:0000021
 name: phloem sap feeder
 def: "An gumnivore that primarily consumes phloem sap." []
 synonym: "phloem feeder" EXACT []
-is_a: ECOCORE:00000145
+is_a: ECOCORE:00000019
 
 [Term]
 id: STWO:0000022
@@ -398,12 +462,6 @@ is_a: ECOCORE:00000019
 id: STWO:0000028
 name: algophage
 is_a: ECOCORE:00000019
-
-[Term]
-id: STWO:0000029
-name: lepidophage
-def: "A piscivore that primarily eats fish scales." []
-is_a: ECOCORE:00000156
 
 [Term]
 id: STWO:0000030
@@ -500,6 +558,21 @@ synonym: "geophagia" EXACT []
 is_a: ECOCORE:00000058
 
 [Term]
+id: STWO:0000049
+name: plant exudate
+is_a: PO:0025161
+
+[Term]
+id: STWO:0000050
+name: gum
+is_a: PO:0025161
+
+[Term]
+id: STWO:0000051
+name: resin
+is_a: PO:0025161
+
+[Term]
 id: STWO:4000000
 name: dissolved organic matter
 is_a: ENVO:01000155
@@ -526,11 +599,6 @@ synonym: "solar energy" EXACT []
 is_a: STWO:4000003 ! light
 
 [Term]
-id: STWO:4000005
-name: soil organic matter
-is_a: ENVO:01000155
-
-[Term]
 id: STWO:4000006
 name: fresh organic matter
 is_a: STWO:4000002 ! undecomposed organic matter
@@ -554,10 +622,10 @@ is_a: ENVO:01000155
 
 [Term]
 id: STWO:4000010
-name: deadwood
-is_a: STWO:4000008 ! dead organic matter
+name: decaying wood
+is_a: ENVO:01001103
 intersection_of: PO:0005848
-intersection_of: RO:0000086 PATO:0001422
+intersection_of: RO:0000086 PATO:0001432
 
 [Term]
 id: STWO:4000011
@@ -601,8 +669,13 @@ id: UBERON:0001062
 is_a: BFO:0000004
 
 [Term]
+id: UBERON:0001988
+is_a: ENVO:01001103
+
+[Term]
 id: UBERON:0008979
 synonym: "carrion" RELATED []
+is_a: ENVO:01001103
 intersection_of: UBERON:0000468
 intersection_of: RO:0000086 PATO:0001422
 
@@ -611,4 +684,19 @@ id: ecocore:00000082
 intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000020
 intersection_of: RO:0002215 ECOCORE:00000021
+
+[Typedef]
+id: STWO:0000047
+name: acquires carbon from
+is_a: RO:0002457
+
+[Typedef]
+id: STWO:0000048
+name: uses as energy source
+is_a: RO:0002437
+
+[Typedef]
+id: STWO:0000052
+name: obtains electrons or hydrogen from
+is_a: RO:0002437
 

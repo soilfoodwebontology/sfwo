@@ -11,12 +11,12 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/stwo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-10-01/stwo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-24/stwo-base.owl"/>
         <dc:description>None</dc:description>
         <dc:title>Soil Trophic Web Ontology</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-10-01</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-11-24</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -115,9 +115,78 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002437 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002437"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002439 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002439"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002440 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002440"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002444 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002444"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002457 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002457"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002470 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002470"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002473 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002473"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002574 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002574"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STWO_0000047 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STWO_0000047">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002457"/>
+        <rdfs:label xml:lang="fr">acquires carbon from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STWO_0000048 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STWO_0000048">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
+        <rdfs:label xml:lang="en">uses as energy source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STWO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STWO_0000052">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
+        <rdfs:label xml:lang="en">obtains electrons or hydrogen from</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -164,6 +233,30 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16526 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16526"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24835 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25367 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25367"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_72695 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000009"/>
@@ -184,6 +277,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000047"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -197,6 +301,14 @@
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000012">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -242,6 +354,19 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FAO_0002002"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -261,7 +386,6 @@
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019">
-        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/STWO_0000023"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -272,6 +396,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <oboInOwl:hasNarrowSynonym>plant feeder</oboInOwl:hasNarrowSynonym>
     </owl:Class>
@@ -304,6 +434,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000047"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16526"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -321,6 +462,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002440"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -354,6 +501,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002574"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000008"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -361,7 +514,6 @@
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055">
-        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/STWO_0000011"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -372,6 +524,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+            </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -390,6 +548,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002457"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000008"/>
+            </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -419,10 +583,22 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000084 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000084">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/STWO_0000026"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025034"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -431,6 +607,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000085">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/STWO_0000022"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009005"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -439,6 +621,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000086">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/STWO_0000028"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -446,7 +634,6 @@
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000088 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088">
-        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/STWO_0000013"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -457,6 +644,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+            </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -476,6 +669,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002439"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -494,6 +693,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008979"/>
+            </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -524,13 +729,26 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000114"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2157"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -592,6 +810,46 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000130"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000122">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000130"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000014"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000130"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -606,6 +864,17 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000162"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000129"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -628,6 +897,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000129"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -642,6 +922,17 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000162"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000131"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -664,6 +955,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000131"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -678,6 +980,17 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000162"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000132"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -700,6 +1013,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000132"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -718,6 +1042,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000048"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -732,6 +1067,17 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000017"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000048"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000003"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -765,6 +1111,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000048"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -783,6 +1140,46 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000048"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000136">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009001"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym xml:lang="fr">carpophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">fructivore</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000137 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000137">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025281"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym>pollen feeder</oboInOwl:hasExactSynonym>
     </owl:Class>
     
 
@@ -801,13 +1198,39 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009010"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000144">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0005848"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000145 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000145"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000145">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_0000050"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -825,6 +1248,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -838,12 +1267,6 @@
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000154 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000154"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000156 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000156"/>
     
 
 
@@ -870,7 +1293,6 @@
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000164 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000164">
-        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/STWO_0000016"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -881,6 +1303,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+            </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -942,7 +1370,20 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001988"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00001998 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998"/>
     
 
 
@@ -957,6 +1398,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000628 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000628">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -973,11 +1415,45 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001103 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_4000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_4000008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_04000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_04000008">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FAO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_4000011"/>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FAO_0002002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0002002"/>
     
 
 
@@ -995,15 +1471,87 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_13809 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_13809"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2157"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27482 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27482"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3195"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3208"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_33090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_36668 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_36668"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_4751 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_50557 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_50557"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6231 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6231"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6447 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6447"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_8570 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_8570"/>
     
 
 
@@ -1031,9 +1579,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001432 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001432"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PO_0005848 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005848"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009005"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009010"/>
     
 
 
@@ -1057,6 +1629,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PO_0025161 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025161"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025281"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025540 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025540"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STWO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000000">
@@ -1067,6 +1657,17 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000163"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000048"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1092,6 +1693,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000115>An organism which is capable of using a biogenic organic compound as an electron donor.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">organotroph</rdfs:label>
@@ -1109,6 +1721,17 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000014"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1195,6 +1818,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
         <obo:IAO_0000115>A decomposer which obtains nutrition by consuming earth or soil-like substrates such as clay or chalk.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">geophage</rdfs:label>
@@ -1205,6 +1834,19 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000009">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/STWO_0000049"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0000174"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
         <obo:IAO_0000115>A heterotroph that consumes plan or animal exudates.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">exudativore</rdfs:label>
@@ -1225,6 +1867,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000011">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000008"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
         <rdfs:label xml:lang="en">saprophage</rdfs:label>
     </owl:Class>
@@ -1234,6 +1882,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000012">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000010"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000011"/>
         <obo:IAO_0000115>A saprophage which obtains nutrition by consuming decaying wood.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">saproxylophage</rdfs:label>
@@ -1244,6 +1898,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000013">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
         <rdfs:label xml:lang="en">zoophage</rdfs:label>
     </owl:Class>
@@ -1253,6 +1913,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000014">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50557"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
         <rdfs:label xml:lang="en">entomophage</rdfs:label>
     </owl:Class>
@@ -1262,6 +1928,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000015">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6447"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000013"/>
         <obo:IAO_0000115>A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">malacophage</rdfs:label>
@@ -1272,6 +1944,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000016">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000013"/>
         <obo:IAO_0000115>A zoophage that feeds on blood.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">hematophage</rdfs:label>
@@ -1293,6 +1971,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007379"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000013"/>
         <obo:IAO_0000115>A zoophage that feeds on eggs.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">oophage</rdfs:label>
@@ -1303,6 +1987,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000018">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_36668"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000014"/>
         <obo:IAO_0000115>An entomophage that feeds on ants.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">myrmecophage</rdfs:label>
@@ -1313,6 +2003,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000019">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6231"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000013"/>
         <obo:IAO_0000115>A zoophage that primarily eats nematodes.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">nematophage</rdfs:label>
@@ -1323,6 +2019,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000020 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000020">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/STWO_4000012"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000009"/>
         <obo:IAO_0000115>An exudativore that consumes honeydew produced by phloem sap-feeding insects.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">honeydew feeder</rdfs:label>
@@ -1333,7 +2035,13 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000021 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000021">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000145"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025540"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
         <obo:IAO_0000115>An gumnivore that primarily consumes phloem sap.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>phloem feeder</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">phloem sap feeder</rdfs:label>
@@ -1354,6 +2062,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000023">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
         <rdfs:label xml:lang="en">phytophage</rdfs:label>
     </owl:Class>
@@ -1363,6 +2077,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000024 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000024">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
         <obo:IAO_0000115>A parasite whose host is a plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym xml:lang="fr">phytoparasite</oboInOwl:hasExactSynonym>
@@ -1374,6 +2094,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000025 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000025">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000628"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000011"/>
         <obo:IAO_0000115 xml:lang="fr"></obo:IAO_0000115>
         <rdfs:label xml:lang="en">phytosaprophage</rdfs:label>
@@ -1393,6 +2119,20 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000027 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000027">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_13809"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3195"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3208"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
         <obo:IAO_0000115>An herbivore that primarily consumes bryophytes (mosses, liverworts, and hornworts).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">bryophage</rdfs:label>
@@ -1405,16 +2145,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000028">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
         <rdfs:label xml:lang="en">algophage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STWO_0000029 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000156"/>
-        <obo:IAO_0000115>A piscivore that primarily eats fish scales.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">lepidophage</rdfs:label>
     </owl:Class>
     
 
@@ -1433,6 +2163,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8570"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000013"/>
         <obo:IAO_0000115>A zoophage that primarily eats snakes.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>serpentivore</oboInOwl:hasExactSynonym>
@@ -1444,6 +2180,12 @@
     <!-- http://purl.obolibrary.org/obo/STWO_0000031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000031">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27482"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_0000014"/>
         <obo:IAO_0000115>An entomophage that feeds on aphids.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym xml:lang="fr">aphidiphage</oboInOwl:hasExactSynonym>
@@ -1582,6 +2324,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/STWO_0000049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
+        <rdfs:label xml:lang="fr">plant exudate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STWO_0000050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
+        <rdfs:label xml:lang="fr">gum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STWO_0000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
+        <rdfs:label xml:lang="fr">resin</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STWO_4000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_4000000">
@@ -1624,15 +2393,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_4000003"/>
         <oboInOwl:hasExactSynonym xml:lang="en">solar energy</oboInOwl:hasExactSynonym>
         <rdfs:label>sunlight</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STWO_4000005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_4000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
-        <rdfs:label>soil organic matter</rdfs:label>
     </owl:Class>
     
 
@@ -1694,13 +2454,13 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0005848"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001432"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STWO_4000008"/>
-        <rdfs:label>deadwood</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+        <rdfs:label>decaying wood</rdfs:label>
     </owl:Class>
     
 
@@ -1769,6 +2529,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UBERON_0000463 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000463">
@@ -1804,6 +2570,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001988 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001988">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0007379 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007379"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UBERON_0008979 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0008979">
@@ -1818,6 +2598,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
         <oboInOwl:hasRelatedSynonym>carrion</oboInOwl:hasRelatedSynonym>
     </owl:Class>
     
@@ -1841,25 +2622,36 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000098"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000098"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000136">
-        <oboInOwl:hasExactSynonym xml:lang="fr">fructivore</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">carpophage</oboInOwl:hasExactSynonym>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000137">
-        <oboInOwl:hasExactSynonym>pollen feeder</oboInOwl:hasExactSynonym>
-    </rdf:Description>
 </rdf:RDF>
 
 

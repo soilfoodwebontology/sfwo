@@ -13,7 +13,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/pato_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-18/imports/pato_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-24/imports/pato_import.owl"/>
     </owl:Ontology>
     
 

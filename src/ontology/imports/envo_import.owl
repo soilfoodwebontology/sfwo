@@ -16,7 +16,7 @@
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-18/imports/envo_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-24/imports/envo_import.owl"/>
     </owl:Ontology>
     
 
@@ -1731,7 +1731,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A plant anatomical entity (PO:0025131) that is, or was, part of a plant, or was derived from a part of a plant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CARO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:0000003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>

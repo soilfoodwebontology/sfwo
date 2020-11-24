@@ -1,5 +1,6 @@
 format-version: 1.2
-data-version: releases/2020-10-01
+data-version: releases/2020-11-24
+subsetdef: 3_STAR ""
 subsetdef: Angiosperm ""
 subsetdef: Arabidopsis ""
 subsetdef: attribute_slim ""
@@ -7,6 +8,7 @@ subsetdef: Citrus ""
 subsetdef: CL ""
 subsetdef: disposition_slim ""
 subsetdef: efo_slim ""
+subsetdef: EnvO-Lite-GSC ""
 subsetdef: Gymnosperms ""
 subsetdef: inconsistent_with_fma ""
 subsetdef: Maize ""
@@ -29,7 +31,7 @@ ontology: stwo
 property_value: dc-description "None" xsd:string
 property_value: dc-title "Soil Trophic Web Ontology" xsd:string
 property_value: dcterms-license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2020-10-01" xsd:string
+property_value: owl:versionInfo "2020-11-24" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -288,6 +290,313 @@ name: biological entity
 is_a: BFO:0000004 ! independent continuant
 
 [Term]
+id: CHEBI:138675
+name: gas molecular entity
+namespace: chebi_ontology
+def: "Any main group molecular entity that is gaseous at standard temperature and pressure (STP; 0degreeC and 100 kPa)." []
+subset: 3_STAR
+synonym: "gas molecular entities" RELATED [ChEBI]
+synonym: "gaseous molecular entities" RELATED [ChEBI]
+synonym: "gaseous molecular entity" RELATED [ChEBI]
+xref: Wikipedia:https\://en.wikipedia.org/wiki/Gas
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:16526
+name: carbon dioxide
+namespace: chebi_ontology
+alt_id: CHEBI:13282
+alt_id: CHEBI:13283
+alt_id: CHEBI:13284
+alt_id: CHEBI:13285
+alt_id: CHEBI:23011
+alt_id: CHEBI:3283
+alt_id: CHEBI:48829
+def: "A one-carbon compound with formula CO2 in which the carbon is attached to each oxygen atom by a double bond. A colourless, odourless gas under normal conditions, it is produced during respiration by all animals, fungi and microorganisms that depend directly or indirectly on living or decaying plants for food." []
+subset: 3_STAR
+synonym: "[CO2]" RELATED [MolBase]
+synonym: "CARBON DIOXIDE" EXACT [PDBeChem]
+synonym: "Carbon dioxide" EXACT [KEGG_COMPOUND]
+synonym: "carbon dioxide" EXACT IUPAC_NAME [IUPAC]
+synonym: "carbonic anhydride" RELATED [UM-BBD]
+synonym: "CO2" RELATED [UniProt]
+synonym: "CO2" RELATED [KEGG_COMPOUND]
+synonym: "dioxidocarbon" EXACT IUPAC_NAME [IUPAC]
+synonym: "E 290" RELATED [ChEBI]
+synonym: "E-290" RELATED [ChEBI]
+synonym: "E290" RELATED [ChEBI]
+synonym: "methanedione" EXACT IUPAC_NAME [IUPAC]
+synonym: "R-744" RELATED [ChEBI]
+xref: Beilstein:1900390 {source="Beilstein"}
+xref: CAS:124-38-9 {source="ChemIDplus"}
+xref: CAS:124-38-9 {source="NIST Chemistry WebBook"}
+xref: CAS:124-38-9 {source="KEGG COMPOUND"}
+xref: Drug_Central:4256 {source="DrugCentral"}
+xref: Gmelin:989 {source="Gmelin"}
+xref: HMDB:HMDB0001967
+xref: KEGG:C00011
+xref: KEGG:D00004
+xref: MetaCyc:CARBON-DIOXIDE
+xref: MolBase:752
+xref: PDBeChem:CO2
+xref: PMID:10826146 {source="Europe PMC"}
+xref: PMID:11094503 {source="Europe PMC"}
+xref: PMID:11584085 {source="Europe PMC"}
+xref: PMID:11802652 {source="Europe PMC"}
+xref: PMID:14639145 {source="Europe PMC"}
+xref: PMID:15050588 {source="Europe PMC"}
+xref: PMID:16591971 {source="Europe PMC"}
+xref: PMID:16656478 {source="Europe PMC"}
+xref: PMID:16659660 {source="Europe PMC"}
+xref: PMID:17190796 {source="Europe PMC"}
+xref: PMID:17448243 {source="Europe PMC"}
+xref: PMID:17878298 {source="Europe PMC"}
+xref: PMID:17884085 {source="Europe PMC"}
+xref: PMID:19043767 {source="Europe PMC"}
+xref: PMID:19259576 {source="Europe PMC"}
+xref: PMID:19854893 {source="Europe PMC"}
+xref: PMID:23384758 {source="Europe PMC"}
+xref: PMID:23828359 {source="Europe PMC"}
+xref: PMID:24258718 {source="Europe PMC"}
+xref: PMID:8482095 {source="Europe PMC"}
+xref: PMID:8818713 {source="Europe PMC"}
+xref: PMID:8869828 {source="Europe PMC"}
+xref: PMID:9611769 {source="Europe PMC"}
+xref: PMID:9730350 {source="Europe PMC"}
+xref: PPDB:119
+xref: Reaxys:1900390 {source="Reaxys"}
+xref: UM-BBD_compID:c0131 {source="UM-BBD"}
+xref: Wikipedia:Carbon_dioxide
+is_a: CHEBI:138675 ! gas molecular entity
+is_a: CHEBI:23014 ! carbon oxide
+is_a: CHEBI:64708 ! one-carbon compound
+is_a: ENVO:00010483 ! environmental material
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/CO2/c2-1-3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "CURLTUGMZLYLDI-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "44.010" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=C=O" xsd:string
+
+[Term]
+id: CHEBI:23014
+name: carbon oxide
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "carbon oxides" RELATED [ChEBI]
+synonym: "oxides of carbon" RELATED [ChEBI]
+is_a: CHEBI:25701 ! organic oxide
+is_a: CHEBI:36963 ! organooxygen compound
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+namespace: chebi_ontology
+def: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." []
+subset: 3_STAR
+synonym: "entidad molecular" RELATED [IUPAC]
+synonym: "entidades moleculares" RELATED [IUPAC]
+synonym: "entite moleculaire" RELATED [IUPAC]
+synonym: "molecular entities" RELATED [IUPAC]
+synonym: "molecular entity" EXACT IUPAC_NAME [IUPAC]
+synonym: "molekulare Entitaet" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+namespace: chebi_ontology
+def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+subset: 3_STAR
+synonym: "chemical entity" EXACT [UniProt]
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: CHEBI:24835
+name: inorganic molecular entity
+namespace: chebi_ontology
+def: "A molecular entity that contains no carbon." []
+subset: 3_STAR
+synonym: "anorganische Verbindungen" RELATED [ChEBI]
+synonym: "inorganic compounds" RELATED [ChEBI]
+synonym: "inorganic entity" RELATED [ChEBI]
+synonym: "inorganic molecular entities" RELATED [ChEBI]
+synonym: "inorganics" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:25367
+name: molecule
+namespace: chebi_ontology
+def: "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." []
+subset: 3_STAR
+synonym: "molecula" RELATED [IUPAC]
+synonym: "molecule" EXACT [IUPAC]
+synonym: "molecules" RELATED [IUPAC]
+synonym: "Molekuel" RELATED [ChEBI]
+synonym: "neutral molecular compounds" RELATED [IUPAC]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:25701
+name: organic oxide
+namespace: chebi_ontology
+def: "An oxide in which the oxygen atom is bonded to a carbon atom." []
+subset: 3_STAR
+synonym: "organic oxides" RELATED [ChEBI]
+is_a: CHEBI:25741 ! oxide
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
+id: CHEBI:25741
+name: oxide
+namespace: chebi_ontology
+def: "An oxide is a chemical compound of oxygen with other chemical elements." []
+subset: 3_STAR
+synonym: "oxide" EXACT [ChEBI]
+synonym: "oxides" RELATED [ChEBI]
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:25806
+name: oxygen molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "oxygen molecular entities" RELATED [ChEBI]
+synonym: "oxygen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33304 ! chalcogen molecular entity
+
+[Term]
+id: CHEBI:33285
+name: heteroorganic entity
+namespace: chebi_ontology
+def: "A heteroorganic entity is an organic molecular entity in which carbon atoms or organic groups are bonded directly to one or more heteroatoms." []
+subset: 3_STAR
+synonym: "heteroorganic entities" RELATED [ChEBI]
+synonym: "organoelement compounds" RELATED [ChEBI]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33304
+name: chalcogen molecular entity
+namespace: chebi_ontology
+def: "Any p-block molecular entity containing a chalcogen." []
+subset: 3_STAR
+synonym: "chalcogen compounds" RELATED [ChEBI]
+synonym: "chalcogen molecular entities" RELATED [ChEBI]
+synonym: "chalcogen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+
+[Term]
+id: CHEBI:33579
+name: main group molecular entity
+namespace: chebi_ontology
+def: "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table." []
+subset: 3_STAR
+synonym: "main group compounds" RELATED [ChEBI]
+synonym: "main group molecular entities" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:33582
+name: carbon group molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "carbon group molecular entities" RELATED [ChEBI]
+synonym: "carbon group molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+
+[Term]
+id: CHEBI:33675
+name: p-block molecular entity
+namespace: chebi_ontology
+def: "A main group molecular entity that contains one or more atoms of a p-block element." []
+subset: 3_STAR
+synonym: "p-block compounds" RELATED [ChEBI]
+synonym: "p-block molecular entities" RELATED [ChEBI]
+synonym: "p-block molecular entitiy" RELATED [ChEBI]
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:36357
+name: polyatomic entity
+namespace: chebi_ontology
+def: "Any molecular entity consisting of more than one atom." []
+subset: 3_STAR
+synonym: "polyatomic entities" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:36962
+name: organochalcogen compound
+namespace: chebi_ontology
+def: "An organochalcogen compound is a compound containing at least one carbon-chalcogen bond." []
+subset: 3_STAR
+synonym: "organochalcogen compound" EXACT [ChEBI]
+synonym: "organochalcogen compounds" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:33304 ! chalcogen molecular entity
+
+[Term]
+id: CHEBI:36963
+name: organooxygen compound
+namespace: chebi_ontology
+def: "An organochalcogen compound containing at least one carbon-oxygen bond." []
+subset: 3_STAR
+synonym: "organooxygen compound" EXACT [ChEBI]
+synonym: "organooxygen compounds" RELATED [ChEBI]
+xref: PMID:17586126 "Europe PMC"
+xref: PMID:17586126 {source="Europe PMC"}
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:36962 ! organochalcogen compound
+
+[Term]
+id: CHEBI:37577
+name: heteroatomic molecular entity
+namespace: chebi_ontology
+def: "A molecular entity consisting of two or more chemical elements." []
+subset: 3_STAR
+synonym: "chemical compound" RELATED [ChEBI]
+synonym: "heteroatomic molecular entities" RELATED [ChEBI]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:50860
+name: organic molecular entity
+namespace: chebi_ontology
+alt_id: CHEBI:25700
+alt_id: CHEBI:33244
+def: "Any molecular entity that contains carbon." []
+subset: 3_STAR
+synonym: "organic compounds" RELATED [ChEBI]
+synonym: "organic entity" RELATED [ChEBI]
+synonym: "organic molecular entities" RELATED [ChEBI]
+is_a: CHEBI:33582 ! carbon group molecular entity
+
+[Term]
+id: CHEBI:64708
+name: one-carbon compound
+namespace: chebi_ontology
+def: "An organic molecular entity containing a single carbon atom (C1)." []
+subset: 3_STAR
+synonym: "one-carbon compounds" RELATED [ChEBI]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:72695
+name: organic molecule
+namespace: chebi_ontology
+def: "Any molecule that consists of at least one carbon atom as part of the electrically neutral entity." []
+subset: 3_STAR
+synonym: "organic compound" RELATED [ChEBI]
+synonym: "organic compounds" RELATED [ChEBI]
+synonym: "organic molecules" RELATED [ChEBI]
+is_a: CHEBI:25367 ! molecule
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
 id: ECOCORE:00000001
 name: food web
 def: "A system in which living entities consume living, dead, or non-living entities or are consumed by other living entities through trophic interactions." [] {http://purl.obolibrary.org/obo/IAO_0000119="https://en.wikipedia.org/wiki/Food_web"}
@@ -330,7 +639,9 @@ def: "An organism that obtains carbon for growth and development by metabolizing
 synonym: "consumer" RELATED []
 is_a: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
+intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000011 ! heterotrophy
+intersection_of: STWO:0000047 CHEBI:72695 ! acquires carbon from organic molecule
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 
@@ -349,7 +660,8 @@ id: ECOCORE:00000012
 name: mixotroph
 def: "An organism which is capable of heterotrophic and autotrophic trophic processes." []
 is_a: ECOCORE:00000010 ! heterotroph
-is_a: ECOCORE:00000023 ! autotroph
+intersection_of: ECOCORE:00000010 ! heterotroph
+intersection_of: ECOCORE:00000023 ! autotroph
 intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000009 ! autotrophy
 intersection_of: capable_of ECOCORE:00000011 ! heterotrophy
@@ -411,7 +723,6 @@ synonym: "primary consumer" EXACT []
 is_a: ECOCORE:00000010 ! heterotroph
 intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000020 ! herbivory
-equivalent_to: STWO:0000023 ! phytophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 
@@ -439,9 +750,11 @@ id: ECOCORE:00000023
 name: autotroph
 def: "An organism which is capable of incorporating abiogenic (inorganic) carbon into its biomass." []
 synonym: "primary producer" RELATED []
-is_a: OBI:0100026 ! organism
+is_a: ECOCORE:00000010 ! heterotroph
+intersection_of: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000009 ! autotrophy
+intersection_of: STWO:0000047 CHEBI:16526 ! acquires carbon from carbon dioxide
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 
@@ -483,10 +796,9 @@ id: ECOCORE:00000055
 name: detritivore
 def: "A decomposer which obtains nutrition by consuming detritus." []
 is_a: CARO:0001010 ! organism or virus or viroid
-is_a: ECOCORE:00000054 ! decomposer
+is_a: STWO:0000011 ! saprophage
 intersection_of: ECOCORE:00000054 ! decomposer
 intersection_of: capable_of ECOCORE:00000057 ! detritivory
-equivalent_to: STWO:0000011 ! saprophage
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -525,6 +837,13 @@ id: ECOCORE:00000060
 name: symbiotrophy
 def: "A heterotrophic process during which a living entity acquires food and energy through a symbiotic relationship with another organism." []
 is_a: ECOCORE:00000011 ! heterotrophy
+property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
+
+[Term]
+id: ECOCORE:00000076
+name: algae
+def: "A polyphyletic group of diverse photosynthetic organisms that excludes vascular plants and mosses and includes cyanobacteria, seaweed, and some single-celled organisms." []
+is_a: OBI:0100026 ! organism
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -570,7 +889,6 @@ is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000010 ! heterotroph
 intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000021 ! carnivory
-equivalent_to: STWO:0000013 ! zoophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -589,7 +907,6 @@ name: scavenger
 def: "A carnivore that feeds on dead and decaying animal matter" []
 is_a: ECOCORE:00000055 ! detritivore
 is_a: ECOCORE:00000088 ! carnivore
-is_a: STWO:0000011 ! saprophage
 is_a: STWO:0000013 ! zoophage
 intersection_of: ECOCORE:00000088 ! carnivore
 intersection_of: capable_of ECOCORE:00000103 ! scavenging
@@ -612,7 +929,7 @@ name: bacterivore
 def: "a heterotroph that consumes bacteria" []
 is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000010 ! heterotroph
-intersection_of: ECOCORE:00000010 ! heterotroph
+intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000114 ! bactivory
 
 [Term]
@@ -676,30 +993,49 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 id: ECOCORE:00000121
 name: photoorganoautotroph
 def: "A photoautotroph which is capable of using a biogenic organic compound as an electron donor." []
+is_a: ECOCORE:00000125 ! photoorganoheterotroph
 is_a: ECOCORE:00000130 ! photoautotroph
-is_a: STWO:0000001 ! organotroph
+intersection_of: ECOCORE:00000130 ! photoautotroph
 intersection_of: ECOCORE:00000130 ! photoautotroph
 intersection_of: capable_of ECOCORE:00000162 ! organotrophy
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from organic molecule
+property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
+
+[Term]
+id: ECOCORE:00000122
+name: photolithoautotroph
+def: "A photoautotroph which is capable of using an abiogenic organic compound as an electron donor." []
+is_a: ECOCORE:00000076 ! algae
+is_a: ECOCORE:00000126 ! photolithoheterotroph
+is_a: ECOCORE:00000130 ! photoautotroph
+intersection_of: ECOCORE:00000130 ! photoautotroph
+intersection_of: ECOCORE:00000130 ! photoautotroph
+intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from inorganic molecular entity
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
 id: ECOCORE:00000123
 name: chemoorganoautotroph
 def: "A chemoautotroph which is capable of using a biogenic organic compound as an electron donor." []
+is_a: ECOCORE:00000127 ! chemoorganoheterotroph
 is_a: ECOCORE:00000129 ! chemoautotroph
-is_a: STWO:0000001 ! organotroph
+intersection_of: ECOCORE:00000129 ! chemoautotroph
 intersection_of: ECOCORE:00000129 ! chemoautotroph
 intersection_of: capable_of ECOCORE:00000162 ! organotrophy
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from organic molecule
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
 id: ECOCORE:00000124
 name: chemolithoautotroph
 def: "A chemoautotroph which is capable of using an abiogenic organic compound as an electron donor." []
+is_a: ECOCORE:00000128 ! chemolithoheterotroph
 is_a: ECOCORE:00000129 ! chemoautotroph
-is_a: STWO:0000002 ! lithotroph
+intersection_of: ECOCORE:00000129 ! chemoautotroph
 intersection_of: ECOCORE:00000129 ! chemoautotroph
 intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from inorganic molecular entity
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -709,7 +1045,9 @@ def: "A photoheterotroph which is capable of using a biogenic organic compound a
 is_a: ECOCORE:00000131 ! photoheterotroph
 is_a: STWO:0000001 ! organotroph
 intersection_of: ECOCORE:00000131 ! photoheterotroph
+intersection_of: ECOCORE:00000131 ! photoheterotroph
 intersection_of: capable_of ECOCORE:00000162 ! organotrophy
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from organic molecule
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -719,7 +1057,9 @@ def: "A photoheterotroph which is capable of using an abiogenic organic compound
 is_a: ECOCORE:00000131 ! photoheterotroph
 is_a: STWO:0000002 ! lithotroph
 intersection_of: ECOCORE:00000131 ! photoheterotroph
+intersection_of: ECOCORE:00000131 ! photoheterotroph
 intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from inorganic molecular entity
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -729,7 +1069,9 @@ def: "A chemoheterotroph which is capable of using a biogenic organic compound a
 is_a: ECOCORE:00000132 ! chemoheterotroph
 is_a: STWO:0000001 ! organotroph
 intersection_of: ECOCORE:00000132 ! chemoheterotroph
+intersection_of: ECOCORE:00000132 ! chemoheterotroph
 intersection_of: capable_of ECOCORE:00000162 ! organotrophy
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from organic molecule
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -739,29 +1081,37 @@ def: "A chemoheterotroph which is capable of using an abiogenic organic compound
 is_a: ECOCORE:00000132 ! chemoheterotroph
 is_a: STWO:0000002 ! lithotroph
 intersection_of: ECOCORE:00000132 ! chemoheterotroph
+intersection_of: ECOCORE:00000132 ! chemoheterotroph
 intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from inorganic molecular entity
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
 id: ECOCORE:00000129
 name: chemoautotroph
 def: "An autotroph which is capable of obtaining energy from the bonds in a chemical compound." []
+is_a: ECOCORE:00000012 ! mixotroph
 is_a: ECOCORE:00000023 ! autotroph
-is_a: STWO:0000000 ! chemotroph
+is_a: ECOCORE:00000132 ! chemoheterotroph
+intersection_of: ECOCORE:00000023 ! autotroph
 intersection_of: ECOCORE:00000023 ! autotroph
 intersection_of: capable_of ECOCORE:00000163 ! chemotrophy
+intersection_of: STWO:0000048 CHEBI:25367 ! uses as energy source molecule
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
 id: ECOCORE:00000130
 name: photoautotroph
 def: "An autotroph which is capable of transforming light into chemical energy." []
+is_a: ECOCORE:00000012 ! mixotroph
 is_a: ECOCORE:00000023 ! autotroph
-is_a: STWO:0000007 ! phototroph
+is_a: ECOCORE:00000131 ! photoheterotroph
+intersection_of: ECOCORE:00000023 ! autotroph
 intersection_of: ECOCORE:00000023 ! autotroph
 intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000013 ! photoautotrophy
 intersection_of: capable_of ECOCORE:00000017 ! phototrophy
+intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -771,7 +1121,9 @@ def: "A heterotroph which is capable of transforming light into chemical energy.
 is_a: ECOCORE:00000010 ! heterotroph
 is_a: STWO:0000007 ! phototroph
 intersection_of: ECOCORE:00000010 ! heterotroph
+intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000017 ! phototrophy
+intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -781,7 +1133,9 @@ def: "A heterotroph which is capable of obtaining energy from the bonds in a che
 is_a: ECOCORE:00000010 ! heterotroph
 is_a: STWO:0000000 ! chemotroph
 intersection_of: ECOCORE:00000010 ! heterotroph
+intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000163 ! chemotrophy
+intersection_of: STWO:0000048 CHEBI:25367 ! uses as energy source molecule
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -819,6 +1173,16 @@ is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
 intersection_of: ECOCORE:00000019 ! herbivore
 intersection_of: capable_of ECOCORE:00000100 ! seed predation
+property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
+
+[Term]
+id: ECOCORE:00000144
+name: xylophage
+def: "An herbivore that primarily consumes wood" []
+xref: https://www.wikidata.org/entity/Q2072826
+is_a: CARO:0001010 ! organism or virus or viroid
+is_a: ECOCORE:00000019 ! herbivore
+is_a: STWO:0000023 ! phytophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -860,15 +1224,6 @@ is_a: ECOCORE:00000102 ! predation
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
-id: ECOCORE:00000156
-name: piscivore
-def: "A predator that primarily eats fish" []
-synonym: "fish eater" EXACT []
-xref: https://www.wikidata.org/entity/Q1420208
-is_a: ECOCORE:00000089 ! predator
-property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
-
-[Term]
 id: ECOCORE:00000157
 name: filter feeder
 def: "A suspension feeder that acquires nutrition by consuming particles using a filtering apparatus." []
@@ -896,7 +1251,6 @@ is_a: ECOCORE:00000088 ! carnivore
 is_a: STWO:0000013 ! zoophage
 intersection_of: ECOCORE:00000088 ! carnivore
 intersection_of: capable_of ECOCORE:00000165 ! hematophagy
-equivalent_to: STWO:0000016 ! hematophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -931,10 +1285,25 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 id: ECOCORE:00000176
 name: coprophage
 def: "a decomposer which obtains nutrition by consuming feces" []
-is_a: ECOCORE:00000054 ! decomposer
+is_a: ECOCORE:00000055 ! detritivore
+is_a: STWO:0000009 ! exudativore
 intersection_of: ECOCORE:00000054 ! decomposer
 intersection_of: capable_of STWO:0000043 ! coprophagy
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
+
+[Term]
+id: ENVO:00001998
+name: soil
+def: "Soil is an environmental material which is primarily composed of minerals, varying proportions of sand, silt, and clay, organic material such as humus, gases, liquids, and a broad range of resident micro- and macroorganisms." [https://en.wikipedia.org/wiki/Soil]
+comment: 'In engineering terms, soil is referred to as regolith, or loose rock material that lies above the 'solid geology'. Soil is commonly referred to as "earth" or "dirt"; technically, the term "dirt" should be restricted to displaced soil.' https://en.wikipedia.org/wiki/Soil\n\n" The upper limit of soil is the boundary between soil and air, shallow water, live plants, or plant materials that have not begun to decompose. Areas are not considered to have soil if the surface is permanently covered by water too deep (typically more than 2.5 meters) for the growth of rooted plants.\n\nThe lower boundary that separates soil from the nonsoil underneath is most difficult to define. Soil consists of horizons near the Earth's surface that, in contrast to the underlying parent material, have been altered by the interactions of climate, relief, and living organisms over time. Commonly, soil grades at its lower boundary to hard rock or to earthy materials virtually devoid of animals, roots, or other marks of biological activity. For purposes of classification, the lower boundary of soil is arbitrarily set at 200 cm."  Soil taxonomy, 2nd Ed., quoted in http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/edu/?cid=nrcs142p2_054280
+subset: EnvO-Lite-GSC
+synonym: "regolith" BROAD []
+xref: https://en.wikipedia.org/wiki/Soil
+xref: LTER:535
+xref: SPIRE:Soil
+xref: SWEETRealm:Soil
+is_a: ENVO:00010483 ! environmental material
+property_value: editor_note "The various 'has part' and 'has quality' relations may not hold true for all soils; however, I have yet to find counter examples. Require input from a pedologist or similar. [pbuttigieg]" xsd:string
 
 [Term]
 id: ENVO:00010483
@@ -965,9 +1334,16 @@ synonym: "leaf litter" EXACT []
 synonym: "litterfall" EXACT []
 synonym: "soil litter" EXACT []
 synonym: "tree litter" EXACT []
-is_a: ENVO:01000155 ! organic material
+is_a: ENVO:01001103 ! detritus
 relationship: has_part PO:0025034 ! leaf
 relationship: has_quality PATO:0001422 ! dead
+
+[Term]
+id: ENVO:01001103
+name: detritus
+def: "An organic material which is primarily composed of dead particulate matter." [https://en.wikipedia.org/wiki/Detritus]
+is_a: STWO:4000001 ! particulate organic matter
+is_a: STWO:4000008 ! dead organic matter
 
 [Term]
 id: ENVO:02500000
@@ -975,6 +1351,17 @@ name: environmental system process
 def: "A process in which includes the components of an environmental system as participants." []
 comment: This is a convenience class for organisation and should not be used for annotation.
 is_a: BFO:0000015 ! process
+
+[Term]
+id: ENVO:04000008
+name: soil organic matter
+def: "Organic material in soil, which consists of plant and animal residues at various stages of decomposition, cells and tissues of soil organisms, and substances synthesized by soil organisms." [https://en.wikipedia.org/wiki/Soil_organic_matter]
+subset: envoNceas
+is_a: ENVO:01000155 ! organic material
+relationship: has_part STWO:4000008 ! dead organic matter
+relationship: part_of ENVO:00001998 ! soil
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0003-1264-1166
+property_value: http://purl.org/dc/elements/1.1/date 2019-04-05T00:53:06Z xsd:dateTime
 
 [Term]
 id: FAO:0000001
@@ -1030,40 +1417,37 @@ created_by: midori
 creation_date: 2019-05-03T13:33:22Z
 
 [Term]
-id: FOODON:03420116
-is_a: BFO:0000040 ! material entity
-
-[Term]
-id: FOODON:03420122
-is_a: FOODON:03420127
-
-[Term]
-id: FOODON:03420127
-is_a: FOODON:03420164
-
-[Term]
-id: FOODON:03420144
-is_a: FOODON:03420148
-
-[Term]
-id: FOODON:03420148
-is_a: FOODON:03420174
-
-[Term]
-id: FOODON:03420164
-is_a: FOODON:03420116
-
-[Term]
-id: FOODON:03420174
-is_a: FOODON:03420116
-
-[Term]
 id: NCBITaxon:1
 name: root
 namespace: ncbi_taxonomy
 synonym: "all" RELATED synonym []
 xref: GC_ID:1
 is_a: BFO:0000040 ! material entity
+
+[Term]
+id: NCBITaxon:117565
+name: Myxini
+namespace: ncbi_taxonomy
+synonym: "Agnatha" RELATED in_part []
+synonym: "fish" EXACT common_name []
+synonym: "fishes" EXACT common_name []
+synonym: "Hyperotreti" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:1476529 ! Cyclostomata
+property_value: has_rank NCBITaxon:class
+
+[Term]
+id: NCBITaxon:117569
+name: Hyperoartia
+namespace: ncbi_taxonomy
+synonym: "Agnatha" RELATED in_part []
+synonym: "Cephalaspidomorphi" RELATED in_part []
+synonym: "fish" EXACT common_name []
+synonym: "fishes" EXACT common_name []
+synonym: "Monorhina" RELATED in_part []
+xref: GC_ID:1
+is_a: NCBITaxon:1476529 ! Cyclostomata
+property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:117570
@@ -1082,6 +1466,20 @@ xref: GC_ID:1
 is_a: NCBITaxon:117570 ! Teleostomi
 
 [Term]
+id: NCBITaxon:118072
+name: Coelacanthimorpha
+namespace: ncbi_taxonomy
+synonym: "Actinistia" RELATED synonym []
+synonym: "Choanichthyes" RELATED in_part []
+synonym: "Crossopterygii" RELATED in_part []
+synonym: "fish" EXACT common_name []
+synonym: "fishes" EXACT common_name []
+synonym: "lobe-finned fishes" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:8287 ! Sarcopterygii
+property_value: has_rank NCBITaxon:class
+
+[Term]
 id: NCBITaxon:1206794
 name: Ecdysozoa
 namespace: ncbi_taxonomy
@@ -1094,6 +1492,16 @@ name: Lophotrochozoa
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:2697495 ! Spiralia
+
+[Term]
+id: NCBITaxon:131221
+name: Streptophytina
+namespace: ncbi_taxonomy
+synonym: "Charophyta/Embryophyta group" RELATED synonym []
+synonym: "charophyte/embryophyte group" EXACT equivalent_name []
+xref: GC_ID:1
+is_a: NCBITaxon:35493 ! Streptophyta
+property_value: has_rank NCBITaxon:subphylum
 
 [Term]
 id: NCBITaxon:131567
@@ -1149,6 +1557,25 @@ xref: GC_ID:1
 is_a: NCBITaxon:8287 ! Sarcopterygii
 
 [Term]
+id: NCBITaxon:13809
+name: Anthocerotophyta
+namespace: ncbi_taxonomy
+synonym: "bryophytes" RELATED in_part []
+synonym: "hornworts" EXACT genbank_common_name []
+synonym: "hornworts" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:3193 ! Embryophyta
+
+[Term]
+id: NCBITaxon:1476529
+name: Cyclostomata
+namespace: ncbi_taxonomy
+synonym: "Agnatha" RELATED synonym []
+synonym: "jawless vertebrates" EXACT genbank_common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
+
+[Term]
 id: NCBITaxon:197562
 name: Pancrustacea
 namespace: ncbi_taxonomy
@@ -1174,6 +1601,7 @@ namespace: ncbi_taxonomy
 synonym: "bacteria" RELATED blast_name []
 synonym: "eubacteria" EXACT genbank_common_name []
 synonym: "Monera" RELATED in_part []
+synonym: "not Bacteria Haeckel 1894" RELATED []
 synonym: "Procaryotae" RELATED in_part []
 synonym: "Prokaryota" RELATED in_part []
 synonym: "Prokaryotae" RELATED in_part []
@@ -1207,6 +1635,7 @@ xref: PMID:9103655
 xref: PMID:9336922
 is_a: NCBITaxon:131567 ! cellular organisms
 property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2153479
@@ -1258,6 +1687,7 @@ xref: PMID:9103655
 xref: PMID:9336922
 is_a: NCBITaxon:131567 ! cellular organisms
 property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2697495
@@ -1292,6 +1722,46 @@ xref: PMID:30257078
 is_a: NCBITaxon:131567 ! cellular organisms
 property_value: has_rank NCBITaxon:superkingdom
 property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:3193
+name: Embryophyta
+namespace: ncbi_taxonomy
+synonym: "higher plants" EXACT common_name []
+synonym: "land plants" EXACT common_name []
+synonym: "land plants" RELATED blast_name []
+synonym: "plants" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:131221 ! Streptophytina
+
+[Term]
+id: NCBITaxon:3195
+name: Marchantiophyta
+namespace: ncbi_taxonomy
+synonym: "bryophytes" RELATED in_part []
+synonym: "Hepaticae" RELATED synonym []
+synonym: "Hepaticopsida" RELATED synonym []
+synonym: "hepatics" EXACT common_name []
+synonym: "liverwort" EXACT common_name []
+synonym: "liverworts" EXACT genbank_common_name []
+synonym: "liverworts" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:9187096
+is_a: NCBITaxon:3193 ! Embryophyta
+
+[Term]
+id: NCBITaxon:3208
+name: Bryophyta
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:3194
+synonym: "bryophytes" RELATED in_part []
+synonym: "Bryopsida" RELATED synonym []
+synonym: "mosses" EXACT genbank_common_name []
+synonym: "mosses" RELATED blast_name []
+synonym: "Musci" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:3193 ! Embryophyta
 
 [Term]
 id: NCBITaxon:32523
@@ -1324,9 +1794,9 @@ name: Viridiplantae
 namespace: ncbi_taxonomy
 synonym: "Chlorobionta" RELATED synonym []
 synonym: "Chlorophyta/Embryophyta group" EXACT equivalent_name []
-synonym: "Chlorophyta/Embryophyta group" RELATED []
+synonym: "Chlorophyta/Embryophyta group" RELATED synonym []
 synonym: "chlorophyte/embryophyte group" EXACT equivalent_name []
-synonym: "chlorophyte/embryophyte group" RELATED []
+synonym: "chlorophyte/embryophyte group" RELATED synonym []
 synonym: "Chloroplastida" RELATED synonym []
 synonym: "green plants" EXACT common_name []
 synonym: "green plants" RELATED blast_name []
@@ -1335,6 +1805,7 @@ xref: PMID:16248873
 xref: PMID:30257078
 is_a: NCBITaxon:2759 ! Eukaryota
 property_value: has_rank NCBITaxon:kingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33154
@@ -1344,6 +1815,7 @@ synonym: "Fungi/Metazoa group" RELATED synonym []
 synonym: "opisthokonts" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:2759 ! Eukaryota
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33208
@@ -1356,6 +1828,7 @@ synonym: "multicellular animals" EXACT common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:33154 ! Opisthokonta
 property_value: has_rank NCBITaxon:kingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33213
@@ -1363,6 +1836,7 @@ name: Bilateria
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:6072 ! Eumetazoa
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33317
@@ -1435,6 +1909,14 @@ xref: GC_ID:1
 is_a: NCBITaxon:33213 ! Bilateria
 
 [Term]
+id: NCBITaxon:35493
+name: Streptophyta
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:33090 ! Viridiplantae
+property_value: has_rank NCBITaxon:phylum
+
+[Term]
 id: NCBITaxon:36668
 name: Formicidae
 namespace: ncbi_taxonomy
@@ -1474,6 +1956,7 @@ name: Eumetazoa
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:33208 ! Metazoa
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:6231
@@ -1522,6 +2005,17 @@ synonym: "Uniramia" RELATED in_part []
 xref: GC_ID:1
 is_a: NCBITaxon:197562 ! Pancrustacea
 property_value: has_rank NCBITaxon:subphylum
+
+[Term]
+id: NCBITaxon:7088
+name: Lepidoptera
+namespace: ncbi_taxonomy
+synonym: "butterflies and moths" EXACT genbank_common_name []
+synonym: "moths" EXACT common_name []
+synonym: "moths" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:85604 ! Amphiesmenoptera
+property_value: has_rank NCBITaxon:order
 
 [Term]
 id: NCBITaxon:7399
@@ -1605,6 +2099,49 @@ xref: GC_ID:1
 is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
 
 [Term]
+id: NCBITaxon:7777
+name: Chondrichthyes
+namespace: ncbi_taxonomy
+synonym: "cartilaginous fishes" EXACT genbank_common_name []
+synonym: "cartilaginous fishes" RELATED blast_name []
+synonym: "fish" EXACT common_name []
+synonym: "fishes" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:7776 ! Gnathostomata <vertebrates>
+property_value: has_rank NCBITaxon:class
+
+[Term]
+id: NCBITaxon:7878
+name: Dipnoi
+namespace: ncbi_taxonomy
+synonym: "Choanichthyes" RELATED in_part []
+synonym: "Dipneusti" RELATED synonym []
+synonym: "dipnoans" EXACT common_name []
+synonym: "Dipnomorpha" RELATED synonym []
+synonym: "fish" EXACT common_name []
+synonym: "fishes" EXACT common_name []
+synonym: "lungfishes" EXACT genbank_common_name []
+synonym: "lungfishes" RELATED blast_name []
+synonym: "Osteichthyes" RELATED in_part []
+xref: GC_ID:1
+is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
+property_value: has_rank NCBITaxon:class
+
+[Term]
+id: NCBITaxon:7898
+name: Actinopterygii
+namespace: ncbi_taxonomy
+synonym: "Actinopterygi" RELATED synonym []
+synonym: "bony fishes" RELATED blast_name []
+synonym: "fish" EXACT common_name []
+synonym: "fishes" EXACT common_name []
+synonym: "Osteichthyes" RELATED in_part []
+synonym: "ray-finned fishes" EXACT genbank_common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:117571 ! Euteleostomi
+property_value: has_rank NCBITaxon:superclass
+
+[Term]
 id: NCBITaxon:8287
 name: Sarcopterygii
 namespace: ncbi_taxonomy
@@ -1651,6 +2188,14 @@ name: Dicondylia
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:50557 ! Insecta
+
+[Term]
+id: NCBITaxon:85604
+name: Amphiesmenoptera
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:33392 ! Holometabola
+property_value: has_rank NCBITaxon:superorder
 
 [Term]
 id: NCBITaxon:8570
@@ -1947,6 +2492,7 @@ synonym: "propagule  (broad)" BROAD []
 synonym: "syncarp (narrow)" NARROW [FNA:67fa41ae-b735-4d89-b5db-7631b873ef7a]
 synonym: "果実 (exact, Japanese)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 xref: PO_GIT:76
+is_a: CARO:0000000 ! anatomical entity
 is_a: PO:0025496 ! multi-tissue plant structure
 
 [Term]
@@ -1988,6 +2534,7 @@ synonym: "radices (exact, plural)" EXACT [FNA:3c46e84c-23e4-416b-91cd-2f7c42e4b1
 synonym: "radix (exact)" EXACT [FNA:e6315684-fc99-4976-b39d-b356c4b7e7fd]
 synonym: "根 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 xref: PO_GIT:578
+is_a: CARO:0000000 ! anatomical entity
 is_a: PO:0025004 ! plant axis
 
 [Term]
@@ -2041,6 +2588,7 @@ synonym: "pyrene (narrow)" NARROW [FNA:f5c50e73-61e3-48ec-b918-6f85b3f40738]
 synonym: "semilla (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "種子 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 xref: PO_GIT:405
+is_a: CARO:0000000 ! anatomical entity
 is_a: PO:0025496 ! multi-tissue plant structure
 
 [Term]
@@ -2094,7 +2642,6 @@ synonym: "hoja (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "葉 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 xref: PO_GIT:274
 xref: PO_GIT:301
-is_a: FOODON:03420144
 is_a: PO:0006001 ! phyllome
 created_by: rwalls
 creation_date: 2010-07-12T01:31:44Z
@@ -2247,7 +2794,9 @@ name: chemotroph
 def: "An organism which is capable of obtaining energy from the bonds in a chemical compound" []
 is_a: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
+intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000163 ! chemotrophy
+intersection_of: STWO:0000048 CHEBI:25367 ! uses as energy source molecule
 
 [Term]
 id: STWO:0000001
@@ -2255,7 +2804,9 @@ name: organotroph
 def: "An organism which is capable of using a biogenic organic compound as an electron donor." []
 is_a: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
+intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000162 ! organotrophy
+intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from organic molecule
 
 [Term]
 id: STWO:0000002
@@ -2263,7 +2814,9 @@ name: lithotroph
 def: "An organism which is capable of using an inorganic compound as an electron donor." []
 is_a: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
+intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
+intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from inorganic molecular entity
 
 [Term]
 id: STWO:0000003
@@ -2317,13 +2870,11 @@ name: necrophage
 def: "A saprophage which obtains nutrition by consuming corpses or carrion." []
 is_a: ECOCORE:00000055 ! detritivore
 is_a: ECOCORE:00000088 ! carnivore
-is_a: STWO:0000011 ! saprophage
 is_a: STWO:0000013 ! zoophage
 
 [Term]
 id: STWO:0000011
 name: saprophage
-is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000054 ! decomposer
 
 [Term]
@@ -2331,7 +2882,7 @@ id: STWO:0000012
 name: saproxylophage
 def: "A saprophage which obtains nutrition by consuming decaying wood." []
 is_a: ECOCORE:00000055 ! detritivore
-is_a: STWO:0000011 ! saprophage
+is_a: ECOCORE:00000144 ! xylophage
 
 [Term]
 id: STWO:0000013
@@ -2391,7 +2942,8 @@ id: STWO:0000021
 name: phloem sap feeder
 def: "An gumnivore that primarily consumes phloem sap." []
 synonym: "phloem feeder" EXACT []
-is_a: ECOCORE:00000145 ! gumnivore
+is_a: ECOCORE:00000019 ! herbivore
+is_a: STWO:0000023 ! phytophage
 
 [Term]
 id: STWO:0000022
@@ -2417,7 +2969,6 @@ is_a: ECOCORE:00000146 ! parasite
 id: STWO:0000025
 name: phytosaprophage
 is_a: ECOCORE:00000055 ! detritivore
-is_a: STWO:0000011 ! saprophage
 
 [Term]
 id: STWO:0000026
@@ -2439,12 +2990,6 @@ name: algophage
 is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
-
-[Term]
-id: STWO:0000029
-name: lepidophage
-def: "A piscivore that primarily eats fish scales." []
-is_a: ECOCORE:00000156 ! piscivore
 
 [Term]
 id: STWO:0000030
@@ -2543,6 +3088,21 @@ synonym: "geophagia" EXACT []
 is_a: ECOCORE:00000058 ! decomposition
 
 [Term]
+id: STWO:0000049
+name: plant exudate
+is_a: PO:0025161 ! portion of plant substance
+
+[Term]
+id: STWO:0000050
+name: gum
+is_a: PO:0025161 ! portion of plant substance
+
+[Term]
+id: STWO:0000051
+name: resin
+is_a: PO:0025161 ! portion of plant substance
+
+[Term]
 id: STWO:4000000
 name: dissolved organic matter
 is_a: ENVO:01000155 ! organic material
@@ -2569,11 +3129,6 @@ synonym: "solar energy" EXACT []
 is_a: STWO:4000003 ! light
 
 [Term]
-id: STWO:4000005
-name: soil organic matter
-is_a: ENVO:01000155 ! organic material
-
-[Term]
 id: STWO:4000006
 name: fresh organic matter
 is_a: STWO:4000002 ! undecomposed organic matter
@@ -2597,11 +3152,11 @@ is_a: ENVO:01000155 ! organic material
 
 [Term]
 id: STWO:4000010
-name: deadwood
+name: decaying wood
+is_a: ENVO:01001103 ! detritus
 is_a: PO:0005848 ! secondary xylem
-is_a: STWO:4000008 ! dead organic matter
 intersection_of: PO:0005848 ! secondary xylem
-intersection_of: has_quality PATO:0001422 ! dead
+intersection_of: has_quality PATO:0001432 ! decayed
 
 [Term]
 id: STWO:4000011
@@ -2718,6 +3273,7 @@ xref: UMLS:C0005767 {source="ncithesaurus:Blood"}
 xref: VHOG:0000224
 xref: XAO:0000124
 xref: ZFA:0000007
+is_a: CARO:0000000 ! anatomical entity
 is_a: UBERON:0000179 ! haemolymphatic fluid
 relationship: dc-contributor https://github.com/cmungall
 relationship: dc-contributor https://github.com/tmeehan
@@ -2770,7 +3326,6 @@ xref: TGMA:0001824
 xref: VHOG:0001726
 xref: XAO:0004001
 xref: ZFA:0001487
-is_a: FOODON:03420122
 is_a: UBERON:0000465 ! material anatomical entity
 relationship: part_of UBERON:0000468 ! multicellular organism
 
@@ -2923,6 +3478,7 @@ xref: MIAA:0000053
 xref: NCIT:C13234
 xref: OpenCyc:Mx4rvVjJMZwpEbGdrcN5Y29ycA
 xref: UMLS:C0015733 {source="ncithesaurus:Feces"}
+is_a: ENVO:01001103 ! detritus
 is_a: UBERON:0000174 ! excreta
 property_value: external_definition "Excretion in semisolid state processed by the intestine.[FMA]" xsd:string {source="FMA:64183"}
 property_value: has_relational_adjective "fecal" xsd:string
@@ -3018,6 +3574,7 @@ synonym: "dead body" RELATED [BTO:0001965]
 xref: BTO:0001965
 xref: http://www.snomedbrowser.com/Codes/Details/127853004
 xref: NCIT:C113674
+is_a: ENVO:01001103 ! detritus
 is_a: UBERON:0000468 ! multicellular organism
 intersection_of: UBERON:0000468 ! multicellular organism
 intersection_of: has_quality PATO:0001422 ! dead
@@ -3145,6 +3702,19 @@ property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 
 [Typedef]
+id: RO:0002434
+name: interacts with
+def: "A relationship that holds between two entities in which the processes executed by the two entities are causally connected." []
+subset: ro-eco
+synonym: "in pairwise interaction with" EXACT []
+property_value: curator_notes "Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules." xsd:string
+property_value: editor_note "Considering relabeling as 'pairwise interacts with'" xsd:anyURI
+property_value: editor_note "This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact." xsd:string
+property_value: foaf-page https://github.com/oborel/obo-relations/wiki/InteractionRelations xsd:anyURI
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: seeAlso http://purl.obolibrary.org/obo/MI_0914 xsd:anyURI
+
+[Typedef]
 id: RO:0002437
 name: biotically interacts with
 def: "An interaction relationship in which at least one of the partners is an organism and the other is either an organism or an abiotic entity with which the organism interacts." []
@@ -3155,6 +3725,7 @@ property_value: seeAlso http://dx.doi.org/10.1016/j.ecoinf.2014.08.005
 property_value: seeAlso http://eol.org/schema/terms/interactsWith xsd:string
 is_symmetric: true
 is_a: RO:0002321 ! ecologically related to
+is_a: RO:0002434 ! interacts with
 
 [Typedef]
 id: RO:0002438
@@ -3626,6 +4197,21 @@ id: RO:0008508
 name: has eggs laid on by
 def: "inverse of lays eggs on" []
 is_a: RO:0002619 ! visited by
+
+[Typedef]
+id: STWO:0000047
+name: acquires carbon from
+is_a: RO:0002457 ! acquires nutrients from
+
+[Typedef]
+id: STWO:0000048
+name: uses as energy source
+is_a: RO:0002437 ! biotically interacts with
+
+[Typedef]
+id: STWO:0000052
+name: obtains electrons or hydrogen from
+is_a: RO:0002437 ! biotically interacts with
 
 [Typedef]
 id: axiom_lost_from_external_ontology

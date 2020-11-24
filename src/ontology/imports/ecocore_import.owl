@@ -20,7 +20,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/ecocore_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-18/imports/ecocore_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-24/imports/ecocore_import.owl"/>
     </owl:Ontology>
     
 
@@ -4989,7 +4989,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A multi-tissue plant structure (PO:0025496) that develops from a gynoecium (PO:0009062), or a single carpel (PO:0009030), and at maturity may have as parts one or more seeds (PO:0009010).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:Laurel_Cooper</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
@@ -4998,7 +4998,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009001"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>frucht (exact, German)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#German"/>
     </owl:Axiom>
@@ -5066,7 +5066,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedTarget>A plant axis (PO:0025004) that lacks shoot axis nodes (PO:0005004) and usually grows indeterminately.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ISBN:978-0879015329</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:9780964022157</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:Laurel_Cooper</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
@@ -5401,7 +5401,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025496"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A plant structure (PO:0009011) that has as parts two or more portions of plant tissue (PO:0009007) of at least two different types and which through specific morphogenetic processes forms a single structural unit demarcated by primarily bona-fide boundaries from other structural units of different types.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CARO:0000055</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:0000055</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
