@@ -8,3 +8,5 @@ PO:0025034 # Leaf
 PO:0000256 # Root hair cell
 PO:0005848 # Secondary xylem (wood)
 PO:0005417 # Phloem
+PO:0025603 # Plant resin
+PO:0025029 # Shoot

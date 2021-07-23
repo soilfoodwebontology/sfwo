@@ -4,3 +4,7 @@ CARO:0001010 # Organism or virus or viroid
 ENVO:01001103 # Detritus
 ENVO:04000008 # Soil organic material
 ENVO:00001998 # Soil
+ENVO:2000017 # Kinetic energy
+CHEBI:72695
+CHEBI:16526
+ECOCORE:00000057

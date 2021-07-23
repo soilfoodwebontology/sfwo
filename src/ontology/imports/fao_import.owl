@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/fao_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-24/imports/fao_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2021-07-23/imports/fao_import.owl"/>
     </owl:Ontology>
     
 
@@ -55,7 +55,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
+        <rdfs:label>database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -198,6 +200,67 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FAO_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0002002"/>
+        <obo:IAO_0000115>A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GO:0075259</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>fruit body</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fruitbody</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fruiting body</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>spore-bearing structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>spore-producing structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sporocarp</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>FAO:0000010</oboInOwl:id>
+        <rdfs:label>sporophore</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>fruit body</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>fruitbody</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>fruiting body</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>spore-bearing structure</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>spore-producing structure</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>sporocarp</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FAO_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000011">
@@ -235,6 +298,66 @@
         <owl:annotatedTarget>A large fruiting body that is composed of masses of intertwined hyphal elements and produces basidia and basidiospores. The basidiocarp is characteristic of the majority of fungi of the subphylum Basidiomycotina, in which it is the site of karyogamy and meiosis. Mushrooms and toadstools are common examples.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0000114</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471940526</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FAO_0000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000001"/>
+        <obo:IAO_0000115>A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>FAO:0000018</oboInOwl:id>
+        <rdfs:label>unicellular structure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000018"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SGD:clt</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FAO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000018"/>
+        <obo:IAO_0000115>A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>FAO:0000019</oboInOwl:id>
+        <rdfs:label>spore</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000019"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471940526</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FAO_0000052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
+        <obo:IAO_0000115>A structure within which spores develop.</obo:IAO_0000115>
+        <oboInOwl:created_by>Maria</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-06-10T12:06:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>GO:0043582</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>FAO:0000052</oboInOwl:id>
+        <rdfs:label>sporangium</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000052"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A structure within which spores develop.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

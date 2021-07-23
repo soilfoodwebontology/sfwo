@@ -1,4 +1,3 @@
-PATO:0001021 # Energy
 PATO:0001432 # Decayed
 PATO:0001422 # Dead
 PATO:0001421 # Alive

@@ -1,0 +1,8 @@
+CHEBI:16526 # Carbon dioxide
+CHEBI:17234 # Glucose
+CHEBI:18246 # Cellulose
+CHEBI:17029 # Chitin
+CHEBI:6457 # Lignin
+CHEBI:26848 # Tannin
+CHEBI:89634 # Melanin
+CHEBI:61266 # Hemicellulose

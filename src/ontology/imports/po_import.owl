@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/po_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2020-11-24/imports/po_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2021-07-23/imports/po_import.owl"/>
     </owl:Ontology>
     
 
@@ -1216,6 +1216,51 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PO_0025029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025004"/>
+        <obo:IAO_0000115>A plant axis (PO:0025004) that is part of a shoot system (PO:0009006).</obo:IAO_0000115>
+        <oboInOwl:created_by>rwalls</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-07-01T03:46:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>caullome (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>eje del epiblasto (epiblastema) (Spanish, exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>シュート軸 (Japanese, exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>plant_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>shoot (related)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>PO:0025029</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/po#Angiosperm"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/po#Arabidopsis"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/po#Maize"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/po#Poaceae"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/po#Rice"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/po#TraitNet"/>
+        <rdfs:comment>Often bears leaves and branches. In vascular plants, has at least one node and one internode.</rdfs:comment>
+        <rdfs:label>shoot axis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025029"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A plant axis (PO:0025004) that is part of a shoot system (PO:0009006).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025029"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>eje del epiblasto (epiblastema) (Spanish, exact)</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:Maria_Alejandra_Gandolfo</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#Spanish"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025029"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>シュート軸 (Japanese, exact)</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIG:Yukiko_Yamazaki</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#Japanese"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PO_0025034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025034">
@@ -1605,6 +1650,34 @@
         <owl:annotatedTarget>師管液 (Japanese, exact)</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIG:Yukiko_Yamazaki</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#Japanese"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025603 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025603">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
+        <obo:IAO_0000115>A portion of plant substance (PO:0025161) that consists of a complex mixture of organic aromatic compounds such as mono-, sesqui-, and diterpenoids.</obo:IAO_0000115>
+        <oboInOwl:created_by>Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date>2014-04-10T09:51:14Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>CHEBI:24913</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CHEBI:26873</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PO_GIT:587</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>pitch  (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>plant_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>oleoresin  (related)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>PO:0025603</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/po#Gymnosperms"/>
+        <rdfs:comment>Plant resins are often produced by Gymnosperms but not restricted to those plants. In the conifers, plant resins are constitutively and inducibly produced through the secretory activity of resin cells (PO:0025604), and can be exuded through a resin canal (PO:0005665) to a site of injury or predator attack.</rdfs:comment>
+        <rdfs:label>plant resin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025603"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A portion of plant substance (PO:0025161) that consists of a complex mixture of organic aromatic compounds such as mono-, sesqui-, and diterpenoids.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11337413</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:Laurel_Cooper</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

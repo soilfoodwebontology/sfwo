@@ -20,3 +20,6 @@ NCBITaxon:117569 # Hyperoartia
 NCBITaxon:118072 # Coelacanthimorpha
 NCBITaxon:7777 # Chondrichthyes
 NCBITaxon:7878 # Dipnoi
+NCBITaxon:7742 # Vertebrata
+NCBITaxon:6933 # Acari
+NCBITaxon:30001 # Collembola

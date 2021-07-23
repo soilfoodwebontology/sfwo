@@ -1,7 +1,2 @@
 RO:0002321 # Ecologically related to
-# RO:0002160 # only in taxon
-# RO:0000086 # has quality
-# RO:0002473 # composed primarily of
-# RO:0002638 # intercellular endoparasite of
-# RO:0002455 # pollinates
-# RO:0002470 # eats
+RO:0003001 # produced by

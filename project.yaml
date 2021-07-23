@@ -28,6 +28,7 @@ import_group:
   - envo
   - fao
   - ncbitaxon
+  - chebi
   products:
   - description: null
     id: ro
@@ -71,6 +72,11 @@ import_group:
     robot_settings: null
   - description: null
     id: ncbitaxon
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: chebi
     mirror_from: null
     rebuild_if_source_changes: true
     robot_settings: null

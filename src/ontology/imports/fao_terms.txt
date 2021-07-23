@@ -1,3 +1,6 @@
 FAO:0000012 # Basidiocarp
 FAO:0001001 # Hypha
 FAO:0000011 # Mycelium
+FAO:0000019 # Spore
+FAO:0000052 # Sporangium
+FAO:0000010 # Sporophore
