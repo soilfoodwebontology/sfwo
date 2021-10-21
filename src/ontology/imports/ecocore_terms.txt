@@ -10,3 +10,4 @@ ECOCORE:00000122 # photolithoautotroph
 GO:0036377 # arbuscular mycorrhizal association
 GO:0085030 # symbiotic process benefiting host
 ECOCORE:00000103 # Scavenging
+ECOCORE:00000140 # Nectarivore

@@ -23,3 +23,5 @@ NCBITaxon:7878 # Dipnoi
 NCBITaxon:7742 # Vertebrata
 NCBITaxon:6933 # Acari
 NCBITaxon:30001 # Collembola
+NCBITaxon:4345 # Ericaceae
+NCBITaxon:4747 # Orchidaceae

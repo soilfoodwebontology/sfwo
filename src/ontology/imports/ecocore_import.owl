@@ -20,7 +20,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/ecocore_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2021-07-23/imports/ecocore_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2021-07-26/imports/ecocore_import.owl"/>
     </owl:Ontology>
     
 
@@ -2056,7 +2056,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16526"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Drug_Central:4256</owl:annotatedTarget>
-        <oboInOwl:source>DrugCentral</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugCentral</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16526"/>
@@ -2870,7 +2870,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000056 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
         <obo:IAO_0000115>A decomposer that obtains nutrition through extracellular digestion of decaying organic matter</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0002-2908-3327</obo:IAO_0000117>
         <rdfs:label>saprotroph</rdfs:label>
@@ -3279,6 +3278,19 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+        <obo:IAO_0000115>An herbivore that primarily consumes nectar</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0002-2908-3327</obo:IAO_0000117>
+        <oboInOwl:hasDbXref>https://www.wikidata.org/entry/Q120880</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>nectar eater</oboInOwl:hasExactSynonym>
+        <rdfs:label>nectarivore</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000143 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000143">
@@ -3457,9 +3469,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A portion of environmental material is a fiat object part which forms the medium or part of the medium of an environmental system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>URL:http://ontology.buffalo.edu/smith/articles/niches.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3470,7 +3482,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000155">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <obo:IAO_0000115>Environmental material derived from living organisms and composed primarily of one or more biomacromolecules.</obo:IAO_0000115>
-        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-20T08:40:04Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>EcoLexicon:organic_material</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>biomass</oboInOwl:hasExactSynonym>
@@ -3481,7 +3493,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Environmental material derived from living organisms and composed primarily of one or more biomacromolecules.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4472,7 +4484,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A multi-tissue plant structure (PO:0025496) that develops from a gynoecium (PO:0009062), or a single carpel (PO:0009030), and at maturity may have as parts one or more seeds (PO:0009010).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:Laurel_Cooper</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -4481,7 +4493,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>frucht (exact, German)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#German"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -4548,7 +4560,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasDbXref>ISBN:978-0879015329</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:9780964022157</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NYBG:Brandon_Sinn</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NYBG:Dario_Cavaliere</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:Laurel_Cooper</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -5431,5 +5443,5 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

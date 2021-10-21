@@ -10,3 +10,5 @@ PO:0005848 # Secondary xylem (wood)
 PO:0005417 # Phloem
 PO:0025603 # Plant resin
 PO:0025029 # Shoot
+PO:0009055 # Bract
+
