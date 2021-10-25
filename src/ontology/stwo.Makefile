@@ -46,7 +46,7 @@ imports/pato_import.owl: mirror/pato.owl imports/pato_terms_combined.txt
 
 imports/uberon_import.owl: mirror/uberon.owl imports/uberon_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/uberon_terms_combined.txt --force true --method MIREOT \
-		remove --term-file imports/chebi_exclude_terms.txt --select "self" --preserve-structure false \
+		remove --term-file imports/chebi_exclude_terms.txt --select "self" --preserve-structure true \
 		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/uberon_import.owl
@@ -58,9 +58,9 @@ imports/fao_import.owl: mirror/fao.owl imports/fao_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/fao_import.owl
 
-imports/chebi_import.owl: mirror/chebi.owl imports/chebi_terms_combined.txt
+imports/chebi_import.owl: mirror/chebi.owl imports/chebi_terms_combined.txt imports/chebi_exclude_terms.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/chebi_terms_combined.txt --intermediates minimal --force true --method MIREOT \
-		remove --term-file imports/chebi_exclude_terms.txt --select "self" --axioms all --preserve-structure false \
+		remove --term-file imports/chebi_exclude_terms.txt --select self --preserve-structure true \
 		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/chebi_import.owl

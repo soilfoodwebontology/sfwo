@@ -12,7 +12,7 @@
      xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#3"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/chebi_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2021-07-23/imports/chebi_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2021-10-25/imports/chebi_import.owl"/>
     </owl:Ontology>
     
 
@@ -231,6 +231,9 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_16526 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16526">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36357"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
         <obo:IAO_0000115>A one-carbon compound with formula CO2 in which the carbon is attached to each oxygen atom by a double bond. A colourless, odourless gas under normal conditions, it is produced during respiration by all animals, fungi and microorganisms that depend directly or indirectly on living or decaying plants for food.</obo:IAO_0000115>
         <chebi:charge>0</chebi:charge>
@@ -581,7 +584,9 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_17029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33694"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
         <obo:IAO_0000115>An aminoglycan consisting of beta-(1-&gt;4)-linked N-acetyl-D-glucosamine residues.</obo:IAO_0000115>
         <chebi:charge>0</chebi:charge>
         <chebi:formula>H2O(C8H13NO5)n</chebi:formula>
@@ -657,6 +662,8 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_17234 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17234">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
         <obo:IAO_0000115>An aldohexose used as a source of energy and metabolic intermediate.</obo:IAO_0000115>
         <chebi:charge>0</chebi:charge>
         <chebi:formula>C6H12O6</chebi:formula>
@@ -730,7 +737,9 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_18154 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_18154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33694"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
         <obo:IAO_0000115>A biomacromolecule consisting of large numbers of monosaccharide residues linked glycosidically. This term is commonly used only for those containing more than ten monosaccharide residues.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>CHEBI:14864</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>CHEBI:26205</oboInOwl:hasAlternativeId>
@@ -1074,7 +1083,10 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_26195 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33659"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36357"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
         <obo:IAO_0000115>Members of the class of phenols that contain 2 or more benzene rings each of which is substituted by at least one hydroxy group.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Polyphenol</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
@@ -1116,6 +1128,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_33659 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33659">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>organic aromatic compounds</oboInOwl:hasRelatedSynonym>
@@ -1136,6 +1149,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33694">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36357"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
         <obo:IAO_0000115>A macromolecule formed by a living organism.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>biopolymer</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
@@ -1194,6 +1208,42 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50860 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50860">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <obo:IAO_0000115>Any molecular entity that contains carbon.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>CHEBI:25700</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:33244</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>organic compounds</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>organic entity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>organic molecular entities</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:50860</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label>organic molecular entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>organic compounds</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>organic entity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>organic molecular entities</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_61266 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_61266">
@@ -1240,6 +1290,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
         <obo:IAO_0000115>Any molecule that consists of at least one carbon atom as part of the electrically neutral entity.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>organic compound</oboInOwl:hasRelatedSynonym>

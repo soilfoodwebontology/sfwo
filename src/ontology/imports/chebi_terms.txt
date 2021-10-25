@@ -6,3 +6,5 @@ CHEBI:6457 # Lignin
 CHEBI:26848 # Tannin
 CHEBI:89634 # Melanin
 CHEBI:61266 # Hemicellulose
+CHEBI:50860 # Organic molecular entity
+CHEBI:72695 # Organic molecule

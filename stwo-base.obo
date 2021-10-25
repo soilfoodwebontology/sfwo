@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: stwo/releases/2020-11-24/stwo-base.owl
+data-version: stwo/releases/2021-10-25/stwo-base.owl
 ontology: stwo/stwo-base
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Soil Trophic Web Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2020-11-24" xsd:string
+property_value: owl:versionInfo "2021-10-25" xsd:string
 
 [Term]
 id: BFO:0000003
@@ -28,6 +28,7 @@ intersection_of: RO:0002215 ECOCORE:00000011
 
 [Term]
 id: ECOCORE:00000015
+synonym: "fungal feeder" EXACT []
 intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000016
 
@@ -36,6 +37,7 @@ id: ECOCORE:00000019
 synonym: "plant feeder" NARROW []
 intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000020
+equivalent_to: STWO:0000023 ! phytophage
 
 [Term]
 id: ECOCORE:00000023
@@ -69,6 +71,11 @@ intersection_of: ECOCORE:00000054
 intersection_of: RO:0002215 ECOCORE:00000059
 
 [Term]
+id: ECOCORE:00000076
+intersection_of: ECOCORE:00000130
+intersection_of: STWO:0000062 ! microorganism
+
+[Term]
 id: ECOCORE:00000084
 equivalent_to: STWO:0000026 ! phyllophage
 
@@ -98,14 +105,19 @@ equivalent_to: STWO:0000010 ! necrophage
 
 [Term]
 id: ECOCORE:00000091
+synonym: "entomophage" EXACT []
 intersection_of: ECOCORE:00000089
 intersection_of: RO:0002215 ECOCORE:00000108
-equivalent_to: STWO:0000014 ! entomophage
 
 [Term]
 id: ECOCORE:00000098
+synonym: "bacterial feeder" EXACT []
 intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000114
+
+[Term]
+id: ECOCORE:00000103
+is_a: ECOCORE:00000057
 
 [Term]
 id: ECOCORE:00000121
@@ -165,6 +177,7 @@ intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from
 
 [Term]
 id: ECOCORE:00000129
+is_a: STWO:0000000 ! chemotroph
 intersection_of: ECOCORE:00000023
 intersection_of: ECOCORE:00000023
 intersection_of: RO:0002215 ECOCORE:00000163
@@ -173,21 +186,18 @@ intersection_of: STWO:0000048 CHEBI:25367 ! uses as energy source
 [Term]
 id: ECOCORE:00000130
 intersection_of: ECOCORE:00000023
-intersection_of: ECOCORE:00000023
 intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000013
 intersection_of: RO:0002215 ECOCORE:00000017
-intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 
 [Term]
 id: ECOCORE:00000131
 intersection_of: ECOCORE:00000010
-intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000017
-intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 
 [Term]
 id: ECOCORE:00000132
+is_a: STWO:0000000 ! chemotroph
 intersection_of: ECOCORE:00000010
 intersection_of: ECOCORE:00000010
 intersection_of: RO:0002215 ECOCORE:00000163
@@ -224,6 +234,7 @@ equivalent_to: STWO:0000041 ! collector filterer
 
 [Term]
 id: ECOCORE:00000164
+synonym: "hematophage" EXACT []
 intersection_of: ECOCORE:00000088
 intersection_of: RO:0002215 ECOCORE:00000165
 
@@ -256,7 +267,7 @@ relationship: RO:0000086 PATO:0001422
 [Term]
 id: ENVO:01001103
 is_a: STWO:4000001 ! particulate organic matter
-is_a: STWO:4000008 ! dead organic matter
+equivalent_to: STWO:4000008 ! dead organic matter
 
 [Term]
 id: ENVO:04000008
@@ -295,6 +306,7 @@ intersection_of: OBI:0100026
 intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000162
 intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000002
@@ -305,6 +317,7 @@ intersection_of: OBI:0100026
 intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000014
 intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000003
@@ -337,11 +350,15 @@ def: "An organism which is capable of transforming light into chemical energy." 
 is_a: OBI:0100026
 intersection_of: OBI:0100026
 intersection_of: RO:0002215 ECOCORE:00000017
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000008
 name: geophage
 def: "A decomposer which obtains nutrition by consuming earth or soil-like substrates such as clay or chalk." []
+synonym: "geophagous" EXACT []
+synonym: "humiphage" RELATED []
+synonym: "soil feeder" EXACT []
 is_a: ECOCORE:00000054
 intersection_of: ECOCORE:00000054
 intersection_of: RO:0002215 STWO:0000044 ! geophagy
@@ -349,14 +366,17 @@ intersection_of: RO:0002215 STWO:0000044 ! geophagy
 [Term]
 id: STWO:0000009
 name: exudativore
-def: "A heterotroph that consumes plan or animal exudates." []
+def: "A heterotroph that consumes plant or animal exudates." []
+synonym: "exudate feeder" EXACT []
 is_a: ECOCORE:00000010
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000010
 name: necrophage
 def: "A saprophage which obtains nutrition by consuming corpses or carrion." []
-is_a: STWO:0000011 ! saprophage
+is_a: ECOCORE:00000055
+is_obsolete: true
 
 [Term]
 id: STWO:0000011
@@ -367,55 +387,58 @@ is_a: ECOCORE:00000054
 id: STWO:0000012
 name: saproxylophage
 def: "A saprophage which obtains nutrition by consuming decaying wood." []
-is_a: STWO:0000011 ! saprophage
+synonym: "saproxylophagous" EXACT []
+is_a: ECOCORE:00000055
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000013
 name: zoophage
+def: "A heterotroph feeding on animal material." []
+synonym: "zoophagous" EXACT []
 is_a: ECOCORE:00000010
-
-[Term]
-id: STWO:0000014
-name: entomophage
-is_a: ECOCORE:00000089
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000015
 name: malacophage
 def: "A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods." []
-is_a: STWO:0000013 ! zoophage
-
-[Term]
-id: STWO:0000016
-name: hematophage
-def: "A zoophage that feeds on blood." []
-is_a: STWO:0000013 ! zoophage
+synonym: "malacophagous" EXACT []
+is_a: ECOCORE:00000089
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000017
 name: oophage
 def: "A zoophage that feeds on eggs." []
+synonym: "oophagous" EXACT []
 is_a: STWO:0000013 ! zoophage
 intersection_of: STWO:0000013 ! zoophage
 intersection_of: RO:0002215 ECOCORE:00000109
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000018
 name: myrmecophage
 def: "An entomophage that feeds on ants." []
-is_a: STWO:0000014 ! entomophage
+synonym: "myrmecophagous" EXACT []
+is_a: ECOCORE:00000091
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000019
 name: nematophage
 def: "A zoophage that primarily eats nematodes." []
-is_a: STWO:0000013 ! zoophage
+synonym: "nematophagous" EXACT []
+is_a: ECOCORE:00000089
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000020
 name: honeydew feeder
 def: "An exudativore that consumes honeydew produced by phloem sap-feeding insects." []
-is_a: STWO:0000009 ! exudativore
+is_a: STWO:0000069 ! animal exudate feeder
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000021
@@ -423,17 +446,21 @@ name: phloem sap feeder
 def: "An gumnivore that primarily consumes phloem sap." []
 synonym: "phloem feeder" EXACT []
 is_a: ECOCORE:00000019
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000022
 name: rhizophage
 synonym: "racidivore" EXACT []
 is_a: ECOCORE:00000019
+is_obsolete: true
 
 [Term]
 id: STWO:0000023
 name: phytophage
 is_a: ECOCORE:00000010
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+is_obsolete: true
 
 [Term]
 id: STWO:0000024
@@ -441,91 +468,107 @@ name: plant parasite
 def: "A parasite whose host is a plant." []
 synonym: "phytoparasite" EXACT []
 is_a: ECOCORE:00000146
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000025
 name: phytosaprophage
-is_a: STWO:0000011 ! saprophage
+def: "A detritivore that consumes dead or decaying plant material." []
+synonym: "phytosaprophagous" EXACT []
+is_a: ECOCORE:00000055
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000026
 name: phyllophage
+synonym: "phyllophagous" EXACT []
 is_a: ECOCORE:00000019
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+is_obsolete: true
 
 [Term]
 id: STWO:0000027
 name: bryophage
 def: "An herbivore that primarily consumes bryophytes (mosses, liverworts, and hornworts)." []
+synonym: "bryophagous" EXACT []
+synonym: "moss feeder" EXACT []
 is_a: ECOCORE:00000019
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000028
 name: algophage
 is_a: ECOCORE:00000019
+is_obsolete: true
 
 [Term]
 id: STWO:0000030
 name: ophiophage
 def: "A zoophage that primarily eats snakes." []
+synonym: "ophiophagous" EXACT []
 synonym: "serpentivore" EXACT []
-is_a: STWO:0000013 ! zoophage
-intersection_of: STWO:0000013 ! zoophage
+is_a: ECOCORE:00000089
+intersection_of: ECOCORE:00000089
 intersection_of: RO:0002215 ECOCORE:00000154
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000031
 name: aphidophage
 def: "An entomophage that feeds on aphids." []
 synonym: "aphidiphage" EXACT []
-is_a: STWO:0000014 ! entomophage
+synonym: "aphidophagous" EXACT []
+is_a: ECOCORE:00000091
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000032
 name: scraper
 def: "An herbivore that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates." []
 is_a: ECOCORE:00000019
-
-[Term]
-id: STWO:0000033
-name: engulfer
-def: "A predator that feeds on its prey by engulfing and swallowing the prey whole." []
-is_a: ECOCORE:00000089
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000034
 name: fluid feeder
 def: "A heterotroph that obtains nutrition by consuming other organisms' fluids." []
 is_a: ECOCORE:00000010
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000035
 name: piercer and sucker
 def: "A sucker with sharp or chewing mouthparts that pierce food items to allow internal fluids to be sucked out." []
 is_a: STWO:0000036 ! sucker
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000036
 name: sucker
 def: "A fluid feeder that feeds by sucking fluids into its mouth." []
 is_a: STWO:0000034 ! fluid feeder
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000037
 name: shredder
 def: "A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves." []
 is_a: ECOCORE:00000010
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000038
 name: active suspension feeder
 def: "A suspension feeder that uses ciliary or muscular activity to create feeding currents." []
 is_a: ECOCORE:00000051
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000039
 name: passive suspension feeder
 def: "A suspension feeder that utilises the natural flow to bring particles in contact with feeding structures." []
 is_a: ECOCORE:00000051
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000040
@@ -536,6 +579,7 @@ is_a: ECOCORE:00000010
 id: STWO:0000041
 name: collector filterer
 is_a: ECOCORE:00000051
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000042
@@ -558,91 +602,331 @@ synonym: "geophagia" EXACT []
 is_a: ECOCORE:00000058
 
 [Term]
+id: STWO:0000045
+name: invertebrate carrion
+def: "A carcass of an invertebrate organism" []
+is_a: UBERON:0008979
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000046
+name: vertebrate carrion
+def: "A carcass of a vertebrate organism" []
+is_a: UBERON:0008979
+intersection_of: NCBITaxon:7742
+intersection_of: RO:0000086 PATO:0001422
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
 id: STWO:0000049
 name: plant exudate
+def: "A portion of plant substance that is or was emitted by a plant through pores or wound." []
 is_a: PO:0025161
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000050
-name: gum
+name: plant gum
+def: "A portion of plant substance composed of sap or other resinous material, associated with certain plant species." []
 is_a: PO:0025161
 
 [Term]
 id: STWO:0000051
-name: resin
-is_a: PO:0025161
+name: root exudate
+def: "A plant exudate excreted by the roots of living plants." []
+is_a: STWO:0000049 ! plant exudate
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000053
+name: acariphage
+def: "A predator that primarily eats acari" []
+synonym: "acariphagous" EXACT []
+is_a: ECOCORE:00000089
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000054
+name: animal parasite
+def: "A parasite whose host is an animal." []
+is_a: ECOCORE:00000146
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000055
+name: insect parasite
+def: "An animal parasite whose host is an insect." []
+synonym: "entomogenous organism" EXACT []
+is_a: STWO:0000054 ! animal parasite
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000056
+name: ectomycorrhizal association
+is_a: GO:0044403
+
+[Term]
+id: STWO:0000057
+name: light energy
+def: "A kind of kinetic energy that propagates as waves of any wavelength, whether visible or not." []
+is_a: ENVO:2000017
+
+[Term]
+id: STWO:0000058
+name: springtail feeder
+def: "A predator that primarily eats springtails" []
+is_a: ECOCORE:00000089
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000059
+name: mutualism
+def: "A symbiotrophic process during which there is a transfer of energy and nutrients between two living entities. This process has positive effects on the growth rates of both entities." []
+is_a: ECOCORE:00000060
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000060
+name: zoosaprophage
+def: "A detritivore that consumes dead or decaying animal material." []
+synonym: "zoosaprophagous" EXACT []
+is_a: ECOCORE:00000055
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000061
+name: microbivore
+def: "A heterotroph that feeds on microorganisms." []
+is_a: ECOCORE:00000010
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000062
+name: microorganism
+def: "An organism of microscopic size, which may exist in its single-celled form or as a colony of cells." []
+is_a: NCBITaxon:131567
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000063
+name: trophic level omnivore
+def: "A heterotroph that consumes both animals and lower trophic level organisms." []
+is_a: ECOCORE:00000010
+property_value: IAO:0000117 https://orcid.org/0000-0002-4456-1710 xsd:string
+
+[Term]
+id: STWO:0000064
+name: protist
+def: "An eukaryotic microorganism that is not an animal, plant, or fungus." []
+is_a: STWO:0000062 ! microorganism
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000065
+name: protistivore
+def: "A heterotroph that feeds on protists." []
+synonym: "protistivorous" EXACT []
+is_a: ECOCORE:00000010
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000068
+name: plant exudate feeder
+def: "An exudativore that consumes plant exudates." []
+is_a: STWO:0000009 ! exudativore
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000069
+name: animal exudate feeder
+def: "An exudativore that consumes animal exudates." []
+is_a: STWO:0000009 ! exudativore
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000070
+name: wood saprotroph
+def: "A saprotroph that obtains nutrition through extracellular digestion of wood" []
+is_a: ECOCORE:00000056
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000071
+name: ectomycorrhizal
+def: "A mycorrhizal fungus whose hyphae do not penetrate the plant cell wall." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: RO:0002215 STWO:0000056 ! ectomycorrhizal association
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000072
+name: mycorrhizal
+def: "A symbiotroph involved in a mutual symbiotic association with the roots of a plant." []
+is_a: ECOCORE:00000045
+intersection_of: NCBITaxon:4751
+intersection_of: RO:0002440 NCBITaxon:33090
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000073
+name: arbuscular mycorrhizal
+def: "A mycorrhizal fungus whose hyphae penetrate the plant cell wall and invaginate its cell membrane." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: RO:0002215 GO:0036377
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000074
+name: fungal parasite
+def: "A parasite whose host is a fungus." []
+synonym: "mycoparasite" EXACT []
+is_a: ECOCORE:00000146
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000076
+name: litter saprotroph
+synonym: "leaf saprotroph" NARROW []
+is_a: ECOCORE:00000056
+property_value: IAO:0000117 "A saprotroph that obtains nutrition through extracellular digestion of plant litter." xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000077
+name: dung saprotroph
+def: "A saprotroph that obtains nutrition through extracellular digestion of feces." []
+is_a: ECOCORE:00000056
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000078
+name: soil saprotroph
+is_a: ECOCORE:00000056
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000079
+name: ericoid mycorrhizal
+def: "A mycorrhizal fungus involved in a mutualistic association with a member of the plant family Ericaceae." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: RO:0002442 NCBITaxon:4345
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000080
+name: bryophyte parasite
+def: "A parasite whose host is a bryophyte." []
+def: "https://orcid.org/0000-0003-4559-7579" []
+is_a: ECOCORE:00000146
+
+[Term]
+id: STWO:0000081
+name: orchid mycorrhizal
+def: "A mycorrhizal fungus involved in a symbiotic interaction with a member of the plant family Orchidaceae." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: RO:0002440 NCBITaxon:4747
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000082
+name: lichenized
+def: "A symbiotroph involved in a symbiotic association with living green algae or cyanobacteria." []
+is_a: ECOCORE:00000045
+intersection_of: NCBITaxon:4751
+intersection_of: RO:0002440 ECOCORE:00000076
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000083
+name: lichen parasite
+def: "A fungal parasite whose host is a lichenized fungus." []
+synonym: "lichenicolous fungus" NARROW []
+is_a: STWO:0000074 ! fungal parasite
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000084
+name: nectar
+def: "A plant exudate produced in glands called nectaries or nectarines." []
+is_a: STWO:0000049 ! plant exudate
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000085
+name: protist parasite
+def: "A parasite whose host is a protist." []
+synonym: "protistan parasite" EXACT []
+is_a: ECOCORE:00000146
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000086
+name: animal anatomical entity
+def: "An anatomical entity that is or was part of an animal." []
+is_a: UBERON:0001062
+relationship: RO:0002160 NCBITaxon:33208
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000000
 name: dissolved organic matter
+def: "Organic material that is able to pass through a filter, in contrast to particulate organic matter retained on the filter." []
 is_a: ENVO:01000155
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000001
 name: particulate organic matter
+def: "Organic material that does not pass through a filter, in contrast to dissolved organic matter." []
 is_a: ENVO:01000155
-
-[Term]
-id: STWO:4000002
-name: undecomposed organic matter
-is_a: ENVO:01000155
-
-[Term]
-id: STWO:4000003
-name: light
-is_a: PATO:0001021
-
-[Term]
-id: STWO:4000004
-name: sunlight
-synonym: "solar energy" EXACT []
-is_a: STWO:4000003 ! light
-
-[Term]
-id: STWO:4000006
-name: fresh organic matter
-is_a: STWO:4000002 ! undecomposed organic matter
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+is_obsolete: true
 
 [Term]
 id: STWO:4000007
 name: root litter
-is_a: ENVO:01000155
+is_a: ENVO:01000628
 relationship: RO:0000086 PATO:0001422
 relationship: RO:0002473 NCBITaxon:1
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000008
 name: dead organic matter
+def: "Organic material which is primarily composed of organic compounds that has come from the remains of organisms such as plants and animals and their waste products in the environment." []
 is_a: ENVO:01000155
-
-[Term]
-id: STWO:4000009
-name: living organic matter
-is_a: ENVO:01000155
+intersection_of: ENVO:01000155
+intersection_of: RO:0000086 PATO:0001422
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000010
-name: decaying wood
+name: decayed wood
+def: "A detritus which is primarily composed of wood being decomposed by micro-organisms." []
 is_a: ENVO:01001103
 intersection_of: PO:0005848
 intersection_of: RO:0000086 PATO:0001432
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000011
 name: fungal anatomical entity
+def: "An anatomical entity that is or was part of a fungus." []
 is_a: UBERON:0001062
+relationship: RO:0002160 NCBITaxon:4751
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000012
 name: honeydew
+def: "An excreta secreted by aphids and some scale insects as they feed on plant sap. Honeydew is also secreted by certain fungi." []
 is_a: UBERON:0000174
-
-[Term]
-id: STWO:4000013
-name: living wood
-is_a: STWO:4000009 ! living organic matter
-intersection_of: PO:0005848
-intersection_of: RO:0000086 PATO:0001421
+is_a: UBERON:0007780
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000014
@@ -658,6 +942,7 @@ is_a: NCBITaxon:4751
 
 [Term]
 id: UBERON:0000463
+is_a: STWO:0000086 ! animal anatomical entity
 relationship: BFO:0000050 UBERON:0000468
 
 [Term]
@@ -673,9 +958,14 @@ id: UBERON:0001988
 is_a: ENVO:01001103
 
 [Term]
+id: UBERON:0007379
+is_a: STWO:0000086 ! animal anatomical entity
+
+[Term]
 id: UBERON:0008979
 synonym: "carrion" RELATED []
 is_a: ENVO:01001103
+is_a: STWO:0000086 ! animal anatomical entity
 intersection_of: UBERON:0000468
 intersection_of: RO:0000086 PATO:0001422
 

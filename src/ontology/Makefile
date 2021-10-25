@@ -237,8 +237,8 @@ imports/%_import.obo: imports/%_import.owl
 # ----------------------------------------
 #
 
-IMP=true # Global parameter to bypass import generation
-MIR=true # Global parameter to bypass mirror generation
+IMP=false # Global parameter to bypass import generation
+MIR=false # Global parameter to bypass mirror generation
 
 
 ## ONTOLOGY: ro

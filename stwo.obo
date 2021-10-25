@@ -1,5 +1,6 @@
 format-version: 1.2
-data-version: releases/2020-11-24
+data-version: releases/2021-10-25
+subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 subsetdef: Angiosperm ""
 subsetdef: Arabidopsis ""
@@ -9,7 +10,21 @@ subsetdef: CL ""
 subsetdef: disposition_slim ""
 subsetdef: efo_slim ""
 subsetdef: EnvO-Lite-GSC ""
+subsetdef: gocheck_do_not_annotate ""
+subsetdef: goslim_aspergillus ""
+subsetdef: goslim_candida ""
+subsetdef: goslim_chembl ""
+subsetdef: goslim_generic ""
+subsetdef: goslim_metagenomics ""
+subsetdef: goslim_pir ""
+subsetdef: goslim_plant ""
+subsetdef: goslim_pombe ""
+subsetdef: goslim_yeast ""
 subsetdef: Gymnosperms ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: inconsistent_with_fma ""
 subsetdef: Maize ""
 subsetdef: Musa ""
@@ -20,7 +35,6 @@ subsetdef: reference ""
 subsetdef: Rice ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
-subsetdef: scalar_slim ""
 subsetdef: Tomato ""
 subsetdef: TraitNet ""
 subsetdef: uberon_slim ""
@@ -31,7 +45,7 @@ ontology: stwo
 property_value: dc-description "None" xsd:string
 property_value: dc-title "Soil Trophic Web Ontology" xsd:string
 property_value: dcterms-license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2020-11-24" xsd:string
+property_value: owl:versionInfo "2021-10-25" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -158,6 +172,7 @@ property_value: example_of_usage "the disposition of your blood to coagulate" xs
 property_value: example_of_usage "the function of your reproductive organs" xsd:string
 property_value: example_of_usage "the role of being a doctor" xsd:string
 property_value: example_of_usage "the role of this boundary to delineate where Utah and Colorado meet" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078 xsd:string
 property_value: IAO:0000600 "To say that b is a realizable entity is to say that b is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region and is of a type instances of which are realized in processes of a correlated type. (axiom label in BFO2 Reference: [058-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/058-002"}
 property_value: IAO:0000601 "All realizable dependent continuants have independent continuants that are not spatial regions as their bearers. (axiom label in BFO2 Reference: [060-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/060-002"}
 property_value: IAO:0000602 "(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/060-002"}
@@ -168,19 +183,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 id: BFO:0000019
 name: quality
 is_a: BFO:0000020 ! specifically dependent continuant
-property_value: BFO:0000179 "quality" xsd:string
-property_value: BFO:0000180 "Quality" xsd:string
-property_value: example_of_usage "the ambient temperature of this portion of air" xsd:string
-property_value: example_of_usage "the color of a tomato" xsd:string
-property_value: example_of_usage "the length of the circumference of your waist" xsd:string
-property_value: example_of_usage "the mass of this piece of gold." xsd:string
-property_value: example_of_usage "the shape of your nose" xsd:string
-property_value: example_of_usage "the shape of your nostril" xsd:string
-property_value: IAO:0000600 "a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/055-001"}
-property_value: IAO:0000601 "If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/105-001"}
-property_value: IAO:0000602 "(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/105-001"}
-property_value: IAO:0000602 "(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/055-001"}
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
 id: BFO:0000020
@@ -211,19 +213,6 @@ id: BFO:0000024
 name: fiat object
 name: fiat object part
 is_a: BFO:0000040 ! material entity
-property_value: BFO:0000179 "fiat-object-part" xsd:string
-property_value: BFO:0000180 "FiatObjectPart" xsd:string
-property_value: editor_note "BFO 2 Reference: Most examples of fiat object parts are associated with theoretically drawn divisions" xsd:string
-property_value: example_of_usage "or with divisions drawn by cognitive subjects for practical reasons, such as the division of a cake (before slicing) into (what will become) slices (and thus member parts of an object aggregate). However, this does not mean that fiat object parts are dependent for their existence on divisions or delineations effected by cognitive subjects. If, for example, it is correct to conceive geological layers of the Earth as fiat object parts of the Earth, then even though these layers were first delineated in recent times, still existed long before such delineation and what holds of these layers (for example that the oldest layers are also the lowest layers) did not begin to hold because of our acts of delineation.Treatment of material entity in BFOExamples viewed by some as problematic cases for the trichotomy of fiat object part, object, and object aggregate include: a mussel on (and attached to) a rock, a slime mold, a pizza, a cloud, a galaxy, a railway train with engine and multiple carriages, a clonal stand of quaking aspen, a bacterial community (biofilm), a broken femur. Note that, as Aristotle already clearly recognized, such problematic cases – which lie at or near the penumbra of instances defined by the categories in question – need not invalidate these categories. The existence of grey objects does not prove that there are not objects which are black and objects which are white; the existence of mules does not prove that there are not objects which are donkeys and objects which are horses. It does, however, show that the examples in question need to be addressed carefully in order to show how they can be fitted into the proposed scheme, for example by recognizing additional subdivisions [29" xsd:string
-property_value: example_of_usage "the division of the brain into regions" xsd:string
-property_value: example_of_usage "the division of the planet into hemispheres" xsd:string
-property_value: example_of_usage "the dorsal and ventral surfaces of the body" xsd:string
-property_value: example_of_usage "the FMA:regional parts of an intact human body." xsd:string
-property_value: example_of_usage "the upper and lower lobes of the left lung" xsd:string
-property_value: example_of_usage "the Western hemisphere of the Earth" xsd:string
-property_value: IAO:0000600 "b is a fiat object part = Def. b is a material entity which is such that for all times t, if b exists at t then there is some object c such that b proper continuant_part of  c at t and c is demarcated from the remainder of c by a two-dimensional continuant fiat boundary. (axiom label in BFO2 Reference: [027-004])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/027-004"}
-property_value: IAO:0000602 "(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/027-004"}
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
 id: BFO:0000034
@@ -288,18 +277,6 @@ property_value: IAO:0000589 "organism or virus" xsd:string
 id: CARO:0030000
 name: biological entity
 is_a: BFO:0000004 ! independent continuant
-
-[Term]
-id: CHEBI:138675
-name: gas molecular entity
-namespace: chebi_ontology
-def: "Any main group molecular entity that is gaseous at standard temperature and pressure (STP; 0degreeC and 100 kPa)." []
-subset: 3_STAR
-synonym: "gas molecular entities" RELATED [ChEBI]
-synonym: "gaseous molecular entities" RELATED [ChEBI]
-synonym: "gaseous molecular entity" RELATED [ChEBI]
-xref: Wikipedia:https\://en.wikipedia.org/wiki/Gas
-is_a: CHEBI:33579 ! main group molecular entity
 
 [Term]
 id: CHEBI:16526
@@ -367,10 +344,7 @@ xref: PPDB:119
 xref: Reaxys:1900390 {source="Reaxys"}
 xref: UM-BBD_compID:c0131 {source="UM-BBD"}
 xref: Wikipedia:Carbon_dioxide
-is_a: CHEBI:138675 ! gas molecular entity
 is_a: CHEBI:23014 ! carbon oxide
-is_a: CHEBI:64708 ! one-carbon compound
-is_a: ENVO:00010483 ! environmental material
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/CO2/c2-1-3" xsd:string
@@ -380,6 +354,102 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=C=O" xsd:string
 
 [Term]
+id: CHEBI:17029
+name: chitin
+namespace: chebi_ontology
+alt_id: CHEBI:13962
+alt_id: CHEBI:23099
+alt_id: CHEBI:3596
+def: "An aminoglycan consisting of beta-(1->4)-linked N-acetyl-D-glucosamine residues." []
+subset: 3_STAR
+synonym: "(1->4)-2-acetamido-2-deoxy-beta-D-glucan" EXACT IUPAC_NAME [IUPAC]
+synonym: "[1,4-(N-Acetyl-beta-D-glucosaminyl)]n" RELATED [KEGG_COMPOUND]
+synonym: "[4)-beta-D-GlcpNAc(1->]n" RELATED [IUPAC]
+synonym: "beta-1,4-Poly-N-acetyl-D-glucosamine" RELATED [KEGG_COMPOUND]
+synonym: "Chitin" EXACT [KEGG_COMPOUND]
+synonym: "chitin" EXACT [IUPAC]
+synonym: "chitin" EXACT [UniProt]
+xref: CAS:1398-61-4 {source="KEGG COMPOUND"}
+xref: KEGG:C00461
+xref: KEGG:G10483
+is_a: CHEBI:33694 ! biomacromolecule
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "H2O(C8H13NO5)n" xsd:string
+
+[Term]
+id: CHEBI:17234
+name: glucose
+namespace: chebi_ontology
+alt_id: CHEBI:14313
+alt_id: CHEBI:24277
+alt_id: CHEBI:33929
+alt_id: CHEBI:5418
+def: "An aldohexose used as a source of energy and metabolic intermediate." []
+subset: 3_STAR
+synonym: "DL-glucose" RELATED [ChEBI]
+synonym: "Glc" RELATED [JCBN]
+synonym: "gluco-hexose" EXACT IUPAC_NAME [IUPAC]
+synonym: "Glucose" EXACT [KEGG_COMPOUND]
+synonym: "glucose" EXACT IUPAC_NAME [IUPAC]
+synonym: "Glukose" RELATED [ChEBI]
+xref: CAS:50-99-7 {source="KEGG COMPOUND"}
+xref: KEGG:C00293
+xref: Wikipedia:Glucose
+is_a: CHEBI:50860 ! organic molecular entity
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H12O6" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "180.15588" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "180.06339" xsd:string
+
+[Term]
+id: CHEBI:18154
+name: polysaccharide
+namespace: chebi_ontology
+alt_id: CHEBI:14864
+alt_id: CHEBI:26205
+alt_id: CHEBI:8322
+def: "A biomacromolecule consisting of large numbers of monosaccharide residues linked glycosidically. This term is commonly used only for those containing more than ten monosaccharide residues." []
+subset: 3_STAR
+synonym: "Glycan" RELATED [KEGG_COMPOUND]
+synonym: "Glycane" RELATED [ChEBI]
+synonym: "glycans" RELATED [IUPAC]
+synonym: "Glykan" RELATED [ChEBI]
+synonym: "Glykane" RELATED [ChEBI]
+synonym: "polisacarido" RELATED [ChEBI]
+synonym: "polisacaridos" RELATED [IUPAC]
+synonym: "Polysaccharide" EXACT [KEGG_COMPOUND]
+synonym: "polysaccharides" EXACT IUPAC_NAME [IUPAC]
+xref: KEGG:C00420
+is_a: CHEBI:33694 ! biomacromolecule
+
+[Term]
+id: CHEBI:18246
+name: (1->4)-beta-D-glucan
+namespace: chebi_ontology
+alt_id: CHEBI:10812
+alt_id: CHEBI:23063
+alt_id: CHEBI:3529
+def: "A beta-D-glucan in which the glucose units are connected by (1->4) linkages." []
+subset: 3_STAR
+synonym: "(1,4-beta-D-Glucosyl)n" RELATED [KEGG_COMPOUND]
+synonym: "(1,4-beta-D-glucosyl)n" RELATED [IUBMB]
+synonym: "(1,4-beta-D-glucosyl)n" RELATED [UniProt]
+synonym: "(1,4-beta-D-Glucosyl)n+1" RELATED [KEGG_COMPOUND]
+synonym: "(1,4-beta-D-Glucosyl)n-1" RELATED [KEGG_COMPOUND]
+synonym: "(1->4)-beta-D-glucopyranan" EXACT IUPAC_NAME [IUPAC]
+synonym: "1,4-beta-D-Glucan" RELATED [KEGG_COMPOUND]
+synonym: "Cellulose" RELATED [KEGG_COMPOUND]
+xref: CAS:9004-34-6 {source="KEGG COMPOUND"}
+xref: CAS:9004-34-6 {source="ChemIDplus"}
+xref: HMDB:HMDB0006944
+xref: KEGG:C00760
+xref: KEGG:D00093
+xref: KEGG:G10481
+is_a: CHEBI:18154 ! polysaccharide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "(C6H10O5)nH2O" xsd:string
+
+[Term]
 id: CHEBI:23014
 name: carbon oxide
 namespace: chebi_ontology
@@ -387,7 +457,6 @@ subset: 3_STAR
 synonym: "carbon oxides" RELATED [ChEBI]
 synonym: "oxides of carbon" RELATED [ChEBI]
 is_a: CHEBI:25701 ! organic oxide
-is_a: CHEBI:36963 ! organooxygen compound
 
 [Term]
 id: CHEBI:23367
@@ -445,79 +514,48 @@ namespace: chebi_ontology
 def: "An oxide in which the oxygen atom is bonded to a carbon atom." []
 subset: 3_STAR
 synonym: "organic oxides" RELATED [ChEBI]
-is_a: CHEBI:25741 ! oxide
 is_a: CHEBI:72695 ! organic molecule
 
 [Term]
-id: CHEBI:25741
-name: oxide
+id: CHEBI:26195
+name: polyphenol
 namespace: chebi_ontology
-def: "An oxide is a chemical compound of oxygen with other chemical elements." []
+def: "Members of the class of phenols that contain 2 or more benzene rings each of which is substituted by at least one hydroxy group." []
 subset: 3_STAR
-synonym: "oxide" EXACT [ChEBI]
-synonym: "oxides" RELATED [ChEBI]
-is_a: CHEBI:25806 ! oxygen molecular entity
-is_a: CHEBI:37577 ! heteroatomic molecular entity
+synonym: "polyphenols" RELATED [ChEBI]
+xref: Wikipedia:Polyphenol
+is_a: CHEBI:33659 ! organic aromatic compound
 
 [Term]
-id: CHEBI:25806
-name: oxygen molecular entity
+id: CHEBI:26848
+name: tannin
 namespace: chebi_ontology
+def: "Any of a group of astringent polyphenolic vegetable principles or compounds, chiefly complex glucosides of catechol and pyrogallol." []
 subset: 3_STAR
-synonym: "oxygen molecular entities" RELATED [ChEBI]
-synonym: "oxygen molecular entity" EXACT [ChEBI]
-is_a: CHEBI:33304 ! chalcogen molecular entity
+synonym: "tannins" RELATED [ChEBI]
+xref: Wikipedia:Tannin
+is_a: CHEBI:26195 ! polyphenol
 
 [Term]
-id: CHEBI:33285
-name: heteroorganic entity
+id: CHEBI:33659
+name: organic aromatic compound
 namespace: chebi_ontology
-def: "A heteroorganic entity is an organic molecular entity in which carbon atoms or organic groups are bonded directly to one or more heteroatoms." []
 subset: 3_STAR
-synonym: "heteroorganic entities" RELATED [ChEBI]
-synonym: "organoelement compounds" RELATED [ChEBI]
+synonym: "organic aromatic compounds" RELATED [ChEBI]
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
+id: CHEBI:33694
+name: biomacromolecule
+namespace: chebi_ontology
+def: "A macromolecule formed by a living organism." []
+subset: 3_STAR
+synonym: "biomacromolecules" RELATED [ChEBI]
+synonym: "biopolymer" EXACT IUPAC_NAME [IUPAC]
+synonym: "Biopolymere" RELATED [ChEBI]
+synonym: "biopolymers" RELATED [ChEBI]
+is_a: CHEBI:36357 ! polyatomic entity
 is_a: CHEBI:50860 ! organic molecular entity
-
-[Term]
-id: CHEBI:33304
-name: chalcogen molecular entity
-namespace: chebi_ontology
-def: "Any p-block molecular entity containing a chalcogen." []
-subset: 3_STAR
-synonym: "chalcogen compounds" RELATED [ChEBI]
-synonym: "chalcogen molecular entities" RELATED [ChEBI]
-synonym: "chalcogen molecular entity" EXACT [ChEBI]
-is_a: CHEBI:33675 ! p-block molecular entity
-
-[Term]
-id: CHEBI:33579
-name: main group molecular entity
-namespace: chebi_ontology
-def: "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table." []
-subset: 3_STAR
-synonym: "main group compounds" RELATED [ChEBI]
-synonym: "main group molecular entities" RELATED [ChEBI]
-is_a: CHEBI:23367 ! molecular entity
-
-[Term]
-id: CHEBI:33582
-name: carbon group molecular entity
-namespace: chebi_ontology
-subset: 3_STAR
-synonym: "carbon group molecular entities" RELATED [ChEBI]
-synonym: "carbon group molecular entity" EXACT [ChEBI]
-is_a: CHEBI:33675 ! p-block molecular entity
-
-[Term]
-id: CHEBI:33675
-name: p-block molecular entity
-namespace: chebi_ontology
-def: "A main group molecular entity that contains one or more atoms of a p-block element." []
-subset: 3_STAR
-synonym: "p-block compounds" RELATED [ChEBI]
-synonym: "p-block molecular entities" RELATED [ChEBI]
-synonym: "p-block molecular entitiy" RELATED [ChEBI]
-is_a: CHEBI:33579 ! main group molecular entity
 
 [Term]
 id: CHEBI:36357
@@ -527,40 +565,6 @@ def: "Any molecular entity consisting of more than one atom." []
 subset: 3_STAR
 synonym: "polyatomic entities" RELATED [ChEBI]
 is_a: CHEBI:23367 ! molecular entity
-
-[Term]
-id: CHEBI:36962
-name: organochalcogen compound
-namespace: chebi_ontology
-def: "An organochalcogen compound is a compound containing at least one carbon-chalcogen bond." []
-subset: 3_STAR
-synonym: "organochalcogen compound" EXACT [ChEBI]
-synonym: "organochalcogen compounds" RELATED [ChEBI]
-is_a: CHEBI:33285 ! heteroorganic entity
-is_a: CHEBI:33304 ! chalcogen molecular entity
-
-[Term]
-id: CHEBI:36963
-name: organooxygen compound
-namespace: chebi_ontology
-def: "An organochalcogen compound containing at least one carbon-oxygen bond." []
-subset: 3_STAR
-synonym: "organooxygen compound" EXACT [ChEBI]
-synonym: "organooxygen compounds" RELATED [ChEBI]
-xref: PMID:17586126 "Europe PMC"
-xref: PMID:17586126 {source="Europe PMC"}
-is_a: CHEBI:25806 ! oxygen molecular entity
-is_a: CHEBI:36962 ! organochalcogen compound
-
-[Term]
-id: CHEBI:37577
-name: heteroatomic molecular entity
-namespace: chebi_ontology
-def: "A molecular entity consisting of two or more chemical elements." []
-subset: 3_STAR
-synonym: "chemical compound" RELATED [ChEBI]
-synonym: "heteroatomic molecular entities" RELATED [ChEBI]
-is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
 id: CHEBI:50860
@@ -573,16 +577,27 @@ subset: 3_STAR
 synonym: "organic compounds" RELATED [ChEBI]
 synonym: "organic entity" RELATED [ChEBI]
 synonym: "organic molecular entities" RELATED [ChEBI]
-is_a: CHEBI:33582 ! carbon group molecular entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
-id: CHEBI:64708
-name: one-carbon compound
+id: CHEBI:61266
+name: hemicellulose
 namespace: chebi_ontology
-def: "An organic molecular entity containing a single carbon atom (C1)." []
+def: "Hemicelluloses are polysaccharides in plant cell walls that have beta-(1->4)-linked backbones with an equatorial configuration. Hemicelluloses include xyloglucans, xylans, mannans and glucomannans, and beta-(1->3,1->4)-glucans." []
 subset: 3_STAR
-synonym: "one-carbon compounds" RELATED [ChEBI]
-is_a: CHEBI:50860 ! organic molecular entity
+synonym: "hemicelluloses" RELATED [ChEBI]
+xref: PMID:20192742 {source="SUBMITTER"}
+is_a: CHEBI:18154 ! polysaccharide
+
+[Term]
+id: CHEBI:6457
+name: lignin
+namespace: chebi_ontology
+alt_id: CHEBI:25037
+def: "A polyphenylpropanoid derived from three monolignol monomers: trans-p-coumaryl alcohol, coniferol and trans-sinapyl alcohol. There is extensive cross-linking and no defined primary structure." []
+subset: 3_STAR
+xref: Wikipedia:Lignin
+is_a: CHEBI:33659 ! organic aromatic compound
 
 [Term]
 id: CHEBI:72695
@@ -595,6 +610,22 @@ synonym: "organic compounds" RELATED [ChEBI]
 synonym: "organic molecules" RELATED [ChEBI]
 is_a: CHEBI:25367 ! molecule
 is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:89634
+name: Melanin
+namespace: chebi_ontology
+subset: 2_STAR
+xref: CAS:8049-97-6 {source="KEGG COMPOUND"}
+xref: HMDB:HMDB0004068
+is_a: CHEBI:26195 ! polyphenol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C18H10N2O4" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C18H10N2O4/c1-5-13-9-7(3-19-13)12-10-8(11(9)17(23)15(5)21)4-20-14(10)6(2)16(22)18(12)24/h3-4,19-20H,1-2H3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUMBMVFBXHLACL-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "318.284" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "318.06406" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=C1C(=O)C2=C3C(NC=C3C=4C(=O)C(=O)C(C)=C5NC=C2C54)=C1C" xsd:string
 
 [Term]
 id: ECOCORE:00000001
@@ -616,7 +647,7 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 
 [Term]
 id: ECOCORE:00000008
-name: trophic interaction
+name: trophic process
 def: "A process during which a living entity acquires or generates food and energy from a living, dead, or non-living entity." []
 is_a: BFO:0000015 ! process
 property_value: editor_note "All categories of interaction partners should be indentified in subclasses." xsd:string
@@ -627,7 +658,7 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 id: ECOCORE:00000009
 name: autotrophy
 def: "A trophic interaction process during which a living entity acquires energy and generates biomass from non-living entities." []
-is_a: ECOCORE:00000008 ! trophic interaction
+is_a: ECOCORE:00000008 ! trophic process
 property_value: editor_note "This should be axiomatised and made a defined class: any trophic interaction which has as input some inorganic material (non-living) that is the only source of carbon or reducing equivalents source is a autotrophic process." xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
@@ -650,7 +681,7 @@ id: ECOCORE:00000011
 name: heterotrophy
 def: "A trophic interaction process during which a living entity acquires food and energy by consuming another organism or organism part, living or dead." []
 synonym: "consumption" EXACT []
-is_a: ECOCORE:00000008 ! trophic interaction
+is_a: ECOCORE:00000008 ! trophic process
 property_value: editor_note "This should be axiomatised and made a defined class: any trophic interaction which has as input some organic material (living or dead) that is the only source of carbon or reducing equivalents source is a autotrophic process." xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
@@ -680,14 +711,16 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 id: ECOCORE:00000014
 name: lithotrophy
 def: "A process during which a living entity acquires reducing equivalents from inorganic chemicals for use in biosynthesis or energy conservation via aerobic or anaerobic respiration." [] {http://purl.obolibrary.org/obo/IAO_0000119="https://en.wikipedia.org/wiki/Lithotroph"}
-is_a: ECOCORE:00000008 ! trophic interaction
+is_a: ECOCORE:00000008 ! trophic process
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 
 [Term]
 id: ECOCORE:00000015
 name: fungivore
 def: "A heterotroph which consumes fungi." []
+synonym: "fungal feeder" EXACT []
 synonym: "mycophage" EXACT []
+is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000010 ! heterotroph
 intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000016 ! fungivory
@@ -708,7 +741,7 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 id: ECOCORE:00000017
 name: phototrophy
 def: "A process during which a living entity generates food from abiotic sources or through consumption of living or dead material, and captures energy from light." [] {http://purl.obolibrary.org/obo/IAO_0000119="https://en.wikipedia.org/wiki/Phototroph"}
-is_a: ECOCORE:00000008 ! trophic interaction
+is_a: ECOCORE:00000008 ! trophic process
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 
@@ -723,6 +756,7 @@ synonym: "primary consumer" EXACT []
 is_a: ECOCORE:00000010 ! heterotroph
 intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000020 ! herbivory
+equivalent_to: STWO:0000023 ! phytophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 
@@ -762,6 +796,7 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
 id: ECOCORE:00000045
 name: symbiotroph
 def: "heterotroph that acquires nutrition from a symbiont" []
+is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000010 ! heterotroph
 intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000060 ! symbiotrophy
@@ -796,7 +831,7 @@ id: ECOCORE:00000055
 name: detritivore
 def: "A decomposer which obtains nutrition by consuming detritus." []
 is_a: CARO:0001010 ! organism or virus or viroid
-is_a: STWO:0000011 ! saprophage
+is_a: ECOCORE:00000054 ! decomposer
 intersection_of: ECOCORE:00000054 ! decomposer
 intersection_of: capable_of ECOCORE:00000057 ! detritivory
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
@@ -815,7 +850,6 @@ id: ECOCORE:00000057
 name: detritivory
 def: "A decomposition process during which a living entity acquires food and energy by consuming detritus." []
 is_a: ECOCORE:00000058 ! decomposition
-is_a: ENVO:02500000 ! environmental system process
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -843,7 +877,10 @@ property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 id: ECOCORE:00000076
 name: algae
 def: "A polyphyletic group of diverse photosynthetic organisms that excludes vascular plants and mosses and includes cyanobacteria, seaweed, and some single-celled organisms." []
-is_a: OBI:0100026 ! organism
+is_a: ECOCORE:00000130 ! photoautotroph
+is_a: STWO:0000062 ! microorganism
+intersection_of: ECOCORE:00000130 ! photoautotroph
+intersection_of: STWO:0000062 ! microorganism
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -875,9 +912,9 @@ id: ECOCORE:00000086
 name: algivore
 def: "An herbivore that primarily consumes algae" []
 synonym: "algae eater" EXACT []
-is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
+is_a: STWO:0000061 ! microbivore
 equivalent_to: STWO:0000028 ! algophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
@@ -896,7 +933,6 @@ id: ECOCORE:00000089
 name: predator
 def: "A carnivore that actively captures and consumes other animals, causing their immediate or immenent death" []
 is_a: ECOCORE:00000088 ! carnivore
-is_a: STWO:0000013 ! zoophage
 intersection_of: ECOCORE:00000088 ! carnivore
 intersection_of: capable_of ECOCORE:00000102 ! predation
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
@@ -906,8 +942,9 @@ id: ECOCORE:00000090
 name: scavenger
 def: "A carnivore that feeds on dead and decaying animal matter" []
 is_a: ECOCORE:00000055 ! detritivore
-is_a: ECOCORE:00000088 ! carnivore
+is_a: STWO:0000011 ! saprophage
 is_a: STWO:0000013 ! zoophage
+is_a: STWO:0000063 ! trophic level omnivore
 intersection_of: ECOCORE:00000088 ! carnivore
 intersection_of: capable_of ECOCORE:00000103 ! scavenging
 equivalent_to: STWO:0000010 ! necrophage
@@ -917,16 +954,17 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 id: ECOCORE:00000091
 name: insectivore
 def: "A predator that primarily eats insects" []
+synonym: "entomophage" EXACT []
 is_a: ECOCORE:00000089 ! predator
 intersection_of: ECOCORE:00000089 ! predator
 intersection_of: capable_of ECOCORE:00000108 ! insectivory
-equivalent_to: STWO:0000014 ! entomophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
 id: ECOCORE:00000098
 name: bacterivore
 def: "a heterotroph that consumes bacteria" []
+synonym: "bacterial feeder" EXACT []
 is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000010 ! heterotroph
 intersection_of: OBI:0100026 ! organism
@@ -966,6 +1004,7 @@ id: ECOCORE:00000103
 name: scavenging
 def: "A carnivorous process during which a living entity acquires food and energy by consuming dead or decaying animal matter." []
 is_a: ECOCORE:00000021 ! carnivory
+is_a: ECOCORE:00000057 ! detritivory
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -1005,9 +1044,9 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 id: ECOCORE:00000122
 name: photolithoautotroph
 def: "A photoautotroph which is capable of using an abiogenic organic compound as an electron donor." []
-is_a: ECOCORE:00000076 ! algae
+is_a: ECOCORE:00000121 ! photoorganoautotroph
+is_a: ECOCORE:00000124 ! chemolithoautotroph
 is_a: ECOCORE:00000126 ! photolithoheterotroph
-is_a: ECOCORE:00000130 ! photoautotroph
 intersection_of: ECOCORE:00000130 ! photoautotroph
 intersection_of: ECOCORE:00000130 ! photoautotroph
 intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
@@ -1030,8 +1069,8 @@ property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 id: ECOCORE:00000124
 name: chemolithoautotroph
 def: "A chemoautotroph which is capable of using an abiogenic organic compound as an electron donor." []
+is_a: ECOCORE:00000123 ! chemoorganoautotroph
 is_a: ECOCORE:00000128 ! chemolithoheterotroph
-is_a: ECOCORE:00000129 ! chemoautotroph
 intersection_of: ECOCORE:00000129 ! chemoautotroph
 intersection_of: ECOCORE:00000129 ! chemoautotroph
 intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
@@ -1107,11 +1146,9 @@ is_a: ECOCORE:00000012 ! mixotroph
 is_a: ECOCORE:00000023 ! autotroph
 is_a: ECOCORE:00000131 ! photoheterotroph
 intersection_of: ECOCORE:00000023 ! autotroph
-intersection_of: ECOCORE:00000023 ! autotroph
 intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000013 ! photoautotrophy
 intersection_of: capable_of ECOCORE:00000017 ! phototrophy
-intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -1121,9 +1158,7 @@ def: "A heterotroph which is capable of transforming light into chemical energy.
 is_a: ECOCORE:00000010 ! heterotroph
 is_a: STWO:0000007 ! phototroph
 intersection_of: ECOCORE:00000010 ! heterotroph
-intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000017 ! phototrophy
-intersection_of: STWO:0000048 STWO:4000003 ! uses as energy source light
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -1158,6 +1193,16 @@ def: "An herbivore that primarily consumes pollen" []
 synonym: "pollen eater" EXACT []
 synonym: "pollen feeder" EXACT []
 xref: https://www.wikidata.org/entity/Q3805698
+is_a: ECOCORE:00000019 ! herbivore
+is_a: STWO:0000023 ! phytophage
+property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
+
+[Term]
+id: ECOCORE:00000140
+name: nectarivore
+def: "An herbivore that primarily consumes nectar" []
+synonym: "nectar eater" EXACT []
+xref: https://www.wikidata.org/entry/Q120880
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
@@ -1234,19 +1279,20 @@ equivalent_to: STWO:0000041 ! collector filterer
 id: ECOCORE:00000162
 name: organotrophy
 def: "A process during which a living entity acquires reducing equivalents from organic chemicals for use in biosynthesis or energy conservation via aerobic or anaerobic respiration." []
-is_a: ECOCORE:00000008 ! trophic interaction
+is_a: ECOCORE:00000008 ! trophic process
 
 [Term]
 id: ECOCORE:00000163
 name: chemotrophy
 def: "A process during which a living entity generates food from abiotic sources or through consumption of living or dead material, and captures energy from preformed molecules." []
-is_a: ECOCORE:00000008 ! trophic interaction
+is_a: ECOCORE:00000008 ! trophic process
 
 [Term]
 id: ECOCORE:00000164
 name: sanguivore
 def: "A carnivore that consumes blood, during a brief, temporary interaction." []
 synonym: "blood eater" EXACT []
+synonym: "hematophage" EXACT []
 is_a: ECOCORE:00000088 ! carnivore
 is_a: STWO:0000013 ! zoophage
 intersection_of: ECOCORE:00000088 ! carnivore
@@ -1286,7 +1332,8 @@ id: ECOCORE:00000176
 name: coprophage
 def: "a decomposer which obtains nutrition by consuming feces" []
 is_a: ECOCORE:00000055 ! detritivore
-is_a: STWO:0000009 ! exudativore
+is_a: STWO:0000011 ! saprophage
+is_a: STWO:0000013 ! zoophage
 intersection_of: ECOCORE:00000054 ! decomposer
 intersection_of: capable_of STWO:0000043 ! coprophagy
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
@@ -1317,7 +1364,6 @@ is_a: BFO:0000024 ! fiat object part
 id: ENVO:01000155
 name: organic material
 def: "Environmental material derived from living organisms and composed primarily of one or more biomacromolecules." [ISBN:978-0-618-45504-1, ORCID:0000-0002-4366-3088]
-def: "Environmental material derived from living organisms and composed primarily of one or more biomacromolecules." [ISBN-10:0618455043, ORCID:0000-0002-4366-3088]
 synonym: "biomass" EXACT []
 synonym: "organic matter" EXACT []
 xref: EcoLexicon:organic_material
@@ -1335,6 +1381,7 @@ synonym: "litterfall" EXACT []
 synonym: "soil litter" EXACT []
 synonym: "tree litter" EXACT []
 is_a: ENVO:01001103 ! detritus
+is_a: STWO:4000008 ! dead organic matter
 relationship: has_part PO:0025034 ! leaf
 relationship: has_quality PATO:0001422 ! dead
 
@@ -1343,14 +1390,7 @@ id: ENVO:01001103
 name: detritus
 def: "An organic material which is primarily composed of dead particulate matter." [https://en.wikipedia.org/wiki/Detritus]
 is_a: STWO:4000001 ! particulate organic matter
-is_a: STWO:4000008 ! dead organic matter
-
-[Term]
-id: ENVO:02500000
-name: environmental system process
-def: "A process in which includes the components of an environmental system as participants." []
-comment: This is a convenience class for organisation and should not be used for annotation.
-is_a: BFO:0000015 ! process
+equivalent_to: STWO:4000008 ! dead organic matter
 
 [Term]
 id: ENVO:04000008
@@ -1362,6 +1402,23 @@ relationship: has_part STWO:4000008 ! dead organic matter
 relationship: part_of ENVO:00001998 ! soil
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0003-1264-1166
 property_value: http://purl.org/dc/elements/1.1/date 2019-04-05T00:53:06Z xsd:dateTime
+
+[Term]
+id: ENVO:2000015
+name: energy
+def: "A disposition which is realized during the execution of work, the emission of heat, or the possession of mass." []
+comment: Consider replacing with PATO class; note that PATO class is not a disposition. This should likely go into OBO Core and also have a physicist look at it.
+is_a: BFO:0000016 ! disposition
+created_by: cjm
+creation_date: 2018-11-03T20:22:18Z
+
+[Term]
+id: ENVO:2000017
+name: kinetic energy
+def: "Energy that it realized through motion." []
+is_a: ENVO:2000015 ! energy
+created_by: cjm
+creation_date: 2018-11-03T20:25:57Z
 
 [Term]
 id: FAO:0000001
@@ -1383,6 +1440,20 @@ xref: BTO:0000487
 is_a: FAO:0002002 ! multicellular fungal structure
 
 [Term]
+id: FAO:0000010
+name: sporophore
+namespace: fungal_anatomy_ontology
+def: "A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore." [FAO:curators]
+synonym: "fruit body" EXACT [FAO:doi]
+synonym: "fruitbody" EXACT [FAO:doi]
+synonym: "fruiting body" EXACT [FAO:doi]
+synonym: "spore-bearing structure" EXACT [FAO:doi]
+synonym: "spore-producing structure" EXACT [FAO:doi]
+synonym: "sporocarp" EXACT [FAO:doi]
+xref: GO:0075259
+is_a: FAO:0002002 ! multicellular fungal structure
+
+[Term]
 id: FAO:0000011
 name: mycelium
 namespace: fungal_anatomy_ontology
@@ -1401,6 +1472,31 @@ xref: BTO:0000114
 is_a: FAO:0000007 ! fruitbody
 
 [Term]
+id: FAO:0000018
+name: unicellular structure
+namespace: fungal_anatomy_ontology
+def: "A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure." [FAO:curators, FAO:mah, SGD:clt]
+synonym: "cell" EXACT []
+is_a: FAO:0000001 ! fungal structure
+
+[Term]
+id: FAO:0000019
+name: spore
+namespace: fungal_anatomy_ontology
+def: "A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions." [ISBN:0471940526]
+is_a: FAO:0000018 ! unicellular structure
+
+[Term]
+id: FAO:0000052
+name: sporangium
+namespace: fungal_anatomy_ontology
+def: "A structure within which spores develop." [FAO:curators]
+xref: GO:0043582
+is_a: FAO:0000010 ! sporophore
+created_by: Maria
+creation_date: 2011-06-10T12:06:16Z
+
+[Term]
 id: FAO:0001001
 name: hypha
 namespace: fungal_anatomy_ontology
@@ -1415,6 +1511,99 @@ def: "A fungal structure that comprises more than one cell." [FAO:mah]
 is_a: FAO:0000001 ! fungal structure
 created_by: midori
 creation_date: 2019-05-03T13:33:22Z
+
+[Term]
+id: GO:0008150
+name: biological_process
+namespace: biological_process
+alt_id: GO:0000004
+alt_id: GO:0007582
+alt_id: GO:0044699
+def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
+synonym: "single organism process" RELATED []
+synonym: "single-organism process" RELATED []
+xref: Wikipedia:Biological_process
+is_a: BFO:0000015 ! process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+created_by: janelomax
+created_by: jl
+creation_date: 2012-09-19T15:05:24Z
+
+[Term]
+id: GO:0036377
+name: arbuscular mycorrhizal association
+namespace: biological_process
+def: "A form of mutualism between a fungus and the roots of a vascular plant, where hyphae of the fungus penetrate the plant cell wall and invaginate its cell membrane. Once inside, the fungus forms highly branched structures for nutrient exchange with the plant called arbuscules. Aids in the acquisition by the plant of nutrients such as phosphorus from the soil." [GOC:sk, Wikipedia:Arbuscular_mycorrhiza]
+synonym: "arbuscular mycorrhizae formation" EXACT [Wikipedia:Arbuscular_mycorrhiza]
+synonym: "arbuscular mycorrhizal symbiosis" RELATED [Wikipedia:Arbuscular_mycorrhiza]
+synonym: "arbuscular mycorrhizas formation" EXACT [Wikipedia:Arbuscular_mycorrhiza]
+is_a: GO:0044403 ! biological process involved in symbiotic interaction
+created_by: bf
+creation_date: 2013-05-07T15:07:32Z
+
+[Term]
+id: GO:0044403
+name: biological process involved in symbiotic interaction
+namespace: biological_process
+alt_id: GO:0043298
+alt_id: GO:0044404
+alt_id: GO:0072519
+alt_id: GO:0085031
+def: "A process carried out by gene products in an organism that enable the organism to engage in a symbiotic relationship, a more or less intimate association, with another organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, PMID:31257129]
+subset: goslim_chembl
+subset: goslim_generic
+synonym: "commensalism" NARROW []
+synonym: "host-pathogen interaction" NARROW []
+synonym: "parasitism" NARROW []
+synonym: "symbiosis" RELATED []
+synonym: "symbiosis, encompassing mutualism through parasitism" RELATED []
+synonym: "symbiotic interaction" RELATED []
+synonym: "symbiotic interaction between host and organism" RELATED []
+synonym: "symbiotic interaction between organisms" RELATED []
+synonym: "symbiotic interaction between species" RELATED []
+synonym: "symbiotic process" RELATED []
+is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/14807 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
+
+[Term]
+id: GO:0044419
+name: biological process involved in interspecies interaction between organisms
+namespace: biological_process
+def: "Any process evolved to enable an interaction with an organism of a different species." [GOC:cc]
+subset: gocheck_do_not_annotate
+subset: goslim_candida
+subset: goslim_pir
+synonym: "interaction with another species" EXACT []
+synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction between organisms" EXACT []
+synonym: "interspecies interaction with other organisms" EXACT []
+is_a: GO:0008150 ! biological_process
+relationship: never_in_taxon NCBITaxon:4895
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
+
+[Term]
+id: GO:0085030
+name: symbiotic process benefiting host
+namespace: biological_process
+def: "A process carried out by symbiont gene products that enables a symbiotic interaction with a host organism, that is beneficial to the host organism." [GOC:pdt]
+synonym: "mutualism" RELATED []
+is_a: GO:0044403 ! biological process involved in symbiotic interaction
+created_by: jl
+creation_date: 2010-07-27T01:25:21Z
 
 [Term]
 id: NCBITaxon:1
@@ -1455,6 +1644,7 @@ name: Teleostomi
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:7776 ! Gnathostomata <vertebrates>
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:117571
@@ -1464,6 +1654,7 @@ alt_id: NCBITaxon:40673
 synonym: "bony vertebrates" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:117570 ! Teleostomi
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:118072
@@ -1477,7 +1668,7 @@ synonym: "fishes" EXACT common_name []
 synonym: "lobe-finned fishes" EXACT common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:8287 ! Sarcopterygii
-property_value: has_rank NCBITaxon:class
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:1206794
@@ -1485,6 +1676,7 @@ name: Ecdysozoa
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:33317 ! Protostomia
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:1206795
@@ -1492,6 +1684,7 @@ name: Lophotrochozoa
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:2697495 ! Spiralia
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:131221
@@ -1522,6 +1715,7 @@ xref: PMID:16286089
 xref: PMID:19281946
 xref: PMID:22982760
 is_a: NCBITaxon:1329912 ! Episquamata
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:1329912
@@ -1531,6 +1725,7 @@ xref: GC_ID:1
 xref: PMID:16286089
 xref: PMID:22982760
 is_a: NCBITaxon:1329950 ! Unidentata
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:1329950
@@ -1539,6 +1734,7 @@ namespace: ncbi_taxonomy
 xref: GC_ID:1
 xref: PMID:22982760
 is_a: NCBITaxon:1329961 ! Bifurcata
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:1329961
@@ -1548,6 +1744,7 @@ synonym: "split-tongued squamates" EXACT genbank_common_name []
 xref: GC_ID:1
 xref: PMID:22982760
 is_a: NCBITaxon:8509 ! Squamata
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:1338369
@@ -1555,6 +1752,7 @@ name: Dipnotetrapodomorpha
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:8287 ! Sarcopterygii
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:13809
@@ -1564,7 +1762,35 @@ synonym: "bryophytes" RELATED in_part []
 synonym: "hornworts" EXACT genbank_common_name []
 synonym: "hornworts" RELATED blast_name []
 xref: GC_ID:1
+xref: PMID:26929706
 is_a: NCBITaxon:3193 ! Embryophyta
+property_value: has_rank NCBITaxon:clade
+
+[Term]
+id: NCBITaxon:1437183
+name: Mesangiospermae
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+xref: PMID:25249442
+is_a: NCBITaxon:3398 ! Magnoliopsida
+property_value: has_rank NCBITaxon:clade
+
+[Term]
+id: NCBITaxon:1437197
+name: Petrosaviidae
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+xref: PMID:26350789
+is_a: NCBITaxon:4447 ! Liliopsida
+property_value: has_rank NCBITaxon:subclass
+
+[Term]
+id: NCBITaxon:1437201
+name: Pentapetalae
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:91827 ! Gunneridae
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:1476529
@@ -1573,7 +1799,8 @@ namespace: ncbi_taxonomy
 synonym: "Agnatha" RELATED synonym []
 synonym: "jawless vertebrates" EXACT genbank_common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:197562
@@ -1583,6 +1810,7 @@ xref: GC_ID:1
 xref: PMID:10874751
 xref: PMID:11557979
 is_a: NCBITaxon:197563 ! Mandibulata
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:197563
@@ -1593,6 +1821,7 @@ xref: GC_ID:1
 xref: PMID:11557979
 xref: PMID:9727836
 is_a: NCBITaxon:6656 ! Arthropoda
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:2
@@ -1695,6 +1924,7 @@ name: Spiralia
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:33317 ! Protostomia
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:27482
@@ -1725,6 +1955,20 @@ property_value: has_rank NCBITaxon:superkingdom
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
+id: NCBITaxon:30001
+name: Collembola
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:30000
+synonym: "Entognatha" RELATED in_part []
+synonym: "Oligoentomata" RELATED synonym []
+synonym: "snow fleas" EXACT common_name []
+synonym: "springtails" EXACT genbank_common_name []
+synonym: "springtails" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:6960 ! Hexapoda
+property_value: has_rank NCBITaxon:class
+
+[Term]
 id: NCBITaxon:3193
 name: Embryophyta
 namespace: ncbi_taxonomy
@@ -1734,6 +1978,7 @@ synonym: "land plants" RELATED blast_name []
 synonym: "plants" EXACT common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:131221 ! Streptophytina
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:3195
@@ -1747,8 +1992,10 @@ synonym: "liverwort" EXACT common_name []
 synonym: "liverworts" EXACT genbank_common_name []
 synonym: "liverworts" RELATED blast_name []
 xref: GC_ID:1
+xref: PMID:26929706
 xref: PMID:9187096
 is_a: NCBITaxon:3193 ! Embryophyta
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:3208
@@ -1762,6 +2009,7 @@ synonym: "mosses" RELATED blast_name []
 synonym: "Musci" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:3193 ! Embryophyta
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:32523
@@ -1770,6 +2018,7 @@ namespace: ncbi_taxonomy
 synonym: "tetrapods" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:32524
@@ -1778,6 +2027,7 @@ namespace: ncbi_taxonomy
 synonym: "amniotes" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:32523 ! Tetrapoda
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:32561
@@ -1787,6 +2037,7 @@ synonym: "Diapsida" RELATED synonym []
 synonym: "diapsids" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:8457 ! Sauropsida
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:33090
@@ -1805,7 +2056,6 @@ xref: PMID:16248873
 xref: PMID:30257078
 is_a: NCBITaxon:2759 ! Eukaryota
 property_value: has_rank NCBITaxon:kingdom
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33154
@@ -1815,6 +2065,7 @@ synonym: "Fungi/Metazoa group" RELATED synonym []
 synonym: "opisthokonts" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:2759 ! Eukaryota
+property_value: has_rank NCBITaxon:clade
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
@@ -1836,6 +2087,7 @@ name: Bilateria
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:6072 ! Eumetazoa
+property_value: has_rank NCBITaxon:clade
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
@@ -1844,6 +2096,7 @@ name: Protostomia
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:33213 ! Bilateria
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:33340
@@ -1893,9 +2146,9 @@ property_value: has_rank NCBITaxon:superfamily
 
 [Term]
 id: NCBITaxon:33392
-name: Holometabola
+name: Endopterygota
 namespace: ncbi_taxonomy
-synonym: "Endopterygota" RELATED synonym []
+synonym: "Holometabola" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:33340 ! Neoptera
 property_value: has_rank NCBITaxon:cohort
@@ -1907,6 +2160,22 @@ namespace: ncbi_taxonomy
 synonym: "deuterostomes" EXACT common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:33213 ! Bilateria
+property_value: has_rank NCBITaxon:clade
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:3398
+name: Magnoliopsida
+namespace: ncbi_taxonomy
+synonym: "Angiospermae" RELATED synonym []
+synonym: "angiosperms" EXACT common_name []
+synonym: "flowering plants" EXACT genbank_common_name []
+synonym: "flowering plants" RELATED blast_name []
+synonym: "Magnoliophyta" RELATED synonym []
+xref: GC_ID:1
+xref: PMID:25249442
+is_a: NCBITaxon:58024 ! Spermatophyta
+property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:35493
@@ -1927,6 +2196,56 @@ is_a: NCBITaxon:2153479 ! Formicoidea
 property_value: has_rank NCBITaxon:family
 
 [Term]
+id: NCBITaxon:41945
+name: Ericales
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:125051
+alt_id: NCBITaxon:3622
+alt_id: NCBITaxon:3736
+alt_id: NCBITaxon:4334
+alt_id: NCBITaxon:4338
+xref: GC_ID:1
+xref: PMID:12144762
+is_a: NCBITaxon:71274 ! asterids
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:4345
+name: Ericaceae
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:16487
+alt_id: NCBITaxon:16613
+alt_id: NCBITaxon:4342
+alt_id: NCBITaxon:71242
+synonym: "heath family" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:41945 ! Ericales
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:4447
+name: Liliopsida
+namespace: ncbi_taxonomy
+synonym: "monocots" EXACT common_name []
+synonym: "monocots" RELATED blast_name []
+synonym: "Monocotyledoneae" RELATED synonym []
+synonym: "monocotyledons" EXACT genbank_common_name []
+xref: GC_ID:1
+xref: PMID:25249442
+is_a: NCBITaxon:1437183 ! Mesangiospermae
+property_value: has_rank NCBITaxon:clade
+
+[Term]
+id: NCBITaxon:4747
+name: Orchidaceae
+namespace: ncbi_taxonomy
+synonym: "orchid family" EXACT common_name []
+xref: GC_ID:1
+xref: PMID:20546585
+is_a: NCBITaxon:73496 ! Asparagales
+property_value: has_rank NCBITaxon:family
+
+[Term]
 id: NCBITaxon:4751
 name: Fungi
 namespace: ncbi_taxonomy
@@ -1940,15 +2259,37 @@ xref: PMID:12684019
 is_a: NCBITaxon:33154 ! Opisthokonta
 property_value: has_rank NCBITaxon:kingdom
 property_value: has_rank NCBITaxon:kingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:50557
 name: Insecta
 namespace: ncbi_taxonomy
+synonym: "insects" RELATED blast_name []
 synonym: "true insects" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:6960 ! Hexapoda
 property_value: has_rank NCBITaxon:class
+
+[Term]
+id: NCBITaxon:58023
+name: Tracheophyta
+namespace: ncbi_taxonomy
+synonym: "vascular plants" EXACT common_name []
+synonym: "vascular plants" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:3193 ! Embryophyta
+property_value: has_rank NCBITaxon:clade
+
+[Term]
+id: NCBITaxon:58024
+name: Spermatophyta
+namespace: ncbi_taxonomy
+synonym: "seed plants" EXACT common_name []
+synonym: "seed plants" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:78536 ! Euphyllophyta
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:6072
@@ -1956,6 +2297,7 @@ name: Eumetazoa
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:33208 ! Metazoa
+property_value: has_rank NCBITaxon:clade
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
@@ -1994,12 +2336,42 @@ is_a: NCBITaxon:88770 ! Panarthropoda
 property_value: has_rank NCBITaxon:phylum
 
 [Term]
+id: NCBITaxon:6843
+name: Chelicerata
+namespace: ncbi_taxonomy
+synonym: "chelicerates" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:6656 ! Arthropoda
+property_value: has_rank NCBITaxon:subphylum
+
+[Term]
+id: NCBITaxon:6854
+name: Arachnida
+namespace: ncbi_taxonomy
+synonym: "arachnids" EXACT genbank_common_name []
+synonym: "arachnids" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:6843 ! Chelicerata
+property_value: has_rank NCBITaxon:class
+
+[Term]
+id: NCBITaxon:6933
+name: Acari
+namespace: ncbi_taxonomy
+synonym: "Acarina" RELATED synonym []
+synonym: "mites & ticks" RELATED blast_name []
+synonym: "mites and ticks" EXACT genbank_common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:6854 ! Arachnida
+property_value: has_rank NCBITaxon:subclass
+
+[Term]
 id: NCBITaxon:6960
 name: Hexapoda
 namespace: ncbi_taxonomy
 synonym: "Atelocerata" RELATED in_part []
+synonym: "hexapods" RELATED blast_name []
 synonym: "insects" EXACT genbank_common_name []
-synonym: "insects" RELATED blast_name []
 synonym: "Tracheata" RELATED in_part []
 synonym: "Uniramia" RELATED in_part []
 xref: GC_ID:1
@@ -2018,6 +2390,43 @@ is_a: NCBITaxon:85604 ! Amphiesmenoptera
 property_value: has_rank NCBITaxon:order
 
 [Term]
+id: NCBITaxon:71240
+name: eudicotyledons
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:3399
+synonym: "dicots" RELATED in_part []
+synonym: "Dicotyledoneae" RELATED in_part []
+synonym: "dicotyledons" RELATED in_part []
+synonym: "eudicots" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:25249442
+xref: PMID:26724406
+is_a: NCBITaxon:1437183 ! Mesangiospermae
+property_value: has_rank NCBITaxon:clade
+
+[Term]
+id: NCBITaxon:71274
+name: asterids
+namespace: ncbi_taxonomy
+synonym: "Asteridae" EXACT equivalent_name []
+xref: GC_ID:1
+xref: PMID:12144762
+is_a: NCBITaxon:1437201 ! Pentapetalae
+property_value: has_rank NCBITaxon:clade
+
+[Term]
+id: NCBITaxon:73496
+name: Asparagales
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:4745
+synonym: "Liliales/Asparagales group" RELATED in_part []
+synonym: "Liliiflorae" RELATED in_part []
+xref: GC_ID:1
+xref: PMID:26350789
+is_a: NCBITaxon:1437197 ! Petrosaviidae
+property_value: has_rank NCBITaxon:order
+
+[Term]
 id: NCBITaxon:7399
 name: Hymenoptera
 namespace: ncbi_taxonomy
@@ -2027,7 +2436,7 @@ alt_id: NCBITaxon:27531
 synonym: "hymenopterans" EXACT common_name []
 synonym: "hymenopterans" RELATED blast_name []
 xref: GC_ID:1
-is_a: NCBITaxon:33392 ! Holometabola
+is_a: NCBITaxon:33392 ! Endopterygota
 property_value: has_rank NCBITaxon:order
 
 [Term]
@@ -2078,16 +2487,20 @@ synonym: "chordates" RELATED blast_name []
 xref: GC_ID:1
 is_a: NCBITaxon:33511 ! Deuterostomia
 property_value: has_rank NCBITaxon:phylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7742
+name: Vertebrata <Metazoa>
 name: Vertebrata <vertebrates>
 namespace: ncbi_taxonomy
 synonym: "Vertebrata" EXACT scientific_name []
 synonym: "vertebrates" EXACT genbank_common_name []
 synonym: "vertebrates" RELATED blast_name []
 xref: GC_ID:1
-is_a: NCBITaxon:89593 ! Craniata <chordates>
+is_a: NCBITaxon:89593 ! Craniata <chordata>
+property_value: has_rank NCBITaxon:clade
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7776
@@ -2096,7 +2509,8 @@ namespace: ncbi_taxonomy
 synonym: "Gnathostomata" EXACT scientific_name []
 synonym: "jawed vertebrates" EXACT genbank_common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:7777
@@ -2111,13 +2525,22 @@ is_a: NCBITaxon:7776 ! Gnathostomata <vertebrates>
 property_value: has_rank NCBITaxon:class
 
 [Term]
+id: NCBITaxon:78536
+name: Euphyllophyta
+namespace: ncbi_taxonomy
+synonym: "euphyllophytes" EXACT equivalent_name []
+xref: GC_ID:1
+is_a: NCBITaxon:58023 ! Tracheophyta
+property_value: has_rank NCBITaxon:clade
+
+[Term]
 id: NCBITaxon:7878
-name: Dipnoi
+name: Dipnomorpha
 namespace: ncbi_taxonomy
 synonym: "Choanichthyes" RELATED in_part []
 synonym: "Dipneusti" RELATED synonym []
 synonym: "dipnoans" EXACT common_name []
-synonym: "Dipnomorpha" RELATED synonym []
+synonym: "Dipnoi" RELATED synonym []
 synonym: "fish" EXACT common_name []
 synonym: "fishes" EXACT common_name []
 synonym: "lungfishes" EXACT genbank_common_name []
@@ -2125,7 +2548,7 @@ synonym: "lungfishes" RELATED blast_name []
 synonym: "Osteichthyes" RELATED in_part []
 xref: GC_ID:1
 is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
-property_value: has_rank NCBITaxon:class
+property_value: has_rank NCBITaxon:subclass
 
 [Term]
 id: NCBITaxon:7898
@@ -2156,6 +2579,7 @@ namespace: ncbi_taxonomy
 synonym: "sauropsids" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:32524 ! Amniota
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:8504
@@ -2188,13 +2612,14 @@ name: Dicondylia
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:50557 ! Insecta
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:85604
 name: Amphiesmenoptera
 namespace: ncbi_taxonomy
 xref: GC_ID:1
-is_a: NCBITaxon:33392 ! Holometabola
+is_a: NCBITaxon:33392 ! Endopterygota
 property_value: has_rank NCBITaxon:superorder
 
 [Term]
@@ -2215,15 +2640,29 @@ name: Panarthropoda
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:1206794 ! Ecdysozoa
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:89593
+name: Craniata <chordata>
 name: Craniata <chordates>
 namespace: ncbi_taxonomy
 synonym: "Craniata" EXACT scientific_name []
 xref: GC_ID:1
 is_a: NCBITaxon:7711 ! Chordata
 property_value: has_rank NCBITaxon:subphylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:91827
+name: Gunneridae
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:1437200
+synonym: "core eudicots" EXACT equivalent_name []
+synonym: "core eudicotyledons" EXACT equivalent_name []
+xref: GC_ID:1
+is_a: NCBITaxon:71240 ! eudicotyledons
+property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: OBI:0100026
@@ -2237,7 +2676,6 @@ name: quality
 namespace: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-synonym: "trait" EXACT []
 is_a: BFO:0000020 ! specifically dependent continuant
 property_value: IAO:0000589 "quality (PATO)" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
@@ -2250,30 +2688,6 @@ def: "An organismal quality inhering in a bearer or a population by virtue of th
 subset: attribute_slim
 subset: disposition_slim
 is_a: PATO:0001995 ! organismal quality
-
-[Term]
-id: PATO:0001018
-name: physical quality
-namespace: quality
-alt_id: PATO:0002079
-def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
-subset: attribute_slim
-synonym: "relational physical quality" EXACT []
-xref: Wikipedia:Physical_property
-is_a: PATO:0001241 ! physical object quality
-
-[Term]
-id: PATO:0001021
-name: energy
-namespace: quality
-def: "A physical quality inhering in a bearer by virtue of the bearer's capacity to do work." [Wikipedia:http\://en.wikipedia.org/wiki/Energy]
-subset: attribute_slim
-subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
-
-[Term]
-id: PATO:0001237
-is_a: BFO:0000019 ! quality
 
 [Term]
 id: PATO:0001241
@@ -2294,8 +2708,6 @@ synonym: "quality of continuant" EXACT []
 xref: snap:Quality
 is_a: BFO:0000019 ! quality
 is_a: PATO:0000001 ! quality
-property_value: IAO:0000111 "physical object quality" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
 
 [Term]
@@ -2313,7 +2725,6 @@ namespace: quality
 def: "A viability quality inhering in a bearer by virtue of the cessation of the bearer's life." [PATOC:GVG]
 subset: value_slim
 is_a: PATO:0000169 ! viability
-is_a: PATO:0001237
 
 [Term]
 id: PATO:0001432
@@ -2619,6 +3030,23 @@ xref: PO_GIT:431
 is_a: PO:0009007 ! portion of plant tissue
 
 [Term]
+id: PO:0009055
+name: bract
+namespace: plant_anatomy
+def: "A phyllome that subtends a reproductive structure." [POC:curators]
+comment: Usually different from leaves. Often used to refer to a floral bract, but includes other kinds of bracts.
+subset: reference
+subset: TraitNet
+synonym: "br&#225ctea (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "bracteole (related)" RELATED [FNA:9cce93dc-f233-440e-9163-97207fca71a4]
+synonym: "bractlet (related)" RELATED [FNA:8968da77-e6b0-4302-baf9-1c8cb72a8b06]
+synonym: "hypsophyll (related)" RELATED []
+synonym: "scale (narrow)" NARROW [FNA:8c618dea-f3dd-434f-bb13-23273ea6c143]
+synonym: "苞葉 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+xref: PO_GIT:217
+is_a: PO:0006001 ! phyllome
+
+[Term]
 id: PO:0025004
 name: plant axis
 namespace: plant_anatomy
@@ -2631,6 +3059,26 @@ synonym: "植物軸（軸柱） (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Ya
 is_a: PO:0009008 ! plant organ
 created_by: rwalls
 creation_date: 2010-07-01T03:44:41Z
+
+[Term]
+id: PO:0025029
+name: shoot axis
+namespace: plant_anatomy
+def: "A plant axis (PO:0025004) that is part of a shoot system (PO:0009006)." [POC:curators]
+comment: Often bears leaves and branches. In vascular plants, has at least one node and one internode.
+subset: Angiosperm
+subset: Arabidopsis
+subset: Maize
+subset: Poaceae
+subset: Rice
+subset: TraitNet
+synonym: "caullome (exact)" EXACT []
+synonym: "eje del epiblasto (epiblastema) (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "shoot (related)" RELATED []
+synonym: "シュート軸 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0025004 ! plant axis
+created_by: rwalls
+creation_date: 2010-07-01T03:46:35Z
 
 [Term]
 id: PO:0025034
@@ -2769,6 +3217,22 @@ created_by: Laurel_Cooper
 creation_date: 2013-04-05T17:29:18Z
 
 [Term]
+id: PO:0025603
+name: plant resin
+namespace: plant_anatomy
+def: "A portion of plant substance (PO:0025161) that consists of a complex mixture of organic aromatic compounds such as mono-, sesqui-, and diterpenoids." [PMID:11337413, POC:Laurel_Cooper]
+comment: Plant resins are often produced by Gymnosperms but not restricted to those plants. In the conifers, plant resins are constitutively and inducibly produced through the secretory activity of resin cells (PO:0025604), and can be exuded through a resin canal (PO:0005665) to a site of injury or predator attack.
+subset: Gymnosperms
+synonym: "oleoresin  (related)" RELATED []
+synonym: "pitch  (exact)" EXACT []
+xref: CHEBI:24913
+xref: CHEBI:26873
+xref: PO_GIT:587
+is_a: PO:0025161 ! portion of plant substance
+created_by: Laurel_Cooper
+creation_date: 2014-04-10T09:51:14Z
+
+[Term]
 id: PO:0025606
 name: native plant cell
 namespace: plant_anatomy
@@ -2807,6 +3271,7 @@ intersection_of: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000162 ! organotrophy
 intersection_of: STWO:0000052 CHEBI:72695 ! obtains electrons or hydrogen from organic molecule
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000002
@@ -2817,6 +3282,7 @@ intersection_of: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000014 ! lithotrophy
 intersection_of: STWO:0000052 CHEBI:24835 ! obtains electrons or hydrogen from inorganic molecular entity
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000003
@@ -2849,11 +3315,15 @@ def: "An organism which is capable of transforming light into chemical energy." 
 is_a: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
 intersection_of: capable_of ECOCORE:00000017 ! phototrophy
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000008
 name: geophage
 def: "A decomposer which obtains nutrition by consuming earth or soil-like substrates such as clay or chalk." []
+synonym: "geophagous" EXACT []
+synonym: "humiphage" RELATED []
+synonym: "soil feeder" EXACT []
 is_a: ECOCORE:00000054 ! decomposer
 intersection_of: ECOCORE:00000054 ! decomposer
 intersection_of: capable_of STWO:0000044 ! geophagy
@@ -2861,81 +3331,86 @@ intersection_of: capable_of STWO:0000044 ! geophagy
 [Term]
 id: STWO:0000009
 name: exudativore
-def: "A heterotroph that consumes plan or animal exudates." []
+def: "A heterotroph that consumes plant or animal exudates." []
+synonym: "exudate feeder" EXACT []
 is_a: ECOCORE:00000010 ! heterotroph
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000010
 name: necrophage
 def: "A saprophage which obtains nutrition by consuming corpses or carrion." []
 is_a: ECOCORE:00000055 ! detritivore
-is_a: ECOCORE:00000088 ! carnivore
+is_a: STWO:0000011 ! saprophage
 is_a: STWO:0000013 ! zoophage
+is_a: STWO:0000063 ! trophic level omnivore
+is_obsolete: true
 
 [Term]
 id: STWO:0000011
 name: saprophage
+is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000054 ! decomposer
 
 [Term]
 id: STWO:0000012
 name: saproxylophage
 def: "A saprophage which obtains nutrition by consuming decaying wood." []
+synonym: "saproxylophagous" EXACT []
 is_a: ECOCORE:00000055 ! detritivore
 is_a: ECOCORE:00000144 ! xylophage
+is_a: STWO:0000011 ! saprophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000013
 name: zoophage
-is_a: CARO:0001010 ! organism or virus or viroid
+def: "A heterotroph feeding on animal material." []
+synonym: "zoophagous" EXACT []
 is_a: ECOCORE:00000010 ! heterotroph
-
-[Term]
-id: STWO:0000014
-name: entomophage
-is_a: ECOCORE:00000089 ! predator
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000015
 name: malacophage
 def: "A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods." []
-is_a: ECOCORE:00000088 ! carnivore
-is_a: STWO:0000013 ! zoophage
-
-[Term]
-id: STWO:0000016
-name: hematophage
-def: "A zoophage that feeds on blood." []
-is_a: ECOCORE:00000088 ! carnivore
-is_a: STWO:0000013 ! zoophage
+synonym: "malacophagous" EXACT []
+is_a: ECOCORE:00000089 ! predator
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000017
 name: oophage
 def: "A zoophage that feeds on eggs." []
+synonym: "oophagous" EXACT []
 is_a: ECOCORE:00000089 ! predator
+is_a: STWO:0000013 ! zoophage
 intersection_of: STWO:0000013 ! zoophage
 intersection_of: capable_of ECOCORE:00000109 ! egg predation
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000018
 name: myrmecophage
 def: "An entomophage that feeds on ants." []
+synonym: "myrmecophagous" EXACT []
 is_a: ECOCORE:00000091 ! insectivore
-is_a: STWO:0000014 ! entomophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000019
 name: nematophage
 def: "A zoophage that primarily eats nematodes." []
-is_a: ECOCORE:00000088 ! carnivore
-is_a: STWO:0000013 ! zoophage
+synonym: "nematophagous" EXACT []
+is_a: ECOCORE:00000089 ! predator
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000020
 name: honeydew feeder
 def: "An exudativore that consumes honeydew produced by phloem sap-feeding insects." []
-is_a: STWO:0000009 ! exudativore
+is_a: STWO:0000069 ! animal exudate feeder
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000021
@@ -2944,6 +3419,7 @@ def: "An gumnivore that primarily consumes phloem sap." []
 synonym: "phloem feeder" EXACT []
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000022
@@ -2952,11 +3428,14 @@ synonym: "racidivore" EXACT []
 is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
+is_obsolete: true
 
 [Term]
 id: STWO:0000023
 name: phytophage
 is_a: ECOCORE:00000010 ! heterotroph
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+is_obsolete: true
 
 [Term]
 id: STWO:0000024
@@ -2964,49 +3443,64 @@ name: plant parasite
 def: "A parasite whose host is a plant." []
 synonym: "phytoparasite" EXACT []
 is_a: ECOCORE:00000146 ! parasite
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000025
 name: phytosaprophage
+def: "A detritivore that consumes dead or decaying plant material." []
+synonym: "phytosaprophagous" EXACT []
 is_a: ECOCORE:00000055 ! detritivore
+is_a: STWO:0000011 ! saprophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000026
 name: phyllophage
+synonym: "phyllophagous" EXACT []
 is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+is_obsolete: true
 
 [Term]
 id: STWO:0000027
 name: bryophage
 def: "An herbivore that primarily consumes bryophytes (mosses, liverworts, and hornworts)." []
+synonym: "bryophagous" EXACT []
+synonym: "moss feeder" EXACT []
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000028
 name: algophage
-is_a: CARO:0001010 ! organism or virus or viroid
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
+is_a: STWO:0000061 ! microbivore
+is_obsolete: true
 
 [Term]
 id: STWO:0000030
 name: ophiophage
 def: "A zoophage that primarily eats snakes." []
+synonym: "ophiophagous" EXACT []
 synonym: "serpentivore" EXACT []
 is_a: ECOCORE:00000089 ! predator
-intersection_of: STWO:0000013 ! zoophage
+intersection_of: ECOCORE:00000089 ! predator
 intersection_of: capable_of ECOCORE:00000154 ! ophiophagy
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000031
 name: aphidophage
 def: "An entomophage that feeds on aphids." []
 synonym: "aphidiphage" EXACT []
+synonym: "aphidophagous" EXACT []
 is_a: ECOCORE:00000091 ! insectivore
-is_a: STWO:0000014 ! entomophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000032
@@ -3014,48 +3508,49 @@ name: scraper
 def: "An herbivore that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates." []
 is_a: ECOCORE:00000019 ! herbivore
 is_a: STWO:0000023 ! phytophage
-
-[Term]
-id: STWO:0000033
-name: engulfer
-def: "A predator that feeds on its prey by engulfing and swallowing the prey whole." []
-is_a: ECOCORE:00000089 ! predator
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000034
 name: fluid feeder
 def: "A heterotroph that obtains nutrition by consuming other organisms' fluids." []
 is_a: ECOCORE:00000010 ! heterotroph
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000035
 name: piercer and sucker
 def: "A sucker with sharp or chewing mouthparts that pierce food items to allow internal fluids to be sucked out." []
 is_a: STWO:0000036 ! sucker
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000036
 name: sucker
 def: "A fluid feeder that feeds by sucking fluids into its mouth." []
 is_a: STWO:0000034 ! fluid feeder
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000037
 name: shredder
 def: "A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves." []
 is_a: ECOCORE:00000010 ! heterotroph
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000038
 name: active suspension feeder
 def: "A suspension feeder that uses ciliary or muscular activity to create feeding currents." []
 is_a: ECOCORE:00000051 ! suspension feeder
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000039
 name: passive suspension feeder
 def: "A suspension feeder that utilises the natural flow to bring particles in contact with feeding structures." []
 is_a: ECOCORE:00000051 ! suspension feeder
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000040
@@ -3066,6 +3561,7 @@ is_a: ECOCORE:00000010 ! heterotroph
 id: STWO:0000041
 name: collector filterer
 is_a: ECOCORE:00000051 ! suspension feeder
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000042
@@ -3088,93 +3584,340 @@ synonym: "geophagia" EXACT []
 is_a: ECOCORE:00000058 ! decomposition
 
 [Term]
+id: STWO:0000045
+name: invertebrate carrion
+def: "A carcass of an invertebrate organism" []
+is_a: NCBITaxon:33208 ! Metazoa
+is_a: UBERON:0008979 ! carcass
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000046
+name: vertebrate carrion
+def: "A carcass of a vertebrate organism" []
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+is_a: UBERON:0008979 ! carcass
+intersection_of: NCBITaxon:7742 ! Vertebrata <Metazoa>
+intersection_of: has_quality PATO:0001422 ! dead
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
 id: STWO:0000049
 name: plant exudate
+def: "A portion of plant substance that is or was emitted by a plant through pores or wound." []
 is_a: PO:0025161 ! portion of plant substance
+is_a: STWO:0000068 ! plant exudate feeder
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:0000050
-name: gum
+name: plant gum
+def: "A portion of plant substance composed of sap or other resinous material, associated with certain plant species." []
 is_a: PO:0025161 ! portion of plant substance
 
 [Term]
 id: STWO:0000051
-name: resin
-is_a: PO:0025161 ! portion of plant substance
+name: root exudate
+def: "A plant exudate excreted by the roots of living plants." []
+is_a: STWO:0000049 ! plant exudate
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000053
+name: acariphage
+def: "A predator that primarily eats acari" []
+synonym: "acariphagous" EXACT []
+is_a: ECOCORE:00000089 ! predator
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000054
+name: animal parasite
+def: "A parasite whose host is an animal." []
+is_a: ECOCORE:00000146 ! parasite
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000055
+name: insect parasite
+def: "An animal parasite whose host is an insect." []
+synonym: "entomogenous organism" EXACT []
+is_a: STWO:0000054 ! animal parasite
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000056
+name: ectomycorrhizal association
+is_a: GO:0044403 ! biological process involved in symbiotic interaction
+
+[Term]
+id: STWO:0000057
+name: light energy
+def: "A kind of kinetic energy that propagates as waves of any wavelength, whether visible or not." []
+is_a: ENVO:2000017 ! kinetic energy
+
+[Term]
+id: STWO:0000058
+name: springtail feeder
+def: "A predator that primarily eats springtails" []
+is_a: ECOCORE:00000089 ! predator
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000059
+name: mutualism
+def: "A symbiotrophic process during which there is a transfer of energy and nutrients between two living entities. This process has positive effects on the growth rates of both entities." []
+is_a: ECOCORE:00000060 ! symbiotrophy
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000060
+name: zoosaprophage
+def: "A detritivore that consumes dead or decaying animal material." []
+synonym: "zoosaprophagous" EXACT []
+is_a: ECOCORE:00000055 ! detritivore
+is_a: STWO:0000011 ! saprophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000061
+name: microbivore
+def: "A heterotroph that feeds on microorganisms." []
+is_a: ECOCORE:00000010 ! heterotroph
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000062
+name: microorganism
+def: "An organism of microscopic size, which may exist in its single-celled form or as a colony of cells." []
+is_a: NCBITaxon:131567 ! cellular organisms
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000063
+name: trophic level omnivore
+def: "A heterotroph that consumes both animals and lower trophic level organisms." []
+is_a: ECOCORE:00000088 ! carnivore
+property_value: IAO:0000117 https://orcid.org/0000-0002-4456-1710 xsd:string
+
+[Term]
+id: STWO:0000064
+name: protist
+def: "An eukaryotic microorganism that is not an animal, plant, or fungus." []
+is_a: NCBITaxon:2759 ! Eukaryota
+is_a: STWO:0000062 ! microorganism
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000065
+name: protistivore
+def: "A heterotroph that feeds on protists." []
+synonym: "protistivorous" EXACT []
+is_a: STWO:0000061 ! microbivore
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000068
+name: plant exudate feeder
+def: "An exudativore that consumes plant exudates." []
+is_a: STWO:0000009 ! exudativore
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000069
+name: animal exudate feeder
+def: "An exudativore that consumes animal exudates." []
+is_a: STWO:0000009 ! exudativore
+is_a: STWO:0000013 ! zoophage
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000070
+name: wood saprotroph
+def: "A saprotroph that obtains nutrition through extracellular digestion of wood" []
+is_a: ECOCORE:00000056 ! saprotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000071
+name: ectomycorrhizal
+def: "A mycorrhizal fungus whose hyphae do not penetrate the plant cell wall." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: capable_of STWO:0000056 ! ectomycorrhizal association
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000072
+name: mycorrhizal
+def: "A symbiotroph involved in a mutual symbiotic association with the roots of a plant." []
+is_a: ECOCORE:00000045 ! symbiotroph
+is_a: NCBITaxon:4751 ! Fungi
+intersection_of: NCBITaxon:4751 ! Fungi
+intersection_of: RO:0002440 NCBITaxon:33090 ! symbiotically interacts with Viridiplantae
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000073
+name: arbuscular mycorrhizal
+def: "A mycorrhizal fungus whose hyphae penetrate the plant cell wall and invaginate its cell membrane." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: capable_of GO:0036377 ! arbuscular mycorrhizal association
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000074
+name: fungal parasite
+def: "A parasite whose host is a fungus." []
+synonym: "mycoparasite" EXACT []
+is_a: ECOCORE:00000146 ! parasite
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000076
+name: litter saprotroph
+synonym: "leaf saprotroph" NARROW []
+is_a: ECOCORE:00000056 ! saprotroph
+property_value: IAO:0000117 "A saprotroph that obtains nutrition through extracellular digestion of plant litter." xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000077
+name: dung saprotroph
+def: "A saprotroph that obtains nutrition through extracellular digestion of feces." []
+is_a: ECOCORE:00000056 ! saprotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000078
+name: soil saprotroph
+is_a: ECOCORE:00000056 ! saprotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000079
+name: ericoid mycorrhizal
+def: "A mycorrhizal fungus involved in a mutualistic association with a member of the plant family Ericaceae." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: RO:0002442 NCBITaxon:4345 ! mutualistically interacts with Ericaceae
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000080
+name: bryophyte parasite
+def: "A parasite whose host is a bryophyte." []
+def: "https://orcid.org/0000-0003-4559-7579" []
+is_a: ECOCORE:00000146 ! parasite
+
+[Term]
+id: STWO:0000081
+name: orchid mycorrhizal
+def: "A mycorrhizal fungus involved in a symbiotic interaction with a member of the plant family Orchidaceae." []
+is_a: STWO:0000072 ! mycorrhizal
+intersection_of: STWO:0000072 ! mycorrhizal
+intersection_of: RO:0002440 NCBITaxon:4747 ! symbiotically interacts with Orchidaceae
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000082
+name: lichenized
+def: "A symbiotroph involved in a symbiotic association with living green algae or cyanobacteria." []
+is_a: ECOCORE:00000045 ! symbiotroph
+is_a: NCBITaxon:4751 ! Fungi
+intersection_of: NCBITaxon:4751 ! Fungi
+intersection_of: RO:0002440 ECOCORE:00000076 ! symbiotically interacts with algae
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000083
+name: lichen parasite
+def: "A fungal parasite whose host is a lichenized fungus." []
+synonym: "lichenicolous fungus" NARROW []
+is_a: STWO:0000074 ! fungal parasite
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000084
+name: nectar
+def: "A plant exudate produced in glands called nectaries or nectarines." []
+is_a: STWO:0000049 ! plant exudate
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000085
+name: protist parasite
+def: "A parasite whose host is a protist." []
+synonym: "protistan parasite" EXACT []
+is_a: ECOCORE:00000146 ! parasite
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: STWO:0000086
+name: animal anatomical entity
+def: "An anatomical entity that is or was part of an animal." []
+is_a: UBERON:0001062 ! anatomical entity
+relationship: only_in_taxon NCBITaxon:33208 ! Metazoa
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000000
 name: dissolved organic matter
+def: "Organic material that is able to pass through a filter, in contrast to particulate organic matter retained on the filter." []
 is_a: ENVO:01000155 ! organic material
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000001
 name: particulate organic matter
+def: "Organic material that does not pass through a filter, in contrast to dissolved organic matter." []
 is_a: ENVO:01000155 ! organic material
-
-[Term]
-id: STWO:4000002
-name: undecomposed organic matter
-is_a: ENVO:01000155 ! organic material
-
-[Term]
-id: STWO:4000003
-name: light
-is_a: PATO:0001021 ! energy
-
-[Term]
-id: STWO:4000004
-name: sunlight
-synonym: "solar energy" EXACT []
-is_a: STWO:4000003 ! light
-
-[Term]
-id: STWO:4000006
-name: fresh organic matter
-is_a: STWO:4000002 ! undecomposed organic matter
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+is_obsolete: true
 
 [Term]
 id: STWO:4000007
 name: root litter
-is_a: ENVO:01000155 ! organic material
+is_a: ENVO:01000628 ! plant litter
 relationship: composed_primarily_of NCBITaxon:1 ! root
-relationship: has_quality PATO:0001422 ! dead
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000008
 name: dead organic matter
-is_a: ENVO:01000155 ! organic material
-
-[Term]
-id: STWO:4000009
-name: living organic matter
-is_a: ENVO:01000155 ! organic material
+def: "Organic material which is primarily composed of organic compounds that has come from the remains of organisms such as plants and animals and their waste products in the environment." []
+is_a: STWO:4000001 ! particulate organic matter
+intersection_of: ENVO:01000155 ! organic material
+intersection_of: has_quality PATO:0001422 ! dead
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000010
-name: decaying wood
+name: decayed wood
+def: "A detritus which is primarily composed of wood being decomposed by micro-organisms." []
 is_a: ENVO:01001103 ! detritus
 is_a: PO:0005848 ! secondary xylem
+is_a: STWO:4000008 ! dead organic matter
 intersection_of: PO:0005848 ! secondary xylem
 intersection_of: has_quality PATO:0001432 ! decayed
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000011
 name: fungal anatomical entity
+def: "An anatomical entity that is or was part of a fungus." []
 is_a: UBERON:0001062 ! anatomical entity
+relationship: only_in_taxon NCBITaxon:4751 ! Fungi
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000012
 name: honeydew
+def: "An excreta secreted by aphids and some scale insects as they feed on plant sap. Honeydew is also secreted by certain fungi." []
 is_a: UBERON:0000174 ! excreta
-
-[Term]
-id: STWO:4000013
-name: living wood
-is_a: PO:0005848 ! secondary xylem
-is_a: STWO:4000009 ! living organic matter
-intersection_of: PO:0005848 ! secondary xylem
-intersection_of: has_quality PATO:0001421 ! alive
+is_a: UBERON:0007780 ! exudate
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: STWO:4000014
@@ -3211,6 +3954,7 @@ xref: http://dbpedia.org/ontology/AnatomicalStructure
 xref: http://www.snomedbrowser.com/Codes/Details/362889002
 xref: MA:0003000
 xref: MESH:D000825
+xref: SCTID:362889002
 xref: TAO:0000037
 xref: TGMA:0001823
 xref: VHOG:0001759
@@ -3225,6 +3969,7 @@ namespace: uberon
 alt_id: UBERON:0000324
 alt_id: UBERON:0007550
 def: "A portion of organism substance that is the product of an excretion process that will be eliminated from the body. An excretion process is elimination by an organism of the waste products that arise as a result of metabolic activity" [GO:0007588, http://orcid.org/0000-0002-6601-2165]
+def: "A portion of organism substance that is the product of an excretion process that will be eliminated from the body. An excretion process is elimination by an organism of the waste products that arise as a result of metabolic activity." [GO:0007588, http://orcid.org/0000-0002-6601-2165]
 synonym: "excreted substance" EXACT []
 synonym: "excretion" RELATED [BTO:0000491]
 synonym: "portion of excreted substance" EXACT [FMA:9674]
@@ -3242,6 +3987,7 @@ id: UBERON:0000178
 name: blood
 namespace: uberon
 def: "A fluid that is composed of blood plasma and erythrocytes." [FMA:9670, http://en.wikipedia.org/wiki/Blood, http://orcid.org/0000-0002-6601-2165, https://github.com/obophenotype/uberon/issues/9]
+def: "A fluid that is composed of blood plasma and erythrocytes." [FMA:9670, http://orcid.org/0000-0002-6601-2165, https://github.com/obophenotype/uberon/issues/9, Wikipedia:Blood]
 subset: efo_slim
 subset: pheno_slim
 subset: uberon_slim
@@ -3271,6 +4017,7 @@ xref: OpenCyc:Mx4rvVjI8JwpEbGdrcN5Y29ycA
 xref: TAO:0000007
 xref: UMLS:C0005767 {source="ncithesaurus:Blood"}
 xref: VHOG:0000224
+xref: Wikipedia:Blood
 xref: XAO:0000124
 xref: ZFA:0000007
 is_a: CARO:0000000 ! anatomical entity
@@ -3282,6 +4029,7 @@ property_value: curator_notes "This class excludes blood analogues, such as the 
 property_value: external_definition "A complex mixture of cells suspended in a liquid matrix that delivers nutrients to cells and removes wastes. (Source: BioGlossary, www.Biology-Text.com)[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0000007", ontology="TAO", source="ZFIN:curator"}
 property_value: external_definition "Highly specialized circulating tissue consisting of several types of cells suspended in a fluid medium known as plasma.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000046", ontology="AAO", source="AAO:LAP"}
 property_value: homology_notes "Recent findings strongly suggest that the molecular pathways involved in the development and function of blood cells are highly conserved among vertebrates and various invertebrates phyla. (...) There is now good reason to believe that, in vertebrates and invertebrates alike, blood cell lineages diverge from a common type of progenitor cell, the hemocytoblast.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000224", ontology="VHOG", source="http://bgee.unil.ch/", source="DOI:10.1146/annurev.cellbio.22.010605.093317 Hartenstein V, Blood cells and blood cell development in the animal kingdom. Annual review of cell and developmental biology (2006) "}
+property_value: homology_notes "Recent findings strongly suggest that the molecular pathways involved in the development and function of blood cells are highly conserved among vertebrates and various invertebrates phyla. (...) There is now good reason to believe that, in vertebrates and invertebrates alike, blood cell lineages diverge from a common type of progenitor cell, the hemocytoblast.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000224", ontology="VHOG", source="DOI:10.1146/annurev.cellbio.22.010605.093317 Hartenstein V, Blood cells and blood cell development in the animal kingdom. Annual review of cell and developmental biology (2006) ", source="http://bgee.unil.ch/"}
 
 [Term]
 id: UBERON:0000179
@@ -3294,6 +4042,33 @@ xref: CARO:0000081
 is_a: UBERON:0006314 ! bodily fluid
 created_by: cjm
 creation_date: 2009-04-08T04:38:19Z
+
+[Term]
+id: UBERON:0000456
+name: secretion of exocrine gland
+namespace: uberon
+alt_id: UBERON:0006540
+def: "A portion of organism substance that is produced by exocrine glands." [http://orcid.org/0000-0002-6601-2165]
+synonym: "bodily secretion" EXACT [MESH:D012634]
+synonym: "exocrine gland fluid" RELATED []
+synonym: "exocrine gland fluid or secretion" RELATED []
+synonym: "exocrine gland fluid/secretion" EXACT [MA:0002504]
+synonym: "exocrine gland secretion" RELATED []
+synonym: "external secretion" RELATED [BTO:0002977]
+synonym: "secreted substance" EXACT []
+synonym: "secretion" BROAD [FMA:9675]
+xref: AEO:0001005
+xref: BTO:0002977
+xref: BTO:0002979
+xref: EMAPA:36535
+xref: FMA:9675
+xref: galen:Secretion
+xref: MA:0002504
+xref: MESH:D012634
+xref: NCIT:C34062
+xref: UMLS:C1516992 {source="ncithesaurus:Exocrine_Gland_Fluid_or_Secretion"}
+is_a: UBERON:0000463 ! organism substance
+property_value: external_ontology_notes "BTO has two distunct classes, with exocrine glandular secretion a subtype of secretion - however, all examples in BTO directly under secretion appear to be exocrine gland secretions" xsd:string {external_ontology="BTO"}
 
 [Term]
 id: UBERON:0000463
@@ -3326,6 +4101,7 @@ xref: TGMA:0001824
 xref: VHOG:0001726
 xref: XAO:0004001
 xref: ZFA:0001487
+is_a: STWO:0000086 ! animal anatomical entity
 is_a: UBERON:0000465 ! material anatomical entity
 relationship: part_of UBERON:0000468 ! multicellular organism
 
@@ -3354,6 +4130,7 @@ id: UBERON:0000468
 name: multicellular organism
 namespace: uberon
 def: "Anatomical structure that is an individual member of a species and consists of more than one cell." [CARO:0000012, http://en.wikipedia.org/wiki/Multi-cellular_organism, http://orcid.org/0000-0001-9114-8737]
+def: "Anatomical structure that is an individual member of a species and consists of more than one cell." [CARO:0000012, http://orcid.org/0000-0001-9114-8737, Wikipedia:Multi-cellular_organism]
 subset: efo_slim
 subset: pheno_slim
 subset: uberon_slim
@@ -3386,16 +4163,38 @@ xref: http://www.snomedbrowser.com/Codes/Details/243928005
 xref: Multi-cellular:organism
 xref: NCIT:C13041
 xref: ncithesaurus:Whole_Organism
+xref: SCTID:243928005
 xref: TADS:0000001
 xref: TAO:0001094
 xref: TGMA:0001832
 xref: VHOG:0000671
 xref: WBbt:0007833
+xref: Wikipedia:Multi-cellular_organism
 xref: XAO:0003004
 xref: ZFA:0001094
 is_a: UBERON:0010000 ! multicellular anatomical structure
 property_value: editor_note "TODO - split body and mc organism? body continues after death stage" xsd:string
 property_value: has_relational_adjective "organismal" xsd:string
+
+[Term]
+id: UBERON:0000912
+name: mucus
+namespace: uberon
+def: "Mucus is a bodily fluid consisting of a slippery secretion of the lining of the mucous membranes in the body. It is a viscous colloid containing antiseptic enzymes (such as lysozyme) and immunoglobulins. Mucus is produced by goblet cells in the mucous membranes that cover the surfaces of the membranes. It is made up of mucins and inorganic salts suspended in water." [Wikipedia:Mucus]
+xref: CALOHA:TS-2144
+xref: ENVO:02000040
+xref: FMA:66938
+xref: GAID:1164
+xref: galen:Mucus
+xref: MESH:D009093
+xref: NCIT:C13259
+xref: OpenCyc:Mx4rvVjHq5wpEbGdrcN5Y29ycA
+xref: UMLS:C0026727 {source="ncithesaurus:Mucus"}
+xref: Wikipedia:Mucus
+is_a: UBERON:0000456 ! secretion of exocrine gland
+is_a: UBERON:0006314 ! bodily fluid
+property_value: has_relational_adjective "mucoid" xsd:string
+property_value: has_relational_adjective "mucous" xsd:string
 
 [Term]
 id: UBERON:0001062
@@ -3428,11 +4227,12 @@ is_a: BFO:0000004 ! independent continuant
 id: UBERON:0001988
 name: feces
 namespace: uberon
-def: "Portion of semisolid bodily waste discharged through the anus[MW,modified]" [http://en.wikipedia.org/wiki/Feces, http://www.merriam-webster.com/dictionary/feces]
+def: "Portion of semisolid bodily waste discharged through the anus[MW,modified]" [http://www.merriam-webster.com/dictionary/feces, Wikipedia:Feces]
+def: "Portion of semisolid bodily waste discharged through the anus[MW,modified]." [http://www.merriam-webster.com/dictionary/feces, Wikipedia:Feces]
 subset: pheno_slim
 subset: uberon_slim
-synonym: "cow dung" NARROW [http://en.wikipedia.org/wiki/Cow_dung]
-synonym: "cow pat" NARROW [http://en.wikipedia.org/wiki/Cow_dung]
+synonym: "cow dung" NARROW [Wikipedia:Cow_dung]
+synonym: "cow pat" NARROW [Wikipedia:Cow_dung]
 synonym: "droppings" RELATED []
 synonym: "dung" NARROW []
 synonym: "excrement" RELATED [BTO:0000440]
@@ -3440,14 +4240,14 @@ synonym: "excreta" BROAD []
 synonym: "faeces" EXACT []
 synonym: "fecal material" EXACT []
 synonym: "fecal matter" EXACT []
-synonym: "fewmet" NARROW [http://en.wikipedia.org/wiki/Fewmet]
-synonym: "frass" NARROW [http://en.wikipedia.org/wiki/Frass]
-synonym: "guano" NARROW [http://en.wikipedia.org/wiki/Guano]
+synonym: "fewmet" NARROW [Wikipedia:Fewmet]
+synonym: "frass" NARROW [Wikipedia:Frass]
+synonym: "guano" NARROW [Wikipedia:Guano]
 synonym: "matières fécales@fr" EXACT []
 synonym: "merde@fr" EXACT []
 synonym: "ordure" RELATED []
 synonym: "partie de la merde@fr" EXACT []
-synonym: "piece of shit" EXACT [http://www.ncbi.nlm.nih.gov/pubmed/23285307]
+synonym: "piece of shit" EXACT [PMID:23285307]
 synonym: "porción de mierda@es" EXACT []
 synonym: "portion of dung" NARROW []
 synonym: "portion of excrement" EXACT []
@@ -3460,7 +4260,7 @@ synonym: "portion of scat" NARROW []
 synonym: "portionem cacas" EXACT LATIN []
 synonym: "scat" NARROW []
 synonym: "spoor" RELATED []
-synonym: "spraint" NARROW [http://en.wikipedia.org/wiki/Spraint]
+synonym: "spraint" NARROW [Wikipedia:Spraint]
 synonym: "stool" EXACT []
 synonym: "teil der fäkalien@de" EXACT []
 xref: BTO:0000440
@@ -3469,8 +4269,6 @@ xref: ENVO:00002003
 xref: FMA:64183
 xref: GAID:1199
 xref: galen:Feces
-xref: http://en.wikipedia.org/wiki/Feces
-xref: http://linkedlifedata.com/resource/umls/id/C0015733
 xref: MA:0002509
 xref: MAT:0000053
 xref: MESH:D005243
@@ -3478,7 +4276,9 @@ xref: MIAA:0000053
 xref: NCIT:C13234
 xref: OpenCyc:Mx4rvVjJMZwpEbGdrcN5Y29ycA
 xref: UMLS:C0015733 {source="ncithesaurus:Feces"}
+xref: Wikipedia:Feces
 is_a: ENVO:01001103 ! detritus
+is_a: STWO:4000008 ! dead organic matter
 is_a: UBERON:0000174 ! excreta
 property_value: external_definition "Excretion in semisolid state processed by the intestine.[FMA]" xsd:string {source="FMA:64183"}
 property_value: has_relational_adjective "fecal" xsd:string
@@ -3504,11 +4304,10 @@ xref: EFO:0000461
 xref: FBbt:00004208
 xref: FMA:69067
 xref: GAID:407
-xref: http://linkedlifedata.com/resource/umls/id/C0013948
-xref: http://www.snomedbrowser.com/Codes/Details/667009
 xref: MESH:D004628
 xref: NCIT:C13229
 xref: RETIRED_EHDAA2:0003169
+xref: SCTID:667009
 xref: TAO:0001105
 xref: UMLS:C0013948 {source="ncithesaurus:Embryonic_Structure"}
 xref: VSAO:0000178
@@ -3539,6 +4338,7 @@ is_a: UBERON:0000465 ! material anatomical entity
 id: UBERON:0006314
 name: bodily fluid
 namespace: uberon
+def: "Liquid components of living organisms. includes fluids that are excreted or secreted from the body as well as body water that normally is not." [MESH:A12.207, Wikipedia:Body_fluid]
 def: "Liquid components of living organisms. includes fluids that are excreted or secreted from the body as well as body water that normally is not." [http://en.wikipedia.org/wiki/Body_fluid, MESH:A12.207]
 subset: pheno_slim
 synonym: "body fluid" EXACT [GAID:266]
@@ -3550,18 +4350,32 @@ xref: FMA:280556
 xref: GAID:266
 xref: galen:BodyFluid
 xref: MESH:D001826
+xref: Wikipedia:Body_fluid
 is_a: UBERON:0000463 ! organism substance
 
 [Term]
 id: UBERON:0007379
 name: shelled egg
 namespace: uberon
-def: "The hard-shelled reproductive body produced by a bird and especially by the common domestic chicken; also: its contents used as food." [BTO:0000369, http://en.wikipedia.org/wiki/Egg_(biology)]
+def: "The hard-shelled reproductive body produced by a bird (especially by the common domestic chicken) or a reptile; also: its contents used as food." [BTO:0000369, Wikipedia:Egg_(biology)]
 synonym: "egg" RELATED [BTO:0000369]
 xref: BSA:0000081
 xref: BTO:0000369
-xref: Egg:(biology)
+xref: Wikipedia:Egg_(biology)
+is_a: CARO:0000000 ! anatomical entity
+is_a: STWO:0000086 ! animal anatomical entity
 is_a: UBERON:0002050 ! embryonic structure
+relationship: never_in_taxon NCBITaxon:32525
+
+[Term]
+id: UBERON:0007780
+name: exudate
+namespace: uberon
+def: "Fluids that is discharged from blood vessels usually arising from inflammation or injury." [MESH:A12.383]
+comment: Some sources include transudate that has been mixed with cells etc
+xref: MESH:D005122
+xref: ncithesaurus:Exudate
+is_a: UBERON:0000463 ! organism substance
 
 [Term]
 id: UBERON:0008979
@@ -3572,9 +4386,11 @@ synonym: "cadaver" RELATED [BTO:0001965]
 synonym: "carrion" RELATED []
 synonym: "dead body" RELATED [BTO:0001965]
 xref: BTO:0001965
-xref: http://www.snomedbrowser.com/Codes/Details/127853004
 xref: NCIT:C113674
+xref: SCTID:127853004
 is_a: ENVO:01001103 ! detritus
+is_a: STWO:0000086 ! animal anatomical entity
+is_a: STWO:4000008 ! dead organic matter
 is_a: UBERON:0000468 ! multicellular organism
 intersection_of: UBERON:0000468 ! multicellular organism
 intersection_of: has_quality PATO:0001422 ! dead
@@ -3595,9 +4411,8 @@ id: ecocore:00000082
 name: omnivore
 def: "A heterotroph that consumes plant and animal matter either in whole or in part via ingestion through a type of \"mouth\". Animal and plant matter is broken down through an internal digestion process" []
 is_a: ECOCORE:00000019 ! herbivore
-is_a: ECOCORE:00000088 ! carnivore
-is_a: STWO:0000013 ! zoophage
 is_a: STWO:0000023 ! phytophage
+is_a: STWO:0000063 ! trophic level omnivore
 intersection_of: ECOCORE:00000010 ! heterotroph
 intersection_of: capable_of ECOCORE:00000020 ! herbivory
 intersection_of: capable_of ECOCORE:00000021 ! carnivory
@@ -3663,8 +4478,6 @@ is_a: RO:0002321 ! ecologically related to
 id: RO:0002320
 name: evolutionarily related to
 def: "A relationship that holds via some environmental process" []
-property_value: curator_notes "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving the process of evolution." xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
 
 [Typedef]
 id: RO:0002321
@@ -3690,6 +4503,7 @@ name: mereotopologically related to
 def: "A mereological relationship or a topological relationship" []
 property_value: curator_notes "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0001900 RO:0001901
 
 [Typedef]
@@ -3700,6 +4514,7 @@ property_value: curator_notes "Do not use this relation directly. It is intended
 property_value: editor_note "This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an 'activity flow-centric approach', with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.\n\nTo define causal relations in an activity-flow type network, we make use of 3 primitives:\n\n * Temporal: how do the intervals of the two occurrents relate? \n * Is the causal relation regulatory?\n * Is the influence positive or negative\n\nThe first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are 'direct', 'indirect' or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under 'temporally related to'). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.\n\nFor the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.\n\nFor the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.\n\nEach of these 3 primitives can be composed to yield a cross-product of different relation types." xsd:string
 property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 
 [Typedef]
 id: RO:0002434
@@ -3710,8 +4525,9 @@ synonym: "in pairwise interaction with" EXACT []
 property_value: curator_notes "Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules." xsd:string
 property_value: editor_note "Considering relabeling as 'pairwise interacts with'" xsd:anyURI
 property_value: editor_note "This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact." xsd:string
-property_value: foaf-page https://github.com/oborel/obo-relations/wiki/InteractionRelations xsd:anyURI
+property_value: http://xmlns.com/foaf/0.1/page https://github.com/oborel/obo-relations/wiki/InteractionRelations xsd:anyURI
 property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: seeAlso http://purl.obolibrary.org/obo/MI_0914 xsd:anyURI
 
 [Typedef]
@@ -3772,7 +4588,6 @@ def: "An interaction relationship between two organisms living together in more 
 subset: ro-eco
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/19278549 xsd:anyURI
-property_value: RO:0002561 GO:0085031
 is_a: RO:0002440 ! symbiotically interacts with
 
 [Typedef]
@@ -3782,7 +4597,6 @@ def: "An interaction relationship between two organisms living together in more 
 subset: ro-eco
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/19278549 xsd:anyURI
-property_value: RO:0002561 GO:0085030
 is_a: RO:0002440 ! symbiotically interacts with
 
 [Typedef]
@@ -3949,6 +4763,7 @@ id: RO:0002500
 name: causal agent in process
 def: "A relationship between a material entity and a process where the material entity has some causal role that influences the process" []
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 is_a: RO:0002595 ! causal relation between material entity and a process
 
 [Typedef]
@@ -4019,6 +4834,7 @@ def: "A relationship that holds between a material entity and a process in which
 property_value: editor_note "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 is_a: RO:0002410 ! causally related to
 
 [Typedef]
@@ -4143,6 +4959,22 @@ subset: RO:0002259
 is_a: RO:0002635 ! has endoparasite
 
 [Typedef]
+id: RO:0002801
+name: co-roosts with
+def: "Two or more individuals sharing the same roost site (cave, mine, tree or tree hollow, animal burrow, leaf tent, rock crack, space in man-made structure, etc.). Individuals that are sharing a communal roost may be said to be co-roosting. The roost may be either a day roost where the individuals rest during daytime hours, or a night roost where individuals roost to feed, groom, or rest in between flights and/or foraging bouts.  Communal roosting as thus defined is an umbrella term within which different specialized types -- which are not mutually exclusive -- may be recognized based on taxonomy and the temporal and spatial relationships of the individuals that are co-roosting." []
+property_value: IAO:0000119 Communal:roosting
+is_symmetric: true
+is_a: RO:0008506 ! ecologically co-occurs with
+
+[Typedef]
+id: RO:0003001
+name: produced by
+def: "a produced_by b iff some process that occurs_in b has_output a." []
+subset: ro-eco
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Melissa Haendel" xsd:string
+
+[Typedef]
 id: RO:0008501
 name: epiphyte of
 def: "An interaction relationship wherein a plant or algae is living on the outside surface of another plant." []
@@ -4225,8 +5057,10 @@ is_metadata_tag: true
 [Typedef]
 id: bearer_of
 name: bearer of
+name: has characteristic
 namespace: uberon
 def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
+def: "Inverse of characteristic_of" []
 xref: RO:0000053
 property_value: editor_note "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist." xsd:string
 property_value: example_of_usage "this apple is bearer of this red color" xsd:string
@@ -4239,6 +5073,8 @@ property_value: RO:0001900 RO:0001901
 [Typedef]
 id: capable_of
 name: capable of
+name: capable_of
+namespace: protein
 namespace: uberon
 def: "A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. " []
 subset: ro-eco
@@ -4250,6 +5086,8 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "has function realized in" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20123131
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/21208450
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_transitive: false
 is_a: capable_of_part_of ! capable of part of
 is_a: functionally_related_to ! functionally related to
 expand_expression_to: "RO_0000053 some (RO_0000054 only ?Y)" []
@@ -4262,7 +5100,9 @@ def: "c stands in this relationship to p if and only if there exists some p' suc
 xref: RO:0002216
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "has function in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: seeAlso "defining-property-chains-involving-reflexivity"
+property_value: seeAlso http://purl.obolibrary.org/obo/ro/docs/reflexivity/
 is_a: functionally_related_to ! functionally related to
 is_a: RO:0002500 ! causal agent in process
 expand_expression_to: "RO_0000053 some (RO_0000054 only (BFO_0000050 some ?Y))" []
@@ -4273,25 +5113,21 @@ name: composed primarily of
 namespace: uberon
 def: "x composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y." []
 def: "x composed_primarily_of y iff: more than half of the mass of x is made from parts of y" []
+def: "x composed_primarily_of y iff: more than half of the mass of x is made from parts of y." []
 subset: ro-eco
 xref: RO:0002473
 property_value: example_of_usage "'otolith organ' SubClassOf 'composed primarily of' some 'calcium carbonate'" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/22293552
 property_value: RO:0001900 RO:0001901
-is_a: has_part ! has part
+is_a: has_part ! has_part
 
 [Typedef]
 id: curator_notes
 name: curator note
 name: curator notes
 namespace: uberon
-def: "An administrative note of use for a curator but of no use for a user" []
 xref: IAO:0000232
-property_value: IAO:0000111 "curator note" xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000117 "PERSON:Alan Ruttenberg" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/iao.owl
 is_metadata_tag: true
 
 [Typedef]
@@ -4332,6 +5168,7 @@ property_value: IAO:0000111 "editor note" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "PERSON:Daniel Schober" xsd:string
 property_value: IAO:0000119 GROUP:OBI:<http://purl.obfoundry.org/obo/obi> xsd:string
+property_value: IAO:0000119 GROUP:OBI:<http://purl.obofoundry.org/obo/obi> xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/iao.owl
 is_metadata_tag: true
 
@@ -4342,6 +5179,7 @@ namespace: uberon
 def: "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold." []
 xref: IAO:0000112
 property_value: IAO:0000111 "example" xsd:string
+property_value: IAO:0000111 "example of usage" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "PERSON:Daniel Schober" xsd:string
 property_value: IAO:0000119 GROUP:OBI:<http://purl.obolibrary.org/obo/obi> xsd:string
@@ -4367,13 +5205,6 @@ property_value: editor_note "This annotation property may be replaced with an an
 is_metadata_tag: true
 
 [Typedef]
-id: foaf-page
-name: page
-namespace: uberon
-xref: http://xmlns.com/foaf/0.1/page
-is_metadata_tag: true
-
-[Typedef]
 id: functionally_related_to
 name: functionally related to
 namespace: uberon
@@ -4381,6 +5212,7 @@ def: "A grouping relationship for any relationship directly involving a function
 xref: RO:0002328
 property_value: curator_notes "This is a grouping relation that collects relations used for the purpose of connecting structure and function" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 
 [Typedef]
 id: has_part
@@ -4389,20 +5221,35 @@ name: has_part
 namespace: chebi_ontology
 namespace: external
 namespace: plant_ontology
+namespace: protein
 namespace: quality
 namespace: uberon
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000051
 property_value: editor_note "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: editor_note "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: editor_note "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: editor_note "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: example_of_usage "my body has part my brain (continuant parthood, two material entities)" xsd:string
 property_value: example_of_usage "my body has part my brain (continuant parthood, two material entities)" xsd:string
 property_value: example_of_usage "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: example_of_usage "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: example_of_usage "this year has part this day (occurrent parthood)" xsd:string
 property_value: example_of_usage "this year has part this day (occurrent parthood)" xsd:string
 property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000111 "has part" xsd:string
 property_value: IAO:0000118 "has_part" xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 property_value: RO:0001900 RO:0001901
 is_cyclic: false
 is_a: overlaps ! overlaps
@@ -4440,16 +5287,27 @@ id: in_taxon
 name: in taxon
 namespace: uberon
 def: "x is in taxon y if an only if y is an organism, and the relationship between x and y is one of: part of (reflexive), developmentally preceded by, derives from, secreted by, expressed." []
-comment: Connects a biological entity to its taxon of origin.
-subset: ro-eco
 xref: RO:0002162
-property_value: IAO:0000114 IAO:0000125
+is_a: RO:0002320 ! evolutionarily related to
+
+[Typedef]
+id: never_in_taxon
+name: never in taxon
+name: never_in_taxon
+namespace: uberon
+def: "S never_in_taxon T iff: S SubClassOf in_taxon only not T" []
+def: "S never_in_taxon T iff: S SubClassOf in_taxon only not T." [PMID:20973947]
+def: "x never in taxon T if and only if T is a class, and x does not instantiate the class expression \"in taxon some T\". Note that this is a shortcut relation, and should be used as a hasValue restriction in OWL." []
+xref: RO:0002161
+property_value: example_of_usage "tooth SubClassOf 'never in taxon' value 'Aves'" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000117 "Jennifer Deegan" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/17921072
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20973947
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Taxon-constraints
-is_a: RO:0002320 ! evolutionarily related to
+expand_assertion_to: "?X DisjointWith RO_0002162 some ?Y " []
+expand_assertion_to: "Class: <http://www.w3.org/2002/07/owl#Nothing> EquivalentTo: ?X and (RO_0002162 some ?Y)" []
+is_metadata_tag: true
+is_class_level: true
 
 [Typedef]
 id: only_in_taxon
@@ -4458,16 +5316,10 @@ name: only_in_taxon
 namespace: fungal_anatomy_ontology
 namespace: plant_ontology
 namespace: uberon
-def: "S only_in_taxon T iff: S SubClassOf in_taxon only T" [http://www.ncbi.nlm.nih.gov/pubmed/20973947]
+def: "S only_in_taxon T iff: S SubClassOf in_taxon only T" [PMID:20973947]
+def: "S only_in_taxon T iff: S SubClassOf in_taxon only T." [PMID:20973947]
 def: "x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z." []
 xref: RO:0002160
-property_value: editor_note "The original intent was to treat this as a macro that expands to 'in taxon' only ?Y - however, this is not necessary if we instead have supplemental axioms that state that each pair of sibling tax have a disjointness axiom using the 'in taxon' property - e.g.\n\n 'in taxon' some Eukaryota DisjointWith 'in taxon' some Eubacteria" xsd:string
-property_value: example_of_usage "lactation SubClassOf 'only in taxon' some 'Mammalia'" xsd:string
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/17921072
-property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20973947
-property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Taxon-constraints
 is_a: in_taxon ! in taxon
 
 [Typedef]
@@ -4476,9 +5328,13 @@ name: overlaps
 namespace: uberon
 def: "A overlaps B if they share some part in common." []
 def: "x overlaps y if and only if there exists some z such that x has part z and z part of y" []
+def: "x overlaps y iff they have some part in common." [BSPO:cjm]
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 subset: ro-eco
 xref: RO:0002131
 property_value: IAO:0000114 IAO:0000125
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0001900 RO:0001901
 is_a: RO:0002323 ! mereotopologically related to
 expand_expression_to: "BFO_0000051 some (BFO_0000050 some ?Y)" []
@@ -4491,18 +5347,34 @@ name: part_of
 namespace: external
 namespace: fungal_anatomy_ontology
 namespace: plant_ontology
+namespace: protein
 namespace: quality
 namespace: uberon
 def: "a core relation that holds between a part and its whole" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000050
 property_value: editor_note "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: editor_note "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: editor_note "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: editor_note "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: editor_note "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: example_of_usage "my brain is part of my body (continuant parthood, two material entities)" xsd:string
 property_value: example_of_usage "my brain is part of my body (continuant parthood, two material entities)" xsd:string
 property_value: example_of_usage "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: example_of_usage "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: example_of_usage "this day is part of this year (occurrent parthood)" xsd:string
 property_value: example_of_usage "this day is part of this year (occurrent parthood)" xsd:string
 property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000111 "is part of" xsd:string
 property_value: IAO:0000118 "part_of" xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 property_value: RO:0001900 RO:0001901
 property_value: RO:0040042 BFO:0000002
 property_value: RO:0040042 BFO:0000003
@@ -4515,4 +5387,12 @@ property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_a
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
 property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
 is_a: overlaps ! overlaps
+
+[Typedef]
+id: seeAlso
+name: see also
+namespace: uberon
+xref: http://www.w3.org/2000/01/rdf-schema#seeAlso
+xref: seeAlso
+is_metadata_tag: true
 
