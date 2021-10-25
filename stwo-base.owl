@@ -2351,7 +2351,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_0000040">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
-        <rdfs:label xml:lang="en">collector gatherer</rdfs:label>
+        <rdfs:label>collector gatherer</rdfs:label>
     </owl:Class>
     
 
@@ -2946,7 +2946,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
         <obo:IAO_0000115>A parasite whose host is a bryophyte.</obo:IAO_0000115>
-        <obo:IAO_0000115>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <rdfs:label>bryophyte parasite</rdfs:label>
     </owl:Class>
     
@@ -3064,7 +3064,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STWO_4000000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
-        <obo:IAO_0000115></obo:IAO_0000115>
         <obo:IAO_0000115>Organic material that is able to pass through a filter, in contrast to particulate organic matter retained on the filter.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <rdfs:label>dissolved organic matter</rdfs:label>
