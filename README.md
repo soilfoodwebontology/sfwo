@@ -9,6 +9,7 @@ The STWO is a joint effort to :
 - standardize trophic group definitions
 - provide a vocabulary of terms for text mining
 - automate the creation of food webs from interaction data
+- 
 This domain ontology has a strong focus on reasoning. It provides logical definitions of trophic groups in the form of OWL equivalence axioms to support food web reconstruction using OWL reasoning.
 
 The STWO makes use of the Basic Formal Ontology (BFO) and its principles for interoperability. It reuses existing ontologies as much as possible (see the wiki for details).
