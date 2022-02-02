@@ -1,11 +1,22 @@
 [![Build Status](https://travis-ci.org/nleguillarme/stwo.svg?branch=master)](https://travis-ci.org/nleguillarme/stwo)
 [![DOI](https://zenodo.org/badge/13996/nleguillarme/stwo.svg)](https://zenodo.org/badge/latestdoi/13996/nleguillarme/stwo)
 
-# Soil Trophic Web Ontology
+# The Soil Trophic Web Ontology
 
-This ontology... YOUR DESCRIPTION HERE
+The Soil Trophic Web Ontology (STWO) is a domain ontology which represents and maps together knowledge about trophic interactions (consumer-resource relationships) and trophic groups (feeding habits, diets), with a focus on soil food webs. The STWO is published on GitHub as open source software and is constantly being extended. A steering committee of 20+ soil ecology experts was created to accompany the development and widespread adoption of the ontology.
 
-More information can be found at http://obofoundry.org/ontology/stwo
+The STWO is a joint effort to :
+- standardize trophic group definitions
+- provide a vocabulary of terms for text mining
+- automate the creation of food webs from interaction data
+
+This domain ontology has a strong focus on reasoning. It provides logical definitions of trophic groups in the form of OWL equivalence axioms to support food web reconstruction using OWL reasoning.
+
+The STWO makes use of the Basic Formal Ontology (BFO) and its principles for interoperability. It reuses existing ontologies as much as possible (see the wiki for details).
+
+<!-- STWO leverages existing OBO ontologies as much as possible. In particular, STWO extends a "trophic subset" of [the ECOCORE ontology](https://github.com/EcologicalSemantics/ecocore) with additional classes for missing trophic groups and resources. STWO also provides logical definitions of trophic groups in the form of OWL equivalence axioms to support food web reconstruction using OWL reasoning. -->
+
+<!-- More information can be found at http://obofoundry.org/ontology/stwo -->
 
 ## Versions
 
@@ -13,9 +24,11 @@ More information can be found at http://obofoundry.org/ontology/stwo
 
 The latest version of the ontology can always be found at:
 
-http://purl.obolibrary.org/obo/stwo.owl
+https://github.com/nleguillarme/soil_trophic_web_ontology/releases
 
-(note this will not show up until the request has been approved by obofoundry.org)
+<!-- http://purl.obolibrary.org/obo/stwo.owl
+
+(note this will not show up until the request has been approved by obofoundry.org)-->
 
 ### Editors' version
 
