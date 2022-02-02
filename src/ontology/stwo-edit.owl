@@ -121,23 +121,24 @@ Declaration(AnnotationProperty(dcterms:license))
 # Object Property: <http://purl.org/sfwo/STWO_0000047> (obtains carbon from)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/STWO_0000047> "https://orcid.org/0000-0003-4559-7579")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000047> "obtains carbon from"@fr)
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000047> "obtains carbon from")
 SubObjectPropertyOf(<http://purl.org/sfwo/STWO_0000047> <http://purl.obolibrary.org/obo/RO_0002437>)
 
 # Object Property: <http://purl.org/sfwo/STWO_0000048> (uses as energy source)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/STWO_0000048> "https://orcid.org/0000-0003-4559-7579")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000048> "uses as energy source"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000048> "uses as energy source")
 SubObjectPropertyOf(<http://purl.org/sfwo/STWO_0000048> <http://purl.obolibrary.org/obo/RO_0002437>)
 
 # Object Property: <http://purl.org/sfwo/STWO_0000052> (obtains electrons or hydrogen from)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/STWO_0000052> "https://orcid.org/0000-0003-4559-7579")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000052> "obtains electrons or hydrogen from"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000052> "obtains electrons or hydrogen from")
 SubObjectPropertyOf(<http://purl.org/sfwo/STWO_0000052> <http://purl.obolibrary.org/obo/RO_0002437>)
 
 # Object Property: <http://purl.org/sfwo/STWO_0000099> (acquires nutrients through symbiosis with)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/STWO_0000099> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000099> "acquires nutrients through symbiosis with")
 SubObjectPropertyOf(<http://purl.org/sfwo/STWO_0000099> <http://purl.obolibrary.org/obo/RO_0002440>)
 SubObjectPropertyOf(<http://purl.org/sfwo/STWO_0000099> <http://purl.obolibrary.org/obo/RO_0002457>)
@@ -173,7 +174,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000019> "phytophage")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000019> "plant feeder")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000019> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000020>))
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000019> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_33090> <http://purl.obolibrary.org/obo/PO_0025131> <http://purl.org/sfwo/STWO_0000095>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000019> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_33090> <http://purl.obolibrary.org/obo/PO_0025131> <http://purl.org/sfwo/STWO_0000095> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/PO_0025131>))))
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000023> (autotroph)
 
@@ -260,7 +261,10 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000091> ObjectSomeVa
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000098> (bacterivore)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/ECOCORE_00000098> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000098> "bactivore")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000098> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_2157>)))
+SubClassOf(<http://purl.obolibrary.org/obo/ECOCORE_00000098> <http://purl.org/sfwo/STWO_0000061>)
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000103> (scavenging)
 
@@ -808,6 +812,7 @@ SubClassOf(<http://purl.org/sfwo/STWO_0000060> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/STWO_0000061> "A heterotroph that feeds on microorganisms.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/STWO_0000061> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.org/sfwo/STWO_0000061> "microbivorous")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/STWO_0000061> "microbivore")
 EquivalentClasses(<http://purl.org/sfwo/STWO_0000061> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/STWO_0000062>))
 SubClassOf(<http://purl.org/sfwo/STWO_0000061> <http://purl.obolibrary.org/obo/ECOCORE_00000010>)
