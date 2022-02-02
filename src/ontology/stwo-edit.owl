@@ -206,8 +206,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000055> ObjectSomeVa
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000056> (saprotroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/ECOCORE_00000056> "https://orcid.org/0000-0003-4559-7579")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECOCORE_00000056> "The main characteristic that differentiates detritivores from saprotrophs is that saprotrophs secrete enzymes that digest dead material externally, whereas detritivores digest internally. 
-It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECOCORE_00000056> "It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECOCORE_00000056> "There is some debate over whether saprotroph and subclasses should be broad synonyms of detritivore and subclasses. We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology/")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000056> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_4751>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/STWO_4000008>)))
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000059>))
 
@@ -221,14 +221,19 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000084> ObjectSomeVa
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/ECOCORE_00000085> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000085> "racidivore"@fr)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000085> "rhizophage"@fr)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000085> "rhizophage")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000085> "root feeder")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/PO_0009005>))
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000086> (algivore)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/ECOCORE_00000086> "https://orcid.org/0000-0003-4559-7579")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000086> "algophage"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000086> "algophage")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000086> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/ECOCORE_00000076>))
+
+# Class: <http://purl.obolibrary.org/obo/ECOCORE_00000087> (parasitoid)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000087> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002208> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000088> (carnivore)
 
@@ -263,6 +268,7 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000091> ObjectSomeVa
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/ECOCORE_00000098> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000098> "bactivore")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000098> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000114>))
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000098> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_2157>)))
 SubClassOf(<http://purl.obolibrary.org/obo/ECOCORE_00000098> <http://purl.org/sfwo/STWO_0000061>)
 
@@ -357,6 +363,14 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000145> ObjectSomeVa
 
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000146> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000147>))
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000146> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
+
+# Class: <http://purl.obolibrary.org/obo/ECOCORE_00000151> (internal parasite)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000151> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002634> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
+
+# Class: <http://purl.obolibrary.org/obo/ECOCORE_00000152> (external parasite)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002632> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000157> (filter feeder)
 

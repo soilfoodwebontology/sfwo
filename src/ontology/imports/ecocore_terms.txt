@@ -13,4 +13,7 @@ ECOCORE:00000103 # Scavenging
 ECOCORE:00000140 # Nectarivore
 ECOCORE:00000098 # Bacterivore
 ECOCORE:00000114 # Bactivory
-ECOCORE:00000057
+ECOCORE:00000057 # Detritivory
+ECOCORE:00000087 # Parasitoid
+ECOCORE:00000151 # Internal parasite
+ECOCORE:00000152 # External parasite
