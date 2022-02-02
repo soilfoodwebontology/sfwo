@@ -11,3 +11,6 @@ GO:0036377 # arbuscular mycorrhizal association
 GO:0085030 # symbiotic process benefiting host
 ECOCORE:00000103 # Scavenging
 ECOCORE:00000140 # Nectarivore
+ECOCORE:00000098 # Bacterivore
+ECOCORE:00000114 # Bactivory
+ECOCORE:00000057
