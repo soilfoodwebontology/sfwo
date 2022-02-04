@@ -1,4 +1,5 @@
-Prefix(:=<http://purl.org/sfwo/sfwo.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/sfwo.owl#>)
+# Prefix(:=<http://purl.org/sfwo/sfwo.owl#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
