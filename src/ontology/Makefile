@@ -1,5 +1,5 @@
 # ----------------------------------------
-# Makefile for stwo
+# Makefile for sfwo
 # Generated using ontology-starter-kit
 # ODK Version: v1.2.23
 # ----------------------------------------
@@ -11,7 +11,7 @@
 # these can be overwritten on the command line
 
 URIBASE=                    http://purl.obolibrary.org/obo
-ONT=                        stwo
+ONT=                        sfwo
 ONTBASE=                    $(URIBASE)/$(ONT)
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
@@ -72,7 +72,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  ro bfo ecocore po pato uberon envo fao chebi #ncbitaxon chebi
+IMPORTS =  ro bfo ecocore po pato uberon envo fao chebi ncbitaxon
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -160,7 +160,7 @@ OTHER_SRC =
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	touch $(ONTOLOGYTERMS) && \
-	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/stwo_terms.sparql $@
+	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/sfwo_terms.sparql $@
 
 
 
@@ -399,4 +399,4 @@ build-docker:
 update_repo:
 	sh ../scripts/update_repo.sh
 
-include stwo.Makefile
+include sfwo.Makefile

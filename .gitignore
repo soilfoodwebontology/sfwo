@@ -9,14 +9,14 @@ bin/
 
 src/ontology/mirror
 src/ontology/mirror/*
-src/ontology/stwo.owl
-src/ontology/stwo.obo
-src/ontology/stwo.json
-src/ontology/stwo-base.*
-src/ontology/stwo-basic.*
-src/ontology/stwo-full.*
-src/ontology/stwo-simple.*
-src/ontology/stwo-simple-non-classified.*
+src/ontology/sfwo.owl
+src/ontology/sfwo.obo
+src/ontology/sfwo.json
+src/ontology/sfwo-base.*
+src/ontology/sfwo-basic.*
+src/ontology/sfwo-full.*
+src/ontology/sfwo-simple.*
+src/ontology/sfwo-simple-non-classified.*
 
 src/ontology/seed.txt
 src/ontology/dosdp-tools.log
@@ -24,7 +24,7 @@ src/ontology/ed_definitions_merged.owl
 src/ontology/ontologyterms.txt
 src/ontology/simple_seed.txt
 src/ontology/patterns
-src/ontology/merged-stwo-edit.owl
+src/ontology/merged-sfwo-edit.owl
 
 src/ontology/target/
 src/ontology/tmp/*
