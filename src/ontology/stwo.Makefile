@@ -5,7 +5,7 @@
 
 imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ecocore_terms_combined.txt --force true --method MIREOT \
-	  	remove --select "parents" --select "FOODON:*" --trim true \
+	  remove --select "parents" --select "FOODON:*" --trim true \
 		remove --term RO:0002410 --term RO:0002328 --axioms "subproperty" --preserve-structure false --trim true \
 		remove --term-file imports/ecocore_exclude_terms.txt --select "self" --preserve-structure false \
 		remove --term-file imports/chebi_exclude_terms.txt --select "self" --preserve-structure false \
@@ -72,12 +72,6 @@ imports/ncbitaxon_import.owl: mirror/ncbitaxon.owl imports/ncbitaxon_terms_combi
 	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ncbitaxon_terms_combined.txt --force true --method MIREOT \
 		remove --term NCBITaxon:1 --trim true \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-## imports/ncbitaxon_import.owl: mirror/ncbitaxon.owl imports/ncbitaxon_terms_combined.txt
-## 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -L imports/ncbitaxon_terms_combined.txt --force true --method MIREOT \
-## 		query --update ../sparql/inject-subset-declaration.ru \
-## 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
 .PRECIOUS: imports/ncbitaxon_import.owl
 
 
