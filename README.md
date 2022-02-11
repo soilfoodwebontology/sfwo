@@ -1,7 +1,9 @@
-[![Build Status](https://travis-ci.org/nleguillarme/sfwo.svg?branch=master)](https://travis-ci.org/nleguillarme/sfwo)
-[![DOI](https://zenodo.org/badge/13996/nleguillarme/sfwo.svg)](https://zenodo.org/badge/latestdoi/13996/nleguillarme/sfwo)
+<!-- [![Build Status](https://travis-ci.org/nleguillarme/sfwo.svg?branch=master)](https://travis-ci.org/nleguillarme/sfwo)
+[![DOI](https://zenodo.org/badge/13996/nleguillarme/sfwo.svg)](https://zenodo.org/badge/latestdoi/13996/nleguillarme/sfwo) -->
 
-# The Soil Food Web Ontology
+<!-- <a><img align="right" width="300" src="https://i.ibb.co/QQtPKJM/sfwo-logo.png" alt="Soil Food Web Ontology"></a> -->
+
+![](https://i.ibb.co/QQtPKJM/sfwo-logo.png)
 
 The Soil Food Web Ontology (SFWO) is a domain ontology which represents and maps together knowledge about trophic interactions (consumer-resource relationships) and trophic groups (feeding habits, diets), with a focus on soil food webs. The SFWO is published on GitHub as open source software and is constantly being extended. A steering committee of 20+ soil ecology experts was created to accompany the development and widespread adoption of the ontology.
 
