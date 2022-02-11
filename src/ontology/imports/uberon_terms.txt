@@ -4,3 +4,6 @@ UBERON:0008979 # Carcass
 UBERON:0007379 # Egg
 UBERON:0000456 # Secretion
 UBERON:0000912 # Mucus
+UBERON:0000069 # Larval stage
+UBERON:0000066 # Fully formed stage
+UBERON:0000070 # Pupal stage

@@ -1,5 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/sfwo.owl#>)
-# Prefix(:=<http://purl.org/sfwo/sfwo.owl#>)
+Prefix(:=<http://purl.org/sfwo/sfwo.owl#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -77,7 +76,6 @@ Declaration(Class(<http://purl.org/sfwo/SFWO_0000055>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000056>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000058>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000059>))
-Declaration(Class(<http://purl.org/sfwo/SFWO_0000060>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000061>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000062>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000063>))
@@ -770,14 +768,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.or
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000059> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000059> "mutualism")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000059> <http://purl.obolibrary.org/obo/ECOCORE_00000060>)
-
-# Class: <http://purl.org/sfwo/SFWO_0000060> (zoosaprophage)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000060> "A detritivore that consumes dead or decaying animal material.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000060> "http://orcid.org/0000-0003-4559-7579")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000060> "zoosaprophagous")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000060> "zoosaprophage")
-AnnotationAssertion(owl:deprecated <http://purl.org/sfwo/SFWO_0000060> "true"^^xsd:boolean)
 
 # Class: <http://purl.org/sfwo/SFWO_0000061> (microbivore)
 
