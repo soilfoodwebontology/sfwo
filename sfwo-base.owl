@@ -1,0 +1,2754 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sfwo/sfwo-base.owl#"
+     xml:base="http://purl.obolibrary.org/obo/sfwo/sfwo-base.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sfwo/sfwo-base.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-12/sfwo-base.owl"/>
+        <dc:description>None</dc:description>
+        <dc:title>Soil Trophic Web Ontology</dc:title>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-02-12</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002160 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002160"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002208 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002208"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002215 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002215"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002437 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002437"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002439 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002439"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002440 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002440"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002442 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002442"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002444 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002444"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002457 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002457"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002470 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002470"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002632 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002632"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002634 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002634"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000047 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sfwo/SFWO_0000047">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>obtains carbon from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000048 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sfwo/SFWO_0000048">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>uses as energy source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sfwo/SFWO_0000052">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>obtains electrons or hydrogen from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000099 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sfwo/SFWO_0000099">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002440"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002457"/>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>acquires nutrients through symbiosis with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23367 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24835 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_30212"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50860 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000009"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000047"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000011"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000011"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000012">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000009"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000011"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000013"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000014"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000015">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000016"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FAO_0002002"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym>fungal feeder</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000017"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0025131"/>
+                            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000095"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>phytophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>plant feeder</oboInOwl:hasNarrowSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000021"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000009"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000045">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000060"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000099"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000054">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000058"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000057"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="en">detritophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">detritus feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">détritiphage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">détritivore</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>saprophage</oboInOwl:hasExactSynonym>
+        <rdfs:comment>It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/</rdfs:comment>
+        <rdfs:comment>There is some debate over whether detritivores should be considered a subclass of decomposers, see https://en.wikipedia.org/wiki/Decomposer.
+We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000059"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:comment>It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/</rdfs:comment>
+        <rdfs:comment>There is some debate over whether saprotroph and subclasses should be broad synonyms of detritivore and subclasses. We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology/</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000057"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000058"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000059"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000060"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000084">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025034"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym xml:lang="fr">phyllophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">phyllophagous</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000085">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009005"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="fr">racidivore</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>rhizophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>root feeder</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000086">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>algophage</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000087">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002208"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000021"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000086"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasBroadSynonym>zoophage</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>zoophagous</oboInOwl:hasBroadSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000089">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000102"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002439"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000090">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000103"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasBroadSynonym>zoosaprophage</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>carcasivore</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>necrophage</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000091">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000108"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50557"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym>entomophage</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000098 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000098">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000114"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2157"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000061"/>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>bactivore</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000099 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000099"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000100"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000101 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000101"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000102 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000102"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000103 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000057"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000108"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000109"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000114"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000121 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000121">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000130"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000001"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000122">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000130"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000002"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000123">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000129"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000001"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000124 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000124">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000129"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000002"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000129"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000125">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000131"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000001"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000126">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000131"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000002"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000127">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000132"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000001"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000128 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000128">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000132"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000002"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000129">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000000"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000130">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000007"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000013"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000131">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000007"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000132">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000000"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000136">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009001"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym xml:lang="fr">carpophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">fructivore</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000137 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000137">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025281"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym>pollen feeder</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000140">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000084"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000143">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000100"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009010"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000144">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0005848"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000145">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000050"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000146">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000147"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000147 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000147"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000151 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000151">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002634"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000152 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000152">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002632"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000154"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000157">
+        <owl:equivalentClass rdf:resource="http://purl.org/sfwo/SFWO_0000041"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000162 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000162"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000163 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000163"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000164 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000164">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000165"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym>hematophage</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000165"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000168 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000168">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000099"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000169 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000169">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000101"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000176">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000043"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00001998 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000155">
+        <oboInOwl:hasExactSynonym xml:lang="en">organic matter</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_04000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_04000008">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FAO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_4000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FAO_0002002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0002002"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0036377 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0036377"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0044403 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044403"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_131567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131567">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_13809 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_13809"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2157"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27482 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27482"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2759 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_30001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_30001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3195"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3208"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_36668 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_36668"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4345 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4345"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4747 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4747"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4751 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_50557 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_50557"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6231 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6231"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6447 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6447"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6933"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_8570 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_8570"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0005848 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005848"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009005"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009010"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025034"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025161 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025161"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025281"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025540 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025540"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000174"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000463 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000463">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000086"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000465 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000465">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000468 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0007379 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007379">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000086"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0007780 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007780"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000000 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000048"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000163"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115>An organism which is capable of obtaining energy from the bonds in a chemical compound</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">chemotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000162"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115>An organism which is capable of using a biogenic organic compound as an electron donor.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>organotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000014"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115>An organism which is capable of using an inorganic compound as an electron donor.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>lithotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000127"/>
+        <obo:IAO_0000115>A chemoorganoheterotroph which obtains nutrition by engulfment of food particles, by phagocytose or ingestion.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">phagotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000003"/>
+        <obo:IAO_0000115>A phagotroph feeding on very small organic particles or organisms.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">microphage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000005 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000003"/>
+        <obo:IAO_0000115>A phagotroph feeding on large organic particles or organisms.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">macrophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000127"/>
+        <obo:IAO_0000115>A chemoorganoheterotroph which obtains nutrition through a parasitic relationship with another organism.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">pathotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000007 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000007">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000048"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30212"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000017"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115>An organism which is capable of transforming light into chemical energy.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>phototroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000008">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000044"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
+        <obo:IAO_0000115>A decomposer which obtains nutrition by consuming earth or soil-like substrates such as clay or chalk.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>geophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>soil feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>humiphage</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>geophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000009">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0007780"/>
+                            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000049"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115>A heterotroph that consumes plant or animal exudates.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>exudate feeder</oboInOwl:hasExactSynonym>
+        <rdfs:label>exudativore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000012 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+        <obo:IAO_0000115>A saprophage which obtains nutrition by consuming decaying wood.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>saproxylophagous</oboInOwl:hasExactSynonym>
+        <rdfs:label>saproxylophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000015">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6447"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
+        <obo:IAO_0000115>A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>malacophagous</oboInOwl:hasExactSynonym>
+        <rdfs:label>malacophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000017">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000109"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007379"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+        <obo:IAO_0000115>A zoophage that feeds on eggs.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>oophagous</oboInOwl:hasExactSynonym>
+        <rdfs:label>oophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000018 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000018">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_36668"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000091"/>
+        <obo:IAO_0000115>An entomophage that feeds on ants.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>myrmecophagous</oboInOwl:hasExactSynonym>
+        <rdfs:label>myrmecophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000019">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6231"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
+        <obo:IAO_0000115>A zoophage that primarily eats nematodes.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>nematophagous</oboInOwl:hasExactSynonym>
+        <rdfs:label>nematophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000020">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_4000012"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000069"/>
+        <obo:IAO_0000115>An exudativore that consumes honeydew produced by phloem sap-feeding insects.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>honeydew feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000021 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000021">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025540"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+        <obo:IAO_0000115>An gumnivore that primarily consumes phloem sap.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>phloem feeder</oboInOwl:hasExactSynonym>
+        <rdfs:label>phloem sap feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000024 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000024">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
+        <obo:IAO_0000115>A parasite whose host is a plant.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>phytoparasite</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">plant parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000025 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+        <obo:IAO_0000115>A detritivore that consumes dead or decaying plant material.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>phytosaprophagous</oboInOwl:hasExactSynonym>
+        <rdfs:label>phytosaprophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000027">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_13809"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3195"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3208"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+        <obo:IAO_0000115>An herbivore that primarily consumes bryophytes (mosses, liverworts, and hornworts).</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>bryophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>moss feeder</oboInOwl:hasExactSynonym>
+        <rdfs:label>bryophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000030">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000154"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8570"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
+        <obo:IAO_0000115>A zoophage that primarily eats snakes.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>ophiophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>serpentivore</oboInOwl:hasExactSynonym>
+        <rdfs:label>ophiophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000031">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27482"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000091"/>
+        <obo:IAO_0000115>An entomophage that feeds on aphids.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="fr">aphidiphage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>aphidophagous</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">aphidophage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000032 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+        <obo:IAO_0000115>An herbivore that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>scraper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115>A heterotroph that obtains nutrition by consuming other organisms&apos; fluids.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>fluid feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000036"/>
+        <obo:IAO_0000115>A sucker with sharp or chewing mouthparts that pierce food items to allow internal fluids to be sucked out.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>piercer and sucker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000036 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000036">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000034"/>
+        <obo:IAO_0000115>A fluid feeder that feeds by sucking fluids into its mouth.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>sucker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000037 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115>A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>shredder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000051"/>
+        <obo:IAO_0000115>A suspension feeder that uses ciliary or muscular activity to create feeding currents.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>active suspension feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000039 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000051"/>
+        <obo:IAO_0000115>A suspension feeder that utilises the natural flow to bring particles in contact with feeding structures.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>passive suspension feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <rdfs:label>collector gatherer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000041 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000051"/>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>collector filterer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000042 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000102"/>
+        <obo:IAO_0000115>A predation process during which a living entity acquires food and energy by consuming fishes.</obo:IAO_0000115>
+        <rdfs:label>piscivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000043 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000058"/>
+        <obo:IAO_0000115>A decomposition process during which a living entity acquires food and energy by consuming feces.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>coprophagia</oboInOwl:hasExactSynonym>
+        <rdfs:label>coprophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000044 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000058"/>
+        <obo:IAO_0000115>A decomposition process during which a living entity acquires food and energy by consuming earth or soil-like substrates such as clay or chalk.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>geophagia</oboInOwl:hasExactSynonym>
+        <rdfs:label>geophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000049 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000049">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000084"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
+        <obo:IAO_0000115>A portion of plant substance that is or was emitted by a plant through pores or wound.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>plant exudate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000050 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
+        <obo:IAO_0000115>A portion of plant substance composed of sap or other resinous material, associated with certain plant species.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>plant gum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000051 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000049"/>
+        <obo:IAO_0000115>A plant exudate excreted by the roots of living plants.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>root exudate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000053 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000053">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6933"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
+        <obo:IAO_0000115>A predator that primarily eats acari</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>acariphagous</oboInOwl:hasExactSynonym>
+        <rdfs:label>acariphage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000054 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000054">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
+        <obo:IAO_0000115>A parasite whose host is an animal.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>animal parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000055 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000055">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50557"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000054"/>
+        <obo:IAO_0000115>An animal parasite whose host is an insect.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>entomogenous organism</oboInOwl:hasExactSynonym>
+        <rdfs:label>insect parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000056 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
+        <rdfs:label>ectomycorrhizal association</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000058 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000058">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_30001"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
+        <obo:IAO_0000115>A predator that primarily eats springtails</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>springtail feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000059 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000060"/>
+        <obo:IAO_0000115>A symbiotrophic process during which there is a transfer of energy and nutrients between two living entities. This process has positive effects on the growth rates of both entities.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>mutualism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000061 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000061">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115>A heterotroph that feeds on microorganisms.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasRelatedSynonym>microbivorous</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>microbivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000062 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115>An organism of microscopic size, which may exist in its single-celled form or as a colony of cells.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>microorganism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000063 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000063">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+                            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000061"/>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000090"/>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115>A heterotroph that feeds on resources at more than one trophic level.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-4456-1710</obo:IAO_0000117>
+        <rdfs:comment>The definition is from Coll, M., &amp; Guershon, M. (2002).</rdfs:comment>
+        <rdfs:label>trophic omnivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000064 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000064">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
+        <obo:IAO_0000115>An eukaryotic microorganism that is not an animal, plant, or fungus.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>protist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000065 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000065">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000064"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115>A heterotroph that feeds on protists.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>protistivorous</oboInOwl:hasExactSynonym>
+        <rdfs:label>protistivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000068 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000068">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000049"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000009"/>
+        <obo:IAO_0000115>An exudativore that consumes plant exudates.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>plant exudate feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000069 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000069">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007780"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000009"/>
+        <obo:IAO_0000115>An exudativore that consumes animal exudates.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>animal exudate feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000070 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <obo:IAO_0000115>A saprotroph that obtains nutrition through extracellular digestion of wood</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>wood saprotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000071 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000071">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000072"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000056"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
+        <obo:IAO_0000115>A mycorrhizal fungus whose hyphae do not penetrate the plant cell wall.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>ectomycorrhizal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000072 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000072">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000099"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000045"/>
+        <obo:IAO_0000115>A symbiotroph involved in a mutual symbiotic association with the roots of a plant.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>mycorrhizal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000073 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000073">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000072"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0036377"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
+        <obo:IAO_0000115>A mycorrhizal fungus whose hyphae penetrate the plant cell wall and invaginate its cell membrane.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>arbuscular mycorrhizal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000074 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000074">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
+        <obo:IAO_0000115>A parasite whose host is a fungus.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>mycoparasite</oboInOwl:hasExactSynonym>
+        <rdfs:label>fungal parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000076 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <obo:IAO_0000117>A saprotroph that obtains nutrition through extracellular digestion of plant litter.</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasNarrowSynonym>leaf saprotroph</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>litter saprotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000077 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <obo:IAO_0000115>A saprotroph that obtains nutrition through extracellular digestion of feces.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>dung saprotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000078 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000078">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_04000008"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>soil saprotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000079 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000079">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000072"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002442"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4345"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
+        <obo:IAO_0000115>A mycorrhizal fungus involved in a mutualistic association with a member of the plant family Ericaceae.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>ericoid mycorrhizal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000080 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000080">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_13809"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3195"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3208"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
+        <obo:IAO_0000115>A parasite whose host is a bryophyte.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>bryophyte parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000081 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000081">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000072"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002440"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4747"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
+        <obo:IAO_0000115>A mycorrhizal fungus involved in a symbiotic interaction with a member of the plant family Orchidaceae.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>orchid mycorrhizal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000082 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000082">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000099"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000045"/>
+        <obo:IAO_0000115>A symbiotroph involved in a symbiotic association with living green algae or cyanobacteria.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>lichenized</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000083 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000083">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000082"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000074"/>
+        <obo:IAO_0000115>A fungal parasite whose host is a lichenized fungus.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasNarrowSynonym>lichenicolous fungus</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>lichen parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000084 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000084">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000049"/>
+        <obo:IAO_0000115>A plant exudate produced in glands called nectaries or nectarines.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>nectar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000085 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000085">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000064"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
+        <obo:IAO_0000115>A parasite whose host is a protist.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>protistan parasite</oboInOwl:hasExactSynonym>
+        <rdfs:label>protist parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000086 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An anatomical entity that is or was part of an animal.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>animal anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000095 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
+        <obo:IAO_0000115>Macroscopic, multicellular, marine algae.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="en">seaweed</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">macroalgae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000096 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
+        <obo:IAO_0000115>Microscopic, unicellular algae.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="en">microphytes</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">microalgae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000100 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000100">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000063"/>
+        <obo:IAO_0000115>A trophic omnivore which specifically feed on both plant and animal food sources.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:comment>The distinction between trophic omnivores and true omnivores comes from Coll, M., &amp; Guershon, M. (2002).</rdfs:comment>
+        <rdfs:label>true omnivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_4000000 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_4000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <obo:IAO_0000115>Organic material that is able to pass through a filter, in contrast to particulate organic matter retained on the filter.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>dissolved organic matter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_4000011 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_4000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An anatomical entity that is or was part of a fungus.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>fungal anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_4000012 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_4000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000174"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007780"/>
+        <obo:IAO_0000115>An excreta secreted by aphids and some scale insects as they feed on plant sap. Honeydew is also secreted by certain fungi.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>honeydew</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_4000014 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_4000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        <obo:IAO_0000115>A non-taxonomic grouping of fungi that grow in the form of mycelium of hyphae (vegetative filaments).</obo:IAO_0000115>
+        <rdfs:label>mold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_4000015 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_4000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        <obo:IAO_0000115>A non-taxonomic grouping of fungi with little or no mycelium development that asexually reproduce by budding.</obo:IAO_0000115>
+        <rdfs:label>yeast</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+

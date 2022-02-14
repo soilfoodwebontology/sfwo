@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/stwo/imports/envo_import.owl#"
-     xml:base="http://purl.obolibrary.org/obo/stwo/imports/envo_import.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sfwo/imports/envo_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/sfwo/imports/envo_import.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:po="http://purl.obolibrary.org/obo/po#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -15,8 +15,8 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/stwo/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/stwo/releases/2021-10-22/imports/envo_import.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sfwo/imports/envo_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-12/imports/envo_import.owl"/>
     </owl:Ontology>
     
 
@@ -479,36 +479,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">this apple is bearer of this red color</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this vase is bearer of this fragility</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">bearer of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
-        <obo:IAO_0000112 xml:lang="en">this apple has quality this red color</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">has quality</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002131 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002131">
@@ -691,21 +661,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002473 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002473">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <obo:IAO_0000112>&apos;otolith organ&apos; SubClassOf &apos;composed primarily of&apos; some &apos;calcium carbonate&apos;</obo:IAO_0000112>
-        <obo:IAO_0000115>x composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/22293552"/>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <rdfs:label>composed primarily of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002500 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002500">
@@ -805,52 +760,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <rdfs:label xml:lang="en">disposition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <obo:IAO_0000115 xml:lang="en">A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">realizable entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <rdfs:label xml:lang="en">quality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:IAO_0000115 xml:lang="en">A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &amp;gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &amp;lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000024 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024">
@@ -867,24 +776,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:IAO_0000115 xml:lang="en">An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_16526 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16526">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23014"/>
-        <rdfs:label>carbon dioxide</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_23014 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25701"/>
-        <rdfs:label>carbon oxide</rdfs:label>
     </owl:Class>
     
 
@@ -916,38 +807,37 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_25367 -->
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30212 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25367">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36357"/>
-        <rdfs:label>molecule</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_30212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36341"/>
+        <rdfs:label>photon</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_25701 -->
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36341 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25701">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
-        <rdfs:label>organic oxide</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36341">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36342"/>
+        <rdfs:label>boson</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_36357 -->
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36342 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36357">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
-        <rdfs:label>polyatomic entity</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36342">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label>subatomic particle</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_72695 -->
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50860 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
-        <rdfs:label>organic molecule</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50860">
+        <rdfs:label>organic molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1075,31 +965,6 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedTarget>Organic material in soil, which consists of plant and animal residues at various stages of decomposition, cells and tissues of soil organisms, and substances synthesized by soil organisms.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Soil_organic_matter</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_2000015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_2000015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <obo:IAO_0000115>A disposition which is realized during the execution of work, the emission of heat, or the possession of mass.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-03T20:22:18Z</oboInOwl:creation_date>
-        <rdfs:comment>Consider replacing with PATO class; note that PATO class is not a disposition. This should likely go into OBO Core and also have a physicist look at it.</rdfs:comment>
-        <rdfs:label>energy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_2000017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_2000017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000015"/>
-        <obo:IAO_0000115>Energy that it realized through motion.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-03T20:25:57Z</oboInOwl:creation_date>
-        <rdfs:label>kinetic energy</rdfs:label>
-    </owl:Class>
     
 
 
@@ -1362,16 +1227,6 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33511 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33511">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33213"/>
-        <oboInOwl:hasExactSynonym>deuterostomes</oboInOwl:hasExactSynonym>
-        <rdfs:label>Deuterostomia</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_4751 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751">
@@ -1459,44 +1314,11 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_7711 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7711">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33511"/>
-        <oboInOwl:hasExactSynonym>chordates</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>chordates</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>Chordata</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_7742 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7742">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_89593"/>
-        <oboInOwl:hasExactSynonym>Vertebrata</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>vertebrates</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>vertebrates</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>Vertebrata &lt;vertebrates&gt;</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_88770 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_88770">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1206794"/>
         <rdfs:label>Panarthropoda</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_89593 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_89593">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7711"/>
-        <oboInOwl:hasExactSynonym>Craniata</oboInOwl:hasExactSynonym>
-        <rdfs:label>Craniata &lt;chordates&gt;</rdfs:label>
     </owl:Class>
     
 
@@ -1507,65 +1329,6 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">organism</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000169 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000169">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
-        <obo:IAO_0000115>An organismal quality inhering in a bearer or a population by virtue of the bearer&apos;s disposition to survive and develop normally or the number of surviving individuals in a given population.</obo:IAO_0000115>
-        <rdfs:label>viability</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001241">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <obo:IAO_0000115>A quality which inheres in a continuant.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>monadic quality of a continuant</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>multiply inhering quality of a physical entity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of a continuant</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of a single physical entity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of an object</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of continuant</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>monadic quality of an object</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>monadic quality of continuant</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>physical object quality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001422 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001422">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000169"/>
-        <obo:IAO_0000115>A viability quality inhering in a bearer by virtue of the cessation of the bearer&apos;s life.</obo:IAO_0000115>
-        <rdfs:label>dead</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001432 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001432">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000169"/>
-        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s decomposition into component parts.</obo:IAO_0000115>
-        <rdfs:label>decayed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001995 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001995">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
-        <obo:IAO_0000115>A quality that inheres in an entire organism or part of an organism.</obo:IAO_0000115>
-        <rdfs:label>organismal quality</rdfs:label>
     </owl:Class>
     
 
@@ -2078,48 +1841,6 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:IAO_0000115>Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.</obo:IAO_0000115>
         <rdfs:label>anatomical entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0001988 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001988">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000174"/>
-        <obo:IAO_0000115>Portion of semisolid bodily waste discharged through the anus[MW,modified]</obo:IAO_0000115>
-        <oboInOwl:hasBroadSynonym>excreta</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym>faeces</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fecal material</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fecal matter</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>matières fécales@fr</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>merde@fr</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>partie de la merde@fr</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>piece of shit</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>porción de mierda@es</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>portion of excrement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>portion of faeces</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>portion of fecal material</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>portion of fecal matter</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>portion of feces</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>portionem cacas</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>stool</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>teil der fäkalien@de</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>cow dung</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>cow pat</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>dung</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>fewmet</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>frass</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>guano</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>portion of dung</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>portion of guano</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>portion of scat</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>scat</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>spraint</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasRelatedSynonym>droppings</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>excrement</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>ordure</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>spoor</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>feces</rdfs:label>
     </owl:Class>
     
 
