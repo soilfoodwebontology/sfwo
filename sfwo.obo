@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2022-02-12
+data-version: http://purl.org/sfwo/releases/2022-02-12/sfwo.owl
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 subsetdef: Angiosperm ""
@@ -41,7 +41,7 @@ subsetdef: uberon_slim ""
 subsetdef: upper_level ""
 subsetdef: value_slim ""
 subsetdef: vertebrate_core ""
-ontology: sfwo
+ontology: http://purl.org/sfwo/sfwo.owl
 property_value: dc-description "None" xsd:string
 property_value: dc-title "Soil Trophic Web Ontology" xsd:string
 property_value: dcterms-license https://creativecommons.org/licenses/unspecified
