@@ -22,7 +22,7 @@ Import(<http://purl.obolibrary.org/obo/sfwo/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/sfwo/imports/uberon_import.owl>)
 Annotation(dce:description "None")
 Annotation(dce:title "Soil Trophic Web Ontology")
-Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
+Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_13809>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_27482>))
@@ -102,6 +102,10 @@ Declaration(Class(<http://purl.org/sfwo/SFWO_0000086>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000095>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000096>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_0000100>))
+Declaration(Class(<http://purl.org/sfwo/SFWO_0000102>))
+Declaration(Class(<http://purl.org/sfwo/SFWO_0000103>))
+Declaration(Class(<http://purl.org/sfwo/SFWO_0000104>))
+Declaration(Class(<http://purl.org/sfwo/SFWO_0000105>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_4000000>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_4000011>))
 Declaration(Class(<http://purl.org/sfwo/SFWO_4000012>))
@@ -202,12 +206,14 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECOCORE_0000005
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECOCORE_00000055> "There is some debate over whether detritivores should be considered a subclass of decomposers, see https://en.wikipedia.org/wiki/Decomposer.
 We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000057>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/ENVO_01001103>))
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000056> (saprotroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/ECOCORE_00000056> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECOCORE_00000056> "It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECOCORE_00000056> "There is some debate over whether saprotroph and subclasses should be broad synonyms of detritivore and subclasses. We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology/")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000056> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_4751>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/ENVO_01001103>)))
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000059>))
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000084> (folivore)
@@ -254,6 +260,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000090> "carcasivore")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECOCORE_00000090> "necrophage")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000090> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000103>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000090> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/UBERON_0008979>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECOCORE_00000090> <http://purl.obolibrary.org/obo/ECOCORE_00000055>)
 
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000091> (insectivore)
@@ -391,11 +398,21 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000169> ObjectSomeVa
 # Class: <http://purl.obolibrary.org/obo/ECOCORE_00000176> (coprophage)
 
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000176> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.org/sfwo/SFWO_0000043>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECOCORE_00000176> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/UBERON_0001988>))
 SubClassOf(<http://purl.obolibrary.org/obo/ECOCORE_00000176> <http://purl.obolibrary.org/obo/ECOCORE_00000054>)
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_01000155> (organic material)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01000155> "organic matter"@en)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_01000628> (plant litter)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000628> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001422>))
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_01001103> (detritus)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/ENVO_01001103> "dead organic matter")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ENVO_01001103> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ENVO_01000155> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001422>)))
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_04000008> (soil organic matter)
 
@@ -431,10 +448,16 @@ SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001062> <http://purl.obolibra
 
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0007379> <http://purl.org/sfwo/SFWO_0000086>)
 
+# Class: <http://purl.obolibrary.org/obo/UBERON_0008979> (carcass)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/UBERON_0008979> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0000468> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001422>)))
+
 # Class: <http://purl.org/sfwo/SFWO_0000000> (chemotroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000000> "An organism which is capable of obtaining energy from the bonds in a chemical compound")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000000> "chemotroph"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000000> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000000> "SFWO:0000000")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000000> "chemotroph")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0100026> ObjectSomeValuesFrom(<http://purl.org/sfwo/SFWO_0000048> <http://purl.obolibrary.org/obo/CHEBI_23367>)))
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000163>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000000> <http://purl.obolibrary.org/obo/OBI_0100026>)
@@ -443,6 +466,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000000> <http://purl.obolibrary.org/obo/O
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000001> "An organism which is capable of using a biogenic organic compound as an electron donor.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000001> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000001> "SFWO:0000001")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000001> "organotroph")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0100026> ObjectSomeValuesFrom(<http://purl.org/sfwo/SFWO_0000052> <http://purl.obolibrary.org/obo/CHEBI_50860>)))
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000162>))
@@ -452,6 +476,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000001> <http://purl.obolibrary.org/obo/O
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000002> "An organism which is capable of using an inorganic compound as an electron donor.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000002> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000002> "SFWO:0000002")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000002> "lithotroph")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0100026> ObjectSomeValuesFrom(<http://purl.org/sfwo/SFWO_0000052> <http://purl.obolibrary.org/obo/CHEBI_24835>)))
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000014>))
@@ -460,31 +485,40 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000002> <http://purl.obolibrary.org/obo/O
 # Class: <http://purl.org/sfwo/SFWO_0000003> (phagotroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000003> "A chemoorganoheterotroph which obtains nutrition by engulfment of food particles, by phagocytose or ingestion.")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000003> "phagotroph"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000003> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000003> "SFWO:0000003")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000003> "phagotroph")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000003> <http://purl.obolibrary.org/obo/ECOCORE_00000127>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000004> (microphage)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000004> "A phagotroph feeding on very small organic particles or organisms.")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000004> "microphage"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000004> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000004> "SFWO:0000004")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000004> "microphage")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000004> <http://purl.org/sfwo/SFWO_0000003>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000005> (macrophage)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000005> "A phagotroph feeding on large organic particles or organisms.")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000005> "macrophage"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000005> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000005> "SFWO:0000005")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000005> "macrophage")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000005> <http://purl.org/sfwo/SFWO_0000003>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000006> (pathotroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000006> "A chemoorganoheterotroph which obtains nutrition through a parasitic relationship with another organism.")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000006> "pathotroph"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000006> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000006> "SFWO:0000006")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000006> "pathotroph")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000006> <http://purl.obolibrary.org/obo/ECOCORE_00000127>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000007> (phototroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000007> "An organism which is capable of transforming light into chemical energy.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000007> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000007> "SFWO:0000007")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000007> "phototroph")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0100026> ObjectSomeValuesFrom(<http://purl.org/sfwo/SFWO_0000048> <http://purl.obolibrary.org/obo/CHEBI_30212>)))
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000017>))
@@ -497,6 +531,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.or
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000008> "geophagous")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000008> "soil feeder")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.org/sfwo/SFWO_0000008> "humiphage")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000008> "SFWO:0000008")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000008> "geophage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000008> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.org/sfwo/SFWO_0000044>))
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000008> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/ENVO_00001998>))
@@ -507,6 +542,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000008> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000009> "A heterotroph that consumes plant or animal exudates.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000009> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000009> "exudate feeder")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000009> "SFWO:0000009")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000009> "exudativore")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000009> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> ObjectUnionOf(<http://purl.obolibrary.org/obo/UBERON_0007780> <http://purl.org/sfwo/SFWO_0000049>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000009> <http://purl.obolibrary.org/obo/ECOCORE_00000010>)
@@ -516,7 +552,9 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000009> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000012> "A saprophage which obtains nutrition by consuming decaying wood.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000012> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000012> "saproxylophagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000012> "SFWO:0000012")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000012> "saproxylophage")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000012> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/SFWO_0000102>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000012> <http://purl.obolibrary.org/obo/ECOCORE_00000055>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000015> (malacophage)
@@ -524,6 +562,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000012> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000015> "A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000015> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000015> "malacophagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000015> "SFWO:0000015")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000015> "malacophage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/NCBITaxon_6447>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000015> <http://purl.obolibrary.org/obo/ECOCORE_00000089>)
@@ -533,6 +572,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000015> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000017> "A zoophage that feeds on eggs.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000017> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000017> "oophagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000017> "SFWO:0000017")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000017> "oophage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000109>))
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/UBERON_0007379>))
@@ -543,6 +583,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000017> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000018> "An entomophage that feeds on ants.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000018> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000018> "myrmecophagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000018> "SFWO:0000018")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000018> "myrmecophage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000018> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/NCBITaxon_36668>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000018> <http://purl.obolibrary.org/obo/ECOCORE_00000091>)
@@ -552,6 +593,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000018> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000019> "A zoophage that primarily eats nematodes.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000019> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000019> "nematophagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000019> "SFWO:0000019")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000019> "nematophage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000019> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/NCBITaxon_6231>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000019> <http://purl.obolibrary.org/obo/ECOCORE_00000089>)
@@ -560,6 +602,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000019> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000020> "An exudativore that consumes honeydew produced by phloem sap-feeding insects.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000020> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000020> "SFWO:0000020")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000020> "honeydew feeder")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000020> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/SFWO_4000012>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000020> <http://purl.org/sfwo/SFWO_0000069>)
@@ -569,6 +612,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000020> <http://purl.org/sfwo/SFWO_000006
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000021> "An gumnivore that primarily consumes phloem sap.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000021> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000021> "phloem feeder")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000021> "SFWO:0000021")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000021> "phloem sap feeder")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000021> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/PO_0025540>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000021> <http://purl.obolibrary.org/obo/ECOCORE_00000019>)
@@ -578,7 +622,8 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000021> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000024> "A parasite whose host is a plant.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000024> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000024> "phytoparasite")
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000024> "plant parasite"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000024> "SFWO:0000024")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000024> "plant parasite")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000024> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> <http://purl.obolibrary.org/obo/NCBITaxon_33090>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000024> <http://purl.obolibrary.org/obo/ECOCORE_00000146>)
 
@@ -587,7 +632,9 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000024> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000025> "A detritivore that consumes dead or decaying plant material.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000025> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000025> "phytosaprophagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000025> "SFWO:0000025")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000025> "phytosaprophage")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000025> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/ENVO_01000628>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000025> <http://purl.obolibrary.org/obo/ECOCORE_00000055>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000027> (bryophage)
@@ -596,6 +643,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.or
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000027> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000027> "bryophagous")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000027> "moss feeder")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000027> "SFWO:0000027")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000027> "bryophage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000027> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_13809> <http://purl.obolibrary.org/obo/NCBITaxon_3195> <http://purl.obolibrary.org/obo/NCBITaxon_3208>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000027> <http://purl.obolibrary.org/obo/ECOCORE_00000019>)
@@ -606,6 +654,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.or
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000030> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000030> "ophiophagous")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000030> "serpentivore")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000030> "SFWO:0000030")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000030> "ophiophage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/ECOCORE_00000154>))
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/NCBITaxon_8570>))
@@ -617,6 +666,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.or
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000031> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000031> "aphidiphage"@fr)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000031> "aphidophagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000031> "SFWO:0000031")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000031> "aphidophage"@en)
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/NCBITaxon_27482>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000031> <http://purl.obolibrary.org/obo/ECOCORE_00000091>)
@@ -625,6 +675,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000031> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000032> "An herbivore that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000032> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000032> "SFWO:0000032")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000032> "scraper")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000032> <http://purl.obolibrary.org/obo/ECOCORE_00000019>)
 
@@ -653,6 +704,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000036> <http://purl.org/sfwo/SFWO_000003
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000037> "A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000037> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000037> "SFWO:0000037")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000037> "shredder")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000037> <http://purl.obolibrary.org/obo/ECOCORE_00000010>)
 
@@ -660,6 +712,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000037> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000038> "A suspension feeder that uses ciliary or muscular activity to create feeding currents.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000038> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000038> "SFWO:0000038")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000038> "active suspension feeder")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000038> <http://purl.obolibrary.org/obo/ECOCORE_00000051>)
 
@@ -667,17 +720,20 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000038> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000039> "A suspension feeder that utilises the natural flow to bring particles in contact with feeding structures.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000039> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000039> "SFWO:0000039")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000039> "passive suspension feeder")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000039> <http://purl.obolibrary.org/obo/ECOCORE_00000051>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000040> (collector gatherer)
 
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000040> "SFWO:0000040")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000040> "collector gatherer")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000040> <http://purl.obolibrary.org/obo/ECOCORE_00000010>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000041> (collector filterer)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000041> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000041> "SFWO:0000041")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000041> "collector filterer")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000041> <http://purl.obolibrary.org/obo/ECOCORE_00000051>)
 
@@ -705,14 +761,15 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000044> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000049> "A portion of plant substance that is or was emitted by a plant through pores or wound.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000049> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000049> <SFWO:0000049>)
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000049> "plant exudate")
-EquivalentClasses(<http://purl.org/sfwo/SFWO_0000049> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/SFWO_0000084>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000049> <http://purl.obolibrary.org/obo/PO_0025161>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000050> (plant gum)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000050> "A portion of plant substance composed of sap or other resinous material, associated with certain plant species.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000050> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000050> <SFWO:0000050>)
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000050> "plant gum")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000050> <http://purl.obolibrary.org/obo/PO_0025161>)
 
@@ -728,6 +785,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000051> <http://purl.org/sfwo/SFWO_000004
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000053> "A predator that primarily eats acari")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000053> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000053> "acariphagous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000053> "SFWO:0000053")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000053> "acariphage")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/NCBITaxon_6933>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000053> <http://purl.obolibrary.org/obo/ECOCORE_00000089>)
@@ -736,6 +794,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000053> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000054> "A parasite whose host is an animal.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000054> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000054> "SFWO:0000054")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000054> "animal parasite")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000054> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> <http://purl.obolibrary.org/obo/NCBITaxon_33208>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000054> <http://purl.obolibrary.org/obo/ECOCORE_00000146>)
@@ -745,6 +804,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000054> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000055> "An animal parasite whose host is an insect.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000055> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000055> "entomogenous organism")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000055> "SFWO:0000055")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000055> "insect parasite")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> <http://purl.obolibrary.org/obo/NCBITaxon_50557>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000055> <http://purl.org/sfwo/SFWO_0000054>)
@@ -758,6 +818,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000056> <http://purl.obolibrary.org/obo/G
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000058> "A predator that primarily eats springtails")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000058> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000058> "SFWO:0000058")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000058> "springtail feeder")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/NCBITaxon_30001>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000058> <http://purl.obolibrary.org/obo/ECOCORE_00000089>)
@@ -774,6 +835,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000059> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000061> "A heterotroph that feeds on microorganisms.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000061> "http://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.org/sfwo/SFWO_0000061> "microbivorous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000061> "SFWO:0000061")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000061> "microbivore")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000061> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/SFWO_0000062>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000061> <http://purl.obolibrary.org/obo/ECOCORE_00000010>)
@@ -782,6 +844,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000061> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000062> "An organism of microscopic size, which may exist in its single-celled form or as a colony of cells.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000062> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000062> "SFWO:0000062")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000062> "microorganism")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000062> <http://purl.obolibrary.org/obo/OBI_0100026>)
 
@@ -789,6 +852,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000062> <http://purl.obolibrary.org/obo/O
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000063> "A heterotroph that feeds on resources at more than one trophic level.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000063> "https://orcid.org/0000-0002-4456-1710")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000063> "SFWO:0000063")
 AnnotationAssertion(rdfs:comment <http://purl.org/sfwo/SFWO_0000063> "The definition is from Coll, M., & Guershon, M. (2002).")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000063> "trophic omnivore")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000063> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ECOCORE_00000088> ObjectUnionOf(<http://purl.obolibrary.org/obo/ECOCORE_00000019> <http://purl.org/sfwo/SFWO_0000061> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ECOCORE_00000055> ObjectComplementOf(<http://purl.obolibrary.org/obo/ECOCORE_00000090>)))))
@@ -798,6 +862,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000063> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000064> "An eukaryotic microorganism that is not an animal, plant, or fungus.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000064> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000064> "SFWO:0000064")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000064> "protist")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000064> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2759> ObjectComplementOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_33090> <http://purl.obolibrary.org/obo/NCBITaxon_33208> <http://purl.obolibrary.org/obo/NCBITaxon_4751>))))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000064> <http://purl.org/sfwo/SFWO_0000062>)
@@ -807,6 +872,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000064> <http://purl.org/sfwo/SFWO_000006
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000065> "A heterotroph that feeds on protists.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000065> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000065> "protistivorous")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000065> "SFWO:0000065")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000065> "protistivore")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/SFWO_0000064>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000065> <http://purl.obolibrary.org/obo/ECOCORE_00000010>)
@@ -815,6 +881,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000065> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000068> "An exudativore that consumes plant exudates.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000068> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000068> "SFWO:0000068")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000068> "plant exudate feeder")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/SFWO_0000049>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000068> <http://purl.org/sfwo/SFWO_0000009>)
@@ -823,6 +890,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000068> <http://purl.org/sfwo/SFWO_000000
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000069> "An exudativore that consumes animal exudates.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000069> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000069> "SFWO:0000069")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000069> "animal exudate feeder")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000069> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/UBERON_0007780>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000069> <http://purl.org/sfwo/SFWO_0000009>)
@@ -831,13 +899,16 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000069> <http://purl.org/sfwo/SFWO_000000
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000070> "A saprotroph that obtains nutrition through extracellular digestion of wood")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000070> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000070> "SFWO:0000070")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000070> "wood saprotroph")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000070> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_4751>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.org/sfwo/SFWO_0000102>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000070> <http://purl.obolibrary.org/obo/ECOCORE_00000056>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000071> (ectomycorrhizal)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000071> "A mycorrhizal fungus whose hyphae do not penetrate the plant cell wall.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000071> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000071> "SFWO:0000071")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000071> "ectomycorrhizal")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000071> ObjectIntersectionOf(<http://purl.org/sfwo/SFWO_0000072> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.org/sfwo/SFWO_0000056>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000071> <http://purl.org/sfwo/SFWO_0000072>)
@@ -846,6 +917,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000071> <http://purl.org/sfwo/SFWO_000007
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000072> "A symbiotroph involved in a mutual symbiotic association with the roots of a plant.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000072> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000072> "SFWO:0000072")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000072> "mycorrhizal")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000072> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_4751> ObjectSomeValuesFrom(<http://purl.org/sfwo/SFWO_0000099> <http://purl.obolibrary.org/obo/NCBITaxon_33090>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000072> <http://purl.obolibrary.org/obo/ECOCORE_00000045>)
@@ -854,6 +926,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000072> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000073> "A mycorrhizal fungus whose hyphae penetrate the plant cell wall and invaginate its cell membrane.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000073> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000073> "SFWO:0000073")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000073> "arbuscular mycorrhizal")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000073> ObjectIntersectionOf(<http://purl.org/sfwo/SFWO_0000072> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0036377>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000073> <http://purl.org/sfwo/SFWO_0000072>)
@@ -863,6 +936,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000073> <http://purl.org/sfwo/SFWO_000007
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000074> "A parasite whose host is a fungus.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000074> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000074> "mycoparasite")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000074> "SFWO:0000074")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000074> "fungal parasite")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000074> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> <http://purl.obolibrary.org/obo/NCBITaxon_4751>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000074> <http://purl.obolibrary.org/obo/ECOCORE_00000146>)
@@ -872,19 +946,24 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000074> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000076> "A saprotroph that obtains nutrition through extracellular digestion of plant litter.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000076> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.org/sfwo/SFWO_0000076> "leaf saprotroph")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000076> "SFWO:0000076")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000076> "litter saprotroph")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000076> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_4751>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/ENVO_01000628>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000076> <http://purl.obolibrary.org/obo/ECOCORE_00000056>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000077> (dung saprotroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000077> "A saprotroph that obtains nutrition through extracellular digestion of feces.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000077> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000077> "SFWO:0000077")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000077> "dung saprotroph")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000077> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_4751>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/UBERON_0001988>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000077> <http://purl.obolibrary.org/obo/ECOCORE_00000056>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000078> (soil saprotroph)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000078> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000078> "SFWO:0000078")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000078> "soil saprotroph")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000078> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_2> <http://purl.obolibrary.org/obo/NCBITaxon_4751>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002470> <http://purl.obolibrary.org/obo/ENVO_04000008>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000078> <http://purl.obolibrary.org/obo/ECOCORE_00000056>)
@@ -893,6 +972,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000078> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000079> "A mycorrhizal fungus involved in a mutualistic association with a member of the plant family Ericaceae.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000079> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000079> "SFWO:0000079")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000079> "ericoid mycorrhizal")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000079> ObjectIntersectionOf(<http://purl.org/sfwo/SFWO_0000072> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002442> <http://purl.obolibrary.org/obo/NCBITaxon_4345>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000079> <http://purl.org/sfwo/SFWO_0000072>)
@@ -901,6 +981,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000079> <http://purl.org/sfwo/SFWO_000007
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000080> "A parasite whose host is a bryophyte.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000080> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000080> "SFWO:0000080")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000080> "bryophyte parasite")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000080> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_13809> <http://purl.obolibrary.org/obo/NCBITaxon_3195> <http://purl.obolibrary.org/obo/NCBITaxon_3208>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000080> <http://purl.obolibrary.org/obo/ECOCORE_00000146>)
@@ -909,6 +990,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000080> <http://purl.obolibrary.org/obo/E
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000081> "A mycorrhizal fungus involved in a symbiotic interaction with a member of the plant family Orchidaceae.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000081> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000081> "SFWO:0000081")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000081> "orchid mycorrhizal")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000081> ObjectIntersectionOf(<http://purl.org/sfwo/SFWO_0000072> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002440> <http://purl.obolibrary.org/obo/NCBITaxon_4747>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000081> <http://purl.org/sfwo/SFWO_0000072>)
@@ -917,6 +999,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000081> <http://purl.org/sfwo/SFWO_000007
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000082> "A symbiotroph involved in a symbiotic association with living green algae or cyanobacteria.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000082> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000082> "SFWO:0000082")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000082> "lichenized")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_4751> ObjectSomeValuesFrom(<http://purl.org/sfwo/SFWO_0000099> <http://purl.obolibrary.org/obo/ECOCORE_00000076>)))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000082> <http://purl.obolibrary.org/obo/ECOCORE_00000045>)
@@ -926,6 +1009,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000082> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000083> "A fungal parasite whose host is a lichenized fungus.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000083> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.org/sfwo/SFWO_0000083> "lichenicolous fungus")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000083> "SFWO:0000083")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000083> "lichen parasite")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000083> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> <http://purl.org/sfwo/SFWO_0000082>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000083> <http://purl.org/sfwo/SFWO_0000074>)
@@ -942,6 +1026,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000084> <http://purl.org/sfwo/SFWO_000004
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000085> "A parasite whose host is a protist.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000085> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000085> "protistan parasite")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000085> "SFWO:0000085")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000085> "protist parasite")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002444> <http://purl.org/sfwo/SFWO_0000064>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000085> <http://purl.obolibrary.org/obo/ECOCORE_00000146>)
@@ -959,7 +1044,8 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000086> ObjectSomeValuesFrom(<http://purl
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000095> "Macroscopic, multicellular, marine algae.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000095> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000095> "seaweed"@en)
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000095> "macroalgae"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000095> "SFWO:0000095")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000095> "macroalgae")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000095> <http://purl.obolibrary.org/obo/ECOCORE_00000076>)
 
 # Class: <http://purl.org/sfwo/SFWO_0000096> (microalgae)
@@ -967,7 +1053,8 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000095> <http://purl.obolibrary.org/obo/E
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000096> "Microscopic, unicellular algae.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000096> "https://orcid.org/0000-0003-4559-7579")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.org/sfwo/SFWO_0000096> "microphytes"@en)
-AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000096> "microalgae"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000096> "SFWO:0000096")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000096> "microalgae")
 SubClassOf(<http://purl.org/sfwo/SFWO_0000096> <http://purl.obolibrary.org/obo/ECOCORE_00000076>)
 SubClassOf(<http://purl.org/sfwo/SFWO_0000096> <http://purl.org/sfwo/SFWO_0000062>)
 
@@ -975,15 +1062,51 @@ SubClassOf(<http://purl.org/sfwo/SFWO_0000096> <http://purl.org/sfwo/SFWO_000006
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000100> "A trophic omnivore which specifically feed on both plant and animal food sources.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000100> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000100> "SFWO:0000100")
 AnnotationAssertion(rdfs:comment <http://purl.org/sfwo/SFWO_0000100> "The distinction between trophic omnivores and true omnivores comes from Coll, M., & Guershon, M. (2002).")
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000100> "true omnivore")
 EquivalentClasses(<http://purl.org/sfwo/SFWO_0000100> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ECOCORE_00000019> <http://purl.obolibrary.org/obo/ECOCORE_00000088>))
 SubClassOf(<http://purl.org/sfwo/SFWO_0000100> <http://purl.org/sfwo/SFWO_0000063>)
 
+# Class: <http://purl.org/sfwo/SFWO_0000102> (decaying wood)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000102> "Wood material that is undergoing decomposition.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000102> "https://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000102> "decaying wood")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000102> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PO_0005848> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001422>)))
+SubClassOf(<http://purl.org/sfwo/SFWO_0000102> <http://purl.obolibrary.org/obo/PO_0005848>)
+
+# Class: <http://purl.org/sfwo/SFWO_0000103> (root litter)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000103> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000103> <SFWO:0000103>)
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000103> "root litter")
+SubClassOf(<http://purl.org/sfwo/SFWO_0000103> <http://purl.obolibrary.org/obo/ENVO_01000155>)
+SubClassOf(<http://purl.org/sfwo/SFWO_0000103> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001422>))
+
+# Class: <http://purl.org/sfwo/SFWO_0000104> (vertebrate carrion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000104> "A carcass of a vertebrate organism.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000104> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000104> <SFWO:0000104>)
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000104> "vertebrate carrion")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000104> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_7742> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001422>)))
+SubClassOf(<http://purl.org/sfwo/SFWO_0000104> <http://purl.obolibrary.org/obo/UBERON_0008979>)
+
+# Class: <http://purl.org/sfwo/SFWO_0000105> (invertebrate carrion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_0000105> "A carcass of an invertebrate organism.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_0000105> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_0000105> <SFWO:0000105>)
+AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_0000105> "invertebrate carrion")
+EquivalentClasses(<http://purl.org/sfwo/SFWO_0000105> ObjectIntersectionOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_33208> ObjectComplementOf(<http://purl.obolibrary.org/obo/NCBITaxon_7742>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001422>)))
+SubClassOf(<http://purl.org/sfwo/SFWO_0000105> <http://purl.obolibrary.org/obo/UBERON_0008979>)
+
 # Class: <http://purl.org/sfwo/SFWO_4000000> (dissolved organic matter)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_4000000> "Organic material that is able to pass through a filter, in contrast to particulate organic matter retained on the filter.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_4000000> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_4000000> <SFWO:4000000>)
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_4000000> "dissolved organic matter")
 SubClassOf(<http://purl.org/sfwo/SFWO_4000000> <http://purl.obolibrary.org/obo/ENVO_01000155>)
 
@@ -999,6 +1122,7 @@ SubClassOf(<http://purl.org/sfwo/SFWO_4000011> ObjectSomeValuesFrom(<http://purl
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/sfwo/SFWO_4000012> "An excreta secreted by aphids and some scale insects as they feed on plant sap. Honeydew is also secreted by certain fungi.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/sfwo/SFWO_4000012> "http://orcid.org/0000-0003-4559-7579")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.org/sfwo/SFWO_4000012> <SFWO:4000012>)
 AnnotationAssertion(rdfs:label <http://purl.org/sfwo/SFWO_4000012> "honeydew")
 SubClassOf(<http://purl.org/sfwo/SFWO_4000012> <http://purl.obolibrary.org/obo/UBERON_0000174>)
 SubClassOf(<http://purl.org/sfwo/SFWO_4000012> <http://purl.obolibrary.org/obo/UBERON_0007780>)

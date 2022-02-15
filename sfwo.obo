@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: http://purl.org/sfwo/releases/2022-02-12/sfwo.owl
+data-version: http://purl.org/sfwo/releases/2022-02-15/sfwo.owl
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
 subsetdef: Angiosperm ""
@@ -44,8 +44,8 @@ subsetdef: vertebrate_core ""
 ontology: http://purl.org/sfwo/sfwo.owl
 property_value: dc-description "None" xsd:string
 property_value: dc-title "Soil Trophic Web Ontology" xsd:string
-property_value: dcterms-license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2022-02-12" xsd:string
+property_value: dcterms-license https://creativecommons.org/licenses/by/4.0/
+property_value: owl:versionInfo "2022-02-15" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -178,6 +178,11 @@ property_value: IAO:0000601 "All realizable dependent continuants have independe
 property_value: IAO:0000602 "(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/060-002"}
 property_value: IAO:0000602 "(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/058-002"}
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000019
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
 
 [Term]
 id: BFO:0000020
@@ -873,7 +878,7 @@ name: saprotroph
 def: "A decomposer that obtains nutrition through extracellular digestion of decaying organic matter" []
 comment: It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/
 comment: There is some debate over whether saprotroph and subclasses should be broad synonyms of detritivore and subclasses. We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology/
-is_a: ECOCORE:00000054 ! decomposer
+is_a: ECOCORE:00000055 ! detritivore
 property_value: IAO:0000117 https://orcid.org/0000-0002-2908-3327 xsd:string
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
@@ -1213,7 +1218,6 @@ name: nectarivore
 def: "An herbivore that primarily consumes nectar" []
 synonym: "nectar eater" EXACT []
 xref: https://www.wikidata.org/entry/Q120880
-is_a: PO:0025161 ! portion of plant substance
 is_a: SFWO:0000068 ! plant exudate feeder
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
@@ -1345,6 +1349,7 @@ id: ECOCORE:00000176
 name: coprophage
 def: "a decomposer which obtains nutrition by consuming feces" []
 is_a: ECOCORE:00000054 ! decomposer
+is_a: ECOCORE:00000088 ! carnivore
 property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
 
 [Term]
@@ -1389,13 +1394,17 @@ synonym: "leaf litter" EXACT []
 synonym: "litterfall" EXACT []
 synonym: "soil litter" EXACT []
 synonym: "tree litter" EXACT []
-is_a: ENVO:01000155 ! organic material
+is_a: ENVO:01001103 ! detritus
+relationship: has_quality PATO:0001422 ! dead
 
 [Term]
 id: ENVO:01001103
 name: detritus
 def: "An organic material which is primarily composed of dead particulate matter." [https://en.wikipedia.org/wiki/Detritus]
+synonym: "dead organic matter" BROAD []
 is_a: ENVO:01000155 ! organic material
+intersection_of: ENVO:01000155 ! organic material
+intersection_of: has_quality PATO:0001422 ! dead
 
 [Term]
 id: ENVO:04000008
@@ -1785,7 +1794,7 @@ namespace: ncbi_taxonomy
 synonym: "Agnatha" RELATED synonym []
 synonym: "jawless vertebrates" EXACT genbank_common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
 property_value: has_rank NCBITaxon:clade
 
 [Term]
@@ -2074,6 +2083,7 @@ namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:6072 ! Eumetazoa
 property_value: has_rank NCBITaxon:clade
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33317
@@ -2146,6 +2156,7 @@ synonym: "deuterostomes" EXACT common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:33213 ! Bilateria
 property_value: has_rank NCBITaxon:clade
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:3398
@@ -2282,6 +2293,7 @@ namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:33208 ! Metazoa
 property_value: has_rank NCBITaxon:clade
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:6231
@@ -2470,17 +2482,20 @@ synonym: "chordates" RELATED blast_name []
 xref: GC_ID:1
 is_a: NCBITaxon:33511 ! Deuterostomia
 property_value: has_rank NCBITaxon:phylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7742
+name: Vertebrata <Metazoa>
 name: Vertebrata <vertebrates>
 namespace: ncbi_taxonomy
 synonym: "Vertebrata" EXACT scientific_name []
 synonym: "vertebrates" EXACT genbank_common_name []
 synonym: "vertebrates" RELATED blast_name []
 xref: GC_ID:1
-is_a: NCBITaxon:89593 ! Craniata <chordates>
+is_a: NCBITaxon:89593 ! Craniata <chordata>
 property_value: has_rank NCBITaxon:clade
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7776
@@ -2489,7 +2504,7 @@ namespace: ncbi_taxonomy
 synonym: "Gnathostomata" EXACT scientific_name []
 synonym: "jawed vertebrates" EXACT genbank_common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
 property_value: has_rank NCBITaxon:clade
 
 [Term]
@@ -2624,12 +2639,14 @@ property_value: has_rank NCBITaxon:clade
 
 [Term]
 id: NCBITaxon:89593
+name: Craniata <chordata>
 name: Craniata <chordates>
 namespace: ncbi_taxonomy
 synonym: "Craniata" EXACT scientific_name []
 xref: GC_ID:1
 is_a: NCBITaxon:7711 ! Chordata
 property_value: has_rank NCBITaxon:subphylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:91827
@@ -2647,6 +2664,16 @@ id: OBI:0100026
 name: organism
 def: "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs." []
 is_a: BFO:0000040 ! material entity
+
+[Term]
+id: PATO:0000001
+name: quality
+namespace: quality
+alt_id: PATO:0000072
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+is_a: BFO:0000020 ! specifically dependent continuant
+property_value: IAO:0000589 "quality (PATO)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
 
 [Term]
 id: PATO:0000169
@@ -2674,7 +2701,9 @@ synonym: "quality of a single physical entity" EXACT []
 synonym: "quality of an object" EXACT []
 synonym: "quality of continuant" EXACT []
 xref: snap:Quality
-is_a: BFO:0000020 ! specifically dependent continuant
+is_a: BFO:0000019 ! quality
+is_a: PATO:0000001 ! quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
 
 [Term]
 id: PATO:0001421
@@ -3225,6 +3254,7 @@ def: "An organism which is capable of obtaining energy from the bonds in a chemi
 is_a: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
 intersection_of: SFWO:0000048 CHEBI:23367 ! uses as energy source molecular entity
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000001
@@ -3249,24 +3279,28 @@ id: SFWO:0000003
 name: phagotroph
 def: "A chemoorganoheterotroph which obtains nutrition by engulfment of food particles, by phagocytose or ingestion." []
 is_a: ECOCORE:00000127 ! chemoorganoheterotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000004
 name: microphage
 def: "A phagotroph feeding on very small organic particles or organisms." []
 is_a: SFWO:0000003 ! phagotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000005
 name: macrophage
 def: "A phagotroph feeding on large organic particles or organisms." []
 is_a: SFWO:0000003 ! phagotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000006
 name: pathotroph
 def: "A chemoorganoheterotroph which obtains nutrition through a parasitic relationship with another organism." []
 is_a: ECOCORE:00000127 ! chemoorganoheterotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000007
@@ -3301,6 +3335,7 @@ name: saproxylophage
 def: "A saprophage which obtains nutrition by consuming decaying wood." []
 synonym: "saproxylophagous" EXACT []
 is_a: ECOCORE:00000055 ! detritivore
+is_a: ECOCORE:00000144 ! xylophage
 property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
@@ -3478,7 +3513,6 @@ id: SFWO:0000049
 name: plant exudate
 def: "A portion of plant substance that is or was emitted by a plant through pores or wound." []
 is_a: PO:0025161 ! portion of plant substance
-is_a: SFWO:0000068 ! plant exudate feeder
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
@@ -3492,7 +3526,6 @@ property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 id: SFWO:0000051
 name: root exudate
 def: "A plant exudate excreted by the roots of living plants." []
-is_a: ECOCORE:00000140 ! nectarivore
 is_a: SFWO:0000049 ! plant exudate
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
@@ -3598,6 +3631,7 @@ id: SFWO:0000070
 name: wood saprotroph
 def: "A saprotroph that obtains nutrition through extracellular digestion of wood" []
 is_a: ECOCORE:00000056 ! saprotroph
+is_a: SFWO:0000012 ! saproxylophage
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
@@ -3641,6 +3675,7 @@ id: SFWO:0000076
 name: litter saprotroph
 synonym: "leaf saprotroph" NARROW []
 is_a: ECOCORE:00000056 ! saprotroph
+is_a: SFWO:0000025 ! phytosaprophage
 property_value: IAO:0000117 "A saprotroph that obtains nutrition through extracellular digestion of plant litter." xsd:string
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
@@ -3649,6 +3684,7 @@ id: SFWO:0000077
 name: dung saprotroph
 def: "A saprotroph that obtains nutrition through extracellular digestion of feces." []
 is_a: ECOCORE:00000056 ! saprotroph
+is_a: ECOCORE:00000176 ! coprophage
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
@@ -3704,7 +3740,6 @@ property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 id: SFWO:0000084
 name: nectar
 def: "A plant exudate produced in glands called nectaries or nectarines." []
-is_a: ECOCORE:00000140 ! nectarivore
 is_a: SFWO:0000049 ! plant exudate
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
@@ -3751,6 +3786,40 @@ is_a: SFWO:0000063 ! trophic omnivore
 intersection_of: ECOCORE:00000019 ! herbivore
 intersection_of: ECOCORE:00000088 ! carnivore
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: SFWO:0000102
+name: decaying wood
+def: "Wood material that is undergoing decomposition." []
+is_a: PO:0005848 ! secondary xylem
+intersection_of: PO:0005848 ! secondary xylem
+intersection_of: has_quality PATO:0001422 ! dead
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: SFWO:0000103
+name: root litter
+is_a: ENVO:01001103 ! detritus
+relationship: has_quality PATO:0001422 ! dead
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: SFWO:0000104
+name: vertebrate carrion
+def: "A carcass of a vertebrate organism." []
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+is_a: UBERON:0008979 ! carcass
+intersection_of: NCBITaxon:7742 ! Vertebrata <Metazoa>
+intersection_of: has_quality PATO:0001422 ! dead
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: SFWO:0000105
+name: invertebrate carrion
+def: "A carcass of an invertebrate organism." []
+is_a: NCBITaxon:33208 ! Metazoa
+is_a: UBERON:0008979 ! carcass
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:4000000
@@ -4211,6 +4280,7 @@ is_a: BFO:0000004 ! independent continuant
 id: UBERON:0001988
 name: feces
 namespace: uberon
+def: "Portion of semisolid bodily waste discharged through the anus[MW,modified]" []
 def: "Portion of semisolid bodily waste discharged through the anus[MW,modified]." [http://en.wikipedia.org/wiki/Feces, http://www.merriam-webster.com/dictionary/feces]
 subset: pheno_slim
 subset: uberon_slim
@@ -4226,8 +4296,12 @@ synonym: "fecal matter" EXACT []
 synonym: "fewmet" NARROW [http://en.wikipedia.org/wiki/Fewmet]
 synonym: "frass" NARROW [http://en.wikipedia.org/wiki/Frass]
 synonym: "guano" NARROW [http://en.wikipedia.org/wiki/Guano]
+synonym: "matières fécales@fr" EXACT []
+synonym: "merde@fr" EXACT []
 synonym: "ordure" RELATED []
+synonym: "partie de la merde@fr" EXACT []
 synonym: "piece of shit" EXACT [http://www.ncbi.nlm.nih.gov/pubmed/23285307]
+synonym: "porción de mierda@es" EXACT []
 synonym: "portion of dung" NARROW []
 synonym: "portion of excrement" EXACT []
 synonym: "portion of faeces" EXACT []
@@ -4241,6 +4315,7 @@ synonym: "scat" NARROW []
 synonym: "spoor" RELATED []
 synonym: "spraint" NARROW [http://en.wikipedia.org/wiki/Spraint]
 synonym: "stool" EXACT []
+synonym: "teil der fäkalien@de" EXACT []
 xref: BTO:0000440
 xref: CALOHA:TS-2345
 xref: ENVO:00002003
@@ -4366,6 +4441,8 @@ xref: BTO:0001965
 xref: http://www.snomedbrowser.com/Codes/Details/127853004
 xref: NCIT:C113674
 is_a: UBERON:0000468 ! multicellular organism
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: has_quality PATO:0001422 ! dead
 
 [Term]
 id: UBERON:0010000
@@ -5111,6 +5188,23 @@ xref: UBPROP:0000002
 is_metadata_tag: true
 
 [Typedef]
+id: bearer_of
+name: bearer of
+name: has characteristic
+namespace: external
+namespace: uberon
+def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
+def: "Inverse of characteristic_of" []
+xref: RO:0000053
+property_value: editor_note "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist." xsd:string
+property_value: example_of_usage "this apple is bearer of this red color" xsd:string
+property_value: example_of_usage "this vase is bearer of this fragility" xsd:string
+property_value: IAO:0000111 "bearer of" xsd:string
+property_value: IAO:0000118 "bearer_of" xsd:string
+property_value: IAO:0000118 "is bearer of" xsd:string
+property_value: RO:0001900 RO:0001901
+
+[Typedef]
 id: capable_of
 name: capable of
 namespace: external
@@ -5280,6 +5374,17 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 property_value: RO:0001900 RO:0001901
 is_cyclic: false
 is_a: overlaps ! overlaps
+
+[Typedef]
+id: has_quality
+name: has quality
+namespace: uberon
+def: "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence" []
+xref: RO:0000086
+property_value: editor_note "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist." xsd:string
+property_value: example_of_usage "this apple has quality this red color" xsd:string
+property_value: IAO:0000118 "has_quality" xsd:string
+is_a: bearer_of ! bearer of
 
 [Typedef]
 id: has_relational_adjective

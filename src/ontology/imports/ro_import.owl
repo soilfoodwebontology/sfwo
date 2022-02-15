@@ -10,7 +10,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sfwo/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-12/imports/ro_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-15/imports/ro_import.owl"/>
     </owl:Ontology>
     
 
@@ -128,6 +128,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <obo:IAO_0000112 xml:lang="en">this apple has quality this red color</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
     
 
 

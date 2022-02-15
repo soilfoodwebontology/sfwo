@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sfwo/imports/uberon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-12/imports/uberon_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-15/imports/uberon_import.owl"/>
     </owl:Ontology>
     
 
@@ -731,6 +731,33 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <obo:IAO_0000115 xml:lang="en">Inverse of characteristic_of</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>RO:0000053</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>bearer_of</oboInOwl:id>
+        <oboInOwl:shorthand>bearer_of</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">has characteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>RO:0000086</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_quality</oboInOwl:id>
+        <oboInOwl:shorthand>has_quality</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002131 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002131">
@@ -1080,6 +1107,60 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
         <owl:annotatedTarget>(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/017-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label xml:lang="en">quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <obo:BFO_0000179>sdc</obo:BFO_0000179>
+        <obo:BFO_0000180>SpecificallyDependentContinuant</obo:BFO_0000180>
+        <obo:IAO_0000112 xml:lang="en">Reciprocal specifically dependent continuants: the function of this key to open this lock and the mutually dependent disposition of this lock: to be opened by this key</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">of one-sided specifically dependent continuants: the mass of this tomato</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">of relational dependent continuants (multiple bearers): John’s love for Mary, the ownership relation between John and this statue, the relation of authority between John and his subordinates.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the disposition of this fish to decay</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the function of this heart: to pump blood</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the mutual dependence of proton donors and acceptors in chemical reactions [79</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the mutual dependence of the role predator and the role prey as played by two organisms in a given interaction</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the pink color of a medium rare piece of grilled filet mignon at its center</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the role of being a doctor</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the shape of this hole.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the smell of this portion of mozzarella</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Specifically dependent continuant doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. We&apos;re not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc.</obo:IAO_0000116>
+        <obo:IAO_0000602>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </obo:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <owl:annotatedTarget xml:lang="en">Specifically dependent continuant doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. We&apos;re not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc.</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000005"/>
+        <rdfs:comment>per discussion with Barry Smith</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
     </owl:Axiom>
     
 
@@ -1569,6 +1650,52 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:label xml:lang="en">organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label>quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000169 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000169">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
+        <rdfs:label>viability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001241">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <rdfs:label>physical object quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001422 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001422">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000169"/>
+        <rdfs:label>dead</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001995 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001995">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <rdfs:label>organismal quality</rdfs:label>
     </owl:Class>
     
 
@@ -2475,6 +2602,27 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>animal</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0000042</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Koerper</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0001489</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>body</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>AEO:0000103</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BIRNLEX:18</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:256135</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C13041</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>whole body</owl:annotatedTarget>
         <oboInOwl:hasDbXref>BTO:0001489</oboInOwl:hasDbXref>
@@ -2506,27 +2654,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>multi-cellular organism</owl:annotatedTarget>
         <oboInOwl:hasDbXref>CARO:0000012</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
-        <owl:annotatedTarget>animal</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>BTO:0000042</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Koerper</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>BTO:0001489</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>body</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>AEO:0000103</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>BIRNLEX:18</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>FMA:256135</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C13041</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

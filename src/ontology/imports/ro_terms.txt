@@ -1,3 +1,4 @@
-RO:0002321 # Ecologically related to
-RO:0003001 # Produced by
+RO:0002321 # ecologically related to
+RO:0003001 # produced by
 RO:0002487 # relation between physical entity and a process or stage
+RO:0000086 # has quality

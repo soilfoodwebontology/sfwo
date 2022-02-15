@@ -15,7 +15,7 @@ imports/ecocore_import.owl: mirror/ecocore.owl imports/ecocore_terms_combined.tx
 
 imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< --term-file imports/ro_terms_combined.txt --force true --method TOP \
-		filter --term "RO:0002487" --term "RO:0002321" --term "RO:0003001" --select "annotations self descendants" --axioms all --preserve-structure true --signature true \
+		filter --term "RO:0002487" --term "RO:0002321" --term "RO:0003001" --term "RO:0000086" --select "annotations self descendants" --axioms all --preserve-structure true --signature true \
 		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/ro_import.owl

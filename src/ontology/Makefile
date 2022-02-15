@@ -72,7 +72,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  ro bfo ecocore po pato uberon envo fao chebi ncbitaxon
+IMPORTS =  ro bfo ecocore po pato uberon envo fao #chebi ncbitaxon
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)

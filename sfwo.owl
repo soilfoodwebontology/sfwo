@@ -15,6 +15,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:pato="http://purl.obolibrary.org/obo/pato#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sfwo="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-15/sfwo.owl#"
      xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:chebi1="http://purl.obolibrary.org/obo/chebi#2"
@@ -24,11 +25,11 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
     <owl:Ontology rdf:about="http://purl.org/sfwo/sfwo.owl">
-        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2022-02-12/sfwo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2022-02-15/sfwo.owl"/>
         <dc:description>None</dc:description>
         <dc:title>Soil Trophic Web Ontology</dc:title>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-02-12</owl:versionInfo>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-02-15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1268,8 +1269,51 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this apple is bearer of this red color</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this vase is bearer of this fragility</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">Inverse of characteristic_of</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <oboInOwl:hasDbXref>RO:0000053</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>bearer_of</oboInOwl:id>
+        <oboInOwl:shorthand>bearer_of</oboInOwl:shorthand>
+        <rdfs:label>bearer of</rdfs:label>
+        <rdfs:label xml:lang="en">bearer of</rdfs:label>
+        <rdfs:label xml:lang="en">has characteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <obo:IAO_0000112 xml:lang="en">this apple has quality this red color</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
+        <oboInOwl:hasDbXref>RO:0000086</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_quality</oboInOwl:id>
+        <oboInOwl:shorthand>has_quality</oboInOwl:shorthand>
+        <rdfs:label>has quality</rdfs:label>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -2911,6 +2955,15 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedTarget>(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/058-002"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label xml:lang="en">quality</rdfs:label>
+    </owl:Class>
     
 
 
@@ -4802,6 +4855,12 @@ Each of these 3 primitives can be composed to yield a cross-product of different
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000057"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
         <obo:IAO_0000115>A decomposer which obtains nutrition by consuming detritus.</obo:IAO_0000115>
@@ -4824,12 +4883,28 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056">
         <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000059"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
         <obo:IAO_0000115>A decomposer that obtains nutrition through extracellular digestion of decaying organic matter</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0002-2908-3327</obo:IAO_0000117>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
@@ -5047,6 +5122,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000103"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008979"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
@@ -5508,7 +5589,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000084"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000068"/>
         <obo:IAO_0000115>An herbivore that primarily consumes nectar</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0002-2908-3327</obo:IAO_0000117>
@@ -5786,7 +5866,14 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000043"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001988"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
         <obo:IAO_0000115>a decomposer which obtains nutrition by consuming feces</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0002-2908-3327</obo:IAO_0000117>
         <rdfs:label>coprophage</rdfs:label>
@@ -5837,7 +5924,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedTarget>A portion of environmental material is a fiat object part which forms the medium or part of the medium of an environmental system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>URL:http://ontology.buffalo.edu/smith/articles/niches.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5848,7 +5935,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000155">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <obo:IAO_0000115>Environmental material derived from living organisms and composed primarily of one or more biomacromolecules.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-20T08:40:04Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>EcoLexicon:organic_material</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>biomass</oboInOwl:hasExactSynonym>
@@ -5859,8 +5946,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Environmental material derived from living organisms and composed primarily of one or more biomacromolecules.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5868,7 +5955,13 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.obolibrary.org/obo/ENVO_01000628 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000628">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Leaf litter is dead plant material, such as leaves, bark, needles, and twigs, that has fallen to the ground.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>duff</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>leaf litter</oboInOwl:hasExactSynonym>
@@ -5889,8 +5982,20 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.obolibrary.org/obo/ENVO_01001103 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001103">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
         <obo:IAO_0000115 xml:lang="en">An organic material which is primarily composed of dead particulate matter.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>dead organic matter</oboInOwl:hasBroadSynonym>
         <rdfs:label>detritus</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7618,9 +7723,10 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33213">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6072"/>
         <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_clade"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id>NCBITaxon:33213</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <rdfs:label>Bilateria</rdfs:label>
     </owl:Class>
     
@@ -7759,15 +7865,17 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33511">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33213"/>
         <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_clade"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deuterostomes</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deuterostomia</rdfs:label>
+        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>deuterostomes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>NCBITaxon:33511</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Deuterostomia</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33511"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deuterostomes</owl:annotatedTarget>
+        <owl:annotatedTarget>deuterostomes</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
     </owl:Axiom>
     
@@ -8089,9 +8197,10 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6072">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
         <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_clade"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id>NCBITaxon:6072</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <rdfs:label>Eumetazoa</rdfs:label>
     </owl:Class>
     
@@ -8587,22 +8696,24 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7711">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33511"/>
         <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_phylum"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chordates</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chordates</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chordata</rdfs:label>
+        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>chordates</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>chordates</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>NCBITaxon:7711</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Chordata</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7711"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chordates</owl:annotatedTarget>
+        <owl:annotatedTarget>chordates</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7711"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chordates</owl:annotatedTarget>
+        <owl:annotatedTarget>chordates</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
     </owl:Axiom>
     
@@ -8613,29 +8724,32 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7742">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_89593"/>
         <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_clade"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertebrata</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vertebrates</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vertebrates</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertebrata &lt;vertebrates&gt;</rdfs:label>
+        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Vertebrata</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>vertebrates</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>vertebrates</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>NCBITaxon:7742</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Vertebrata &lt;Metazoa&gt;</rdfs:label>
+        <rdfs:label>Vertebrata &lt;vertebrates&gt;</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertebrata</owl:annotatedTarget>
+        <owl:annotatedTarget>Vertebrata</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#scientific_name"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vertebrates</owl:annotatedTarget>
+        <owl:annotatedTarget>vertebrates</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vertebrates</owl:annotatedTarget>
+        <owl:annotatedTarget>vertebrates</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
     </owl:Axiom>
     
@@ -9025,15 +9139,18 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_89593">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7711"/>
         <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subphylum"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craniata</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craniata &lt;chordates&gt;</rdfs:label>
+        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Craniata</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>NCBITaxon:89593</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Craniata &lt;chordata&gt;</rdfs:label>
+        <rdfs:label>Craniata &lt;chordates&gt;</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_89593"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craniata</owl:annotatedTarget>
+        <owl:annotatedTarget>Craniata</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#scientific_name"/>
     </owl:Axiom>
     
@@ -9076,6 +9193,27 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <obo:IAO_0000115>A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities</obo:IAO_0000115>
+        <obo:IAO_0000589>quality (PATO)</obo:IAO_0000589>
+        <oboInOwl:hasAlternativeId>PATO:0000072</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0000001</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
+        <rdfs:label>quality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0000169 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000169">
@@ -9099,7 +9237,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001241">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <obo:IAO_0000115>A quality which inheres in a continuant.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>PATO:0001237</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>PATO:0001238</oboInOwl:hasAlternativeId>
@@ -9115,6 +9254,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0001241</oboInOwl:id>
         <rdfs:comment>Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
         <rdfs:label>physical object quality</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -9196,7 +9336,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality that inheres in an entire organism or part of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11696,6 +11836,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001988">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000174"/>
+        <obo:IAO_0000115>Portion of semisolid bodily waste discharged through the anus[MW,modified]</obo:IAO_0000115>
         <obo:IAO_0000115>Portion of semisolid bodily waste discharged through the anus[MW,modified].</obo:IAO_0000115>
         <obo:UBPROP_0000001>Excretion in semisolid state processed by the intestine.[FMA]</obo:UBPROP_0000001>
         <obo:UBPROP_0000007>fecal</obo:UBPROP_0000007>
@@ -11718,7 +11859,11 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasExactSynonym>faeces</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fecal material</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fecal matter</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>matières fécales@fr</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>merde@fr</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>partie de la merde@fr</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>piece of shit</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>porción de mierda@es</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>portion of excrement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>portion of faeces</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>portion of fecal material</oboInOwl:hasExactSynonym>
@@ -11726,6 +11871,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasExactSynonym>portion of feces</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>portionem cacas</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>stool</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>teil der fäkalien@de</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>cow dung</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>cow pat</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>dung</oboInOwl:hasNarrowSynonym>
@@ -12067,6 +12213,17 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.obolibrary.org/obo/UBERON_0008979 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0008979">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
         <obo:IAO_0000115>A body of a multi-cellular organism that is no longer living.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/127853004"/>
@@ -12149,7 +12306,9 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000115>An organism which is capable of obtaining energy from the bonds in a chemical compound</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">chemotroph</rdfs:label>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000000</oboInOwl:id>
+        <rdfs:label>chemotroph</rdfs:label>
     </owl:Class>
     
 
@@ -12177,6 +12336,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000115>An organism which is capable of using a biogenic organic compound as an electron donor.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000001</oboInOwl:id>
         <rdfs:label>organotroph</rdfs:label>
     </owl:Class>
     
@@ -12205,6 +12365,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000115>An organism which is capable of using an inorganic compound as an electron donor.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000002</oboInOwl:id>
         <rdfs:label>lithotroph</rdfs:label>
     </owl:Class>
     
@@ -12215,7 +12376,9 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000127"/>
         <obo:IAO_0000115>A chemoorganoheterotroph which obtains nutrition by engulfment of food particles, by phagocytose or ingestion.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">phagotroph</rdfs:label>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000003</oboInOwl:id>
+        <rdfs:label>phagotroph</rdfs:label>
     </owl:Class>
     
 
@@ -12225,7 +12388,9 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000003"/>
         <obo:IAO_0000115>A phagotroph feeding on very small organic particles or organisms.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">microphage</rdfs:label>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000004</oboInOwl:id>
+        <rdfs:label>microphage</rdfs:label>
     </owl:Class>
     
 
@@ -12235,7 +12400,9 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000003"/>
         <obo:IAO_0000115>A phagotroph feeding on large organic particles or organisms.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">macrophage</rdfs:label>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000005</oboInOwl:id>
+        <rdfs:label>macrophage</rdfs:label>
     </owl:Class>
     
 
@@ -12245,7 +12412,9 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000127"/>
         <obo:IAO_0000115>A chemoorganoheterotroph which obtains nutrition through a parasitic relationship with another organism.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">pathotroph</rdfs:label>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000006</oboInOwl:id>
+        <rdfs:label>pathotroph</rdfs:label>
     </owl:Class>
     
 
@@ -12273,6 +12442,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000115>An organism which is capable of transforming light into chemical energy.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000007</oboInOwl:id>
         <rdfs:label>phototroph</rdfs:label>
     </owl:Class>
     
@@ -12299,6 +12469,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasExactSynonym>geophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>soil feeder</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>humiphage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SFWO:0000008</oboInOwl:id>
         <rdfs:label>geophage</rdfs:label>
     </owl:Class>
     
@@ -12324,6 +12495,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A heterotroph that consumes plant or animal exudates.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>exudate feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000009</oboInOwl:id>
         <rdfs:label>exudativore</rdfs:label>
     </owl:Class>
     
@@ -12332,10 +12504,18 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000012 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000012">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000102"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000144"/>
         <obo:IAO_0000115>A saprophage which obtains nutrition by consuming decaying wood.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>saproxylophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000012</oboInOwl:id>
         <rdfs:label>saproxylophage</rdfs:label>
     </owl:Class>
     
@@ -12354,6 +12534,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>malacophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000015</oboInOwl:id>
         <rdfs:label>malacophage</rdfs:label>
     </owl:Class>
     
@@ -12378,6 +12559,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A zoophage that feeds on eggs.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>oophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000017</oboInOwl:id>
         <rdfs:label>oophage</rdfs:label>
     </owl:Class>
     
@@ -12396,6 +12578,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>An entomophage that feeds on ants.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>myrmecophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000018</oboInOwl:id>
         <rdfs:label>myrmecophage</rdfs:label>
     </owl:Class>
     
@@ -12414,6 +12597,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A zoophage that primarily eats nematodes.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>nematophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000019</oboInOwl:id>
         <rdfs:label>nematophage</rdfs:label>
     </owl:Class>
     
@@ -12431,6 +12615,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000069"/>
         <obo:IAO_0000115>An exudativore that consumes honeydew produced by phloem sap-feeding insects.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000020</oboInOwl:id>
         <rdfs:label>honeydew feeder</rdfs:label>
     </owl:Class>
     
@@ -12449,6 +12634,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>An gumnivore that primarily consumes phloem sap.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>phloem feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000021</oboInOwl:id>
         <rdfs:label>phloem sap feeder</rdfs:label>
     </owl:Class>
     
@@ -12467,7 +12653,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A parasite whose host is a plant.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>phytoparasite</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">plant parasite</rdfs:label>
+        <oboInOwl:id>SFWO:0000024</oboInOwl:id>
+        <rdfs:label>plant parasite</rdfs:label>
     </owl:Class>
     
 
@@ -12475,10 +12662,17 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000025 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000025">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000628"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
         <obo:IAO_0000115>A detritivore that consumes dead or decaying plant material.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>phytosaprophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000025</oboInOwl:id>
         <rdfs:label>phytosaprophage</rdfs:label>
     </owl:Class>
     
@@ -12506,6 +12700,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>bryophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>moss feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000027</oboInOwl:id>
         <rdfs:label>bryophage</rdfs:label>
     </owl:Class>
     
@@ -12531,6 +12726,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>ophiophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>serpentivore</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000030</oboInOwl:id>
         <rdfs:label>ophiophage</rdfs:label>
     </owl:Class>
     
@@ -12550,6 +12746,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym xml:lang="fr">aphidiphage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>aphidophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000031</oboInOwl:id>
         <rdfs:label xml:lang="en">aphidophage</rdfs:label>
     </owl:Class>
     
@@ -12561,6 +12758,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
         <obo:IAO_0000115>An herbivore that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000032</oboInOwl:id>
         <rdfs:label>scraper</rdfs:label>
     </owl:Class>
     
@@ -12605,6 +12803,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
         <obo:IAO_0000115>A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000037</oboInOwl:id>
         <rdfs:label>shredder</rdfs:label>
     </owl:Class>
     
@@ -12616,6 +12815,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000051"/>
         <obo:IAO_0000115>A suspension feeder that uses ciliary or muscular activity to create feeding currents.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000038</oboInOwl:id>
         <rdfs:label>active suspension feeder</rdfs:label>
     </owl:Class>
     
@@ -12627,6 +12827,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000051"/>
         <obo:IAO_0000115>A suspension feeder that utilises the natural flow to bring particles in contact with feeding structures.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000039</oboInOwl:id>
         <rdfs:label>passive suspension feeder</rdfs:label>
     </owl:Class>
     
@@ -12636,6 +12837,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000040">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <oboInOwl:id>SFWO:0000040</oboInOwl:id>
         <rdfs:label>collector gatherer</rdfs:label>
     </owl:Class>
     
@@ -12646,6 +12848,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000041">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000051"/>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000041</oboInOwl:id>
         <rdfs:label>collector filterer</rdfs:label>
     </owl:Class>
     
@@ -12686,16 +12889,10 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000049 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000049">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000084"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000068"/>
         <obo:IAO_0000115>A portion of plant substance that is or was emitted by a plant through pores or wound.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:0000049"/>
         <rdfs:label>plant exudate</rdfs:label>
     </owl:Class>
     
@@ -12707,6 +12904,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
         <obo:IAO_0000115>A portion of plant substance composed of sap or other resinous material, associated with certain plant species.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:0000050"/>
         <rdfs:label>plant gum</rdfs:label>
     </owl:Class>
     
@@ -12715,7 +12913,6 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000051 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000051">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000140"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000049"/>
         <obo:IAO_0000115>A plant exudate excreted by the roots of living plants.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
@@ -12737,6 +12934,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A predator that primarily eats acari</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>acariphagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000053</oboInOwl:id>
         <rdfs:label>acariphage</rdfs:label>
     </owl:Class>
     
@@ -12754,6 +12952,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
         <obo:IAO_0000115>A parasite whose host is an animal.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000054</oboInOwl:id>
         <rdfs:label>animal parasite</rdfs:label>
     </owl:Class>
     
@@ -12772,6 +12971,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>An animal parasite whose host is an insect.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>entomogenous organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000055</oboInOwl:id>
         <rdfs:label>insect parasite</rdfs:label>
     </owl:Class>
     
@@ -12798,6 +12998,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
         <obo:IAO_0000115>A predator that primarily eats springtails</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000058</oboInOwl:id>
         <rdfs:label>springtail feeder</rdfs:label>
     </owl:Class>
     
@@ -12827,6 +13028,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A heterotroph that feeds on microorganisms.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasRelatedSynonym>microbivorous</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SFWO:0000061</oboInOwl:id>
         <rdfs:label>microbivore</rdfs:label>
     </owl:Class>
     
@@ -12838,6 +13040,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000115>An organism of microscopic size, which may exist in its single-celled form or as a colony of cells.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000062</oboInOwl:id>
         <rdfs:label>microorganism</rdfs:label>
     </owl:Class>
     
@@ -12870,6 +13073,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
         <obo:IAO_0000115>A heterotroph that feeds on resources at more than one trophic level.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0002-4456-1710</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000063</oboInOwl:id>
         <rdfs:comment>The definition is from Coll, M., &amp; Guershon, M. (2002).</rdfs:comment>
         <rdfs:label>trophic omnivore</rdfs:label>
     </owl:Class>
@@ -12901,6 +13105,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
         <obo:IAO_0000115>An eukaryotic microorganism that is not an animal, plant, or fungus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000064</oboInOwl:id>
         <rdfs:label>protist</rdfs:label>
     </owl:Class>
     
@@ -12919,6 +13124,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A heterotroph that feeds on protists.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>protistivorous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000065</oboInOwl:id>
         <rdfs:label>protistivore</rdfs:label>
     </owl:Class>
     
@@ -12937,6 +13143,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000009"/>
         <obo:IAO_0000115>An exudativore that consumes plant exudates.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000068</oboInOwl:id>
         <rdfs:label>plant exudate feeder</rdfs:label>
     </owl:Class>
     
@@ -12955,6 +13162,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000009"/>
         <obo:IAO_0000115>An exudativore that consumes animal exudates.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000069</oboInOwl:id>
         <rdfs:label>animal exudate feeder</rdfs:label>
     </owl:Class>
     
@@ -12963,9 +13171,27 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000070 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000070">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000102"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000012"/>
         <obo:IAO_0000115>A saprotroph that obtains nutrition through extracellular digestion of wood</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000070</oboInOwl:id>
         <rdfs:label>wood saprotroph</rdfs:label>
     </owl:Class>
     
@@ -12988,6 +13214,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
         <obo:IAO_0000115>A mycorrhizal fungus whose hyphae do not penetrate the plant cell wall.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000071</oboInOwl:id>
         <rdfs:label>ectomycorrhizal</rdfs:label>
     </owl:Class>
     
@@ -13011,6 +13238,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
         <obo:IAO_0000115>A symbiotroph involved in a mutual symbiotic association with the roots of a plant.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000072</oboInOwl:id>
         <rdfs:label>mycorrhizal</rdfs:label>
     </owl:Class>
     
@@ -13033,6 +13261,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
         <obo:IAO_0000115>A mycorrhizal fungus whose hyphae penetrate the plant cell wall and invaginate its cell membrane.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000073</oboInOwl:id>
         <rdfs:label>arbuscular mycorrhizal</rdfs:label>
     </owl:Class>
     
@@ -13051,6 +13280,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A parasite whose host is a fungus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>mycoparasite</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000074</oboInOwl:id>
         <rdfs:label>fungal parasite</rdfs:label>
     </owl:Class>
     
@@ -13059,10 +13289,28 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000076 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000076">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000628"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000025"/>
         <obo:IAO_0000117>A saprotroph that obtains nutrition through extracellular digestion of plant litter.</obo:IAO_0000117>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasNarrowSynonym>leaf saprotroph</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:id>SFWO:0000076</oboInOwl:id>
         <rdfs:label>litter saprotroph</rdfs:label>
     </owl:Class>
     
@@ -13071,9 +13319,27 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000077 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000077">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001988"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000176"/>
         <obo:IAO_0000115>A saprotroph that obtains nutrition through extracellular digestion of feces.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000077</oboInOwl:id>
         <rdfs:label>dung saprotroph</rdfs:label>
     </owl:Class>
     
@@ -13100,6 +13366,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000078</oboInOwl:id>
         <rdfs:label>soil saprotroph</rdfs:label>
     </owl:Class>
     
@@ -13122,6 +13389,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
         <obo:IAO_0000115>A mycorrhizal fungus involved in a mutualistic association with a member of the plant family Ericaceae.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000079</oboInOwl:id>
         <rdfs:label>ericoid mycorrhizal</rdfs:label>
     </owl:Class>
     
@@ -13147,6 +13415,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
         <obo:IAO_0000115>A parasite whose host is a bryophyte.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000080</oboInOwl:id>
         <rdfs:label>bryophyte parasite</rdfs:label>
     </owl:Class>
     
@@ -13169,6 +13438,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000072"/>
         <obo:IAO_0000115>A mycorrhizal fungus involved in a symbiotic interaction with a member of the plant family Orchidaceae.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000081</oboInOwl:id>
         <rdfs:label>orchid mycorrhizal</rdfs:label>
     </owl:Class>
     
@@ -13192,6 +13462,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
         <obo:IAO_0000115>A symbiotroph involved in a symbiotic association with living green algae or cyanobacteria.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000082</oboInOwl:id>
         <rdfs:label>lichenized</rdfs:label>
     </owl:Class>
     
@@ -13210,6 +13481,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A fungal parasite whose host is a lichenized fungus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasNarrowSynonym>lichenicolous fungus</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:id>SFWO:0000083</oboInOwl:id>
         <rdfs:label>lichen parasite</rdfs:label>
     </owl:Class>
     
@@ -13218,7 +13490,6 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.org/sfwo/SFWO_0000084 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000084">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000140"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000049"/>
         <obo:IAO_0000115>A plant exudate produced in glands called nectaries or nectarines.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
@@ -13240,6 +13511,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A parasite whose host is a protist.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>protistan parasite</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000085</oboInOwl:id>
         <rdfs:label>protist parasite</rdfs:label>
     </owl:Class>
     
@@ -13269,7 +13541,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>Macroscopic, multicellular, marine algae.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym xml:lang="en">seaweed</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">macroalgae</rdfs:label>
+        <oboInOwl:id>SFWO:0000095</oboInOwl:id>
+        <rdfs:label>macroalgae</rdfs:label>
     </owl:Class>
     
 
@@ -13282,7 +13555,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>Microscopic, unicellular algae.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym xml:lang="en">microphytes</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">microalgae</rdfs:label>
+        <oboInOwl:id>SFWO:0000096</oboInOwl:id>
+        <rdfs:label>microalgae</rdfs:label>
     </owl:Class>
     
 
@@ -13302,8 +13576,103 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000063"/>
         <obo:IAO_0000115>A trophic omnivore which specifically feed on both plant and animal food sources.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id>SFWO:0000100</oboInOwl:id>
         <rdfs:comment>The distinction between trophic omnivores and true omnivores comes from Coll, M., &amp; Guershon, M. (2002).</rdfs:comment>
         <rdfs:label>true omnivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000102 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000102">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0005848"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0005848"/>
+        <obo:IAO_0000115>Wood material that is undergoing decomposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <rdfs:label>decaying wood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000103 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:0000103"/>
+        <rdfs:label>root litter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000104 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000104">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008979"/>
+        <obo:IAO_0000115>A carcass of a vertebrate organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:0000104"/>
+        <rdfs:label>vertebrate carrion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000105 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000105">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008979"/>
+        <obo:IAO_0000115>A carcass of an invertebrate organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:0000105"/>
+        <rdfs:label>invertebrate carrion</rdfs:label>
     </owl:Class>
     
 
@@ -13314,6 +13683,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
         <obo:IAO_0000115>Organic material that is able to pass through a filter, in contrast to particulate organic matter retained on the filter.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:4000000"/>
         <rdfs:label>dissolved organic matter</rdfs:label>
     </owl:Class>
     
@@ -13343,6 +13713,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007780"/>
         <obo:IAO_0000115>An excreta secreted by aphids and some scale insects as they feed on plant sap. Honeydew is also secreted by certain fungi.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:4000012"/>
         <rdfs:label>honeydew</rdfs:label>
     </owl:Class>
     
@@ -13369,5 +13740,5 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

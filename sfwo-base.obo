@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: sfwo/releases/2022-02-12/sfwo-base.owl
+data-version: sfwo/releases/2022-02-15/sfwo-base.owl
 ontology: sfwo/sfwo-base
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Soil Trophic Web Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
-property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2022-02-12" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
+property_value: owl:versionInfo "2022-02-15" xsd:string
 
 [Term]
 id: BFO:0000003
@@ -229,6 +229,16 @@ id: ENVO:01000155
 synonym: "organic matter" EXACT []
 
 [Term]
+id: ENVO:01000628
+relationship: RO:0000086 PATO:0001422
+
+[Term]
+id: ENVO:01001103
+synonym: "dead organic matter" BROAD []
+intersection_of: ENVO:01000155
+intersection_of: RO:0000086 PATO:0001422
+
+[Term]
 id: ENVO:04000008
 relationship: BFO:0000050 ENVO:00001998
 
@@ -252,6 +262,7 @@ def: "An organism which is capable of obtaining energy from the bonds in a chemi
 is_a: OBI:0100026
 intersection_of: OBI:0100026
 intersection_of: SFWO:0000048 CHEBI:23367 ! uses as energy source
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000001
@@ -276,24 +287,28 @@ id: SFWO:0000003
 name: phagotroph
 def: "A chemoorganoheterotroph which obtains nutrition by engulfment of food particles, by phagocytose or ingestion." []
 is_a: ECOCORE:00000127
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000004
 name: microphage
 def: "A phagotroph feeding on very small organic particles or organisms." []
 is_a: SFWO:0000003 ! phagotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000005
 name: macrophage
 def: "A phagotroph feeding on large organic particles or organisms." []
 is_a: SFWO:0000003 ! phagotroph
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000006
 name: pathotroph
 def: "A chemoorganoheterotroph which obtains nutrition through a parasitic relationship with another organism." []
 is_a: ECOCORE:00000127
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
 id: SFWO:0000007
@@ -771,6 +786,38 @@ intersection_of: ECOCORE:00000088
 property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
 
 [Term]
+id: SFWO:0000102
+name: decaying wood
+def: "Wood material that is undergoing decomposition." []
+is_a: PO:0005848
+intersection_of: PO:0005848
+intersection_of: RO:0000086 PATO:0001422
+property_value: IAO:0000117 https://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: SFWO:0000103
+name: root litter
+is_a: ENVO:01000155
+relationship: RO:0000086 PATO:0001422
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: SFWO:0000104
+name: vertebrate carrion
+def: "A carcass of a vertebrate organism." []
+is_a: UBERON:0008979
+intersection_of: NCBITaxon:7742
+intersection_of: RO:0000086 PATO:0001422
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
+id: SFWO:0000105
+name: invertebrate carrion
+def: "A carcass of an invertebrate organism." []
+is_a: UBERON:0008979
+property_value: IAO:0000117 http://orcid.org/0000-0003-4559-7579 xsd:string
+
+[Term]
 id: SFWO:4000000
 name: dissolved organic matter
 def: "Organic material that is able to pass through a filter, in contrast to particulate organic matter retained on the filter." []
@@ -821,6 +868,11 @@ is_a: BFO:0000004
 [Term]
 id: UBERON:0007379
 is_a: SFWO:0000086 ! animal anatomical entity
+
+[Term]
+id: UBERON:0008979
+intersection_of: UBERON:0000468
+intersection_of: RO:0000086 PATO:0001422
 
 [Typedef]
 id: SFWO:0000047
