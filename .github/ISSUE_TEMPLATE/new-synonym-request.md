@@ -1,6 +1,6 @@
 ---
 name: New synonym request
-about: Describe this issue template's purpose here.
+about: You want to propose a new synonym for a term in the ontology?
 title: ''
 labels: enhancement
 assignees: ''

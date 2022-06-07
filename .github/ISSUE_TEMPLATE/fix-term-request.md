@@ -1,6 +1,6 @@
 ---
 name: Fix term request
-about: Describe this issue template's purpose here.
+about: You spotted an error? You want to propose a modification?
 title: ''
 labels: invalid
 assignees: ''

@@ -1,6 +1,6 @@
 ---
 name: New term request
-about: Describe this issue template's purpose here.
+about: You want to propose a new term (concept or relation)?
 title: ''
 labels: enhancement
 assignees: ''
