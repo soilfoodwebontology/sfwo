@@ -4,3 +4,4 @@ FAO:0000011 # Mycelium
 FAO:0000019 # Spore
 FAO:0000052 # Sporangium
 FAO:0000010 # Sporophore
+FAO:0001003 # Hypha in mycelium

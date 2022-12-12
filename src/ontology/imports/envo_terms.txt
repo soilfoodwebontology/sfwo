@@ -1,6 +1,6 @@
-ENVO:01000628 # Leaf litter
 ENVO:01000155 # Organic material
-CARO:0001010 # Organism or virus or viroid
 ENVO:01001103 # Detritus
 ENVO:04000008 # Soil organic material
 ENVO:00001998 # Soil
+ENVO:01001121 # Plant matter
+ENVO:01001189 # Algal material

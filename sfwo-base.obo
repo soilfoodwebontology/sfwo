@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: sfwo/releases/2022-02-15/sfwo-base.owl
+data-version: sfwo/releases/2022-06-03/sfwo-base.owl
 ontology: sfwo/sfwo-base
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Soil Trophic Web Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2022-02-15" xsd:string
+property_value: owl:versionInfo "2022-06-03" xsd:string
 
 [Term]
 id: BFO:0000003

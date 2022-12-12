@@ -2,35 +2,41 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
 <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/ro_import.owl" uri="imports/ro_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/ro_import.obo" uri="imports/ro_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/ro_import.owl" uri="imports/ro_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/ro_import.obo" uri="imports/ro_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/bfo_import.obo" uri="imports/bfo_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/bfo_import.obo" uri="imports/bfo_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/ecocore_import.owl" uri="imports/ecocore_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/ecocore_import.obo" uri="imports/ecocore_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/ecocore_import.owl" uri="imports/ecocore_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/ecocore_import.obo" uri="imports/ecocore_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/po_import.owl" uri="imports/po_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/po_import.obo" uri="imports/po_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/po_import.owl" uri="imports/po_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/po_import.obo" uri="imports/po_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/pato_import.owl" uri="imports/pato_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/pato_import.obo" uri="imports/pato_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/pato_import.owl" uri="imports/pato_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/pato_import.obo" uri="imports/pato_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/uberon_import.obo" uri="imports/uberon_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/uberon_import.obo" uri="imports/uberon_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/envo_import.owl" uri="imports/envo_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/envo_import.obo" uri="imports/envo_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/envo_import.owl" uri="imports/envo_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/envo_import.obo" uri="imports/envo_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/fao_import.owl" uri="imports/fao_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/fao_import.obo" uri="imports/fao_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/fao_import.owl" uri="imports/fao_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/fao_import.obo" uri="imports/fao_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/ncbitaxon_import.owl" uri="imports/ncbitaxon_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/ncbitaxon_import.obo" uri="imports/ncbitaxon_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/ncbitaxon_import.owl" uri="imports/ncbitaxon_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/ncbitaxon_import.obo" uri="imports/ncbitaxon_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/chebi_import.owl" uri="imports/chebi_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/sfwo/imports/chebi_import.obo" uri="imports/chebi_import.obo"/>
+  <uri name="http://purl.org/sfwo/imports/chebi_import.owl" uri="imports/chebi_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/chebi_import.obo" uri="imports/chebi_import.obo"/>
+  
+  <uri name="http://purl.org/sfwo/imports/pco_import.owl" uri="imports/pco_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/pco_import.obo" uri="imports/pco_import.obo"/>
+  
+  <uri name="http://purl.org/sfwo/imports/go_import.owl" uri="imports/go_import.owl"/>
+  <uri name="http://purl.org/sfwo/imports/go_import.obo" uri="imports/go_import.obo"/>
 
 </group>
 </catalog>

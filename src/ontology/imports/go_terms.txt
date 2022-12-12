@@ -1,0 +1,1 @@
+GO:0036377 # arbuscular mycorrhizal association

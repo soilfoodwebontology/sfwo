@@ -7,3 +7,4 @@ UBERON:0000912 # Mucus
 UBERON:0000069 # Larval stage
 UBERON:0000066 # Fully formed stage
 UBERON:0000070 # Pupal stage
+UBERON:0007780 # Exudate

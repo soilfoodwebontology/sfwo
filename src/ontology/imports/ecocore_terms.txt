@@ -1,19 +1,26 @@
-ECOCORE:00000004 # Trophic function
-ECOCORE:00000010 # Heterotroph
-ECOCORE:00000023 # Autotroph
-ECOCORE:00000008 # Trophic interaction
-ECOCORE:00000001 # Food web
-RO:0002470
-ECOCORE:00000076 # algae
-ECOCORE:00000144 # Xylophage
-ECOCORE:00000122 # photolithoautotroph
-GO:0036377 # arbuscular mycorrhizal association
-GO:0085030 # symbiotic process benefiting host
-ECOCORE:00000103 # Scavenging
-ECOCORE:00000140 # Nectarivore
+ECOCORE:00000054 # Decomposer
+ECOCORE:00000019 # Herbivore
+ECOCORE:00000088 # Carnivore
+ECOCORE:00000015 # Fungivore
+ECOCORE:00000045 # Symbiotroph
 ECOCORE:00000098 # Bacterivore
-ECOCORE:00000114 # Bactivory
-ECOCORE:00000057 # Detritivory
+ECOCORE:00000023 # Autotroph
 ECOCORE:00000087 # Parasitoid
-ECOCORE:00000151 # Internal parasite
-ECOCORE:00000152 # External parasite
+ECOCORE:00000157 # Filter feeder
+ECOCORE:00000131 # Photoheterotroph
+ECOCORE:00000132 # Chemoheterotroph
+
+ECOCORE:00000058 # Decomposition
+ECOCORE:00000020 # Herbivory
+ECOCORE:00000021 # Carnivory
+ECOCORE:00000016 # Fungivory
+ECOCORE:00000060 # Symbiotrophy
+ECOCORE:00000114 # Bactivory
+ECOCORE:00000009 # Autotrophy
+ECOCORE:00000014 # Lithotrophy
+ECOCORE:00000017 # Phototrophy
+ECOCORE:00000163 # Chemotrophy
+ECOCORE:00000162 # Organotrophy
+
+ECOCORE:00000001 # Food web
+ECOCORE:00000076 # algae

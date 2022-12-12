@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sfwo/imports/po_import.owl#"
-     xml:base="http://purl.obolibrary.org/obo/sfwo/imports/po_import.owl"
+<rdf:RDF xmlns="http://purl.org/sfwo/imports/po_import.owl#"
+     xml:base="http://purl.org/sfwo/imports/po_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:po="http://purl.obolibrary.org/obo/po#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -9,8 +10,10 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sfwo/imports/po_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sfwo/releases/2022-02-15/imports/po_import.owl"/>
+    <owl:Ontology rdf:about="http://purl.org/sfwo/imports/po_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2022-12-05/imports/po_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/po/releases/2021-08-13/po.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-05</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -255,94 +258,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>plant_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>part_of</oboInOwl:id>
-        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part_of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>plant_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>has_part</oboInOwl:id>
-        <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
-        <rdfs:label>has_part</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002131 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002131">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002160 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002160">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
-        <oboInOwl:hasDbXref>RO:0002160</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>plant_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>only_in_taxon</oboInOwl:id>
-        <oboInOwl:shorthand>only_in_taxon</oboInOwl:shorthand>
-        <rdfs:label>only_in_taxon</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002162 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002162">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002320"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002320 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002320">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002323 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002323">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -353,19 +268,25 @@
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </owl:Class>
     
 
 
@@ -1025,7 +946,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009008"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>simple plant organ (related)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:01503</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATO:01503</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1078,7 +999,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009010"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>pyrene (narrow)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FNA:f5c50e73-61e3-48ec-b918-6f85b3f40738</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FNA:f5c50e73-61e3-48ec-b918-6f85b3f40738</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1101,7 +1022,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A plant anatomical entity (PO:0025131) that is, or was, part of a plant, or was derived from a part of a plant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -1216,7 +1137,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009055"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>bracteole (related)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FNA:9cce93dc-f233-440e-9163-97207fca71a4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FNA:9cce93dc-f233-440e-9163-97207fca71a4</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009055"/>
@@ -1359,6 +1280,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025131 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <obo:IAO_0000115>An anatomical entity that is or was part of a plant.</obo:IAO_0000115>
         <oboInOwl:created_by>rwalls</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-15T11:41:38Z</oboInOwl:creation_date>
@@ -1420,7 +1342,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025161"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A portion of organism substance that is or was part of a plant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:0000004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000004</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
