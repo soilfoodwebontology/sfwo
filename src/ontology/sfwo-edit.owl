@@ -1319,6 +1319,19 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4751 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000410"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_48715 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_48715">
@@ -6099,6 +6112,562 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     
 
 
+    <!-- http://purl.org/sfwo/SFWO_0000409 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000409">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000410"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000006"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000410"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000410 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000410">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000127"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000127"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000411 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000411">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000410"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000410"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000412 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000412">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000410"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000045"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000410"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000413 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000413">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000411"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000070"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000414 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000414">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000411"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000433"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000415 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000415">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000411"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000076"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000416 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000416">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000411"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000077"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000417 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000417">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000411"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000078"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000418 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000418">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000159"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000419 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000419">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000158"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000420 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000420">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000074"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000421 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000421">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000080"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000422 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000422">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000083"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000423 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000423">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000082"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000424 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000424">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000046"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000425 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000425">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000073"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000426 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000426">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000071"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000427 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000427">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000428 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000428">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000429 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000429">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000079"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000430 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000430">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000081"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000431 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000431">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000432 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000432">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000433 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000433">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+        <obo:IAO_0000115 xml:lang="en">A saprotroph that obtains nutrition through extracellular digestion of leaves.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">leaf saprotroph</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sfwo/SFWO_4000000 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_4000000">
@@ -7012,6 +7581,150 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     
 
 
+    <!-- http://purl.org/sfwo/SFWO_0000409 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000409"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000410 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000410"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000411 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000411"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000412 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000413 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000413"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000414 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000414"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000415 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000415"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000416 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000416"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000417 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000417"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000418 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000418"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000419 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000419"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000420 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000420"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000421 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000421"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000422 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000422"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000423 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000423"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000424 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000424"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000425 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000425"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000426 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000426"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000427 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000427"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000428 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000428"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000429 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000429"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000430 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000430"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000431 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000431"/>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000432 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000432"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -7725,6 +8438,134 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <rdfs:label xml:lang="en">Hymenoptera.wasps_and_parasitoids</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7580"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
+        <rdfs:label xml:lang="en">Fungi.pathotrophs</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000410">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7581"/>
+        <rdfs:label xml:lang="en">Fungi.all</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000411">
+        <rdfs:label xml:lang="en">Fungi.saprotrophs</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7582"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000412">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.symbiotrophs</rdfs:label>
+        <rdfs:label xml:lang="fr">Fungi.symbiotrophs</rdfs:label>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7583"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000413">
+        <rdfs:label xml:lang="en">Fungi.wood_saprotrophs</rdfs:label>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7584"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000414">
+        <rdfs:label xml:lang="en">Fungi.leaf_saprotrophs</rdfs:label>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7585"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000415">
+        <rdfs:label xml:lang="en">Fungi.litter_saprotrophs</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7586"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000416">
+        <rdfs:label xml:lang="en">Fungi.dung_saprotrophs</rdfs:label>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7587"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000417">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7588"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.soil_saprotrophs</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000418">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7589"/>
+        <rdfs:label xml:lang="en">Fungi.plant_pathogens</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000419">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.animal_pathogens</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7590"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000420">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7591"/>
+        <rdfs:label xml:lang="en">Fungi.fungal_parasites</rdfs:label>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000421">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7592"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.bryophyte_parasites</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000422">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7593"/>
+        <rdfs:label xml:lang="en">Fungi.lichen_parasites</rdfs:label>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000423">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.lichenized</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7594"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000424">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.endophytes</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7595"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000425">
+        <rdfs:label xml:lang="en">Fungi.arbuscular_mycorrhizal</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7596"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000426">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7597"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.ectomycorrhizal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000427">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7598"/>
+        <rdfs:label xml:lang="en">Fungi.epiphytes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000428">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7599"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.animal_endosymbionts</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000429">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7600"/>
+        <rdfs:label xml:lang="en">Fungi.ericoid_mycorrhizal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000430">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7601"/>
+        <rdfs:label xml:lang="en">Fungi.orchid_mycorrhizal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000431">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7601"/>
+        <rdfs:label xml:lang="en">Fungi.root_associated_biotrophs</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000432">
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <rdfs:label xml:lang="en">Fungi.undefined_saprotrophs</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7601"/>
+    </rdf:Description>
     
 
 
@@ -7883,6 +8724,30 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     </owl:Class>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000045"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000046"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000424"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_29997"/>
         </owl:intersectionOf>
@@ -7926,6 +8791,18 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000369"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -8242,6 +9119,198 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000285"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000006"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000070"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000413"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000071"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000426"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000073"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000425"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000074"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000420"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000076"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000415"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000077"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000416"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000078"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000417"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000079"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000429"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000080"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000421"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000081"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000430"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000082"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000423"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000083"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000422"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000158"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000419"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000159"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000418"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000433"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000414"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
