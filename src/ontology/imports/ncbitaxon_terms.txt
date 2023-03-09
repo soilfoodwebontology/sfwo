@@ -81,3 +81,30 @@ NCBITaxon:1294634 # Crocodylia
 NCBITaxon:8504 # Lepidosauria
 NCBITaxon:8459 # Testudines
 NCBITaxon:61986 # Symphyla
+NCBITaxon:554915 # Protists
+NCBITaxon:2686027
+NCBITaxon:554296
+NCBITaxon:1401294
+NCBITaxon:2608240
+NCBITaxon:3027
+NCBITaxon:2611352
+NCBITaxon:2683617
+NCBITaxon:38254
+NCBITaxon:2608109
+NCBITaxon:2489521
+NCBITaxon:2795258
+NCBITaxon:2611341
+NCBITaxon:3004206
+NCBITaxon:2598132
+NCBITaxon:2763
+NCBITaxon:2698737
+NCBITaxon:127916
+NCBITaxon:2316435
+NCBITaxon:318493 # Arcellinida (testate amoebae)
+NCBITaxon:178369 # Euglyphida (testate amoebae)
+NCBITaxon:1287658 # Amphitremida (testate amoebae)
+
+NCBITaxon:2686024
+NCBITaxon:2687318
+NCBITaxon:28009
+NCBITaxon:42461

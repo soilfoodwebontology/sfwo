@@ -57,3 +57,27 @@ $(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms_c
 		extract -L imports/chebi_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method MIREOT \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+
+# Full: The full artefacts with imports merged, reasoned
+$(ONT)-full.owl: $(SRC) $(OTHER_SRC) $(IMPORT_FILES)
+	$(ROBOT) merge --input $< \
+		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		relax \
+		reduce -r ELK --named-classes-only true \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
+
+# ----------------------------------------
+# Template assets
+# ----------------------------------------
+
+TEMPLATES =  trophic_groups punning
+TEMPLATE_FILES = $(patsubst %, $(TEMPLATEDIR)/%.csv, $(TEMPLATES))
+
+all_templates: trophic_groups_template punning_template
+
+trophic_groups_template: $(TEMPLATEDIR)/trophic_groups.csv
+	$(ROBOT) template --template $< --input sfwo-edit.owl --prefix "SFWO: http://purl.org/sfwo/SFWO_" --merge-before --output sfwo-edit.owl
+
+punning_template: $(TEMPLATEDIR)/punning.csv
+	$(ROBOT) template --template $< --input sfwo-edit.owl --prefix "SFWO: http://purl.org/sfwo/SFWO_" --merge-before --output sfwo-edit.owl

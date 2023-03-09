@@ -39,8 +39,21 @@
         <owl:imports rdf:resource="http://purl.org/sfwo/imports/po_import.owl"/>
         <owl:imports rdf:resource="http://purl.org/sfwo/imports/ro_import.owl"/>
         <owl:imports rdf:resource="http://purl.org/sfwo/imports/uberon_import.owl"/>
-        <dc:description>None</dc:description>
-        <dc:title>Soil Trophic Web Ontology</dc:title>
+        <dc:contributor>Benjamin Pey</dc:contributor>
+        <dc:contributor>Camille Martinez Almoyna</dc:contributor>
+        <dc:contributor>Carlos A. Martínez-Muñoz</dc:contributor>
+        <dc:contributor>David J. Russell</dc:contributor>
+        <dc:contributor>Florine Degrune</dc:contributor>
+        <dc:contributor>Irene Calderón-Sanou</dc:contributor>
+        <dc:contributor>Karin Hohberg</dc:contributor>
+        <dc:contributor>Maria J.I. Briones</dc:contributor>
+        <dc:contributor>Matty P. Berg</dc:contributor>
+        <dc:contributor>Wilfried Thuiller</dc:contributor>
+        <dc:description>The Soil Food Web Ontology (SFWO) describes concepts related to the trophic ecology of soil organisms, including feeding preferences, food resources, trophic processes, and trophic groups, across taxonomic groups and trophic levels. SFWO aims at being both a reference ontology -including a standardised vocabulary- for soil trophic ecology, and an application ontology, with a focus on reasoning-based applications.</dc:description>
+        <dc:title>Soil Food Web Ontology</dc:title>
+        <terms:creator>Anton M. Potapov</terms:creator>
+        <terms:creator>Mickaël Hedde</terms:creator>
+        <terms:creator>Nicolas Le Guillarme</terms:creator>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     </owl:Ontology>
     
@@ -83,39 +96,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/sfwo/SFWO_0000047 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/sfwo/SFWO_0000047">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
-        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>obtains carbon from</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/sfwo/SFWO_0000048 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/sfwo/SFWO_0000048">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
-        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>uses as energy source</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/sfwo/SFWO_0000052 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/sfwo/SFWO_0000052">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002437"/>
-        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>obtains electrons or hydrogen from</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
     
 
 
@@ -180,17 +160,6 @@
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000047"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000011"/>
@@ -220,6 +189,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000013 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000013">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">nectarivory</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000015 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000015">
@@ -242,8 +220,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000061"/>
-        <oboInOwl:hasExactSynonym>fungal feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Fungivorous"/>
     </rdf:Description>
     
 
@@ -258,7 +235,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym>phytophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Phytophage"/>
         <oboInOwl:hasNarrowSynonym>plant feeder</oboInOwl:hasNarrowSynonym>
     </rdf:Description>
     
@@ -319,26 +296,34 @@
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055">
         <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000057"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Detritivorous"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">animal primary decomposer</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">detritophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">detritus eater</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">detritus feeder</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">détritiphage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">détritivore</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>saprophage</oboInOwl:hasExactSynonym>
         <rdfs:comment>It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/</rdfs:comment>
         <rdfs:comment>There is some debate over whether detritivores should be considered a subclass of decomposers, see https://en.wikipedia.org/wiki/Decomposer.
-We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology</rdfs:comment>
+We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food_web_ontology</rdfs:comment>
     </rdf:Description>
     
 
@@ -349,12 +334,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000062"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001103"/>
@@ -369,6 +349,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             </owl:Restriction>
         </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">saprobe</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>It may be necessary to distinguish between detritivores and saprotrophs based on the fact the former ingest and digest dead organic matter internally, while the latter absorb nutrients through external chemical and biological processes, see https://www.differencebetween.com/difference-between-detritivores-and-vs-saprotrophs/</rdfs:comment>
         <rdfs:comment>There is some debate over whether saprotroph and subclasses should be broad synonyms of detritivore and subclasses. We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trophic_web_ontology/</rdfs:comment>
     </rdf:Description>
@@ -398,11 +379,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000084">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000454"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025034"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <oboInOwl:hasExactSynonym xml:lang="fr">phyllophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Phyllophagous"/>
         <oboInOwl:hasExactSynonym xml:lang="en">phyllophagous</oboInOwl:hasExactSynonym>
     </rdf:Description>
     
@@ -413,36 +400,18 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000085">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000459"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009005"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym xml:lang="fr">racidivore</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>rhizophage</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>root feeder</oboInOwl:hasExactSynonym>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000086 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000086">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001189"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym>algophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Rhizophagous"/>
     </rdf:Description>
     
 
@@ -470,6 +439,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             </owl:Restriction>
         </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Zoophage"/>
         <oboInOwl:hasExactSynonym xml:lang="en">zoophagous organism</oboInOwl:hasExactSynonym>
     </rdf:Description>
     
@@ -482,6 +452,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000102"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <oboInOwl:hasExactSynonym xml:lang="en">animal predator</oboInOwl:hasExactSynonym>
@@ -506,6 +482,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasBroadSynonym>zoosaprophage</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Necrophagous"/>
         <oboInOwl:hasExactSynonym>carcasivore</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>necrophage</oboInOwl:hasExactSynonym>
     </rdf:Description>
@@ -554,9 +531,28 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000061"/>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Bacterivore"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">bacteriophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">bacterivorous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bactivore</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000100 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000100">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">seed eating</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000109 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000109">
+        <oboInOwl:hasRelatedSynonym xml:lang="en">oophagy</oboInOwl:hasRelatedSynonym>
     </rdf:Description>
     
 
@@ -564,7 +560,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000114 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000114">
-        <obo:IAO_0000115 xml:lang="en">bacterivory</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym xml:lang="en">bacterivory</oboInOwl:hasExactSynonym>
     </rdf:Description>
     
 
@@ -719,12 +715,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000013"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000007"/>
     </rdf:Description>
     
@@ -766,10 +756,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000136">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000455"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009001"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Fructivore_carpophagous"/>
         <oboInOwl:hasExactSynonym xml:lang="fr">carpophage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">fructivore</oboInOwl:hasExactSynonym>
     </rdf:Description>
@@ -781,10 +778,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000137">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000457"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025281"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Pollen_feeders"/>
         <oboInOwl:hasExactSynonym>pollen feeder</oboInOwl:hasExactSynonym>
     </rdf:Description>
     
@@ -795,10 +799,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000140">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000013"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000084"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Nectarivorous"/>
     </rdf:Description>
     
 
@@ -818,6 +829,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0009010"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Granivorous"/>
     </rdf:Description>
     
 
@@ -827,10 +839,18 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000144">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000156"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000460"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000438"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <obo:IAO_0000116>Logical definition is restrained to organisms that eat living wood to prevent saproxylophage to be inferred a subclass of herbivore, which is technically true but does not match the common usage of the term saproxlophage.</obo:IAO_0000116>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Xylophagous"/>
     </rdf:Description>
     
 
@@ -838,6 +858,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000145 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000145">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000456"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
@@ -863,6 +889,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <oboInOwl:hasExactSynonym xml:lang="en">parasitic</oboInOwl:hasExactSynonym>
     </rdf:Description>
     
 
@@ -925,18 +952,24 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000176">
         <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001988"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000043"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001988"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Coprophagous"/>
     </rdf:Description>
     
 
@@ -963,6 +996,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000128"/>
         <oboInOwl:hasBroadSynonym>dead organic matter</oboInOwl:hasBroadSynonym>
     </rdf:Description>
     
@@ -985,12 +1019,21 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.obolibrary.org/obo/ENVO_04000008 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_04000008">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000128"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FAO_0000001 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FAO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
     </rdf:Description>
     
 
@@ -1064,6 +1107,22 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000348"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2157 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2157">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
     </rdf:Description>
     
 
@@ -1174,6 +1233,26 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_3208 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3208"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33090 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090">
+        <owl:disjointWith rdf:resource="http://purl.org/sfwo/SFWO_0000064"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33208 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208">
+        <owl:disjointWith rdf:resource="http://purl.org/sfwo/SFWO_0000064"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000133"/>
+        </owl:disjointUnionOf>
+    </rdf:Description>
     
 
 
@@ -1322,12 +1401,14 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_4751 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000410"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.org/sfwo/SFWO_0000064"/>
     </rdf:Description>
     
 
@@ -1666,6 +1747,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000406"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.org/sfwo/SFWO_0000133"/>
     </rdf:Description>
     
 
@@ -1711,7 +1793,9 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </rdf:Description>
     
 
 
@@ -1719,6 +1803,14 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0005848">
         <oboInOwl:hasExactSynonym xml:lang="en">wood</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0009005 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0009005">
+        <oboInOwl:hasExactSynonym xml:lang="en">roots</oboInOwl:hasExactSynonym>
     </rdf:Description>
     
 
@@ -1789,6 +1881,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0008979">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000153"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">dead animal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">carrion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">necromass</oboInOwl:hasRelatedSynonym>
     </rdf:Description>
@@ -1798,17 +1891,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000000 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000000">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000048"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
@@ -1828,17 +1910,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000001">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000162"/>
@@ -1856,17 +1927,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000002 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000002">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
@@ -1934,17 +1994,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000007">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000048"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30212"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000017"/>
@@ -1963,20 +2012,33 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000008">
         <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_04000008"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000044"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000054"/>
         <obo:IAO_0000115>A decomposer which obtains nutrition by consuming earth or soil-like substrates such as clay or chalk.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Geophagous"/>
         <oboInOwl:hasExactSynonym>geophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>soil feeder</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>humiphage</oboInOwl:hasRelatedSynonym>
@@ -1989,6 +2051,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000009 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000009">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000443"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
         <obo:IAO_0000115 xml:lang="en">A heterotroph that consumes plant exudates or honeydew.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
@@ -2003,15 +2071,22 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000012">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000149"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000149"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
         <obo:IAO_0000115 xml:lang="en">A saprophage which obtains nutrition by consuming decaying wood.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym xml:lang="en">saproxylophagous organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Saproxylophageous"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">dead wood feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">saproxylophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000012</oboInOwl:id>
         <rdfs:label xml:lang="en">saproxylophage</rdfs:label>
     </owl:Class>
@@ -2023,16 +2098,22 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000015">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000449"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6447"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
-        <obo:IAO_0000115>A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A zoophage that primarily eats mollusks such as gastropods, bivalves, brachiopods and cephalopods.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym>malacophagous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">malacophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000015</oboInOwl:id>
-        <rdfs:label>malacophage</rdfs:label>
+        <rdfs:label xml:lang="en">malacophage</rdfs:label>
     </owl:Class>
     
 
@@ -2067,6 +2148,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000018">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000452"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_36668"/>
             </owl:Restriction>
@@ -2086,16 +2173,22 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000019">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000450"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6231"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
-        <obo:IAO_0000115>A zoophage that primarily eats nematodes.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A predator that primarily eats nematodes.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>nematophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000019</oboInOwl:id>
-        <rdfs:label>nematophage</rdfs:label>
+        <rdfs:label xml:lang="en">nematophage</rdfs:label>
     </owl:Class>
     
 
@@ -2110,11 +2203,11 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000009"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000069"/>
-        <obo:IAO_0000115>An exudativore that consumes honeydew produced by phloem sap-feeding insects.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An exudativore that consumes honeydew produced by phloem sap-feeding insects.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Honeydew_feeders"/>
         <oboInOwl:id>SFWO:0000020</oboInOwl:id>
-        <rdfs:label>honeydew feeder</rdfs:label>
+        <rdfs:label xml:lang="en">honeydew feeder</rdfs:label>
     </owl:Class>
     
 
@@ -2124,16 +2217,23 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000021">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000458"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PO_0025540"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
-        <obo:IAO_0000115>An gumnivore that primarily consumes phloem sap.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A herbivore that primarily consumes phloem sap.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym>phloem feeder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Phloem_sap_feeders"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">phloem feeder</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000021</oboInOwl:id>
-        <rdfs:label>phloem sap feeder</rdfs:label>
+        <rdfs:label xml:lang="en">phloem sap feeder</rdfs:label>
     </owl:Class>
     
 
@@ -2141,6 +2241,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000024 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000024">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000440"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
@@ -2151,6 +2257,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <obo:IAO_0000115 xml:lang="en">A parasite whose host is a plant.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym xml:lang="en">phytoparasite</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">phytoparasitic</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">plant-parasitic organism</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000024</oboInOwl:id>
         <rdfs:label xml:lang="en">plant parasite</rdfs:label>
@@ -2162,15 +2269,21 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000025">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000146"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000146"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
         <obo:IAO_0000115 xml:lang="en">A detritivore that consumes dead or decaying plant material.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym xml:lang="en">phytosaprophagous organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Saprophageous"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">phytosaprophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000025</oboInOwl:id>
         <rdfs:label xml:lang="en">phytosaprophage</rdfs:label>
     </owl:Class>
@@ -2180,6 +2293,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000027 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000027">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000453"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
@@ -2197,6 +2316,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
         <obo:IAO_0000115 xml:lang="en">An herbivore that primarily consumes bryophytes (mosses, liverworts, and hornworts).</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Bryophagous"/>
         <oboInOwl:hasExactSynonym xml:lang="en">bryophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">moss feeder</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000027</oboInOwl:id>
@@ -2236,6 +2356,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000031">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000451"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27482"/>
             </owl:Restriction>
@@ -2254,11 +2380,11 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000032 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000032">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
-        <obo:IAO_0000115>An herbivore that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotroph that primarily consumes resources that grow over substrates by removing them with their mouth parts, which are adapted to crop particles closely attached to rocks and other substrates.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:id>SFWO:0000032</oboInOwl:id>
-        <rdfs:label>scraper</rdfs:label>
+        <rdfs:label xml:lang="en">scraper</rdfs:label>
     </owl:Class>
     
 
@@ -2267,9 +2393,10 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000034">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
-        <obo:IAO_0000115>A heterotroph that obtains nutrition by consuming other organisms&apos; fluids.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A heterotroph that obtains nutrition by consuming other organisms&apos; fluids.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>fluid feeder</rdfs:label>
+        <oboInOwl:id rdf:resource="SFWO:0000034"/>
+        <rdfs:label xml:lang="en">fluid feeder</rdfs:label>
     </owl:Class>
     
 
@@ -2278,9 +2405,10 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000035">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000036"/>
-        <obo:IAO_0000115>A sucker with sharp or chewing mouthparts that pierce food items to allow internal fluids to be sucked out.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A sucker with sharp or chewing mouthparts that pierce food items to allow internal fluids to be sucked out.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>piercer and sucker</rdfs:label>
+        <oboInOwl:id rdf:resource="SFWO:0000035"/>
+        <rdfs:label xml:lang="en">piercer and sucker</rdfs:label>
     </owl:Class>
     
 
@@ -2289,9 +2417,10 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000036">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000034"/>
-        <obo:IAO_0000115>A fluid feeder that feeds by sucking fluids into its mouth.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A fluid feeder that feeds by sucking fluids into its mouth.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>sucker</rdfs:label>
+        <oboInOwl:id rdf:resource="SFWO:0000036"/>
+        <rdfs:label xml:lang="en">sucker</rdfs:label>
     </owl:Class>
     
 
@@ -2300,10 +2429,10 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000037">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
-        <obo:IAO_0000115>A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A heterotroph that feeds by chewing on large pieces of dead or live plant tissue or leaves.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:id>SFWO:0000037</oboInOwl:id>
-        <rdfs:label>shredder</rdfs:label>
+        <rdfs:label xml:lang="en">shredder</rdfs:label>
     </owl:Class>
     
 
@@ -2426,12 +2555,18 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000053">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000448"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6933"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
-        <obo:IAO_0000115>A predator that primarily eats acari</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A predator that primarily eats mites (Acari)</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>acariphagous</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000053</oboInOwl:id>
@@ -2445,6 +2580,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000054">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000439"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
             </owl:Restriction>
@@ -2453,6 +2594,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <obo:IAO_0000115 xml:lang="en">A parasite whose host is an animal.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym xml:lang="en">animal parasite</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">zooparasitic</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000054</oboInOwl:id>
         <rdfs:label xml:lang="en">zooparasite</rdfs:label>
     </owl:Class>
@@ -2462,6 +2604,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000055 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000055">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000463"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
@@ -2510,9 +2658,9 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000059">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000060"/>
-        <obo:IAO_0000115>A symbiotrophic process during which there is a transfer of energy and nutrients between two living entities. This process has positive effects on the growth rates of both entities.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A symbiotrophic process during which there is a transfer of energy and nutrients between two living entities. This process has positive effects on the growth rates of both entities.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>mutualism</rdfs:label>
+        <rdfs:label xml:lang="en">mutualism</rdfs:label>
     </owl:Class>
     
 
@@ -2522,6 +2670,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000061">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000444"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
             </owl:Restriction>
@@ -2529,6 +2683,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
         <obo:IAO_0000115>A heterotroph that feeds on microorganisms.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Microbivore-microphytophagous"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">microbiphage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>microbivorous</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SFWO:0000061</oboInOwl:id>
         <rdfs:label>microbivore</rdfs:label>
@@ -2555,30 +2711,29 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
                             <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000061"/>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000090"/>
-                                    </owl:Class>
-                                </owl:intersectionOf>
-                            </owl:Class>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000446"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
-        <obo:IAO_0000115>A heterotroph that feeds on resources at more than one trophic level.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A heterotroph that feeds on resources at more than one trophic level.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0002-4456-1710</obo:IAO_0000117>
         <oboInOwl:id>SFWO:0000063</oboInOwl:id>
         <rdfs:comment>The definition is from Coll, M., &amp; Guershon, M. (2002).</rdfs:comment>
-        <rdfs:label>trophic omnivore</rdfs:label>
+        <rdfs:label xml:lang="en">omnivore</rdfs:label>
     </owl:Class>
     
 
@@ -2588,20 +2743,30 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000064">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:intersectionOf>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_127916"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1401294"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2316435"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2489521"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2598132"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2608109"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2608240"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2611341"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2611352"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2683617"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2686024"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2686027"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2687318"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2698737"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2763"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2795258"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_28009"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3027"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_38254"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_42461"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_554296"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_554915"/>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
@@ -2618,16 +2783,24 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000065">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000445"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000064"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
-        <obo:IAO_0000115>A heterotroph that feeds on protists.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A heterotroph that feeds on protists.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym>protistivorous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://thesaurus.cesab.org/trait#Protozoan_feeders"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">protistivorous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">unicellular eukaryote feeder</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SFWO:0000065</oboInOwl:id>
-        <rdfs:label>protistivore</rdfs:label>
+        <rdfs:label xml:lang="en">protistivore</rdfs:label>
     </owl:Class>
     
 
@@ -2650,37 +2823,13 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     
 
 
-    <!-- http://purl.org/sfwo/SFWO_0000069 -->
-
-    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000069">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007780"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000009"/>
-        <obo:IAO_0000115>An exudativore that consumes animal exudates.</obo:IAO_0000115>
-        <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:id>SFWO:0000069</oboInOwl:id>
-        <rdfs:label>animal exudate feeder</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/sfwo/SFWO_0000070 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000070">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                         <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000149"/>
@@ -2766,6 +2915,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000074">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000461"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002444"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
             </owl:Restriction>
@@ -2774,6 +2929,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <obo:IAO_0000115 xml:lang="en">A parasite whose host is a fungus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym xml:lang="en">fungal parasite</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">mycoparasitic</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000074</oboInOwl:id>
         <rdfs:label xml:lang="en">mycoparasite</rdfs:label>
     </owl:Class>
@@ -2783,6 +2939,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000076 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000076">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000147"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
         <obo:IAO_0000117>A saprotroph that obtains nutrition through extracellular digestion of plant litter.</obo:IAO_0000117>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
@@ -2799,12 +2966,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001988"/>
@@ -2827,12 +2989,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_04000008"/>
@@ -2913,22 +3070,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000082 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000082">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/sfwo/SFWO_0000099"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000045"/>
-        <obo:IAO_0000115>A symbiotroph involved in a symbiotic association with living green algae or cyanobacteria.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A symbiotroph adapted to live as a symbiont in a lichen ; applies mainly to fungi.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="en">lichen-associated</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000082</oboInOwl:id>
-        <rdfs:label>lichenized</rdfs:label>
+        <rdfs:label xml:lang="en">lichenized</rdfs:label>
     </owl:Class>
     
 
@@ -2983,41 +3130,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     
 
 
-    <!-- http://purl.org/sfwo/SFWO_0000095 -->
-
-    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000095">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
-        <obo:IAO_0000115>Macroscopic, multicellular, marine algae.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym xml:lang="en">seaweed</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>SFWO:0000095</oboInOwl:id>
-        <rdfs:label>macroalgae</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/sfwo/SFWO_0000096 -->
-
-    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000096">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000076"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023"/>
-                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000064"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Microscopic, unicellular algae.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym xml:lang="en">microphytes</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>SFWO:0000096</oboInOwl:id>
-        <rdfs:label xml:lang="en">microalgae</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/sfwo/SFWO_0000100 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000100">
@@ -3025,39 +3137,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000063"/>
-        <obo:IAO_0000115>A trophic omnivore which specifically feed on both plant and animal food sources.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A trophic omnivore which specifically feed on both plant and animal food sources.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/ecocore_00000082"/>
         <oboInOwl:id>SFWO:0000100</oboInOwl:id>
         <rdfs:comment>The distinction between trophic omnivores and true omnivores comes from Coll, M., &amp; Guershon, M. (2002).</rdfs:comment>
-        <rdfs:label>true omnivore</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/sfwo/SFWO_0000102 -->
-
-    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000102">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0005848"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0005848"/>
-        <obo:IAO_0000115>Wood material that is undergoing decomposition.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <rdfs:label>decaying wood</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">true omnivore</rdfs:label>
     </owl:Class>
     
 
@@ -3072,7 +3162,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001422"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Plant litter that is primarily composed of plant roots and root tissues.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Plant litter that is primarily composed of dead plant roots and root tissues.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:id rdf:resource="SFWO:0000103"/>
         <rdfs:label xml:lang="en">root litter</rdfs:label>
@@ -3113,6 +3203,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <obo:IAO_0000115 xml:lang="en">A collection of organisms that feed on the same food sources and have the same consumers</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.geoderma.2022.116073"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">trophic species</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">trophic guild</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:resource="SFWO:0000127"/>
         <rdfs:label xml:lang="en">trophic group</rdfs:label>
     </owl:Class>
@@ -3188,16 +3280,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000133 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000133">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000115 xml:lang="en">An animal that neither possess nor develop a vertebral column.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
@@ -3227,9 +3310,15 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000136 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000136">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000462"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000074"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000135"/>
-        <obo:IAO_0000115 xml:lang="en">A mycotroph that acquires the major part of its carbon through a symbiotic association with a fungus ; applies mainly to heterotrophic plants.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A mycotroph is the parasitic partner that acquires the major part of its carbon through a symbiotic association with a fungus ; applies mainly to non-photosynthetic plants.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym xml:lang="en">myco-heterotroph</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:resource="SFWO:0000136"/>
@@ -3242,7 +3331,9 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000138">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115 xml:lang="en">An organism resulting from the symbiotic association of algae or cyanobacteria (photobiont), and fungi (mycobiont) creating macroscopic structures.</obo:IAO_0000115>
         <obo:IAO_0000117>http://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:id rdf:resource="SFWO:0000138"/>
         <rdfs:label xml:lang="en">lichen</rdfs:label>
     </owl:Class>
     
@@ -3323,6 +3414,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001121"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000128"/>
         <obo:IAO_0000115 xml:lang="en">Plant material composed solely of living plant structures.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasRelatedSynonym xml:lang="en">living plant</oboInOwl:hasRelatedSynonym>
@@ -3393,10 +3485,11 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000149">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000146"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000156"/>
-        <obo:IAO_0000115 xml:lang="en">Dead plant material primarily composed of dead tree trunks, roots, and branches.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Dead plant material primarily composed of dead tree trunks, twigs, roots, and branches.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
         <oboInOwl:hasRelatedSynonym xml:lang="en">decayed wood</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">decaying wood</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">rotting wood</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:resource="SFWO:0000149"/>
         <rdfs:label xml:lang="en">dead wood</rdfs:label>
     </owl:Class>
@@ -3445,8 +3538,9 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000157">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
-        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A parasite that causes a disease to its host ; applies to microorganisms.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym xml:lang="en">pathogenic parasite</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:resource="SFWO:0000157"/>
         <rdfs:label xml:lang="en">pathogen</rdfs:label>
     </owl:Class>
@@ -3457,7 +3551,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000158">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000157"/>
-        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A pathogen that causes a disease after infecting its animal host.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <oboInOwl:id rdf:resource="SFWO:0000158"/>
         <rdfs:label xml:lang="en">animal pathogen</rdfs:label>
@@ -3469,7 +3563,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000159">
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000157"/>
-        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A pathogen that causes a disease after infecting its plant host.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <oboInOwl:id rdf:resource="SFWO:0000159"/>
         <rdfs:label xml:lang="en">plant pathogen</rdfs:label>
@@ -3506,6 +3600,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000269 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000269">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000268"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000268"/>
     </owl:Class>
     
@@ -3514,6 +3619,17 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000270 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000270">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000268"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000472"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000268"/>
     </owl:Class>
     
@@ -4272,8 +4388,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000086"/>
                                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_30001"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000465"/>
                                 </owl:intersectionOf>
                             </owl:Class>
                         </owl:allValuesFrom>
@@ -4475,8 +4591,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000086"/>
                                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7553"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000465"/>
                                 </owl:intersectionOf>
                             </owl:Class>
                         </owl:allValuesFrom>
@@ -4552,6 +4668,24 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000321 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000321">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000315"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7553"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000008"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000315"/>
     </owl:Class>
     
@@ -4927,6 +5061,24 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000341 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000341">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000338"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1912919"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000447"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000338"/>
     </owl:Class>
     
@@ -5901,7 +6053,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000392"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000127"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                         <owl:allValuesFrom>
@@ -6660,10 +6812,496 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <!-- http://purl.org/sfwo/SFWO_0000433 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000433">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000148"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000056"/>
         <obo:IAO_0000115 xml:lang="en">A saprotroph that obtains nutrition through extracellular digestion of leaves.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">leaf saprotroph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000438 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000438">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000144"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000156"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:id rdf:resource="SFWO:0000438"/>
+        <rdfs:label xml:lang="en">living wood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000439 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000439">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000147"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000147"/>
+        <obo:IAO_0000115 xml:lang="en">A parasitic process during which a living entity acquires food and energy from an animal host.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">zooparasitism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000440 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000440">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000147"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000147"/>
+        <obo:IAO_0000115 xml:lang="en">A parasitic process during which a living entity acquires food and energy from a plant host.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">plant parasitism</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">phytoparasitism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000441 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000441">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000131"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sfwo/SFWO_0000442"/>
+        <obo:IAO_0000115 xml:lang="en">A detritivore that is member of the macrofauna.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:id rdf:resource="SFWO:0000441"/>
+        <rdfs:label xml:lang="en">macrodetritivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000442 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000442">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000130"/>
+                                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000132"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+        <obo:IAO_0000115 xml:lang="en">A detritivore that is member of the microfauna or mesofauna.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:id rdf:resource="SFWO:0000442"/>
+        <rdfs:label xml:lang="en">microdetritivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000443 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000443">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000011"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotrophic process during which a living entity acquires food and energy from consuming plant exudates or honeydew.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">exudate feeding</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">exudativory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000444 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000444">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000011"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotrophic process during which a living entity acquires food and energy from consuming microorganisms.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">microbivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000445 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000445">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000444"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotrophic process during which a living entity acquires food and energy from consuming protists.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">protistivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000446 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000446">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000011"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotrophic process during which a living entity acquires food and energy from consuming resources at more than one trophic level.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">omnivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000447 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000447">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000147"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000055"/>
+        <obo:IAO_0000115 xml:lang="en">A detritivore that feeds on plant litter.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">litter grazer</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">litter transformer</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">litter feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000448 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000448">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000102"/>
+        <obo:IAO_0000115 xml:lang="en">A predation process during which a living entity acquires food and energy by consuming mites (Acari).</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">mite-eating</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">acariphagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000449 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000449">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000102"/>
+        <obo:IAO_0000115 xml:lang="en">A predation process during which a living entity acquires food and energy by consuming mollusks.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">malacophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000450 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000450">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000102"/>
+        <obo:IAO_0000115 xml:lang="en">A predation process during which a living entity acquires food and energy by consuming nematodes.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">nematophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000451 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000451">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000108"/>
+        <obo:IAO_0000115 xml:lang="en">An insectivorous process during which a living entity acquires food and energy by consuming aphids.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">aphidophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000452 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000452">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000108"/>
+        <obo:IAO_0000115 xml:lang="en">An insectivorous process during which a living entity acquires food and energy by consuming ants.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">myrmecophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000453 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000453">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming bryophytes (mosses, liverworts, and hornworts).</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">moss feeding</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">bryophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000454 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000454">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming leaves.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">leaf eating</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">phyllophagy</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">folivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000455 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000455">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming fruits.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">carpophagy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">fructivory</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">fruit eating</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">fruit feeding</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">frugivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000456 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000456">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming plant exudates - gums, saps, and resins.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">guminivory</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">gumivory</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">gumnivory</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">gummivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000457 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000457">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming pollen.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">pollen eating</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">pollen feeding</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">palynyvory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000458 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000458">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming phloem sap.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">phloem feeding</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">phloem sap feeding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000459 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000459">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming roots.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">rhizophagy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">root feeding</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">rhizovory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000460 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000460">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000020"/>
+        <obo:IAO_0000115 xml:lang="en">A herbivorous process during which a living entity acquires food and energy by consuming wood.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">wood eating</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">xylophagy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000461 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000461">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000147"/>
+        <obo:IAO_0000115 xml:lang="en">A parasitic process during which a living entity acquires food and energy from fungi.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">mycoparasitism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000462 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000462">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000461"/>
+        <obo:IAO_0000115 xml:lang="en">A mycoparasitic process during which a non-photosynthetic plant acquires food and energy from fungi.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">myco-heterotrophy</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">mycoheterotrophy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000463 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000463">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000439"/>
+        <obo:IAO_0000115 xml:lang="en">A zooparasitic process during which a living entity acquires food and energy from an insect host.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">insect parasitism</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">entomoparasitism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000464 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000464">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000062"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000128"/>
+        <obo:IAO_0000115 xml:lang="en">A polyphyletic group of diverse photosynthetic microorganisms, including cyanobacteria</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasBroadSynonym xml:lang="en">algae</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">microphytes</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">microalgae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000465 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000465">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000466"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000464"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000061"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasBroadSynonym xml:lang="en">a heterotroph that consumes microalgae</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym xml:lang="en">algivore</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym xml:lang="en">phycophage</oboInOwl:hasBroadSynonym>
+        <rdfs:label xml:lang="en">microalgivore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000466 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000466">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000444"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotrophic process during which a living entity acquires food and energy from consuming microalgae.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasBroadSynonym xml:lang="en">algivory</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym xml:lang="en">phycophagy</oboInOwl:hasBroadSynonym>
+        <rdfs:label xml:lang="en">microalgivory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000472 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000472">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1287658"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_178369"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_318493"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000064"/>
+        <obo:IAO_0000115 xml:lang="en">a polyphyletic group of unicellular amoeboid protists, which differ from naked amoebae in the presence of a test that partially encloses the cell</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Testate_amoebae"/>
+        <oboInOwl:id rdf:resource="SFWO:0000472"/>
+        <rdfs:label xml:lang="en">testate amoebae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000473 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000473">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotroph that feeds on cell-contents without ingesting the actual cell-walls.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <obo:IAO_0000119>Siepel, H., &amp; de Ruiter-Dijkman, E. M. (1993). Feeding guilds of oribatid mites based on their carbohydrase activities. Soil Biology and Biochemistry, 25(11), 1491-1497.</obo:IAO_0000119>
+        <oboInOwl:id rdf:resource="SFWO:0000473"/>
+        <rdfs:label xml:lang="en">browser</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000474 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000474">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+        <obo:IAO_0000115 xml:lang="en">A heterotroph that feeds on both cell-walls and cell-contents.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <obo:IAO_0000119>Siepel, H., &amp; de Ruiter-Dijkman, E. M. (1993). Feeding guilds of oribatid mites based on their carbohydrase activities. Soil Biology and Biochemistry, 25(11), 1491-1497.</obo:IAO_0000119>
+        <oboInOwl:id rdf:resource="SFWO:0000474"/>
+        <rdfs:label xml:lang="en">grazer</rdfs:label>
     </owl:Class>
     
 
@@ -6723,1005 +7361,1323 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     
 
 
-    <!-- http://purl.org/sfwo/SFWO_0000182 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000182">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000098"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6231"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
-        <rdfs:label xml:lang="fr">nematode</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.org/sfwo/SFWO_0000268 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000268"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000268">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000268"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000269 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000269"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000269">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000269"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000270 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000270"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000270">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000270"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000271 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000271"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000271">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000271"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000272 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000272"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000272">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000272"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000273 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000273"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000273">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000273"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000274 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000274"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000274">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000274"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000275 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000275"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000275">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000275"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000276 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000276"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000276">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000276"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000277 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000277"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000277">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000277"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000278 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000278"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000278">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000278"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000279 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000279"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000279">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000279"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000280 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000280"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000280">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000280"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000281 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000281"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000281">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000281"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000282 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000282"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000282">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000282"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000283 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000283"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000283">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000283"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000284 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000284"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000284">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000284"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000285 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000285"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000285">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000285"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000286 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000286"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000286">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000286"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000287 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000287"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000287">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000287"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000288 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000288"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000288">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000288"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000289 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000289"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000289">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000289"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000290 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000290"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000290">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000290"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000291 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000291"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000291">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000291"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000292 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000292"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000292">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000292"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000293 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000293"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000293">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000293"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000294 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000294"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000294">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000294"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000295 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000295"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000295">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000295"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000296 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000296"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000296">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000296"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000297 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000297"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000297">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000297"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000298 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000298"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000298">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000298"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000299 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000299"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000299">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000299"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000300 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000300"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000300">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000300"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000301 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000301"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000301">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000301"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000302 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000302"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000302">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000302"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000303 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000303"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000303">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000303"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000304 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000304"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000304">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000304"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000305 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000305"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000305">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000305"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000306 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000306"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000306">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000306"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000307 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000307"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000307">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000307"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000308 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000308"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000308">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000308"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000309 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000309"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000309">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000309"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000310 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000310"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000310">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000310"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000311 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000311"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000311">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000311"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000312 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000312"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000312">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000312"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000313 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000313"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000313">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000313"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000314 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000314"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000314">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000314"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000315 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000315"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000315">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000315"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000316 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000316"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000316">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000316"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000317 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000317"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000317">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000317"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000318 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000318"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000318">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000318"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000319 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000319"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000319">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000319"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000320 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000320"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000320">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000320"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000321 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000321"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000321">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000321"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000322 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000322"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000322">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000322"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000323 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000323"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000323">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000323"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000324 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000324"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000324">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000324"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000325 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000325"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000325">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000325"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000326 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000326"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000326">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000326"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000327 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000327"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000327">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000327"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000328 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000328"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000328">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000328"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000329 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000329"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000329">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000329"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000330 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000330"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000330">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000330"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000331 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000331"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000331">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000331"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000332 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000332"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000332">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000332"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000333 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000333"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000333">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000333"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000334 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000334"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000334">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000334"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000335 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000335"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000335">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000335"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000336 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000336"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000336">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000336"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000337 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000337"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000337">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000337"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000338 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000338"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000338">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000338"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000339 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000339"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000339">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000339"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000340 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000340"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000340">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000340"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000341 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000341"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000341">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000341"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000342 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000342"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000342">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000342"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000343 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000343"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000343">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000343"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000344 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000344"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000344">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000344"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000345 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000345"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000345">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000345"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000346 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000346"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000346">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000346"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000347 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000347"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000347">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000347"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000348 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000348"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000348">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000348"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000349 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000349"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000349">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000349"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000350 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000350"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000350">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000350"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000351 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000351"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000351">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000351"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000352 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000352"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000352">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000352"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000353 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000353"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000353">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000353"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000354 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000354"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000354">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000354"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000355 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000355"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000355">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000355"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000356 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000356"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000356">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000356"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000357 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000357"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000357">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000357"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000358 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000358"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000358">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000358"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000359 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000359"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000359">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000359"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000360 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000360"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000360">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000360"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000361 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000361"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000361">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000361"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000362 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000362"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000362">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000362"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000363 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000363"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000363">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000363"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000364 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000364"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000364">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000364"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000365 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000365"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000365">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000365"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000366 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000366"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000366">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000366"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000367 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000367"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000367">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000367"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000368 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000368"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000368">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000368"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000369 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000369"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000369">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000369"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000370 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000370"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000370">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000370"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000371 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000371"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000371">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000371"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000372 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000372"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000372">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000372"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000373 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000373"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000373">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000373"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000374 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000374"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000374">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000374"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000375 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000375"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000375">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000375"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000376 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000376"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000376">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000376"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000377 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000377"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000377">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000377"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000378 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000378"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000378">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000378"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000379 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000379"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000379">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000379"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000380 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000380"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000380">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000380"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000381 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000381"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000381">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000381"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000382 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000382"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000382">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000382"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000383 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000383"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000383">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000383"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000384 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000384"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000384">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000384"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000385 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000385"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000385">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000385"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000386 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000386"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000386">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000386"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000387 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000387"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000387">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000387"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000388 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000388"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000388">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000388"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000389 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000389"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000389">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000389"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000390 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000390"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000390">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000390"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000391 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000391"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000391">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000391"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000392 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000392"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000392">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000392"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000393 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000393"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000393">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000393"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000394 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000394"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000394">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000394"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000395 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000395"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000395">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000395"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000396 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000396"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000396">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000396"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000397 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000397"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000397">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000397"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000398 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000398"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000398">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000398"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000399 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000399"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000399">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000399"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000400 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000400"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000400">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000400"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000401 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000401"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000401">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000401"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000402 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000402"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000402">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000402"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000403 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000403"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000403">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000403"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000404 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000404"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000404">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000404"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000405 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000405"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000405">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000405"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000406 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000406"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000406">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000406"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000407 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000407"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000407">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000407"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000408 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000408"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000408">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000408"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000409 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000409"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000409">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000409"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000410 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000410"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000410">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000410"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000411 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000411"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000411">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000411"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000412 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000412"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000412">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000412"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000413 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000413"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000413">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000413"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000414 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000414"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000414">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000414"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000415 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000415"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000415">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000415"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000416 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000416"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000416">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000416"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000417 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000417"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000417">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000417"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000418 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000418"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000418">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000418"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000419 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000419"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000419">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000419"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000420 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000420"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000420">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000420"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000421 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000421"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000421">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000421"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000422 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000422"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000422">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000422"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000423 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000423"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000423">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000423"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000424 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000424"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000424">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000424"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000425 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000425"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000425">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000425"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000426 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000426"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000426">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000426"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000427 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000427"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000427">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000427"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000428 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000428"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000428">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000428"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000429 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000429"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000429">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000429"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000430 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000430"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000430">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000430"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000431 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000431"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000431">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000431"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/sfwo/SFWO_0000432 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000432"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/sfwo/SFWO_0000432">
+        <rdf:type rdf:resource="http://purl.org/sfwo/SFWO_0000432"/>
+    </owl:NamedIndividual>
     
 
 
@@ -7860,8 +8816,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000293">
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
-        <rdfs:label xml:lang="en">Prostigmata.all</rdfs:label>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
+        <rdfs:label xml:lang="en">Prostigmata.all</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000294">
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
@@ -8320,8 +9276,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000385">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Gastropoda.all</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000386">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
@@ -8439,21 +9395,18 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7580"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
         <rdfs:label xml:lang="en">Fungi.pathotrophs</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000410">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7581"/>
         <rdfs:label xml:lang="en">Fungi.all</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000411">
         <rdfs:label xml:lang="en">Fungi.saprotrophs</rdfs:label>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7582"/>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
@@ -8462,109 +9415,108 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
         <rdfs:label xml:lang="en">Fungi.symbiotrophs</rdfs:label>
-        <rdfs:label xml:lang="fr">Fungi.symbiotrophs</rdfs:label>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7583"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000413">
         <rdfs:label xml:lang="en">Fungi.wood_saprotrophs</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7584"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000414">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.leaf_saprotrophs</rdfs:label>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7585"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000415">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.litter_saprotrophs</rdfs:label>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7586"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000416">
         <rdfs:label xml:lang="en">Fungi.dung_saprotrophs</rdfs:label>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7587"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000417">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7588"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.soil_saprotrophs</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000418">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7589"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.plant_pathogens</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000419">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
         <rdfs:label xml:lang="en">Fungi.animal_pathogens</rdfs:label>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7590"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000420">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7591"/>
         <rdfs:label xml:lang="en">Fungi.fungal_parasites</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000421">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7592"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
         <rdfs:label xml:lang="en">Fungi.bryophyte_parasites</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000422">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7593"/>
         <rdfs:label xml:lang="en">Fungi.lichen_parasites</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000423">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
         <rdfs:label xml:lang="en">Fungi.lichenized</rdfs:label>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7594"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000424">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
         <rdfs:label xml:lang="en">Fungi.endophytes</rdfs:label>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7595"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000425">
         <rdfs:label xml:lang="en">Fungi.arbuscular_mycorrhizal</rdfs:label>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7596"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000426">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7597"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
         <rdfs:label xml:lang="en">Fungi.ectomycorrhizal</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000427">
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7598"/>
         <rdfs:label xml:lang="en">Fungi.epiphytes</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000428">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7599"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.animal_endosymbionts</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000429">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7600"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.ericoid_mycorrhizal</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000430">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7601"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.orchid_mycorrhizal</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000431">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7601"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.root_associated_biotrophs</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000432">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.undefined_saprotrophs</rdfs:label>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7601"/>
     </rdf:Description>
     
 
@@ -8586,6 +9538,18 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000268"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000010"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000472"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000270"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -8820,30 +9784,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     </owl:Class>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000086"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_30001"/>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000303"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000086"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7553"/>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000317"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000089"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10190"/>
         </owl:intersectionOf>
@@ -9055,6 +9995,30 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000340"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1912919"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000447"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000341"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_30001"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000465"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000303"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -9423,12 +10387,48 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7553"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000008"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000321"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7553"/>
             <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000063"/>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000320"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_7553"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000465"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000317"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000003"/>
+            <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000064"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:hasValue rdf:resource="http://purl.org/sfwo/SFWO_0000269"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -9471,13 +10471,16 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_trop
     </owl:Class>
     <owl:Restriction>
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+        <owl:someValuesFrom>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000023"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+                    <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000144"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:someValuesFrom>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000019"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002470"/>
-        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000088"/>
     </owl:Restriction>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
