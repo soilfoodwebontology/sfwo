@@ -19,6 +19,16 @@ Please cite the accompanying paper:
 
 Le Guillarme, N., Hedde, M., Potapov, A., Berg, M. P., Briones, M. J., Calderon-Sanou, I., ... & Thuiller, W. (2023). The Soil Food Web Ontology: aligning trophic groups, processes, and resources to harmonise and automatise soil food web reconstructions. bioRxiv, 2023-02.
 
+## Browsing the Soil Food Web Ontology
+
+Currently the optimal way to browse SFWO is to open [sfwo.owl](http://github.com/nleguillarme/soil_food_web_ontology/releases/latest/download/sfwo.owl) in Protégé or WebProtégé.
+
+A browsable version of SFWO, including a graphical representation of the concepts hierarchy, is available online on [AgroPortal](https://agroportal.lirmm.fr/ontologies/SFWO) (please note that AgroPortal does not display the equivalentClass axioms).
+
+An export of the ontology in a tabular format ([sfwo.csv](http://github.com/nleguillarme/soil_food_web_ontology/releases/latest/download/sfwo.csv)) is also provided with each release.
+
+See the list of relations on OntoBee -- note that sometimes OntoBee fails to display the full hierarchy
+
 ## Contributing to the development of the Soil Food Web Ontology
 
 The development of SFWO is a open and collaborative effort that bring together soil scientists and ontology engineers. SFWO is continuously updated, improved and enriched thanks to contributors’ suggestions for revisions. Contributors are invited to suggest and discuss changes in the ontology using the [Issue tracker](https://github.com/nleguillarme/soil_food_web_ontology/issues) of the project’s GitHub repository. Requests for changes/modifications are regularly submitted to the ontology steering committee for discussion and validation.
