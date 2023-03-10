@@ -27,8 +27,6 @@ A browsable version of SFWO, including a graphical representation of the concept
 
 An export of the ontology in a tabular format ([sfwo.csv](http://github.com/nleguillarme/soil_food_web_ontology/releases/latest/download/sfwo.csv)) is also provided with each release.
 
-See the list of relations on OntoBee -- note that sometimes OntoBee fails to display the full hierarchy
-
 ## Contributing to the development of the Soil Food Web Ontology
 
 The development of SFWO is a open and collaborative effort that bring together soil scientists and ontology engineers. SFWO is continuously updated, improved and enriched thanks to contributors’ suggestions for revisions. Contributors are invited to suggest and discuss changes in the ontology using the [Issue tracker](https://github.com/nleguillarme/soil_food_web_ontology/issues) of the project’s GitHub repository. Requests for changes/modifications are regularly submitted to the ontology steering committee for discussion and validation.
