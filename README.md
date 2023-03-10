@@ -13,6 +13,12 @@ The Soil Food Web Ontology aims at being a reference ontology for soil trophic e
 - automated soil food web reconstruction using OWL reasoning
 - trophic information extraction
 
+### How to cite this ontology ?
+
+Please cite the accompanying paper:
+
+Le Guillarme, N., Hedde, M., Potapov, A., Berg, M. P., Briones, M. J., Calderon-Sanou, I., ... & Thuiller, W. (2023). The Soil Food Web Ontology: aligning trophic groups, processes, and resources to harmonise and automatise soil food web reconstructions. bioRxiv, 2023-02.
+
 ## Contributing to the development of the Soil Food Web Ontology
 
 The development of SFWO is a open and collaborative effort that bring together soil scientists and ontology engineers. SFWO is continuously updated, improved and enriched thanks to contributors’ suggestions for revisions. Contributors are invited to suggest and discuss changes in the ontology using the [Issue tracker](https://github.com/nleguillarme/soil_food_web_ontology/issues) of the project’s GitHub repository. Requests for changes/modifications are regularly submitted to the ontology steering committee for discussion and validation.
