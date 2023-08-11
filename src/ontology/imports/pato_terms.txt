@@ -1,3 +1,6 @@
 PATO:0001432 # Decayed
 PATO:0001422 # Dead
 PATO:0001421 # Alive
+PATO:0000056 # Trophic quality
+PATO:0000422 # Auxotrophic
+PATO:0000423 # Prototrophic

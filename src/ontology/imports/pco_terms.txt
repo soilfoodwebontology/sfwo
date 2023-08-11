@@ -1,2 +1,2 @@
-
 PCO:0000000 # collection of organisms
+PCO:0000059 # taxon as collection of organisms

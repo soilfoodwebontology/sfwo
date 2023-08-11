@@ -11,9 +11,9 @@
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.org/sfwo/imports/fao_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2022-12-05/imports/fao_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2023-08-11/imports/fao_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/fao/releases/2020-05-07/fao.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-05</owl:versionInfo>
+        <owl:versionInfo>2023-08-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -37,15 +37,65 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank"/>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#auto-generated-by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
     
 
 
@@ -61,6 +111,18 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
@@ -69,7 +131,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
+        <rdfs:label>database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -78,6 +142,12 @@
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
         <rdfs:label>has_exact_synonym</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion"/>
     
 
 
@@ -104,6 +174,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
     
 
 
@@ -180,7 +256,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An anatomical structure that forms all or part of a fungus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -200,8 +276,8 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any specialized structure which bears or contains sexually or asexually derived spores.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SGD:clt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SGD:clt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -226,43 +302,43 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>sporocarp</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>fruit body</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>fruitbody</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>fruiting body</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>spore-bearing structure</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>spore-producing structure</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -281,7 +357,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A group or mass of discrete hyphae; the vegetative structure of many fungi.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471940526</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0471940526</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -292,7 +368,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000007"/>
         <obo:IAO_0000115>A large fruiting body that is composed of masses of intertwined hyphal elements and produces basidia and basidiospores. The basidiocarp is characteristic of the majority of fungi of the subphylum Basidiomycotina, in which it is the site of karyogamy and meiosis. Mushrooms and toadstools are common examples.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>FAO:0001024</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0000114</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BTO:0000114</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>mushroom</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FAO:0000012</oboInOwl:id>
@@ -302,8 +378,8 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A large fruiting body that is composed of masses of intertwined hyphal elements and produces basidia and basidiospores. The basidiocarp is characteristic of the majority of fungi of the subphylum Basidiomycotina, in which it is the site of karyogamy and meiosis. Mushrooms and toadstools are common examples.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0000114</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471940526</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BTO:0000114</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0471940526</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -322,9 +398,9 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000018"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SGD:clt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SGD:clt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -342,7 +418,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000019"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471940526</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0471940526</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -363,7 +439,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000052"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structure within which spores develop.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -381,9 +457,9 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0001001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A long, branching filamentous structure formed by a vegetatively growing fungus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mcc</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471522295</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:mcc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0471522295</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -407,9 +483,9 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0001003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A hypha that forms part of a mycelium.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mcc</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471522295</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:mcc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0471522295</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -429,7 +505,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0002002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A fungal structure that comprises more than one cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -450,13 +526,13 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A multicellular fungal structure composed of two or more cells of a single multicellular organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>multicellular structure, multicellular organism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAO:doi</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -618,5 +694,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
 

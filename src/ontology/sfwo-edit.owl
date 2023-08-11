@@ -10,6 +10,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="http://purl.obolibrary.org/obo/uberon/core#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:envo="http://purl.obolibrary.org/obo/envo#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:pato="http://purl.obolibrary.org/obo/pato#"
@@ -512,6 +513,12 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     <!-- http://purl.obolibrary.org/obo/ECOCORE_00000098 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000098">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sfwo/SFWO_0000476"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
@@ -1053,7 +1060,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_1 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000059"/>
     </rdf:Description>
     
 
@@ -7306,6 +7313,32 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     
 
 
+    <!-- http://purl.org/sfwo/SFWO_0000475 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000475">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000056"/>
+        <obo:IAO_0000115>A trophic quality inhering in a bearer by virtue of the bearer&apos;s disposition to acquire nutrition by consuming certain food resources.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasBroadSynonym>dietary trait</oboInOwl:hasBroadSynonym>
+        <oboInOwl:id rdf:resource="SFWO:0000475"/>
+        <rdfs:label>diet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sfwo/SFWO_0000476 -->
+
+    <owl:Class rdf:about="http://purl.org/sfwo/SFWO_0000476">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sfwo/SFWO_0000475"/>
+        <obo:IAO_0000115>The trophic quality inhering in an organism by virtue of the organism&apos;s disposition to acquire nutrition by consuming bacteria.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <oboInOwl:hasExactSynonym>bactivorous</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>SFWO:0000476</oboInOwl:id>
+        <rdfs:label>bacterivorous</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sfwo/SFWO_4000000 -->
 
     <owl:Class rdf:about="http://purl.org/sfwo/SFWO_4000000">
@@ -8700,8 +8733,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000270">
-        <rdfs:label xml:lang="en">protists.testate_amoebae</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">protists.testate_amoebae</rdfs:label>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000271">
@@ -8936,8 +8969,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000317">
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
-        <rdfs:label xml:lang="en">Diplopoda.algivores</rdfs:label>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
+        <rdfs:label xml:lang="en">Diplopoda.algivores</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000318">
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
@@ -9086,8 +9119,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000347">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
-        <rdfs:label xml:lang="en">Hemiptera.all</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">Hemiptera.all</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000348">
         <rdfs:label xml:lang="en">Hemiptera.Auchenorrhyncha</rdfs:label>
@@ -9276,8 +9309,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000385">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
-        <rdfs:label xml:lang="en">Gastropoda.all</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">Gastropoda.all</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000386">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
@@ -9396,8 +9429,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
-        <rdfs:label xml:lang="en">Fungi.pathotrophs</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">Fungi.pathotrophs</rdfs:label>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000410">
@@ -9415,8 +9448,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
         <rdfs:label xml:lang="en">Fungi.symbiotrophs</rdfs:label>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7583"/>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000413">
         <rdfs:label xml:lang="en">Fungi.wood_saprotrophs</rdfs:label>
@@ -9450,8 +9483,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000419">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <rdfs:label xml:lang="en">Fungi.animal_pathogens</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">Fungi.animal_pathogens</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000420">
         <rdfs:label xml:lang="en">Fungi.fungal_parasites</rdfs:label>
