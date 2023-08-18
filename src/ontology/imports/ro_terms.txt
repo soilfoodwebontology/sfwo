@@ -3,3 +3,4 @@ RO:0003001 # produced by
 RO:0002487 # relation between physical entity and a process or stage
 RO:0000053 # has characteristic
 RO:0002473 # composed primarily of
+RO:0002556 # pathogen of
