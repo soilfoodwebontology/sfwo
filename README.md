@@ -21,15 +21,15 @@ Le Guillarme, N., Hedde, M., Potapov, A., Berg, M. P., Briones, M. J., Calderon-
 
 ## Browsing the Soil Food Web Ontology
 
-Currently the optimal way to browse SFWO is to open [sfwo.owl](http://github.com/nleguillarme/soil_food_web_ontology/releases/latest/download/sfwo.owl) in Protégé or WebProtégé.
+Currently the optimal way to browse SFWO is to open [sfwo.owl](http://github.com/soilfoodwebontology/sfwo/releases/latest/download/sfwo.owl) in Protégé or WebProtégé.
 
 A browsable version of SFWO, including a graphical representation of the concepts hierarchy, is available online on [AgroPortal](https://agroportal.lirmm.fr/ontologies/SFWO) (please note that AgroPortal does not display the equivalentClass axioms).
 
-An export of the ontology in a tabular format ([sfwo.csv](http://github.com/nleguillarme/soil_food_web_ontology/releases/latest/download/sfwo.csv)) is also provided with each release.
+An export of the ontology in a tabular format ([sfwo.csv](http://github.com/soilfoodwebontology/sfwo/releases/latest/download/sfwo.csv)) is also provided with each release.
 
 ## Contributing to the development of the Soil Food Web Ontology
 
-The development of SFWO is a open and collaborative effort that bring together soil scientists and ontology engineers. SFWO is continuously updated, improved and enriched thanks to contributors’ suggestions for revisions. Contributors are invited to suggest and discuss changes in the ontology using the [Issue tracker](https://github.com/nleguillarme/soil_food_web_ontology/issues) of the project’s GitHub repository. Requests for changes/modifications are regularly submitted to the ontology steering committee for discussion and validation.
+The development of SFWO is a open and collaborative effort that bring together soil scientists and ontology engineers. SFWO is continuously updated, improved and enriched thanks to contributors’ suggestions for revisions. Contributors are invited to suggest and discuss changes in the ontology using the [Issue tracker](https://github.com/soilfoodwebontology/sfwo/issues) of the project’s GitHub repository. Requests for changes/modifications are regularly submitted to the ontology steering committee for discussion and validation.
 
 The steering committee is currently composed of:
 - Mickaël Hedde (Eco&Sols, INRAE)
@@ -63,7 +63,7 @@ Editors of this ontology should use the edit version, [src/ontology/sfwo-edit.ow
 
 ## Contact
 
-Please use this GitHub repository's [Issue tracker](https://github.com/nleguillarme/sfwo/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+Please use this GitHub repository's [Issue tracker](https://github.com/soilfoodwebontology/sfwo/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
 
 ## Acknowledgements
 
