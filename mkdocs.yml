@@ -1,3 +1,4 @@
 site_name: Soil Food Web Ontology
+site_url: https://soilfoodwebontology.github.io/sfwo
 theme:
   name: readthedocs
