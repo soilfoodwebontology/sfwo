@@ -17,7 +17,7 @@ The Soil Food Web Ontology aims at being a reference ontology for soil trophic e
 
 Please cite the accompanying paper:
 
-Le Guillarme, N., Hedde, M., Potapov, A., Berg, M. P., Briones, M. J., Calderon-Sanou, I., ... & Thuiller, W. (2023). The Soil Food Web Ontology: aligning trophic groups, processes, and resources to harmonise and automatise soil food web reconstructions. bioRxiv, 2023-02. https://doi.org/10.1101/2023.02.03.526812
+Le Guillarme, N., Hedde, M., Potapov, A., Berg, M. P., Briones, M. J., Calderon-Sanou, I., ... & Thuiller, W. (2023). The Soil Food Web Ontology: aligning trophic groups, processes, resources, and dietary traits to support food-web research. bioRxiv, 2023-09. https://doi.org/10.1101/2023.02.03.526812 
 
 ## Browsing the Soil Food Web Ontology
 
