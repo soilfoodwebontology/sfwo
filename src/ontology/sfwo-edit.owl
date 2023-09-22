@@ -641,7 +641,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
             </owl:Restriction>
         </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym xml:lang="en">bacteriophage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bactivore</oboInOwl:hasExactSynonym>
     </rdf:Description>
     
@@ -7675,6 +7674,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
         <oboInOwl:hasDbXref>http://thesaurus.cesab.org/trait#Bacterivore</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>bacteria-eating</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bacteria-feeding</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>bacteriophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bactivorous</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000476</oboInOwl:id>
         <rdfs:label>bacterivorous</rdfs:label>
@@ -12432,8 +12432,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000270">
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">protists.testate_amoebae</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000271">
@@ -12703,8 +12703,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000324">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
-        <rdfs:label xml:lang="en">Chilopoda.Geophilomorpha</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">Chilopoda.Geophilomorpha</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000325">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
@@ -12798,8 +12798,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000343">
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
-        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
         <rdfs:label xml:lang="en">Termitoidae.true_soil_feeders</rdfs:label>
+        <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000344">
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
@@ -12818,8 +12818,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000347">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Hemiptera.all</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000348">
         <rdfs:label xml:lang="en">Hemiptera.Auchenorrhyncha</rdfs:label>
@@ -13008,8 +13008,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000385">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
-        <rdfs:label xml:lang="en">Gastropoda.all</rdfs:label>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
+        <rdfs:label xml:lang="en">Gastropoda.all</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000386">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1111/brv.12832"/>
@@ -13128,8 +13128,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000409">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1016/j.funeco.2015.06.006"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.pathotrophs</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000410">
@@ -13182,8 +13182,8 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000419">
         <obo:IAO_0000119 rdf:resource="https://doi.org/10.1007/s13225-020-00466-2"/>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
         <rdfs:label xml:lang="en">Fungi.animal_pathogens</rdfs:label>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0003-4559-7579"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/sfwo/SFWO_0000420">
         <rdfs:label xml:lang="en">Fungi.fungal_parasites</rdfs:label>

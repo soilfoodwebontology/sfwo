@@ -28,7 +28,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
     <owl:Ontology rdf:about="http://purl.org/sfwo/sfwo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2023-08-23/sfwo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2023-09-22/sfwo-base.owl"/>
         <dc:contributor>Benjamin Pey</dc:contributor>
         <dc:contributor>Camille Martinez Almoyna</dc:contributor>
         <dc:contributor>Carlos A. Martínez-Muñoz</dc:contributor>
@@ -46,7 +46,7 @@
         <terms:creator>Mickaël Hedde</terms:creator>
         <terms:creator>Nicolas Le Guillarme</terms:creator>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <owl:versionInfo>2023-08-23</owl:versionInfo>
+        <owl:versionInfo>2023-09-22</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -866,7 +866,6 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
             </owl:Restriction>
         </owl:equivalentClass>
         <obo:IAO_0000117>https://orcid.org/0000-0003-4559-7579</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym xml:lang="en">bacteriophage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bactivore</oboInOwl:hasExactSynonym>
     </owl:Class>
     
@@ -9250,6 +9249,7 @@ We welcome input on our issue tracker: https://github.com/nleguillarme/soil_food
         <oboInOwl:hasDbXref>http://thesaurus.cesab.org/trait#Bacterivore</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>bacteria-eating</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bacteria-feeding</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>bacteriophagous</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>bactivorous</oboInOwl:hasExactSynonym>
         <oboInOwl:id>SFWO:0000476</oboInOwl:id>
         <rdfs:label>bacterivorous</rdfs:label>
