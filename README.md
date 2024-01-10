@@ -5,6 +5,8 @@
 
 ![](https://i.ibb.co/QQtPKJM/sfwo-logo.png)
 
+**Please visit the [Soil Food Web Ontology main site](https://soilfoodwebontology.github.io/) !***
+
 The Soil Food Web Ontology (SFWO) is a OWL ontology which provides a standardised terminology and a logical formalisation of the domain of soil trophic ecology. It proposes a reference vocabulary to describe information about trophic interactions, feeding preferences (diets) and feeding processes of soil biota. By harmonizing the definitions of trophic groups, SFWO provides a common, logically-sound framework for soil-associated consumers classification across taxonomic groups and trophic levels.
 
 The Soil Food Web Ontology aims at being a reference ontology for soil trophic ecology, and a resource for ontology-driven applications in the field, including:
@@ -29,9 +31,9 @@ An export of the ontology in a tabular format ([sfwo.csv](http://github.com/soil
 
 ## Contributing to the development of the Soil Food Web Ontology
 
-The development of SFWO is a open and collaborative effort that bring together soil scientists and ontology engineers. SFWO is continuously updated, improved and enriched thanks to contributors’ suggestions for revisions. Contributors are invited to suggest and discuss changes in the ontology using the [Issue tracker](https://github.com/soilfoodwebontology/sfwo/issues) of the project’s GitHub repository. Requests for changes/modifications are regularly submitted to the ontology steering committee for discussion and validation.
+The development of SFWO is a open and collaborative effort that bring together soil scientists and ontology engineers. SFWO is continuously updated, improved and enriched thanks to contributors’ suggestions for revisions. Contributors are invited to suggest and discuss changes in the ontology using the [Issue tracker](https://github.com/soilfoodwebontology/sfwo/issues) of the project’s GitHub repository. Requests for changes/modifications are regularly submitted to the SFWO Working Group for discussion and validation.
 
-The steering committee is currently composed of:
+The SFWO Working Group is currently composed of:
 - Mickaël Hedde (Eco&Sols, INRAE)
 - Anton M. Potapov (German Centre for Integrative Biodiversity Research, iDiv)
 - Matty P. Berg (Amsterdam Institute of Life and Environment)
