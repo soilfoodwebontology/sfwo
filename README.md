@@ -5,7 +5,7 @@
 
 ![](https://i.ibb.co/QQtPKJM/sfwo-logo.png)
 
-**Please visit the [Soil Food Web Ontology main site](https://soilfoodwebontology.github.io/) !***
+**Please visit the [Soil Food Web Ontology main site](https://soilfoodwebontology.github.io/) !**
 
 The Soil Food Web Ontology (SFWO) is a OWL ontology which provides a standardised terminology and a logical formalisation of the domain of soil trophic ecology. It proposes a reference vocabulary to describe information about trophic interactions, feeding preferences (diets) and feeding processes of soil biota. By harmonizing the definitions of trophic groups, SFWO provides a common, logically-sound framework for soil-associated consumers classification across taxonomic groups and trophic levels.
 
