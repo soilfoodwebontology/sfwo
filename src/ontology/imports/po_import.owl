@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/sfwo/imports/po_import.owl#"
-     xml:base="http://purl.org/sfwo/imports/po_import.owl"
+<rdf:RDF xmlns="http://purl.org/sfwo/sfwo/imports/po_import.owl#"
+     xml:base="http://purl.org/sfwo/sfwo/imports/po_import.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:po="http://purl.obolibrary.org/obo/po#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -11,10 +11,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.org/sfwo/imports/po_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2023-08-11/imports/po_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/po/releases/2023-07-13/po.owl"/>
-        <owl:versionInfo>2023-08-11</owl:versionInfo>
+    <owl:Ontology rdf:about="http://purl.org/sfwo/sfwo/imports/po_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/po_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/po/releases/2024-04-17/po.owl"/>
+        <owl:versionInfo>2024-06-06</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -329,10 +329,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
     </owl:Class>
     
 
@@ -353,6 +369,14 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_131221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_35493"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_131567 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131567">
@@ -369,10 +393,58 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131221"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_33090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3398 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3398">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58024"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_35493 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_35493">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_58023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_58023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3193"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_58024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_58024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_78536"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_78536 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_78536">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58023"/>
     </owl:Class>
     
 
@@ -397,18 +469,17 @@
         <oboInOwl:hasExactSynonym>植物体全体 (Japanese, exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>bush (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>frutex (narrow)</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>frutices (narrow)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>frutices (narrow, plural)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>gametophyte (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>herb (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>liana (narrow)</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>prothalli (narrow)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>prothalli (narrow, plural)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>prothallium (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>prothallus (narrow)</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>seedling (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>shrub (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>sporophyte (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>suffrutex (narrow)</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>suffrutices (narrow)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>suffrutices (narrow, plural)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>tree (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>vine (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>woody clump (narrow)</oboInOwl:hasNarrowSynonym>
@@ -456,16 +527,16 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0000003"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
-        <owl:annotatedTarget>frutices (narrow)</owl:annotatedTarget>
+        <owl:annotatedTarget>frutices (narrow, plural)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FNA:ec8c2064-2a67-43d7-8e14-aecfef5cf33b</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#Plural"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003004"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0000003"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
-        <owl:annotatedTarget>prothalli (narrow)</owl:annotatedTarget>
+        <owl:annotatedTarget>prothalli (narrow, plural)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FNA:4b610104-1bb0-4c6b-9bb9-e3cc61d11ac0</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#Plural"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003004"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0000003"/>
@@ -482,9 +553,9 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0000003"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
-        <owl:annotatedTarget>suffrutices (narrow)</owl:annotatedTarget>
+        <owl:annotatedTarget>suffrutices (narrow, plural)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FNA:ba1b1bd5-75bd-4195-b11c-3aba08da08c2</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/po#Plural"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003004"/>
     </owl:Axiom>
     
 
@@ -905,6 +976,7 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>radices (exact, plural)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FNA:3c46e84c-23e4-416b-91cd-2f7c42e4b13d</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003004"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009005"/>
@@ -1247,6 +1319,7 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>plant axes (exact, plural)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FNA:2355281f-ab10-4ae2-a3d8-672cace068a8</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003004"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025004"/>
@@ -1743,5 +1816,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

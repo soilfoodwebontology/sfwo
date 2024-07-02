@@ -1,698 +1,301 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/sfwo/imports/fao_import.owl#"
-     xml:base="http://purl.org/sfwo/imports/fao_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.org/sfwo/imports/fao_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2023-08-11/imports/fao_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/fao/releases/2020-05-07/fao.owl"/>
-        <owl:versionInfo>2023-08-11</owl:versionInfo>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <rdfs:label>definition</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/source -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#auto-generated-by -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
-        <rdfs:label>database_cross_reference</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
-        <rdfs:label>has_exact_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
-        <rdfs:label>has_related_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>part_of</oboInOwl:id>
-        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002160 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002160">
-        <oboInOwl:hasDbXref>RO:0002160</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>only_in_taxon</oboInOwl:id>
-        <oboInOwl:shorthand>only_in_taxon</oboInOwl:shorthand>
-        <rdfs:label>only in taxon</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000001">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>An anatomical structure that forms all or part of a fungus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>BTO:0001494</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>fungal structure ontology</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FAO:0000001</oboInOwl:id>
-        <rdfs:label>fungal structure</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An anatomical structure that forms all or part of a fungus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000007 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
-        <obo:IAO_0000115>Any specialized structure which bears or contains sexually or asexually derived spores.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>BTO:0000487</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>fruiting body</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0000007</oboInOwl:id>
-        <rdfs:label>fruitbody</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000007"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any specialized structure which bears or contains sexually or asexually derived spores.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SGD:clt</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
-        <obo:IAO_0000115>A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>GO:0075259</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>fruit body</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fruitbody</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fruiting body</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>spore-bearing structure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>spore-producing structure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>sporocarp</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0000010</oboInOwl:id>
-        <rdfs:label>sporophore</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>sporocarp</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>fruit body</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>fruitbody</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>fruiting body</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>spore-bearing structure</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>spore-producing structure</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
-        <obo:IAO_0000115>A group or mass of discrete hyphae; the vegetative structure of many fungi.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>BTO:0001436</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0000011</oboInOwl:id>
-        <rdfs:label>mycelium</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000011"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A group or mass of discrete hyphae; the vegetative structure of many fungi.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0471940526</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000012 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000007"/>
-        <obo:IAO_0000115>A large fruiting body that is composed of masses of intertwined hyphal elements and produces basidia and basidiospores. The basidiocarp is characteristic of the majority of fungi of the subphylum Basidiomycotina, in which it is the site of karyogamy and meiosis. Mushrooms and toadstools are common examples.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>FAO:0001024</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>BTO:0000114</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>mushroom</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FAO:0000012</oboInOwl:id>
-        <rdfs:label>basidiocarp</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000012"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A large fruiting body that is composed of masses of intertwined hyphal elements and produces basidia and basidiospores. The basidiocarp is characteristic of the majority of fungi of the subphylum Basidiomycotina, in which it is the site of karyogamy and meiosis. Mushrooms and toadstools are common examples.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>BTO:0000114</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0471940526</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000018 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000001"/>
-        <obo:IAO_0000115>A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>cell</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0000018</oboInOwl:id>
-        <rdfs:label>unicellular structure</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000018"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SGD:clt</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000019 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000019">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000018"/>
-        <obo:IAO_0000115>A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0000019</oboInOwl:id>
-        <rdfs:label>spore</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000019"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0471940526</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0000052 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0000052">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000010"/>
-        <obo:IAO_0000115>A structure within which spores develop.</obo:IAO_0000115>
-        <oboInOwl:created_by>Maria</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-06-10T12:06:16Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>GO:0043582</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0000052</oboInOwl:id>
-        <rdfs:label>sporangium</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0000052"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A structure within which spores develop.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0001001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0001001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
-        <obo:IAO_0000115>A long, branching filamentous structure formed by a vegetatively growing fungus.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0001001</oboInOwl:id>
-        <rdfs:label>hypha</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0001001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A long, branching filamentous structure formed by a vegetatively growing fungus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>FAO:mcc</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0471522295</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0001003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0001003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0001001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FAO_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>A hypha that forms part of a mycelium.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0001003</oboInOwl:id>
-        <rdfs:label>hypha in mycelium</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0001003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A hypha that forms part of a mycelium.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>FAO:mcc</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0471522295</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0002002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0002002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0000001"/>
-        <obo:IAO_0000115>A fungal structure that comprises more than one cell.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
-        <oboInOwl:creation_date>2019-05-03T13:33:22Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0002002</oboInOwl:id>
-        <rdfs:label>multicellular fungal structure</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0002002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A fungal structure that comprises more than one cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FAO_0002004 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FAO_0002004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FAO_0002002"/>
-        <obo:IAO_0000115>A multicellular fungal structure composed of two or more cells of a single multicellular organism.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
-        <oboInOwl:creation_date>2019-05-03T14:10:13Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>multicellular structure, multicellular organism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>fungal_anatomy_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FAO:0002004</oboInOwl:id>
-        <rdfs:label>multicellular fungal structure, multicellular organism</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A multicellular fungal structure composed of two or more cells of a single multicellular organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FAO_0002004"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>multicellular structure, multicellular organism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FAO:doi</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1">
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>all</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>NCBITaxon:1</oboInOwl:id>
-        <rdfs:label>root</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>all</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_131567 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131567">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>biota</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>NCBITaxon:131567</oboInOwl:id>
-        <rdfs:label>cellular organisms</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>biota</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2759 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2759">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
-        <taxslim:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_superkingdom"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:23020233</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:30257078</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>eucaryotes</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>eukaryotes</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Eucarya</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Eucaryotae</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Eukarya</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Eukaryotae</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>eukaryotes</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>NCBITaxon:2759</oboInOwl:id>
-        <rdfs:label>Eukaryota</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>eucaryotes</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>eukaryotes</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Eucarya</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Eucaryotae</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Eukarya</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Eukaryotae</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>eukaryotes</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33154 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33154">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Fungi/Metazoa group</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>opisthokonts</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>NCBITaxon:33154</oboInOwl:id>
-        <rdfs:label>Opisthokonta</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33154"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Fungi/Metazoa group</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33154"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>opisthokonts</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4751 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4751">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33154"/>
-        <taxslim:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_kingdom"/>
-        <oboInOwl:hasDbXref>GC_ID:1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:11062127</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:12684019</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>fungi</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>ncbi_taxonomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>fungi</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>NCBITaxon:4751</oboInOwl:id>
-        <rdfs:label>Fungi</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>fungi</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>fungi</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name"/>
-    </owl:Axiom>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
-
+Prefix(:=<http://purl.org/sfwo/sfwo/imports/fao_import.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.org/sfwo/sfwo/imports/fao_import.owl>
+<http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/fao_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/fao/releases/2020-05-07/fao.owl>)
+Annotation(owl:versionInfo "2024-06-06")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000012>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000018>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000019>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000052>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0001001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0001003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0002002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0002004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_131567>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_2759>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_33154>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_4751>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002160>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#auto-generated-by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#creation_date>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#date>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#default-namespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#saved-by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#shorthand>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition")
+
+# Annotation Property: <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name> (<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name> (<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name> (<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym> (<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "database_cross_reference")
+
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> (has_exact_synonym)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "has_exact_synonym")
+
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> (has_related_synonym)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "has_related_synonym")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000050> (part of)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BFO_0000050> "BFO:0000050")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BFO_0000050> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BFO_0000050> "part_of")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BFO_0000050> "part_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000050> "part of")
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002160> (only in taxon)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/RO_0002160> "RO:0002160")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/RO_0002160> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/RO_0002160> "only_in_taxon")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/RO_0002160> "only_in_taxon")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002160> "only in taxon")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000001> (fungal structure)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mah") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000001> "An anatomical structure that forms all or part of a fungus.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FAO_0000001> "BTO:0001494")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000001> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FAO_0000001> "fungal structure ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000001> "FAO:0000001")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000001> "fungal structure")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_4751>))
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000007> (fruitbody)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "SGD:clt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000007> "Any specialized structure which bears or contains sexually or asexually derived spores.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FAO_0000007> "BTO:0000487")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000007> "fruiting body")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000007> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000007> "FAO:0000007")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000007> "fruitbody")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000007> <http://purl.obolibrary.org/obo/FAO_0002004>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000010> (sporophore)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:curators") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000010> "A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FAO_0000010> "GO:0075259")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000010> "fruit body")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000010> "fruitbody")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000010> "fruiting body")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000010> "spore-bearing structure")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000010> "spore-producing structure")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000010> "sporocarp")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000010> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000010> "FAO:0000010")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000010> "sporophore")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000010> <http://purl.obolibrary.org/obo/FAO_0002004>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000011> (mycelium)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0471940526") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000011> "A group or mass of discrete hyphae; the vegetative structure of many fungi.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FAO_0000011> "BTO:0001436")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000011> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000011> "FAO:0000011")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000011> "mycelium")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000011> <http://purl.obolibrary.org/obo/FAO_0002004>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000012> (basidiocarp)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "BTO:0000114") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0471940526") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000012> "A large fruiting body that is composed of masses of intertwined hyphal elements and produces basidia and basidiospores. The basidiocarp is characteristic of the majority of fungi of the subphylum Basidiomycotina, in which it is the site of karyogamy and meiosis. Mushrooms and toadstools are common examples.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/FAO_0000012> "FAO:0001024")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FAO_0000012> "BTO:0000114")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000012> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FAO_0000012> "mushroom")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000012> "FAO:0000012")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000012> "basidiocarp")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000012> <http://purl.obolibrary.org/obo/FAO_0000007>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000018> (unicellular structure)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "SGD:clt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000018> "A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0000018> "cell")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000018> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000018> "FAO:0000018")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000018> "unicellular structure")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000018> <http://purl.obolibrary.org/obo/FAO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000019> (spore)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0471940526") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000019> "A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000019> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000019> "FAO:0000019")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000019> "spore")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000019> <http://purl.obolibrary.org/obo/FAO_0000018>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0000052> (sporangium)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:curators") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000052> "A structure within which spores develop.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FAO_0000052> "Maria")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FAO_0000052> "2011-06-10T12:06:16Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FAO_0000052> "GO:0043582")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000052> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000052> "FAO:0000052")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000052> "sporangium")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000052> <http://purl.obolibrary.org/obo/FAO_0000010>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0001001> (hypha)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mcc") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0471522295") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0001001> "A long, branching filamentous structure formed by a vegetatively growing fungus.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0001001> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0001001> "FAO:0001001")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0001001> "hypha")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0001001> <http://purl.obolibrary.org/obo/FAO_0002004>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0001003> (hypha in mycelium)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mcc") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0471522295") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0001003> "A hypha that forms part of a mycelium.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0001003> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0001003> "FAO:0001003")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0001003> "hypha in mycelium")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0001003> <http://purl.obolibrary.org/obo/FAO_0001001>)
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0001003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FAO_0000011>))
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0002002> (multicellular fungal structure)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mah") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0002002> "A fungal structure that comprises more than one cell.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FAO_0002002> "midori")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FAO_0002002> "2019-05-03T13:33:22Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0002002> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0002002> "FAO:0002002")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0002002> "multicellular fungal structure")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0002002> <http://purl.obolibrary.org/obo/FAO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0002004> (multicellular fungal structure, multicellular organism)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0002004> "A multicellular fungal structure composed of two or more cells of a single multicellular organism.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FAO_0002004> "midori")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FAO_0002004> "2019-05-03T14:10:13Z")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:doi") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FAO_0002004> "multicellular structure, multicellular organism")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0002004> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0002004> "FAO:0002004")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0002004> "multicellular fungal structure, multicellular organism")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0002004> <http://purl.obolibrary.org/obo/FAO_0002002>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_1> (root)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_1> "GC_ID:1")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/NCBITaxon_1> "ncbi_taxonomy")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_1> "all")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/NCBITaxon_1> "NCBITaxon:1")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_1> "root")
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_131567> (cellular organisms)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_131567> "GC_ID:1")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/NCBITaxon_131567> "ncbi_taxonomy")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_131567> "biota")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/NCBITaxon_131567> "NCBITaxon:131567")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_131567> "cellular organisms")
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_131567> <http://purl.obolibrary.org/obo/NCBITaxon_1>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_2759> (Eukaryota)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank> <http://purl.obolibrary.org/obo/NCBITaxon_2759> <http://purl.obolibrary.org/obo/NCBITaxon_superkingdom>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "GC_ID:1")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "PMID:23020233")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "PMID:30257078")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "eucaryotes")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "eukaryotes")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "ncbi_taxonomy")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "Eucarya")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "Eucaryotae")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "Eukarya")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "Eukaryotae")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "eukaryotes")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/NCBITaxon_2759> "NCBITaxon:2759")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_2759> "Eukaryota")
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_2759> <http://purl.obolibrary.org/obo/NCBITaxon_131567>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_33154> (Opisthokonta)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_33154> "GC_ID:1")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/NCBITaxon_33154> "ncbi_taxonomy")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_33154> "Fungi/Metazoa group")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_33154> "opisthokonts")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/NCBITaxon_33154> "NCBITaxon:33154")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_33154> "Opisthokonta")
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_33154> <http://purl.obolibrary.org/obo/NCBITaxon_2759>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_4751> (Fungi)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank> <http://purl.obolibrary.org/obo/NCBITaxon_4751> <http://purl.obolibrary.org/obo/NCBITaxon_kingdom>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_4751> "GC_ID:1")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_4751> "PMID:11062127")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/NCBITaxon_4751> "PMID:12684019")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_4751> "fungi")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/NCBITaxon_4751> "ncbi_taxonomy")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/NCBITaxon_4751> "fungi")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/NCBITaxon_4751> "NCBITaxon:4751")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_4751> "Fungi")
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_4751> <http://purl.obolibrary.org/obo/NCBITaxon_33154>)
+
+
+)

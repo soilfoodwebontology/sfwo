@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/sfwo/imports/envo_import.owl#"
-     xml:base="http://purl.org/sfwo/imports/envo_import.owl"
+<rdf:RDF xmlns="http://purl.org/sfwo/sfwo/imports/envo_import.owl#"
+     xml:base="http://purl.org/sfwo/sfwo/imports/envo_import.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -13,10 +13,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.org/sfwo/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.org/sfwo/releases/2023-08-11/imports/envo_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2023-02-13/envo.owl"/>
-        <owl:versionInfo>2023-08-11</owl:versionInfo>
+    <owl:Ontology rdf:about="http://purl.org/sfwo/sfwo/imports/envo_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/envo_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2024-02-16/envo.owl"/>
+        <owl:versionInfo>2024-06-06</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -235,16 +235,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000024 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:label xml:lang="en">fiat object</rdfs:label>
-        <rdfs:label xml:lang="en">fiat object part</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
@@ -260,6 +250,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <obo:IAO_0000115 xml:lang="en">An environmental material which is primarily composed of minerals, varying proportions of sand, silt, and clay, organic material such as humus, interstitial gases, liquids, and a broad range of resident micro- and macroorganisms.</obo:IAO_0000115>
         <obo:IAO_0000116>The various &apos;has part&apos; and &apos;has quality&apos; relations may not hold true for all soils; however, I have yet to find counter examples. Require input from a pedologist or similar. [pbuttigieg]</obo:IAO_0000116>
         <oboInOwl:hasBroadSynonym>regolith</oboInOwl:hasBroadSynonym>
@@ -287,20 +278,20 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <!-- http://purl.obolibrary.org/obo/ENVO_00010483 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
-        <obo:IAO_0000115>A portion of environmental material is a fiat object part which forms the medium or part of the medium of an environmental system.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115 xml:lang="en">A material entity which other material entities in an environmental system are primarily or partially composed of.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>portion of environmental material</oboInOwl:hasExactSynonym>
-        <rdfs:comment>Everything under this parent must be a mass noun. All subclasses are to be understood as being composed primarily of the named entity, rather than restricted to that entity. For example, &quot;ENVO:water&quot; is to be understood as &quot;environmental material composed primarly of some CHEBI:water&quot;. This class is currently being aligned to the Basic Formal Ontology. Following this alignment, its definition and the definitions of its subclasses will be revised.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Everything under this parent must be a mass noun (i.e. not countable). All subclasses are to be understood as being composed primarily of the named entity, rather than restricted to that entity. For example, &quot;ENVO:water&quot; is to be understood as &quot;environmental material composed primarly of some CHEBI:water&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Instances of this class are portions of environmental materials, such as seawater in bucket, a water parcel in the photic zone of a lake, or the concrete that composes a building part. Instances of these portions may have fiat or non-fiat boundaries. For example, a water parcel has not physical boundaries, while the seawater in a bucket is bounded by the internal surfaces of the bucket.</rdfs:comment>
         <rdfs:label>environmental material</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A portion of environmental material is a fiat object part which forms the medium or part of the medium of an environmental system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>URL:http://ontology.buffalo.edu/smith/articles/niches.html</oboInOwl:hasDbXref>
+        <owl:annotatedTarget xml:lang="en">A material entity which other material entities in an environmental system are primarily or partially composed of.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://ontology.buffalo.edu/smith/articles/niches.html"/>
+        <oboInOwl:hasDbXref rdf:resource="https://dx.doi.org/10.1186/2041-1480-4-43"/>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Material"/>
     </owl:Axiom>
     
 
@@ -323,6 +314,22 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasDbXref>ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000813 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000813">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115>A material part of an astronomical body.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Also note that some astronomical body parts (ABPs) may have fiat boundaries: if there&apos;s strong debate about where an ABP begins or ends (over and above fuzzy boundaries), with different official classifications setting different thresholds or limits, axiomatise the class with fiat boundaries of the appropriate dimension.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Note that material entities may have immaterial entities (e.g. sites) as parts.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">This class includes material parts of astronomical bodies. Immaterial parts, such as magnetospheres, are represented as sites under the influence of magnetic fields.Please post countercases in the ENVO tracker for revision of this hierarchy if needed.</obo:IAO_0000116>
+        <oboInOwl:inSubset>envoAstro</oboInOwl:inSubset>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">Material parts of astronomical bodies generally have boundaries formed by discontinuities in qualities, composition, or other physical characterisitcs. These boundaries are sometimes sharp, and sometimes diffuse, with different classification systems and communities declaring varying thresholds (e.g. for where a shoreline, forest, or other entity begins and ends). However, some boundaries are declared by fiat - that is, by arbitrary human convention or decree - particularly by regulatory or other authorities and communities of practice. The classes in this hierarchy attempt to offer generalisable definitions that allow multiple classfiication systems to map to and interoperate through. If desired, we can create classes that declare thresholds used by a given authority or community under the more generic ones, annotated with source information.</rdfs:comment>
+        <rdfs:label xml:lang="en">astronomical body part</rdfs:label>
+    </owl:Class>
     
 
 
@@ -374,6 +381,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_04000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <obo:IAO_0000115>Organic material in soil, which consists of plant and animal residues at various stages of decomposition, cells and tissues of soil organisms, and substances synthesized by soil organisms.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-05T00:53:06Z</dc:date>
@@ -390,5 +398,5 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
 
 
 
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

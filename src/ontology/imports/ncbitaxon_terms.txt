@@ -104,7 +104,15 @@ NCBITaxon:318493 # Arcellinida (testate amoebae)
 NCBITaxon:178369 # Euglyphida (testate amoebae)
 NCBITaxon:1287658 # Amphitremida (testate amoebae)
 NCBITaxon:2686024
+NCBITaxon:33344 # Coleorrhyncha
 NCBITaxon:2687318
 NCBITaxon:28009
 NCBITaxon:42461
 NCBITaxon:1117 # Cyanobacteriota
+NCBITaxon:6979 # Blattaria
+NCBITaxon:1049658
+NCBITaxon:2163898
+NCBITaxon:6974
+NCBITaxon:36982
+NCBITaxon:1080998
+NCBITaxon:1560744
