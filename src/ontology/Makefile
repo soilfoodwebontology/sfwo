@@ -21,7 +21,7 @@ CONFIG_HASH=                5fa4fc1e8f5bacba8bbf964213764c605bcccac87bebbcc37516
 OBOBASE=                    http://purl.obolibrary.org/obo
 URIBASE=                    http://purl.org/sfwo
 ONT=                        sfwo
-ONTBASE=                    http://purl.org/sfwo/sfwo
+ONTBASE=                    http://purl.org/sfwo
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -305,7 +305,7 @@ prepare_initial_release: all_assets
 prepare_release_fast:
 	$(MAKE) prepare_release IMP=false PAT=false MIR=false COMP=false
 
-CURRENT_RELEASE=$(ONTBASE).owl
+CURRENT_RELEASE=$(ONTBASE)/$(ONT).owl
 
 $(TMPDIR)/current-release.owl:
 	wget $(CURRENT_RELEASE) -O $@

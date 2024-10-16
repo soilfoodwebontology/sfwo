@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.org/sfwo/sfwo/imports/fao_import.owl#>)
+Prefix(:=<http://purl.org/sfwo/imports/fao_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,12 +6,13 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.org/sfwo/sfwo/imports/fao_import.owl>
-<http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/fao_import.owl>
+Ontology(<http://purl.org/sfwo/imports/fao_import.owl>
+<http://purl.org/sfwo/releases/2024-10-16/imports/fao_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/fao/releases/2020-05-07/fao.owl>)
-Annotation(owl:versionInfo "2024-06-06")
+Annotation(owl:versionInfo "2024-10-16")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000007>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000010>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000011>))
@@ -21,6 +22,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000019>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0000052>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0001001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0001003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0001027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0002002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FAO_0002004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))
@@ -128,6 +130,15 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000001> "fungal structure")
 SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_4751>))
 
+# Class: <http://purl.obolibrary.org/obo/FAO_0000002> (composite structure)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "SGD:clt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000002> "A multicellular fungal structure composed of cells from more than one species.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0000002> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FAO_0000002> "multispecific structure")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0000002> "FAO:0000002")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0000002> "composite structure")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0000002> <http://purl.obolibrary.org/obo/FAO_0000001>)
+
 # Class: <http://purl.obolibrary.org/obo/FAO_0000007> (fruitbody)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FAO:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "SGD:clt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0000007> "Any specialized structure which bears or contains sexually or asexually derived spores.")
@@ -217,6 +228,15 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0001003> "hypha in mycelium")
 SubClassOf(<http://purl.obolibrary.org/obo/FAO_0001003> <http://purl.obolibrary.org/obo/FAO_0001001>)
 SubClassOf(<http://purl.obolibrary.org/obo/FAO_0001003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FAO_0000011>))
+
+# Class: <http://purl.obolibrary.org/obo/FAO_0001027> (mycorrhiza)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "BTO:0000893") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FAO_0001027> "A composite structure formed by the symbiotic association of the mycelium of a fungus with the roots of a seed plant.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FAO_0001027> "BTO:0000893")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FAO_0001027> "fungal_anatomy_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FAO_0001027> "FAO:0001027")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FAO_0001027> "mycorrhiza")
+SubClassOf(<http://purl.obolibrary.org/obo/FAO_0001027> <http://purl.obolibrary.org/obo/FAO_0000002>)
 
 # Class: <http://purl.obolibrary.org/obo/FAO_0002002> (multicellular fungal structure)
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-11/imports/ro_import.owl" uri="imports/ro_import.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/pco_import.owl" uri="imports/pco_import.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/ncbitaxon_import.owl" uri="imports/ncbitaxon_import.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-11/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
@@ -11,8 +12,10 @@
     <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/po_import.owl" uri="imports/po_import.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/ecocore_import.owl" uri="imports/ecocore_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/sfwo/sfwo/releases/2024-06-06/imports/ro_import.owl" uri="imports/ro_import.owl"/>
     <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
         <uri name="http://purl.org/sfwo/imports/ro_import.obo" uri="imports/ro_import.obo"/>
+        <uri name="http://purl.org/sfwo/imports/ro_import.owl" uri="imports/ro_import.owl"/>
         <uri name="http://purl.org/sfwo/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
         <uri name="http://purl.org/sfwo/imports/bfo_import.obo" uri="imports/bfo_import.obo"/>
         <uri name="http://purl.org/sfwo/imports/ecocore_import.owl" uri="imports/ecocore_import.owl"/>
